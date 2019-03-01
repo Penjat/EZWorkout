@@ -13,6 +13,7 @@
 		0BCA1AC42228D30100B51C27 /* EZWorkout.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0BCA1AC22228D30100B51C27 /* EZWorkout.xcdatamodeld */; };
 		0BCA1AC62228D30100B51C27 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0BCA1AC52228D30100B51C27 /* Assets.xcassets */; };
 		0BCA1AC92228D30100B51C27 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0BCA1AC72228D30100B51C27 /* LaunchScreen.storyboard */; };
+		285A56D52228D587003E4AA0 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 285A56D42228D587003E4AA0 /* User.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		0BCA1AC52228D30100B51C27 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0BCA1AC82228D30100B51C27 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0BCA1ACA2228D30100B51C27 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		285A56D42228D587003E4AA0 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,7 +59,8 @@
 			isa = PBXGroup;
 			children = (
 				0BCA1ABB2228D30000B51C27 /* AppDelegate.swift */,
-				0BCA1ABD2228D30100B51C27 /* ViewController.swift */,
+				285A56D92228E367003E4AA0 /* Core Data Extentions */,
+				285A56D82228E358003E4AA0 /* View Controllers */,
 				0BCA1ABF2228D30100B51C27 /* Main.storyboard */,
 				0BCA1AC52228D30100B51C27 /* Assets.xcassets */,
 				0BCA1AC72228D30100B51C27 /* LaunchScreen.storyboard */,
@@ -65,6 +68,22 @@
 				0BCA1AC22228D30100B51C27 /* EZWorkout.xcdatamodeld */,
 			);
 			path = EZWorkout;
+			sourceTree = "<group>";
+		};
+		285A56D82228E358003E4AA0 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				0BCA1ABD2228D30100B51C27 /* ViewController.swift */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		285A56D92228E367003E4AA0 /* Core Data Extentions */ = {
+			isa = PBXGroup;
+			children = (
+				285A56D42228D587003E4AA0 /* User.swift */,
+			);
+			path = "Core Data Extentions";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,6 +157,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				285A56D52228D587003E4AA0 /* User.swift in Sources */,
 				0BCA1AC42228D30100B51C27 /* EZWorkout.xcdatamodeld in Sources */,
 				0BCA1ABE2228D30100B51C27 /* ViewController.swift in Sources */,
 				0BCA1ABC2228D30000B51C27 /* AppDelegate.swift in Sources */,
@@ -287,7 +307,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = L688AU9RCV;
+				DEVELOPMENT_TEAM = XX8BFQJ7RJ;
 				INFOPLIST_FILE = EZWorkout/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -305,7 +325,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = L688AU9RCV;
+				DEVELOPMENT_TEAM = XX8BFQJ7RJ;
 				INFOPLIST_FILE = EZWorkout/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
