@@ -44,6 +44,6 @@
 	<key>NSSpeechRecognitionUsageDescription</key>
 	<string>This App uses speech recognition so you can easily input your workouts.  We are only recording when you press the record button.</string>
 	<key>NSMicrophoneUsageDescription</key>
-	<string>You can use your microphone to input your workouts.</string>
+	<string>You can use your microphone to input your workouts with this.</string>
 </dict>
 </plist>
