@@ -38,7 +38,7 @@ class SpeechRecognizer{
   }
   func stopRecognizing(){
     print("stop recognizing")
-    print("last text = \(lastText)")
+    
     
     audioEngine.stop()
     
@@ -47,7 +47,8 @@ class SpeechRecognizer{
     
     recognitionTask?.cancel()
     
-    //TODO pass value to delegate
+    //pass the results to the delegate
+    delegate.recieve(speech: lastText)
     
   }
   

@@ -84,8 +84,7 @@
 			isa = PBXGroup;
 			children = (
 				0BA3DB84222DD0F200AC7538 /* ExerciseModel.swift */,
-				0BA3DB98222DD2FC00AC7538 /* SpeechRecognizer.swift */,
-				0BA3DB9A222DD3ED00AC7538 /* RecognizerReturnDelegate.swift */,
+				0BA3DB9E222DDE2800AC7538 /* SpeechRecognizer */,
 				0BA3DB86222DD0F200AC7538 /* ExerciseModifier.swift */,
 				0BA3DB85222DD0F200AC7538 /* ExerciseRef.swift */,
 				0BA3DB88222DD0F200AC7538 /* ExerciseRefernceProtocol.swift */,
@@ -105,6 +104,15 @@
 				0BA3DB8D222DD0F200AC7538 /* SpeechInputManager.swift */,
 			);
 			path = SpeechInputManager;
+			sourceTree = "<group>";
+		};
+		0BA3DB9E222DDE2800AC7538 /* SpeechRecognizer */ = {
+			isa = PBXGroup;
+			children = (
+				0BA3DB98222DD2FC00AC7538 /* SpeechRecognizer.swift */,
+				0BA3DB9A222DD3ED00AC7538 /* RecognizerReturnDelegate.swift */,
+			);
+			path = SpeechRecognizer;
 			sourceTree = "<group>";
 		};
 		0BCA1AAF2228D30000B51C27 = {
