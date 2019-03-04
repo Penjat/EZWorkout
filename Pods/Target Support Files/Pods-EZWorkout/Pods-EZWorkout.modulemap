@@ -1,0 +1,6 @@
+framework module Pods_EZWorkout {
+  umbrella header "Pods-EZWorkout-umbrella.h"
+
+  export *
+  module * { export * }
+}
