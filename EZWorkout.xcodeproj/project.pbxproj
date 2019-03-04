@@ -7,6 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0BA3DB8E222DD0F200AC7538 /* MuscleGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BA3DB83222DD0F200AC7538 /* MuscleGroup.swift */; };
+		0BA3DB8F222DD0F200AC7538 /* ExerciseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BA3DB84222DD0F200AC7538 /* ExerciseModel.swift */; };
+		0BA3DB90222DD0F200AC7538 /* ExerciseRef.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BA3DB85222DD0F200AC7538 /* ExerciseRef.swift */; };
+		0BA3DB91222DD0F200AC7538 /* ExerciseModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BA3DB86222DD0F200AC7538 /* ExerciseModifier.swift */; };
+		0BA3DB92222DD0F200AC7538 /* ExerciseTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BA3DB87222DD0F200AC7538 /* ExerciseTypes.swift */; };
+		0BA3DB93222DD0F200AC7538 /* ExerciseRefernceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BA3DB88222DD0F200AC7538 /* ExerciseRefernceProtocol.swift */; };
+		0BA3DB94222DD0F200AC7538 /* SpeechInputManager+InputParsing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BA3DB8A222DD0F200AC7538 /* SpeechInputManager+InputParsing.swift */; };
+		0BA3DB95222DD0F200AC7538 /* SpeechInputManager+UserAddedExercises.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BA3DB8B222DD0F200AC7538 /* SpeechInputManager+UserAddedExercises.swift */; };
+		0BA3DB96222DD0F200AC7538 /* SpechInputManager+SetUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BA3DB8C222DD0F200AC7538 /* SpechInputManager+SetUp.swift */; };
+		0BA3DB97222DD0F200AC7538 /* SpeechInputManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BA3DB8D222DD0F200AC7538 /* SpeechInputManager.swift */; };
+		0BA3DB99222DD2FC00AC7538 /* SpeechRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BA3DB98222DD2FC00AC7538 /* SpeechRecognizer.swift */; };
+		0BA3DB9B222DD3ED00AC7538 /* RecognizerReturnDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BA3DB9A222DD3ED00AC7538 /* RecognizerReturnDelegate.swift */; };
+		0BA3DB9D222DD48800AC7538 /* WorkoutRecVC+RecognizerReturnDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BA3DB9C222DD48800AC7538 /* WorkoutRecVC+RecognizerReturnDelegate.swift */; };
 		0BCA1ABC2228D30000B51C27 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BCA1ABB2228D30000B51C27 /* AppDelegate.swift */; };
 		0BCA1AC12228D30100B51C27 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0BCA1ABF2228D30100B51C27 /* Main.storyboard */; };
 		0BCA1AC42228D30100B51C27 /* EZWorkout.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0BCA1AC22228D30100B51C27 /* EZWorkout.xcdatamodeld */; };
@@ -23,6 +36,19 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0BA3DB83222DD0F200AC7538 /* MuscleGroup.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MuscleGroup.swift; sourceTree = "<group>"; };
+		0BA3DB84222DD0F200AC7538 /* ExerciseModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExerciseModel.swift; sourceTree = "<group>"; };
+		0BA3DB85222DD0F200AC7538 /* ExerciseRef.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExerciseRef.swift; sourceTree = "<group>"; };
+		0BA3DB86222DD0F200AC7538 /* ExerciseModifier.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExerciseModifier.swift; sourceTree = "<group>"; };
+		0BA3DB87222DD0F200AC7538 /* ExerciseTypes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExerciseTypes.swift; sourceTree = "<group>"; };
+		0BA3DB88222DD0F200AC7538 /* ExerciseRefernceProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExerciseRefernceProtocol.swift; sourceTree = "<group>"; };
+		0BA3DB8A222DD0F200AC7538 /* SpeechInputManager+InputParsing.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SpeechInputManager+InputParsing.swift"; sourceTree = "<group>"; };
+		0BA3DB8B222DD0F200AC7538 /* SpeechInputManager+UserAddedExercises.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SpeechInputManager+UserAddedExercises.swift"; sourceTree = "<group>"; };
+		0BA3DB8C222DD0F200AC7538 /* SpechInputManager+SetUp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SpechInputManager+SetUp.swift"; sourceTree = "<group>"; };
+		0BA3DB8D222DD0F200AC7538 /* SpeechInputManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpeechInputManager.swift; sourceTree = "<group>"; };
+		0BA3DB98222DD2FC00AC7538 /* SpeechRecognizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeechRecognizer.swift; sourceTree = "<group>"; };
+		0BA3DB9A222DD3ED00AC7538 /* RecognizerReturnDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecognizerReturnDelegate.swift; sourceTree = "<group>"; };
+		0BA3DB9C222DD48800AC7538 /* WorkoutRecVC+RecognizerReturnDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "WorkoutRecVC+RecognizerReturnDelegate.swift"; sourceTree = "<group>"; };
 		0BCA1AB82228D30000B51C27 /* EZWorkout.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EZWorkout.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0BCA1ABB2228D30000B51C27 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0BCA1AC02228D30100B51C27 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -54,6 +80,33 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0BA3DB82222DD0D500AC7538 /* SpeechParsing */ = {
+			isa = PBXGroup;
+			children = (
+				0BA3DB84222DD0F200AC7538 /* ExerciseModel.swift */,
+				0BA3DB98222DD2FC00AC7538 /* SpeechRecognizer.swift */,
+				0BA3DB9A222DD3ED00AC7538 /* RecognizerReturnDelegate.swift */,
+				0BA3DB86222DD0F200AC7538 /* ExerciseModifier.swift */,
+				0BA3DB85222DD0F200AC7538 /* ExerciseRef.swift */,
+				0BA3DB88222DD0F200AC7538 /* ExerciseRefernceProtocol.swift */,
+				0BA3DB87222DD0F200AC7538 /* ExerciseTypes.swift */,
+				0BA3DB83222DD0F200AC7538 /* MuscleGroup.swift */,
+				0BA3DB89222DD0F200AC7538 /* SpeechInputManager */,
+			);
+			path = SpeechParsing;
+			sourceTree = "<group>";
+		};
+		0BA3DB89222DD0F200AC7538 /* SpeechInputManager */ = {
+			isa = PBXGroup;
+			children = (
+				0BA3DB8A222DD0F200AC7538 /* SpeechInputManager+InputParsing.swift */,
+				0BA3DB8B222DD0F200AC7538 /* SpeechInputManager+UserAddedExercises.swift */,
+				0BA3DB8C222DD0F200AC7538 /* SpechInputManager+SetUp.swift */,
+				0BA3DB8D222DD0F200AC7538 /* SpeechInputManager.swift */,
+			);
+			path = SpeechInputManager;
+			sourceTree = "<group>";
+		};
 		0BCA1AAF2228D30000B51C27 = {
 			isa = PBXGroup;
 			children = (
@@ -76,6 +129,7 @@
 			isa = PBXGroup;
 			children = (
 				0BCA1ABB2228D30000B51C27 /* AppDelegate.swift */,
+				0BA3DB82222DD0D500AC7538 /* SpeechParsing */,
 				285A56D92228E367003E4AA0 /* Core Data Extentions */,
 				285A56D82228E358003E4AA0 /* View Controllers */,
 				28812197222DBD59007042C1 /* stat VC */,
@@ -95,6 +149,7 @@
 				2808341C222CC627001D0A64 /* WorkoutVC.swift */,
 				28083420222CCA2F001D0A64 /* WorkoutPVC.swift */,
 				28083422222CCB0D001D0A64 /* WorkoutRecVC.swift */,
+				0BA3DB9C222DD48800AC7538 /* WorkoutRecVC+RecognizerReturnDelegate.swift */,
 				28083424222CCB21001D0A64 /* WorkoutTableVC.swift */,
 			);
 			path = "View Controllers";
@@ -255,13 +310,26 @@
 			files = (
 				28083423222CCB0D001D0A64 /* WorkoutRecVC.swift in Sources */,
 				285A56D52228D587003E4AA0 /* User.swift in Sources */,
+				0BA3DB94222DD0F200AC7538 /* SpeechInputManager+InputParsing.swift in Sources */,
+				0BA3DB95222DD0F200AC7538 /* SpeechInputManager+UserAddedExercises.swift in Sources */,
 				0BCA1AC42228D30100B51C27 /* EZWorkout.xcdatamodeld in Sources */,
+				0BA3DB99222DD2FC00AC7538 /* SpeechRecognizer.swift in Sources */,
 				28083421222CCA2F001D0A64 /* WorkoutPVC.swift in Sources */,
+				0BA3DB93222DD0F200AC7538 /* ExerciseRefernceProtocol.swift in Sources */,
+				0BA3DB9B222DD3ED00AC7538 /* RecognizerReturnDelegate.swift in Sources */,
 				28083425222CCB21001D0A64 /* WorkoutTableVC.swift in Sources */,
+				0BA3DB92222DD0F200AC7538 /* ExerciseTypes.swift in Sources */,
+				0BA3DB90222DD0F200AC7538 /* ExerciseRef.swift in Sources */,
+				0BA3DB9D222DD48800AC7538 /* WorkoutRecVC+RecognizerReturnDelegate.swift in Sources */,
+				0BA3DB96222DD0F200AC7538 /* SpechInputManager+SetUp.swift in Sources */,
 				285A56DB2229DB2E003E4AA0 /* ExcerciseTableViewCell.swift in Sources */,
 				2808341D222CC627001D0A64 /* WorkoutVC.swift in Sources */,
 				28812196222DA4DA007042C1 /* StatVC.swift in Sources */,
+				0BA3DB8E222DD0F200AC7538 /* MuscleGroup.swift in Sources */,
+				0BA3DB97222DD0F200AC7538 /* SpeechInputManager.swift in Sources */,
 				0BCA1ABC2228D30000B51C27 /* AppDelegate.swift in Sources */,
+				0BA3DB91222DD0F200AC7538 /* ExerciseModifier.swift in Sources */,
+				0BA3DB8F222DD0F200AC7538 /* ExerciseModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
