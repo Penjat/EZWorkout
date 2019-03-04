@@ -12,6 +12,7 @@ class WorkoutRecVC: UIViewController {
   var timer = Timer()
   
   
+  
   override func viewDidLoad() {
     super.viewDidLoad()
     
@@ -29,9 +30,14 @@ class WorkoutRecVC: UIViewController {
   }
   
   @IBAction func recordButtonAction(_ sender: Any) {
+    speechRecognizer.toggleRecording()
+    
     
     
   }
+  
+  
+  
   
   
   
