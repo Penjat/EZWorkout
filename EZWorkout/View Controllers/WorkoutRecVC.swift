@@ -31,9 +31,15 @@ class WorkoutRecVC: UIViewController {
   
   @IBAction func recordButtonAction(_ sender: Any) {
     speechRecognizer.toggleRecording()
+
+  }
+  
+  func createExerciseView(){
+    print("creating exercise view")
     
-    
-    
+    let exerciseView = ExerciseView()
+    exerciseView.frame = CGRect(x: 100, y: 100, width: 300, height: 80)
+    view.addSubview(exerciseView)
   }
   
   
