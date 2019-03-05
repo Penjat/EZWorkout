@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0BA30329222DE70A0046FDB9 /* Exercise.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0BA30328222DE70A0046FDB9 /* Exercise.xib */; };
+		0BA3032B222DE8EA0046FDB9 /* ExerciseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BA3032A222DE8EA0046FDB9 /* ExerciseView.swift */; };
 		0BA3DB8E222DD0F200AC7538 /* MuscleGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BA3DB83222DD0F200AC7538 /* MuscleGroup.swift */; };
 		0BA3DB8F222DD0F200AC7538 /* ExerciseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BA3DB84222DD0F200AC7538 /* ExerciseModel.swift */; };
 		0BA3DB90222DD0F200AC7538 /* ExerciseRef.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BA3DB85222DD0F200AC7538 /* ExerciseRef.swift */; };
@@ -36,6 +38,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0BA30328222DE70A0046FDB9 /* Exercise.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Exercise.xib; sourceTree = "<group>"; };
+		0BA3032A222DE8EA0046FDB9 /* ExerciseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseView.swift; sourceTree = "<group>"; };
 		0BA3DB83222DD0F200AC7538 /* MuscleGroup.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MuscleGroup.swift; sourceTree = "<group>"; };
 		0BA3DB84222DD0F200AC7538 /* ExerciseModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExerciseModel.swift; sourceTree = "<group>"; };
 		0BA3DB85222DD0F200AC7538 /* ExerciseRef.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExerciseRef.swift; sourceTree = "<group>"; };
@@ -80,6 +84,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0BA30327222DE6D30046FDB9 /* Custom Views */ = {
+			isa = PBXGroup;
+			children = (
+				0BA30328222DE70A0046FDB9 /* Exercise.xib */,
+				0BA3032A222DE8EA0046FDB9 /* ExerciseView.swift */,
+			);
+			path = "Custom Views";
+			sourceTree = "<group>";
+		};
 		0BA3DB82222DD0D500AC7538 /* SpeechParsing */ = {
 			isa = PBXGroup;
 			children = (
@@ -137,6 +150,7 @@
 			isa = PBXGroup;
 			children = (
 				0BCA1ABB2228D30000B51C27 /* AppDelegate.swift */,
+				0BA30327222DE6D30046FDB9 /* Custom Views */,
 				0BA3DB82222DD0D500AC7538 /* SpeechParsing */,
 				285A56D92228E367003E4AA0 /* Core Data Extentions */,
 				285A56D82228E358003E4AA0 /* View Controllers */,
@@ -257,6 +271,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0BCA1AC92228D30100B51C27 /* LaunchScreen.storyboard in Resources */,
+				0BA30329222DE70A0046FDB9 /* Exercise.xib in Resources */,
 				0BCA1AC62228D30100B51C27 /* Assets.xcassets in Resources */,
 				0BCA1AC12228D30100B51C27 /* Main.storyboard in Resources */,
 			);
@@ -320,6 +335,7 @@
 				285A56D52228D587003E4AA0 /* User.swift in Sources */,
 				0BA3DB94222DD0F200AC7538 /* SpeechInputManager+InputParsing.swift in Sources */,
 				0BA3DB95222DD0F200AC7538 /* SpeechInputManager+UserAddedExercises.swift in Sources */,
+				0BA3032B222DE8EA0046FDB9 /* ExerciseView.swift in Sources */,
 				0BCA1AC42228D30100B51C27 /* EZWorkout.xcdatamodeld in Sources */,
 				0BA3DB99222DD2FC00AC7538 /* SpeechRecognizer.swift in Sources */,
 				28083421222CCA2F001D0A64 /* WorkoutPVC.swift in Sources */,
