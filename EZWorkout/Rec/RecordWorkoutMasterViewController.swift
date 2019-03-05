@@ -4,7 +4,10 @@ import UIKit
 
 class RecordWorkoutMasterViewController: UIViewController {
   
+  @IBOutlet weak var centerContainerView: UIView!
   @IBOutlet weak var timerLabel: UILabel!
+  
+  var centerController: CenterViewController?
   
   let speechInputManager = SpeechInputManager()
   var startDate: Date?
@@ -24,6 +27,12 @@ class RecordWorkoutMasterViewController: UIViewController {
     super.viewDidLoad()
     
     speechRecognizer = SpeechRecognizer(delegate: self)
+    
+  }
+  override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+    if segue.identifier == "toCenterController"{
+      centerController = segue.destination as! CenterViewController
+    }
   }
   
   @IBAction func recPressedDown(_ sender: Any) {

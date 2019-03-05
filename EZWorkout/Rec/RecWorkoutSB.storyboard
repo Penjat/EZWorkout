@@ -100,20 +100,21 @@
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sKg-ac-tKm">
                                 <rect key="frame" x="0.0" y="80" width="375" height="459"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="t0H-XX-SNS" userLabel="ContentView" customClass="WorkoutCenterView" customModule="EZWorkout" customModuleProvider="target">
+                                    <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GuP-wI-WAn">
                                         <rect key="frame" x="0.0" y="0.0" width="1125" height="459"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    </view>
+                                        <connections>
+                                            <segue destination="nOk-Um-RIZ" kind="embed" identifier="toCenterController" id="iGU-Kz-nyV"/>
+                                        </connections>
+                                    </containerView>
                                 </subviews>
                                 <color key="backgroundColor" red="0.93120175599999999" green="0.58680915810000001" blue="0.0019564292579999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
-                                    <constraint firstAttribute="bottom" secondItem="t0H-XX-SNS" secondAttribute="bottom" id="ALe-GQ-gF3"/>
-                                    <constraint firstItem="t0H-XX-SNS" firstAttribute="height" secondItem="sKg-ac-tKm" secondAttribute="height" id="DKp-w7-Qbs"/>
-                                    <constraint firstAttribute="trailing" secondItem="t0H-XX-SNS" secondAttribute="trailing" id="T2q-4c-Lmx"/>
-                                    <constraint firstItem="t0H-XX-SNS" firstAttribute="leading" secondItem="sKg-ac-tKm" secondAttribute="leading" id="YRL-7m-gzg"/>
-                                    <constraint firstItem="t0H-XX-SNS" firstAttribute="top" secondItem="sKg-ac-tKm" secondAttribute="top" id="be5-FU-xZN"/>
-                                    <constraint firstItem="t0H-XX-SNS" firstAttribute="width" secondItem="sKg-ac-tKm" secondAttribute="width" multiplier="3" id="byc-FM-fsI"/>
-                                    <constraint firstItem="t0H-XX-SNS" firstAttribute="top" secondItem="sKg-ac-tKm" secondAttribute="top" id="fTA-wU-gar"/>
+                                    <constraint firstItem="GuP-wI-WAn" firstAttribute="height" secondItem="sKg-ac-tKm" secondAttribute="height" id="6zM-bu-O3u"/>
+                                    <constraint firstItem="GuP-wI-WAn" firstAttribute="width" secondItem="sKg-ac-tKm" secondAttribute="width" multiplier="3" id="Pge-JN-rpf"/>
+                                    <constraint firstAttribute="trailing" secondItem="GuP-wI-WAn" secondAttribute="trailing" id="Urf-be-apb"/>
+                                    <constraint firstAttribute="bottom" secondItem="GuP-wI-WAn" secondAttribute="bottom" id="X3h-Xr-41k"/>
+                                    <constraint firstItem="GuP-wI-WAn" firstAttribute="top" secondItem="sKg-ac-tKm" secondAttribute="top" id="qSf-jS-GQd"/>
+                                    <constraint firstItem="GuP-wI-WAn" firstAttribute="leading" secondItem="sKg-ac-tKm" secondAttribute="leading" id="tZX-FV-sOh"/>
                                 </constraints>
                             </scrollView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="60I-Lu-YER">
@@ -151,6 +152,7 @@
                         <viewLayoutGuide key="safeArea" id="uqK-KA-Ytp"/>
                     </view>
                     <connections>
+                        <outlet property="centerContainerView" destination="GuP-wI-WAn" id="9oE-87-mxC"/>
                         <outlet property="timerLabel" destination="LRs-Ia-OVI" id="bIn-qc-smz"/>
                     </connections>
                 </viewController>
@@ -330,6 +332,87 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WDD-Gj-9KE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3146" y="978"/>
+        </scene>
+        <!--Center View Controller-->
+        <scene sceneID="plR-v4-uxH">
+            <objects>
+                <viewController id="nOk-Um-RIZ" customClass="CenterViewController" customModule="EZWorkout" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="FyU-hU-Lc7">
+                        <rect key="frame" x="0.0" y="0.0" width="1125" height="459"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qCH-99-Yc2">
+                                <rect key="frame" x="20" y="0.0" width="361.5" height="459"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hg6-aN-6eO">
+                                <rect key="frame" x="381.5" y="0.0" width="362" height="459"/>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Idq-kp-ykc">
+                                <rect key="frame" x="743.5" y="0.0" width="361.5" height="459"/>
+                                <subviews>
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="egL-ap-L8a">
+                                        <rect key="frame" x="0.0" y="0.0" width="361.5" height="459"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <prototypes>
+                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="exerciseCell" rowHeight="85" id="dZ2-Ch-ytf" customClass="ExerciseCell" customModule="EZWorkout" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="28" width="361.5" height="85"/>
+                                                <autoresizingMask key="autoresizingMask"/>
+                                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="dZ2-Ch-ytf" id="Or7-tw-QMf">
+                                                    <rect key="frame" x="0.0" y="0.0" width="361.5" height="84.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <subviews>
+                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="A9i-rj-R6y" customClass="ExerciseView" customModule="EZWorkout" customModuleProvider="target">
+                                                            <rect key="frame" x="0.0" y="0.0" width="361.5" height="84.5"/>
+                                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </view>
+                                                    </subviews>
+                                                    <constraints>
+                                                        <constraint firstItem="A9i-rj-R6y" firstAttribute="leading" secondItem="Or7-tw-QMf" secondAttribute="leading" id="45X-vg-EQh"/>
+                                                        <constraint firstAttribute="trailing" secondItem="A9i-rj-R6y" secondAttribute="trailing" id="B68-Wf-1xT"/>
+                                                        <constraint firstAttribute="bottom" secondItem="A9i-rj-R6y" secondAttribute="bottom" id="E63-Zd-mP9"/>
+                                                        <constraint firstItem="A9i-rj-R6y" firstAttribute="top" secondItem="Or7-tw-QMf" secondAttribute="top" id="z73-o1-isy"/>
+                                                    </constraints>
+                                                </tableViewCellContentView>
+                                            </tableViewCell>
+                                        </prototypes>
+                                    </tableView>
+                                </subviews>
+                                <color key="backgroundColor" red="1" green="0.86091302579999995" blue="0.026286063320000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstItem="egL-ap-L8a" firstAttribute="top" secondItem="Idq-kp-ykc" secondAttribute="top" id="1cn-wb-L5t"/>
+                                    <constraint firstAttribute="bottom" secondItem="egL-ap-L8a" secondAttribute="bottom" id="8I7-z3-JBp"/>
+                                    <constraint firstItem="egL-ap-L8a" firstAttribute="leading" secondItem="Idq-kp-ykc" secondAttribute="leading" id="URH-IT-3Ib"/>
+                                    <constraint firstAttribute="trailing" secondItem="egL-ap-L8a" secondAttribute="trailing" id="rgn-C3-Edy"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="hg6-aN-6eO" firstAttribute="top" secondItem="FyU-hU-Lc7" secondAttribute="topMargin" id="0aA-3s-ZgY"/>
+                            <constraint firstItem="Idq-kp-ykc" firstAttribute="leading" secondItem="hg6-aN-6eO" secondAttribute="trailing" id="GEx-Xf-rAG"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Idq-kp-ykc" secondAttribute="trailing" id="HKS-qG-Izj"/>
+                            <constraint firstItem="hg6-aN-6eO" firstAttribute="leading" secondItem="qCH-99-Yc2" secondAttribute="trailing" id="Ly9-Ao-6vz"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="hg6-aN-6eO" secondAttribute="bottom" id="XGV-ok-q93"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="Idq-kp-ykc" secondAttribute="bottom" id="XKx-s9-0vt"/>
+                            <constraint firstItem="qCH-99-Yc2" firstAttribute="width" secondItem="hg6-aN-6eO" secondAttribute="width" id="d1A-wu-fin"/>
+                            <constraint firstItem="hg6-aN-6eO" firstAttribute="leading" secondItem="qCH-99-Yc2" secondAttribute="trailing" id="eZL-S4-iHw"/>
+                            <constraint firstItem="Idq-kp-ykc" firstAttribute="leading" secondItem="hg6-aN-6eO" secondAttribute="trailing" id="hnS-Kd-AvQ"/>
+                            <constraint firstItem="qCH-99-Yc2" firstAttribute="leading" secondItem="FyU-hU-Lc7" secondAttribute="leadingMargin" id="kh1-Wn-B4t"/>
+                            <constraint firstItem="qCH-99-Yc2" firstAttribute="top" secondItem="FyU-hU-Lc7" secondAttribute="topMargin" id="mvl-vx-fln"/>
+                            <constraint firstItem="Idq-kp-ykc" firstAttribute="top" secondItem="FyU-hU-Lc7" secondAttribute="topMargin" id="u6j-0H-Jcb"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="qCH-99-Yc2" secondAttribute="bottom" id="und-4G-k1p"/>
+                            <constraint firstItem="hg6-aN-6eO" firstAttribute="width" secondItem="Idq-kp-ykc" secondAttribute="width" id="yBW-bI-CSY"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="exerciseTableView" destination="egL-ap-L8a" id="c1T-9o-aKr"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Omn-XB-Ewk" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1662" y="1144"/>
         </scene>
     </scenes>
 </document>
