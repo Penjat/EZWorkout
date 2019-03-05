@@ -128,8 +128,8 @@
 		0BA30335222E1CB90046FDB9 /* Data Models */ = {
 			isa = PBXGroup;
 			children = (
+				0BA3DB84222DD0F200AC7538 /* ExerciseModel.swift */,
 				0BA30336222E1CDC0046FDB9 /* WorkoutModel.swift */,
-				0BA3DB86222DD0F200AC7538 /* ExerciseModifier.swift */,
 			);
 			path = "Data Models";
 			sourceTree = "<group>";
@@ -137,11 +137,11 @@
 		0BA3DB82222DD0D500AC7538 /* SpeechParsing */ = {
 			isa = PBXGroup;
 			children = (
-				0BA3DB84222DD0F200AC7538 /* ExerciseModel.swift */,
 				0BA3DB9E222DDE2800AC7538 /* SpeechRecognizer */,
 				0BA3DB85222DD0F200AC7538 /* ExerciseRef.swift */,
 				0BA3DB88222DD0F200AC7538 /* ExerciseRefernceProtocol.swift */,
 				0BA3DB87222DD0F200AC7538 /* ExerciseTypes.swift */,
+				0BA3DB86222DD0F200AC7538 /* ExerciseModifier.swift */,
 				0BA3DB83222DD0F200AC7538 /* MuscleGroup.swift */,
 				0BA3DB89222DD0F200AC7538 /* SpeechInputManager */,
 			);
