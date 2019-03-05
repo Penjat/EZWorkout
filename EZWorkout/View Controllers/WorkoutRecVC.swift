@@ -34,12 +34,43 @@ class WorkoutRecVC: UIViewController {
 
   }
   
-  func createExerciseView(){
+  func createExerciseView(exerciseModel: ExerciseModel){
     print("creating exercise view")
     
     let exerciseView = ExerciseView()
-    exerciseView.frame = CGRect(x: 100, y: 100, width: 300, height: 80)
+    exerciseView.setUp(exerciseModel: exerciseModel)
+    
+    //exerciseView!.frame = CGRect(x: 100, y: 100, width: 300, height: 80)
     view.addSubview(exerciseView)
+    
+    exerciseView.translatesAutoresizingMaskIntoConstraints = false
+    exerciseView.topAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
+    exerciseView.heightAnchor.constraint(equalToConstant: 100).isActive = true
+    exerciseView.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
+    exerciseView.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
+    exerciseView.alpha = 0.0
+    
+    
+    
+    let translate = CGAffineTransform(translationX: 0, y: -100)
+    
+    let outAnimation = {
+      UIView.animate(withDuration: 1.0, delay: 2.0, options: [], animations: {
+        exerciseView.transform = CGAffineTransform(translationX: 0, y: -200)
+        exerciseView.alpha = 0.0
+      }, completion: nil)
+      
+    }
+    
+    UIView.animate(withDuration: 1.0, animations: {
+      exerciseView.transform = translate
+      exerciseView.alpha = 1.0
+      
+    }, completion: { (finished: Bool) in
+      outAnimation()
+    })
+    
+    
   }
   
   

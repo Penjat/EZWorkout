@@ -9,9 +9,9 @@ extension WorkoutRecVC : RecognizerReturnDelegate {
     var exerciseModel = speechInputManager.findExercise(input: speech)
     if let exerciseModel = exerciseModel {
       print("found an exercise with the name \(exerciseModel.name)")
-      
+      createExerciseView(exerciseModel: exerciseModel)
     }
-    createExerciseView()
+    
   }
   
   

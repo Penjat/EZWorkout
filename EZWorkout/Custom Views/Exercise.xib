@@ -13,6 +13,9 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ExerciseView" customModule="EZWorkout" customModuleProvider="target">
             <connections>
                 <outlet property="contentView" destination="iN0-l3-epB" id="n3V-Wm-eGb"/>
+                <outlet property="labelExerciseName" destination="WuB-nZ-KPa" id="lxG-sp-0Ea"/>
+                <outlet property="labelExerciseReps" destination="xCo-yM-Ml7" id="wPo-VC-9LT"/>
+                <outlet property="labelExerciseWeight" destination="pwU-MG-5Bn" id="8OC-8c-6IV"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
