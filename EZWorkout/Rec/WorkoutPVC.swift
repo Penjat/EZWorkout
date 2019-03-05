@@ -18,7 +18,7 @@ class WorkoutPVC: UIPageViewController, UIPageViewControllerDataSource {
     
     fileprivate func getViewController(withIdentifier identifier: String) -> UIViewController
     {
-        return UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: identifier)
+        return UIStoryboard(name: "RecWorkoutSB", bundle: nil).instantiateViewController(withIdentifier: identifier)
     }
     
     
