@@ -6,9 +6,13 @@ import Foundation
 class WorkoutRecVC: UIViewController {
   
   @IBOutlet weak var timerLabel: UILabel!
-  
+ 
   let speechInputManager = SpeechInputManager()
+  
   var workoutModel: WorkoutModel?
+  var exercises: [ExerciseModel]?
+  
+  
   var isWorkingOut = false
   
   var speechRecognizer: SpeechRecognizer!

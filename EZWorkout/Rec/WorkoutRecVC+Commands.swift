@@ -8,6 +8,10 @@ extension WorkoutRecVC {
     if !isWorkingOut {
       print("start workout")
       isWorkingOut = true
+      
+      workoutModel = WorkoutModel()
+      exercises = [ExerciseModel]()
+      
       startWorkoutTimer()
     }else{
       print("you are already working out")
