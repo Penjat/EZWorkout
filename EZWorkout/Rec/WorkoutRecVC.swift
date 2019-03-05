@@ -6,8 +6,15 @@ import Foundation
 class WorkoutRecVC: UIViewController {
   
   @IBOutlet weak var timerLabel: UILabel!
-  
+ 
   let speechInputManager = SpeechInputManager()
+  
+  var workoutModel: WorkoutModel?
+  var exercises: [ExerciseModel]?
+  
+  
+  var isWorkingOut = false
+  
   var speechRecognizer: SpeechRecognizer!
   var timer = Timer()
   
@@ -16,8 +23,7 @@ class WorkoutRecVC: UIViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     
-    //start a workout timer
-    timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector:#selector(self.tick) , userInfo: nil, repeats: true)
+    
     
     
     speechRecognizer = SpeechRecognizer(delegate: self)
@@ -29,10 +35,20 @@ class WorkoutRecVC: UIViewController {
                                                     timeStyle: .medium)
   }
   
+  
   @IBAction func recordButtonAction(_ sender: Any) {
     speechRecognizer.toggleRecording()
 
   }
+  
+  func startWorkoutTimer(){
+    //start a workout timer
+    timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector:#selector(self.tick) , userInfo: nil, repeats: true)
+  }
+  func endWorkoutTimer(){
+    timer.invalidate()
+  }
+  
   
   func createExerciseView(exerciseModel: ExerciseModel){
     print("creating exercise view")

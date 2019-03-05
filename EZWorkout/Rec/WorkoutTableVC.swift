@@ -1,23 +1,29 @@
-//
-//  BeginWorkoutStatVC.swift
-//  EZWorkout
-//
-//  Created by Yilei Huang on 2019-03-03.
-//  Copyright © 2019 Spencer Symington. All rights reserved.
-//
 
 import UIKit
 
-class WorkoutTableVC: UIViewController{
-    @IBOutlet weak var workoutTableView: UITableView!
+class WorkoutTableVC: UIViewController, UITableViewDataSource , UITableViewDelegate{
+ 
+  
+  @IBOutlet weak var workoutTableView: UITableView!
+  
+  override func viewDidLoad() {
+    super.viewDidLoad()
+    workoutTableView.dataSource = self
+    workoutTableView.delegate = self
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-    }
-    
-
-    
-
+  }
+  
+  func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    return 5
+  }
+  
+  func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    let cell = tableView.dequeueReusableCell(withIdentifier: "exerciseCell") as! ExerciseCell
+    //TODO set up with exercise data
+    return cell
+  }
+  
+  
+  
+  
 }

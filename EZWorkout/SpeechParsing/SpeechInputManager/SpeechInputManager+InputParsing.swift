@@ -31,12 +31,13 @@ extension SpeechInputManager{
   
   func sanitize(input:String) -> String {
     
-    var output = input.removingWhitespaces()
-    output = output.lowercased()
-    output = output.removingPunctuation()
+    var output = input.lowercased()
     for element in numberDictionary {
       output = output.replacingOccurrences(of: element.key, with: element.value)
     }
+    output = output.removingWhitespaces()
+    output = output.removingPunctuation()
+    
     
     return output
     
