@@ -35,6 +35,7 @@
 		285A56D52228D587003E4AA0 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 285A56D42228D587003E4AA0 /* User.swift */; };
 		285A56DB2229DB2E003E4AA0 /* ExcerciseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 285A56DA2229DB2E003E4AA0 /* ExcerciseTableViewCell.swift */; };
 		28812196222DA4DA007042C1 /* StatVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28812195222DA4DA007042C1 /* StatVC.swift */; };
+		28812199222E0058007042C1 /* WorkoutSB.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 28812198222E0058007042C1 /* WorkoutSB.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -67,6 +68,7 @@
 		285A56D42228D587003E4AA0 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		285A56DA2229DB2E003E4AA0 /* ExcerciseTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExcerciseTableViewCell.swift; sourceTree = "<group>"; };
 		28812195222DA4DA007042C1 /* StatVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatVC.swift; sourceTree = "<group>"; };
+		28812198222E0058007042C1 /* WorkoutSB.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = WorkoutSB.storyboard; sourceTree = "<group>"; };
 		56613A7F23DBE1C05BB336A2 /* Pods_EZWorkout.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EZWorkout.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8872BA68D8FE0B972398D279 /* Pods-EZWorkout.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EZWorkout.debug.xcconfig"; path = "Pods/Target Support Files/Pods-EZWorkout/Pods-EZWorkout.debug.xcconfig"; sourceTree = "<group>"; };
 		FEEC72732415616696171480 /* Pods-EZWorkout.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EZWorkout.release.xcconfig"; path = "Pods/Target Support Files/Pods-EZWorkout/Pods-EZWorkout.release.xcconfig"; sourceTree = "<group>"; };
@@ -189,6 +191,7 @@
 			isa = PBXGroup;
 			children = (
 				28812195222DA4DA007042C1 /* StatVC.swift */,
+				28812198222E0058007042C1 /* WorkoutSB.storyboard */,
 			);
 			path = "stat VC";
 			sourceTree = "<group>";
@@ -274,6 +277,7 @@
 				0BA30329222DE70A0046FDB9 /* Exercise.xib in Resources */,
 				0BCA1AC62228D30100B51C27 /* Assets.xcassets in Resources */,
 				0BCA1AC12228D30100B51C27 /* Main.storyboard in Resources */,
+				28812199222E0058007042C1 /* WorkoutSB.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -116,17 +116,10 @@
         <!--Item-->
         <scene sceneID="abF-bP-DcJ">
             <objects>
-                <viewController id="ujk-EV-TCc" customClass="StatVC" customModule="EZWorkout" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="ujk-EV-TCc" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="VMJ-nx-oRb">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uB7-Sd-hDl" customClass="BarChartView" customModule="Charts">
-                                <rect key="frame" x="67" y="228" width="242" height="304"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.66422420739999999" green="0.66424006219999998" blue="0.66423153879999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            </view>
-                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="exS-9l-Llf"/>
                     </view>
@@ -260,18 +253,36 @@
         <!--Item-->
         <scene sceneID="m2o-yJ-OEZ">
             <objects>
-                <viewController id="EKu-gI-Eru" sceneMemberID="viewController">
+                <viewController id="EKu-gI-Eru" customClass="StatVC" customModule="EZWorkout" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="gbM-1C-fkY">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uB7-Sd-hDl" customClass="BarChartView" customModule="Charts">
+                                <rect key="frame" x="36" y="137" width="275" height="481"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.66422420739999999" green="0.66424006219999998" blue="0.66423153879999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qcd-5Q-pHQ">
+                                <rect key="frame" x="299" y="36" width="32" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="save"/>
+                                <connections>
+                                    <action selector="saveButtonAction:" destination="EKu-gI-Eru" eventType="touchUpInside" id="BBk-vY-KwS"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="KuX-QS-hQR"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item" badgeValue="Stats" id="Wut-46-cu6"/>
+                    <connections>
+                        <outlet property="barChart" destination="uB7-Sd-hDl" id="zTV-yj-4pl"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="724-ii-0HF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="282" y="871"/>
+            <point key="canvasLocation" x="32.799999999999997" y="966.56671664167925"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="hwN-Af-dSG">
@@ -286,9 +297,12 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YUo-UH-YQf">
-                                        <rect key="frame" x="108" y="134" width="46" height="30"/>
+                                        <rect key="frame" x="108" y="121" width="46" height="28"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" title="Button"/>
+                                        <connections>
+                                            <segue destination="J55-0Z-8Fb" kind="show" id="cQF-Gc-18m"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.55634254220000001" green="0.97934550050000002" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -300,7 +314,15 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1wq-HP-SVZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2502" y="224"/>
+            <point key="canvasLocation" x="2501.5999999999999" y="223.53823088455775"/>
+        </scene>
+        <!--WorkoutSB-->
+        <scene sceneID="v17-JL-H3K">
+            <objects>
+                <viewControllerPlaceholder storyboardName="WorkoutSB" id="J55-0Z-8Fb" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ahM-vQ-K03" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3314" y="197"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="w3i-ST-2EP">
