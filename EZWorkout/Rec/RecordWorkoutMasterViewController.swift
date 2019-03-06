@@ -183,7 +183,7 @@ extension RecordWorkoutMasterViewController : RecognizerReturnDelegate {
       }
     }else{
       print("did not understand command")
-      createFeedbackMessage(topMsg: "did not understand command", bottomMsg: speech)
+      createFeedbackMessage(topMsg: "did not understand command", bottomMsg: "\'\(speech)\'")
     }
     
     
