@@ -19,6 +19,7 @@ class StatsTopBarVC: UIViewController {
     buttonArray = [chartButton1,chartButton2,chartButton3,chartButton4,chartButton5]
     
   }
+ 
   func getButtonXPos(atIndex:Int) -> CGFloat{
     
     if let buttonArray = buttonArray , atIndex < buttonArray.count{

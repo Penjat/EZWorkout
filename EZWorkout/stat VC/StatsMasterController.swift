@@ -12,6 +12,8 @@ class StatsMasterController: UIViewController {
   @IBOutlet weak var topBarScrollView: UIScrollView!
   @IBOutlet weak var centerScrollView: UIScrollView!
   
+  
+  
     override func viewDidLoad() {
         super.viewDidLoad()
 
