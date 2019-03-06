@@ -165,11 +165,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rLb-qH-jhi" customClass="BarChartView" customModule="Charts">
-                                <rect key="frame" x="36" y="137" width="275" height="481"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.66422420739999999" green="0.66424006219999998" blue="0.66423153879999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            </view>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dPF-LJ-M0a">
                                 <rect key="frame" x="299" y="36" width="32" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -399,7 +394,19 @@
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Hhf-go-Aia">
                                 <rect key="frame" x="387" y="20" width="367" height="518"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rLb-qH-jhi" customClass="BarChartView" customModule="Charts">
+                                        <rect key="frame" x="8" y="8" width="351" height="502"/>
+                                        <color key="backgroundColor" red="0.66422420739999999" green="0.66424006219999998" blue="0.66423153879999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </view>
+                                </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="rLb-qH-jhi" secondAttribute="bottom" constant="8" id="2II-FJ-8Th"/>
+                                    <constraint firstItem="rLb-qH-jhi" firstAttribute="leading" secondItem="Hhf-go-Aia" secondAttribute="leading" constant="8" id="WWn-eD-tk0"/>
+                                    <constraint firstItem="rLb-qH-jhi" firstAttribute="top" secondItem="Hhf-go-Aia" secondAttribute="top" constant="8" id="dPw-2z-0xc"/>
+                                    <constraint firstAttribute="trailing" secondItem="rLb-qH-jhi" secondAttribute="trailing" constant="8" id="i5O-6f-6Y8"/>
+                                </constraints>
                             </view>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="1" blue="0.061501125429999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -432,6 +439,7 @@
                     </view>
                     <connections>
                         <outlet property="chart1" destination="kpc-bm-iSk" id="PWx-gM-1Co"/>
+                        <outlet property="chart2" destination="rLb-qH-jhi" id="ba6-LN-tV6"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vyC-Xc-4Ev" userLabel="First Responder" sceneMemberID="firstResponder"/>

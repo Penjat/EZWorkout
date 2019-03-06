@@ -5,6 +5,7 @@ import Charts
 
 class StatsCenterVC: UIViewController {
   @IBOutlet weak var chart1: BarChartView!
+  @IBOutlet weak var chart2: BarChartView!
   
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -13,21 +14,33 @@ class StatsCenterVC: UIViewController {
   
   override func viewDidAppear(_ animated: Bool) {
     super.viewDidAppear(animated)
-    setUpTestData(chart: chart1)
+    
+    let chartValues = [20.0, 4.0, 6.0, 3.0, 12.0, 16.0, 4.0, 18.0, 2.0, 4.0, 5.0, 4.0]
+    let chartLabels = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"]
+    
+    setUpTestData(chart: chart1 , chartLabels: chartLabels , chartValues: chartValues)
+    let weight = [20.0, 4.0, 6.0, 3.0, 12.0, 16.0, 4.0]
+    let days = ["mon", "tue", "wed", "thu", "fri","sat","sun"]
+    setUpTestData(chart: chart2 , chartLabels: days , chartValues: weight)
+    
     chart1.animate(xAxisDuration: 2.0, yAxisDuration: 2.0)
+    
+    
+  }
+  func navTo(page:Int){
+    //TODO call animate on the correct page
   }
   
-  func setUpTestData(chart: BarChartView){
+  func setUpTestData(chart: BarChartView , chartLabels:[String] , chartValues:[Double]){
     //chart.delegate = self
     chart.noDataText = "You need to provide data for the chart."
-    let unitsSold = [20.0, 4.0, 6.0, 3.0, 12.0, 16.0, 4.0, 18.0, 2.0, 4.0, 5.0, 4.0]
-    let months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"]
+    
     var dataEntries: [BarChartDataEntry] = []
     
-    for i in 0 ..< months.count{
+    for i in 0 ..< chartLabels.count{
       //            Double(test[i])
       
-      let dataEntry = BarChartDataEntry(x: Double(i), y: Double(unitsSold[i]))
+      let dataEntry = BarChartDataEntry(x: Double(i), y: Double(chartValues[i]))
       dataEntries.append(dataEntry)
     }
     
@@ -36,7 +49,7 @@ class StatsCenterVC: UIViewController {
     //chartDataSet.colors = ChartColorTemplates.joyful()
     chart.data = chartData
     
-    chart.xAxis.valueFormatter = IndexAxisValueFormatter(values: months)
+    chart.xAxis.valueFormatter = IndexAxisValueFormatter(values: chartLabels)
     chart.xAxis.granularity = 1
     chart.chartDescription?.text = ""
     chart.xAxis.labelPosition = .bottom
@@ -53,7 +66,7 @@ class StatsCenterVC: UIViewController {
   
   func setChart(dataPoints: [String], values:[Double])
   {
-    //let test = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
+    
     
     
   }
