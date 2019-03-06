@@ -14,6 +14,12 @@ extension RecordWorkoutMasterViewController : CenterViewProtocol  {
     
     
   }
+  func getExercise(atIndex index:Int) -> ExerciseModel?{
+    if let exercises = exercises {
+      return exercises[index]
+    }
+    return nil
+  }
   
   
   

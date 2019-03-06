@@ -4,8 +4,10 @@ import UIKit
 
 class RecordWorkoutMasterViewController: UIViewController {
   
+  @IBOutlet weak var centerScrollView: UIScrollView!
   @IBOutlet weak var centerContainerView: UIView!
   @IBOutlet weak var timerLabel: UILabel!
+  @IBOutlet weak var feebBackLabel: UILabel!
   
   var centerController: CenterViewController?
   
@@ -29,19 +31,30 @@ class RecordWorkoutMasterViewController: UIViewController {
     speechRecognizer = SpeechRecognizer(delegate: self)
     
     DataManager.dataManager.testSingelton()
+    feebBackLabel.isHidden = true
     
+  }
+  override func viewDidAppear(_ animated: Bool) {
+    super.viewDidAppear(animated)
+    centerScrollView.setContentOffset(CGPoint(x:view.frame.width, y:0), animated: false)
   }
   override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
     if segue.identifier == "toCenterController"{
       centerController = segue.destination as! CenterViewController
       centerController!.delegate = self
+      
+      print("setting the content offset \(view.frame.width)")
+      
     }
   }
   
   @IBAction func recPressedDown(_ sender: Any) {
+    feebBackLabel.isHidden = false
+    feebBackLabel.text = "recording"
     speechRecognizer.startRecognizing()
   }
   @IBAction func recReleasedInside(_ sender: Any) {
+    feebBackLabel.isHidden = true
     speechRecognizer.stopRecognizing()
   }
   @IBAction func recReleasedOutside(_ sender: Any) {
@@ -118,20 +131,23 @@ class RecordWorkoutMasterViewController: UIViewController {
       startDate = Date()
       workoutModel = WorkoutModel()
       exercises = [ExerciseModel]()
-      
+      createFeedbackMessage(topMsg: "Starting Workout", bottomMsg: "")
       startWorkoutTimer()
     }else{
       print("you are already working out")
+      createFeedbackMessage(topMsg: "you are already working out", bottomMsg: "")
     }
   }
   
   func endWorkout(){
     if isWorkingOut {
       print("ending workout")
+      createFeedbackMessage(topMsg: "Ending Workout", bottomMsg: "")
       isWorkingOut = false
       endWorkoutTimer()
     }else{
       print("you need to start a workout first")
+      createFeedbackMessage(topMsg: "you need to start a workout first", bottomMsg: "")
     }
   }
   
@@ -140,19 +156,29 @@ class RecordWorkoutMasterViewController: UIViewController {
 
 extension RecordWorkoutMasterViewController : RecognizerReturnDelegate {
   
+  func recieveInProgress(speech: String) {
+    feebBackLabel.text = speech
+  }
   
   func recieve(speech: String) {
     print("speech recieved: \(speech)")
     
     //if working out, check exercises first
-    if isWorkingOut{
+    
       //process for exercise data
       var exerciseModel = speechInputManager.findExercise(input: speech)
       if let exerciseModel = exerciseModel {
         print("found an exercise with the name \(exerciseModel.name)")
-        createExerciseView(exerciseModel: exerciseModel)
+        if isWorkingOut{
+          createExerciseView(exerciseModel: exerciseModel)
+        }else{
+          //TODO auto start workout
+          createFeedbackMessage(topMsg: "you must start a workout first", bottomMsg: "")
+        }
+        
+        return
       }
-    }
+    
     
     //then check the commands
     let cmd = speechInputManager.findCommand(inputSpeech: speech)
@@ -166,6 +192,7 @@ extension RecordWorkoutMasterViewController : RecognizerReturnDelegate {
       }
     }else{
       print("did not understand command")
+      createFeedbackMessage(topMsg: "did not understand command", bottomMsg: "\'\(speech)\'")
     }
     
     
