@@ -81,6 +81,7 @@ class SpeechRecognizer{
         //self.results = result.bestTranscription.segments
         
         //self.speechLabel.text = bestString.lowercased()
+        self.delegate.recieveInProgress(speech: bestString.lowercased())
       }else if let error = error {
         print(error)
       }

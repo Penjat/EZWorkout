@@ -3,7 +3,8 @@
 import UIKit
 
 class ExerciseCell: UITableViewCell {
-
+  @IBOutlet weak var exerciseView: ExerciseView!
+  
     override func awakeFromNib() {
         super.awakeFromNib()
         
@@ -14,5 +15,8 @@ class ExerciseCell: UITableViewCell {
 
       
     }
+  func setUp(exerciseModel:ExerciseModel){
+    exerciseView.setUp(exerciseModel: exerciseModel)
+  }
 
 }
