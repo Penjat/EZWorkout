@@ -32,7 +32,10 @@ extension CenterViewController : UITableViewDelegate, UITableViewDataSource{
   
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     let cell = tableView.dequeueReusableCell(withIdentifier: "exerciseCell") as! ExerciseCell
-    //TODO set up cell
+    
+    if let delegate = delegate , let exercise =  delegate.getExercise(atIndex:indexPath.row){
+      cell.setUp(exerciseModel:exercise)
+    }
     return cell
   }
   

@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "EZWorkout/Rec/RecordWorkoutMasterViewController.swift"
-            timestampString = "573525644.088078"
+            timestampString = "573534607.6078171"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "57"
-            endingLineNumber = "57"
+            startingLineNumber = "61"
+            endingLineNumber = "61"
             landmarkName = "createExerciseView(exerciseModel:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -26,11 +26,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "EZWorkout/Rec/RecordWorkoutMasterViewController.swift"
-            timestampString = "573525644.088587"
+            timestampString = "573534607.607909"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "55"
-            endingLineNumber = "55"
+            startingLineNumber = "59"
+            endingLineNumber = "59"
             landmarkName = "createExerciseView(exerciseModel:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -42,11 +42,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "EZWorkout/Rec/RecordWorkoutMasterViewController.swift"
-            timestampString = "573525644.08899"
+            timestampString = "573534607.60799"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "60"
-            endingLineNumber = "60"
+            startingLineNumber = "64"
+            endingLineNumber = "64"
             landmarkName = "createExerciseView(exerciseModel:)"
             landmarkType = "7">
          </BreakpointContent>
