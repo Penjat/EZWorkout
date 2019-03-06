@@ -12,6 +12,8 @@ class StatsTopBarVC: UIViewController {
   
   var buttonArray: [UIButton]?
   
+  var delegate: TopBarDelegate?
+  
   override func viewDidLoad() {
     super.viewDidLoad()
     buttonArray = [chartButton1,chartButton2,chartButton3,chartButton4,chartButton5]
@@ -29,6 +31,11 @@ class StatsTopBarVC: UIViewController {
   @IBAction func navButtonPressed(_ sender: UIButton) {
     
     print("the buttons position is \(sender.tag)")
+    if let delegate = delegate {
+      delegate.scrollTo(pageNum: sender.tag)
+    }else{
+      print("error: delegate not set")
+    }
   }
   
   

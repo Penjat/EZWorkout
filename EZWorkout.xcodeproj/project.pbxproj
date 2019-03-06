@@ -41,6 +41,8 @@
 		0BB1CEC422304BC700F386C3 /* StatsCenterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BB1CEC322304BC700F386C3 /* StatsCenterVC.swift */; };
 		0BB1CEC622304BD800F386C3 /* StatsTopBarVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BB1CEC522304BD800F386C3 /* StatsTopBarVC.swift */; };
 		0BB1CEC8223060AA00F386C3 /* StatsMasterController+ScrollViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BB1CEC7223060AA00F386C3 /* StatsMasterController+ScrollViewDelegate.swift */; };
+		0BB1CECA2230690900F386C3 /* TopBarDelegateProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BB1CEC92230690900F386C3 /* TopBarDelegateProtocol.swift */; };
+		0BB1CECC223069B900F386C3 /* StatsMasterController+TopBarDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BB1CECB223069B900F386C3 /* StatsMasterController+TopBarDelegate.swift */; };
 		0BCA1ABC2228D30000B51C27 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BCA1ABB2228D30000B51C27 /* AppDelegate.swift */; };
 		0BCA1AC12228D30100B51C27 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0BCA1ABF2228D30100B51C27 /* Main.storyboard */; };
 		0BCA1AC42228D30100B51C27 /* EZWorkout.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0BCA1AC22228D30100B51C27 /* EZWorkout.xcdatamodeld */; };
@@ -96,6 +98,8 @@
 		0BB1CEC322304BC700F386C3 /* StatsCenterVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatsCenterVC.swift; sourceTree = "<group>"; };
 		0BB1CEC522304BD800F386C3 /* StatsTopBarVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatsTopBarVC.swift; sourceTree = "<group>"; };
 		0BB1CEC7223060AA00F386C3 /* StatsMasterController+ScrollViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "StatsMasterController+ScrollViewDelegate.swift"; sourceTree = "<group>"; };
+		0BB1CEC92230690900F386C3 /* TopBarDelegateProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopBarDelegateProtocol.swift; sourceTree = "<group>"; };
+		0BB1CECB223069B900F386C3 /* StatsMasterController+TopBarDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "StatsMasterController+TopBarDelegate.swift"; sourceTree = "<group>"; };
 		0BCA1AB82228D30000B51C27 /* EZWorkout.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EZWorkout.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0BCA1ABB2228D30000B51C27 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0BCA1AC02228D30100B51C27 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -270,8 +274,10 @@
 				288121E1222F5598007042C1 /* ScrollStatsView.swift */,
 				0BB1CEC12230496400F386C3 /* StatsMasterController.swift */,
 				0BB1CEC7223060AA00F386C3 /* StatsMasterController+ScrollViewDelegate.swift */,
+				0BB1CECB223069B900F386C3 /* StatsMasterController+TopBarDelegate.swift */,
 				0BB1CEC322304BC700F386C3 /* StatsCenterVC.swift */,
 				0BB1CEC522304BD800F386C3 /* StatsTopBarVC.swift */,
+				0BB1CEC92230690900F386C3 /* TopBarDelegateProtocol.swift */,
 			);
 			path = "stat VC";
 			sourceTree = "<group>";
@@ -451,6 +457,7 @@
 				0BA3DB99222DD2FC00AC7538 /* SpeechRecognizer.swift in Sources */,
 				288121EF222F7B85007042C1 /* WorkoutRealm.swift in Sources */,
 				0BB1CEC8223060AA00F386C3 /* StatsMasterController+ScrollViewDelegate.swift in Sources */,
+				0BB1CECA2230690900F386C3 /* TopBarDelegateProtocol.swift in Sources */,
 				0BA3DB93222DD0F200AC7538 /* ExerciseRefernceProtocol.swift in Sources */,
 				0BB1CEC622304BD800F386C3 /* StatsTopBarVC.swift in Sources */,
 				0BA3033F222ED8050046FDB9 /* RecordWorkoutMasterViewController.swift in Sources */,
@@ -462,6 +469,7 @@
 				0BA3DB92222DD0F200AC7538 /* ExerciseTypes.swift in Sources */,
 				0B5013F2222F4CDC004A64EC /* DataManager.swift in Sources */,
 				0BA3DB90222DD0F200AC7538 /* ExerciseRef.swift in Sources */,
+				0BB1CECC223069B900F386C3 /* StatsMasterController+TopBarDelegate.swift in Sources */,
 				0BB1CEC22230496400F386C3 /* StatsMasterController.swift in Sources */,
 				0BA30339222E1E220046FDB9 /* SpeechInputManager+Commands.swift in Sources */,
 				0B5013EC222F25F7004A64EC /* CenterViewController.swift in Sources */,

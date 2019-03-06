@@ -11,10 +11,8 @@ extension StatsMasterController : UIScrollViewDelegate{
     
     //find out what page the scroll view is on
     
-    let page =  Int(centerScrollView.contentOffset.x / centerScrollView.frame.size.width)
-    
-    
-    print("page = \(page)")
+    let pageFloat =  round(centerScrollView.contentOffset.x / centerScrollView.frame.size.width)
+    let page = Int(pageFloat)
     if page != curPage {
       curPage = page
       setStatBarPos(pageNum: curPage)

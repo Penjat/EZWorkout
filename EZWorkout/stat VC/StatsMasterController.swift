@@ -21,6 +21,7 @@ class StatsMasterController: UIViewController {
     
     super.viewDidAppear(animated)
     centerScrollView.delegate = self
+    topBarController.delegate = self
     
     setStatBarPos(pageNum: curPage)
   }
@@ -40,9 +41,15 @@ class StatsMasterController: UIViewController {
   func setStatBarPos(pageNum:Int){
     
     //get the button for the current page and make sure it is at the center of the screen
-    var offest = -view.frame.width/2  + topBarController.getButtonXPos(atIndex: pageNum)
+    let offest = -view.frame.width/2  + topBarController.getButtonXPos(atIndex: pageNum)
     
     topBarScrollView.setContentOffset(CGPoint(x: offest, y: 0), animated: true)
+  }
+  
+  func setCenterPos(pageNum:Int){
+    
+    let offset = view.frame.width * CGFloat(pageNum)
+    centerScrollView.setContentOffset(CGPoint(x: offset, y: 0), animated: true)
   }
   
   
