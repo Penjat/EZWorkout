@@ -10,6 +10,7 @@ import UIKit
 import RealmSwift
 
 class UserRealm: Object {
+    static var curUser = UserRealm()
     @objc dynamic var name: String?
     @objc dynamic var gender: String?
     @objc dynamic var birthday: Date?
