@@ -28,10 +28,13 @@ class RecordWorkoutMasterViewController: UIViewController {
     
     speechRecognizer = SpeechRecognizer(delegate: self)
     
+    DataManager.dataManager.testSingelton()
+    
   }
   override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
     if segue.identifier == "toCenterController"{
       centerController = segue.destination as! CenterViewController
+      centerController!.delegate = self
     }
   }
   
@@ -42,12 +45,19 @@ class RecordWorkoutMasterViewController: UIViewController {
     speechRecognizer.stopRecognizing()
   }
   @IBAction func recReleasedOutside(_ sender: Any) {
-    speechRecognizer.stopRecognizing()
+    //speechRecognizer.stopRecognizing()
   }
   
   
   func createExerciseView(exerciseModel: ExerciseModel){
+    
     print("creating exercise view")
+    
+    //add to exercise list
+    exercises?.append(exerciseModel)
+    //reload table
+    centerController?.reloadTable()
+    
     
     let exerciseView = ExerciseView()
     exerciseView.setUp(exerciseModel: exerciseModel)
