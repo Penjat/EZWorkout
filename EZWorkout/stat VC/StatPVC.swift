@@ -18,7 +18,7 @@ class StatPVC: UIPageViewController, UIPageViewControllerDataSource {
     
     fileprivate func getViewController(withIdentifier identifier: String) -> UIViewController
     {
-        return UIStoryboard(name: "RecWorkoutSB", bundle: nil).instantiateViewController(withIdentifier: identifier)
+        return UIStoryboard(name: "StatsSB", bundle: nil).instantiateViewController(withIdentifier: identifier)
     }
     
     
@@ -73,10 +73,6 @@ class StatPVC: UIPageViewController, UIPageViewControllerDataSource {
         guard pages.count > nextIndex else { return nil         }
         
         return pages[nextIndex]
-    }
-    private func getViewController(indentifier: String) -> UIViewController {
-        return UIStoryboard(name: "Main", bundle: nil) .
-            instantiateViewController(withIdentifier: "\(indentifier)")
     }
     
 }
