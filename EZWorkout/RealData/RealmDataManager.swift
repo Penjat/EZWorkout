@@ -11,35 +11,53 @@ import UIKit
 import RealmSwift
 
 
+class RealmDataMangers {
+    static func createExcercise(calory:Int, type:String, name:String, modified:String, reps:Int)->ExcerciseRealm{
+        return ExcerciseRealm(value:[calory,type,name,modified,reps])
+    }
+    static func save(object:Object, realm:Realm){
+        try! realm.write {
+            realm.add(object)
+        }
+        print(Realm.Configuration.defaultConfiguration.fileURL!)
+    }
+    static func createWorkout(endTime:Date, startTime:Date, location: String?, excerciseArray: [ExcerciseRealm])->WorkoutRealm{
+       // let realm = try! Realm()
+        return WorkoutRealm(value:[endTime,startTime,location,excerciseArray])
+    }
+    
+    static func createUserStat(date:Date, weight:Int)->userStatRealm{
+        return userStatRealm(value:[date,weight])
+    }
+    
+    static func createUser(name:String,gender:String,Date:Date,userStatArray:[userStatRealm],workoutArray:[WorkoutRealm])->UserRealm{
+        return UserRealm(value:[name,gender,Date,userStatArray,workoutArray])
+    }
+    
+    
+    static func retrieveUser(){
+        let realm = try! Realm()
+        let results = realm.objects(UserRealm.self)
+        UserRealm.curUser = results.last!
+        
+    }
+    
+    static func retrieveExcercise(workoutNum:Int,excersierNum:Int,realm:Realm)->ExcerciseRealm{
+        let results = realm.objects(UserRealm.self).first!
+        return results.workoutArray[workoutNum].excerciseArray[excersierNum]
+    }
+   // static func save()
+}
+
+
 class RealmDataManger: UIViewController{
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
         
-        var config = Realm.Configuration()
-        config.schemaVersion = 20
-        let realm = try! Realm(configuration: config)
-        
-       
-        let firstExcercise = ExcerciseRealm(value:[20,"BodyWeight","pushUp",5])
-        let firstWorkout = WorkoutRealm(value:[Date(),Date(),"Vancouver",[firstExcercise]])
-        let firstUserStat = userStatRealm(value:[Date(),120])
-        let firstUser = UserRealm(value:["Josh","Male",Date(),[firstUserStat],[firstWorkout]])
-        
-        
-        try! realm.write {
-            realm.add(firstUser)
-        }
-         print(Realm.Configuration.defaultConfiguration.fileURL)
-//        DispatchQueue(label: "background").async {
-//            autoreleasepool {
-//                let realm = try! Realm()
-//                let theDog = realm.objects(Cats.self).filter("name == 'Josh'").first
-//                try! realm.write {
-//                    theDog!.name = "jack"
-//                }
-//            }
-//        }
+        RealmDataMangers.retrieveUser()
+         let realm = try! Realm()
+        print(RealmDataMangers.retrieveExcercise(workoutNum: 0, excersierNum: 0, realm: realm))
+        print(UserRealm.curUser.workoutArray[0].excerciseArray[0])
         
     }
     
