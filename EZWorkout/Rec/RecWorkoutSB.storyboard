@@ -117,6 +117,7 @@
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="centerContainerView" destination="GuP-wI-WAn" id="9oE-87-mxC"/>
+                        <outlet property="centerScrollView" destination="sKg-ac-tKm" id="AOp-lB-eor"/>
                         <outlet property="feebBackLabel" destination="uPl-eA-GDb" id="IW5-9A-cRu"/>
                         <outlet property="timerLabel" destination="LRs-Ia-OVI" id="bIn-qc-smz"/>
                     </connections>
@@ -135,7 +136,32 @@
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qCH-99-Yc2">
                                 <rect key="frame" x="20" y="0.0" width="361.5" height="410"/>
+                                <subviews>
+                                    <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dqb-Eg-MwZ">
+                                        <rect key="frame" x="0.0" y="0.0" width="361.5" height="410"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LNi-CZ-r6C" customClass="HelpView" customModule="EZWorkout" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="361.5" height="820"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </view>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="LNi-CZ-r6C" firstAttribute="top" secondItem="dqb-Eg-MwZ" secondAttribute="top" id="Eud-Gu-GNL"/>
+                                            <constraint firstAttribute="trailing" secondItem="LNi-CZ-r6C" secondAttribute="trailing" id="HkM-cj-wW7"/>
+                                            <constraint firstItem="LNi-CZ-r6C" firstAttribute="leading" secondItem="dqb-Eg-MwZ" secondAttribute="leading" id="LyS-Wm-Kjr"/>
+                                            <constraint firstItem="LNi-CZ-r6C" firstAttribute="height" secondItem="dqb-Eg-MwZ" secondAttribute="height" multiplier="2" id="bLZ-Dv-raa"/>
+                                            <constraint firstAttribute="bottom" secondItem="LNi-CZ-r6C" secondAttribute="bottom" id="yHX-gv-F4A"/>
+                                            <constraint firstItem="LNi-CZ-r6C" firstAttribute="width" secondItem="dqb-Eg-MwZ" secondAttribute="width" id="z1p-bo-goQ"/>
+                                        </constraints>
+                                    </scrollView>
+                                </subviews>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="dqb-Eg-MwZ" secondAttribute="bottom" id="3FH-pI-cyX"/>
+                                    <constraint firstItem="dqb-Eg-MwZ" firstAttribute="leading" secondItem="qCH-99-Yc2" secondAttribute="leading" id="67w-ur-Y2Y"/>
+                                    <constraint firstItem="dqb-Eg-MwZ" firstAttribute="top" secondItem="qCH-99-Yc2" secondAttribute="top" id="Yew-y9-3fJ"/>
+                                    <constraint firstAttribute="trailing" secondItem="dqb-Eg-MwZ" secondAttribute="trailing" id="bT8-Nm-oa7"/>
+                                </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hg6-aN-6eO">
                                 <rect key="frame" x="381.5" y="0.0" width="362" height="410"/>

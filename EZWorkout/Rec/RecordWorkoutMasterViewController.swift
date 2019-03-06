@@ -4,6 +4,7 @@ import UIKit
 
 class RecordWorkoutMasterViewController: UIViewController {
   
+  @IBOutlet weak var centerScrollView: UIScrollView!
   @IBOutlet weak var centerContainerView: UIView!
   @IBOutlet weak var timerLabel: UILabel!
   @IBOutlet weak var feebBackLabel: UILabel!
@@ -31,11 +32,19 @@ class RecordWorkoutMasterViewController: UIViewController {
     
     DataManager.dataManager.testSingelton()
     feebBackLabel.isHidden = true
+    
+  }
+  override func viewDidAppear(_ animated: Bool) {
+    super.viewDidAppear(animated)
+    centerScrollView.setContentOffset(CGPoint(x:view.frame.width, y:0), animated: false)
   }
   override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
     if segue.identifier == "toCenterController"{
       centerController = segue.destination as! CenterViewController
       centerController!.delegate = self
+      
+      print("setting the content offset \(view.frame.width)")
+      
     }
   }
   
