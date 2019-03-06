@@ -45,20 +45,20 @@ class StatVC: UIViewController {
     
     func setChart(dataPoints: [String], values:[Double])
     {
-        let test = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
+        //let test = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
 
         var dataEntries: [BarChartDataEntry] = []
 
         for i in 0..<months.count
 //            Double(test[i])
         {
-            let dataEntry = BarChartDataEntry(x: Double(test[i]), y: Double(values[i]))
+            let dataEntry = BarChartDataEntry(x: Double(i), y: Double(values[i]))
             dataEntries.append(dataEntry)
         }
 
         let chartDataSet = BarChartDataSet(values: dataEntries, label: "Visitor count")
         let chartData = BarChartData(dataSet: chartDataSet)
-        chartDataSet.colors = ChartColorTemplates.joyful()
+        //chartDataSet.colors = ChartColorTemplates.joyful()
         barChart.data = chartData
     }
 
