@@ -8,10 +8,10 @@ extension SpeechInputManager{
     let cleanInput = sanitize(input: inputSpeech)
     print("clean input = \(cleanInput)")
     //TODO expand with more commands
-    if cleanInput.contains("startworkout"){
+    if cleanInput.contains("startwork"){
       return SpeechCommand.StartWorkout
     }
-    if cleanInput.contains("endworkout") || cleanInput.contains("finishworkout") {
+    if cleanInput.contains("endwork") || cleanInput.contains("finishworkout") {
       return SpeechCommand.EndWorkout
     }
     return nil

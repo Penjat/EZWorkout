@@ -8,6 +8,7 @@ import Foundation
 struct ExerciseModel{
   
   
+  
   let exerciseRef: ExerciseRefernce?
   let modifiers: [ExerciseModifier]?
   var reps: Int? = nil
