@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ScrollStatsView" customModule="EZWorkout" customModuleProvider="target">
+            <connections>
+                <outlet property="scrollView" destination="iN0-l3-epB" id="zab-ea-0Ao"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="764" height="318"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kAd-r4-pU6">
+                    <rect key="frame" x="463" y="144" width="46" height="30"/>
+                    <state key="normal" title="Button"/>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fvg-og-gOh">
+                    <rect key="frame" x="387" y="144" width="46" height="30"/>
+                    <state key="normal" title="Button"/>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1m2-Pw-H2I">
+                    <rect key="frame" x="30" y="144" width="46" height="30"/>
+                    <state key="normal" title="Button"/>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0bj-Oh-Afo">
+                    <rect key="frame" x="548" y="144" width="46" height="30"/>
+                    <state key="normal" title="Button"/>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RYR-ag-gwT">
+                    <rect key="frame" x="698" y="144" width="46" height="30"/>
+                    <state key="normal" title="Button"/>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zrb-JC-gVk">
+                    <rect key="frame" x="632" y="144" width="46" height="30"/>
+                    <state key="normal" title="Button"/>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="1" green="0.57810515169999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="1m2-Pw-H2I" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="3o4-z1-hoO"/>
+                <constraint firstItem="kAd-r4-pU6" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="DxX-rc-1Gs"/>
+                <constraint firstItem="kAd-r4-pU6" firstAttribute="leading" secondItem="fvg-og-gOh" secondAttribute="trailing" constant="30" id="WDU-Xq-Z6V"/>
+                <constraint firstItem="RYR-ag-gwT" firstAttribute="leading" secondItem="Zrb-JC-gVk" secondAttribute="trailing" constant="20" id="b7S-w8-M3p"/>
+                <constraint firstItem="1m2-Pw-H2I" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="30" id="c37-Fq-7Ht"/>
+                <constraint firstItem="Zrb-JC-gVk" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="cdg-Vw-tfg"/>
+                <constraint firstItem="RYR-ag-gwT" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="kqs-a0-Tr8"/>
+                <constraint firstItem="0bj-Oh-Afo" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="lGh-VW-xvz"/>
+                <constraint firstItem="Zrb-JC-gVk" firstAttribute="leading" secondItem="0bj-Oh-Afo" secondAttribute="trailing" constant="38" id="nm9-Df-552"/>
+                <constraint firstItem="fvg-og-gOh" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="pnR-aj-OPQ"/>
+                <constraint firstItem="RYR-ag-gwT" firstAttribute="trailing" secondItem="iN0-l3-epB" secondAttribute="trailingMargin" id="wzs-Vl-V47"/>
+                <constraint firstItem="0bj-Oh-Afo" firstAttribute="leading" secondItem="kAd-r4-pU6" secondAttribute="trailing" constant="39" id="yBf-QI-Oge"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <point key="canvasLocation" x="387.19999999999999" y="246.47676161919043"/>
+        </view>
+    </objects>
+</document>
