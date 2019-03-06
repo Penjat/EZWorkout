@@ -37,6 +37,10 @@
 		0BA3DB97222DD0F200AC7538 /* SpeechInputManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BA3DB8D222DD0F200AC7538 /* SpeechInputManager.swift */; };
 		0BA3DB99222DD2FC00AC7538 /* SpeechRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BA3DB98222DD2FC00AC7538 /* SpeechRecognizer.swift */; };
 		0BA3DB9B222DD3ED00AC7538 /* RecognizerReturnDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BA3DB9A222DD3ED00AC7538 /* RecognizerReturnDelegate.swift */; };
+		0BB1CEC22230496400F386C3 /* StatsMasterController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BB1CEC12230496400F386C3 /* StatsMasterController.swift */; };
+		0BB1CEC422304BC700F386C3 /* StatsCenterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BB1CEC322304BC700F386C3 /* StatsCenterVC.swift */; };
+		0BB1CEC622304BD800F386C3 /* StatsTopBarVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BB1CEC522304BD800F386C3 /* StatsTopBarVC.swift */; };
+		0BB1CEC8223060AA00F386C3 /* StatsMasterController+ScrollViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BB1CEC7223060AA00F386C3 /* StatsMasterController+ScrollViewDelegate.swift */; };
 		0BCA1ABC2228D30000B51C27 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BCA1ABB2228D30000B51C27 /* AppDelegate.swift */; };
 		0BCA1AC12228D30100B51C27 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0BCA1ABF2228D30100B51C27 /* Main.storyboard */; };
 		0BCA1AC42228D30100B51C27 /* EZWorkout.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0BCA1AC22228D30100B51C27 /* EZWorkout.xcdatamodeld */; };
@@ -88,6 +92,10 @@
 		0BA3DB8D222DD0F200AC7538 /* SpeechInputManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpeechInputManager.swift; sourceTree = "<group>"; };
 		0BA3DB98222DD2FC00AC7538 /* SpeechRecognizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeechRecognizer.swift; sourceTree = "<group>"; };
 		0BA3DB9A222DD3ED00AC7538 /* RecognizerReturnDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecognizerReturnDelegate.swift; sourceTree = "<group>"; };
+		0BB1CEC12230496400F386C3 /* StatsMasterController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatsMasterController.swift; sourceTree = "<group>"; };
+		0BB1CEC322304BC700F386C3 /* StatsCenterVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatsCenterVC.swift; sourceTree = "<group>"; };
+		0BB1CEC522304BD800F386C3 /* StatsTopBarVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatsTopBarVC.swift; sourceTree = "<group>"; };
+		0BB1CEC7223060AA00F386C3 /* StatsMasterController+ScrollViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "StatsMasterController+ScrollViewDelegate.swift"; sourceTree = "<group>"; };
 		0BCA1AB82228D30000B51C27 /* EZWorkout.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EZWorkout.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0BCA1ABB2228D30000B51C27 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0BCA1AC02228D30100B51C27 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -260,6 +268,10 @@
 				0BA30330222E09870046FDB9 /* StatsSB.storyboard */,
 				288121DF222F5548007042C1 /* ScrollStats.xib */,
 				288121E1222F5598007042C1 /* ScrollStatsView.swift */,
+				0BB1CEC12230496400F386C3 /* StatsMasterController.swift */,
+				0BB1CEC7223060AA00F386C3 /* StatsMasterController+ScrollViewDelegate.swift */,
+				0BB1CEC322304BC700F386C3 /* StatsCenterVC.swift */,
+				0BB1CEC522304BD800F386C3 /* StatsTopBarVC.swift */,
 			);
 			path = "stat VC";
 			sourceTree = "<group>";
@@ -426,7 +438,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				288121E2222F5598007042C1 /* ScrollStatsView.swift in Sources */,
-				28083423222CCB0D001D0A64 /* WorkoutRecVC.swift in Sources */,
 				0B5013F0222F2F9F004A64EC /* RecordWorkoutMasterViewController+ContainerFunctions.swift in Sources */,
 				0B5013EE222F2DB2004A64EC /* CenterViewProtocol.swift in Sources */,
 				288121DE222F53DC007042C1 /* StatPVC.swift in Sources */,
@@ -438,10 +449,10 @@
 				0BA3032B222DE8EA0046FDB9 /* ExerciseView.swift in Sources */,
 				0BCA1AC42228D30100B51C27 /* EZWorkout.xcdatamodeld in Sources */,
 				0BA3DB99222DD2FC00AC7538 /* SpeechRecognizer.swift in Sources */,
-				28083421222CCA2F001D0A64 /* WorkoutPVC.swift in Sources */,
 				288121EF222F7B85007042C1 /* WorkoutRealm.swift in Sources */,
-				0BA3033B222E20D10046FDB9 /* WorkoutRecVC+Commands.swift in Sources */,
+				0BB1CEC8223060AA00F386C3 /* StatsMasterController+ScrollViewDelegate.swift in Sources */,
 				0BA3DB93222DD0F200AC7538 /* ExerciseRefernceProtocol.swift in Sources */,
+				0BB1CEC622304BD800F386C3 /* StatsTopBarVC.swift in Sources */,
 				0BA3033F222ED8050046FDB9 /* RecordWorkoutMasterViewController.swift in Sources */,
 				0BA3033D222E28290046FDB9 /* ExerciseCell.swift in Sources */,
 				0BA30347222EDE2C0046FDB9 /* HelpView.swift in Sources */,
@@ -451,6 +462,7 @@
 				0BA3DB92222DD0F200AC7538 /* ExerciseTypes.swift in Sources */,
 				0B5013F2222F4CDC004A64EC /* DataManager.swift in Sources */,
 				0BA3DB90222DD0F200AC7538 /* ExerciseRef.swift in Sources */,
+				0BB1CEC22230496400F386C3 /* StatsMasterController.swift in Sources */,
 				0BA30339222E1E220046FDB9 /* SpeechInputManager+Commands.swift in Sources */,
 				0B5013EC222F25F7004A64EC /* CenterViewController.swift in Sources */,
 				0B5013F6222F673E004A64EC /* FeedbackMsgView.swift in Sources */,
@@ -460,6 +472,7 @@
 				28812196222DA4DA007042C1 /* StatVC.swift in Sources */,
 				0BA3DB8E222DD0F200AC7538 /* MuscleGroup.swift in Sources */,
 				0BA3DB97222DD0F200AC7538 /* SpeechInputManager.swift in Sources */,
+				0BB1CEC422304BC700F386C3 /* StatsCenterVC.swift in Sources */,
 				0BCA1ABC2228D30000B51C27 /* AppDelegate.swift in Sources */,
 				0BA3DB91222DD0F200AC7538 /* ExerciseModifier.swift in Sources */,
 				288121ED222F7B15007042C1 /* UserRealm.swift in Sources */,
