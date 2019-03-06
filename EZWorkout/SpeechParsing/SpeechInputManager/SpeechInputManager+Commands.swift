@@ -4,6 +4,7 @@ import Foundation
 extension SpeechInputManager{
   
   //TODO may need to make command delegate
+  //TODO pass in some status info, if someone says workout it should probably start a workout
   func findCommand(inputSpeech:String) -> SpeechCommand?{
     let cleanInput = sanitize(input: inputSpeech)
     print("clean input = \(cleanInput)")
@@ -11,7 +12,7 @@ extension SpeechInputManager{
     if cleanInput.contains("startwork"){
       return SpeechCommand.StartWorkout
     }
-    if cleanInput.contains("endwork") || cleanInput.contains("finishworkout") {
+    if (cleanInput.contains("endwork") || cleanInput.contains("andwork") || cleanInput.contains("finishworkout")) {
       return SpeechCommand.EndWorkout
     }
     return nil
