@@ -19,7 +19,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
   func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
     // Override point for customization after application launch.
     let config = Realm.Configuration(
-        schemaVersion: 21,
+        schemaVersion: 22,
         migrationBlock: { migration, oldSchemaVersion in
             if (oldSchemaVersion < 1) {
                 // Nothing to do!
