@@ -26,7 +26,7 @@ class HistoryViewController: UIViewController {
   
   @IBOutlet weak var monthYearPicker: UIPickerView!
   var years = ["2017","2018","2019"]
-  let months = ["January","February"]
+  let months = ["January","Febrary","March","April","May","June","July","August","September","October","November","December"]
   
   override func viewDidLoad() {
     super.viewDidLoad()
