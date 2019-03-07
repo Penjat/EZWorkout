@@ -18,4 +18,12 @@ class UserRealm: Object {
     let userStatArray = List<userStatRealm>()
     let workoutArray = List<WorkoutRealm>()
   
+  func getAllExercises() -> [ExcerciseRealm]{
+    
+    var exercises = [ExcerciseRealm]()
+    for workout in workoutArray{
+      exercises = exercises + workout.excerciseArray
+    }
+    return exercises
+  }
 }
