@@ -35,9 +35,16 @@ class WorkoutTableManager : NSObject , UITableViewDelegate , UITableViewDataSour
     
     return cell
   }
+  func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    print("seleceted workout \(indexPath.row)")
+    
+    delegate.workoutPressed(atIndex:indexPath)
+    
+  }
 }
 
 protocol WorkoutTableManagerDelegate{
   func getWorkouts() -> [WorkoutRealm]
   func getWorkout(indexPath:IndexPath)-> WorkoutRealm?
+  func workoutPressed(atIndex index:IndexPath)
 }

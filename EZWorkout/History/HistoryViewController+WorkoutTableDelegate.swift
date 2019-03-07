@@ -21,4 +21,15 @@ extension HistoryViewController : WorkoutTableManagerDelegate{
     return nil
     
   }
+  
+  func workoutPressed(atIndex index:IndexPath){
+    if let workouts = workouts  {
+      
+      curWorkout = workouts[index.row]
+      //TODO check if different
+      exercises = workouts[index.row].excerciseArray.map{$0}
+      exerciseTableView.reloadData()
+    }
+    
+  }
 }
