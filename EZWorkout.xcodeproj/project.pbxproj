@@ -176,12 +176,7 @@
 				0BF84E8B2230C2A900DFC6B0 /* HistoryViewController+ExerciseTableDelegate.swift */,
 				0BF84E8122309F8B00DFC6B0 /* ExerciseTableManager.swift */,
 				0BF84E8322309FA600DFC6B0 /* WorkoutTableManager.swift */,
-				0BF84E852230A32D00DFC6B0 /* ExerciseSetCell.swift */,
-				0BF84E872230A55E00DFC6B0 /* WorkoutCell.swift */,
-				0BF84E8D2230EC3D00DFC6B0 /* ExerciseType.xib */,
-				0BF84E8F2230ED2700DFC6B0 /* ExerciseTypeView.swift */,
-				0BF84E912231B0E900DFC6B0 /* ExerciseSet.xib */,
-				0BF84E932231B16A00DFC6B0 /* ExerciseSetView.swift */,
+				0BF84E952231B8BA00DFC6B0 /* Cells and Xibs */,
 			);
 			path = History;
 			sourceTree = "<group>";
@@ -269,6 +264,19 @@
 				0BCA1AC22228D30100B51C27 /* EZWorkout.xcdatamodeld */,
 			);
 			path = EZWorkout;
+			sourceTree = "<group>";
+		};
+		0BF84E952231B8BA00DFC6B0 /* Cells and Xibs */ = {
+			isa = PBXGroup;
+			children = (
+				0BF84E852230A32D00DFC6B0 /* ExerciseSetCell.swift */,
+				0BF84E872230A55E00DFC6B0 /* WorkoutCell.swift */,
+				0BF84E8D2230EC3D00DFC6B0 /* ExerciseType.xib */,
+				0BF84E8F2230ED2700DFC6B0 /* ExerciseTypeView.swift */,
+				0BF84E912231B0E900DFC6B0 /* ExerciseSet.xib */,
+				0BF84E932231B16A00DFC6B0 /* ExerciseSetView.swift */,
+			);
+			path = "Cells and Xibs";
 			sourceTree = "<group>";
 		};
 		285A56D82228E358003E4AA0 /* Rec */ = {
