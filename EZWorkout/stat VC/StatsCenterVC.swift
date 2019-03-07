@@ -14,6 +14,10 @@ class StatsCenterVC: UIViewController {
   
   override func viewDidAppear(_ animated: Bool) {
     super.viewDidAppear(animated)
+    RealmDataMangers.retrieveUser()
+    print("the current user has \(UserRealm.curUser.workoutArray.count) workouts")
+    
+    print("the current user has done  \(UserRealm.curUser.getAllExercises().filter({$0.name == "pushup"}).count) bench presses")
     
     let chartValues = [20.0, 4.0, 6.0, 3.0, 12.0, 16.0, 4.0, 18.0, 2.0, 4.0, 5.0, 4.0]
     let chartLabels = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"]
