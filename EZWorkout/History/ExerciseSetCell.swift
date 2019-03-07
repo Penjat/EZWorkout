@@ -2,6 +2,7 @@
 import UIKit
 
 class ExerciseSetCell: UITableViewCell {
+  @IBOutlet weak var exerciseSetView: ExerciseSetView!
   
   override func awakeFromNib() {
     super.awakeFromNib()
@@ -12,6 +13,9 @@ class ExerciseSetCell: UITableViewCell {
     super.setSelected(selected, animated: animated)
     
     
+  }
+  func setUp(intValue:Int, numReps:Int){
+    exerciseSetView.setUp(intValue: intValue, numReps: numReps)
   }
   
 }

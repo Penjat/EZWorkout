@@ -1,10 +1,4 @@
-//
-//  Excercise.swift
-//  EZWorkout
-//
-//  Created by Yilei Huang on 2019-03-05.
-//  Copyright © 2019 Spencer Symington. All rights reserved.
-//
+
 
 import UIKit
 import RealmSwift

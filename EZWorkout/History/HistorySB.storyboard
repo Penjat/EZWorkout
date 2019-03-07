@@ -50,18 +50,33 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="q77-n3-S6b">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="q77-n3-S6b">
                                 <rect key="frame" x="97" y="28" width="270" height="631"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" white="1" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="setCell" id="oyZ-Z6-ljP" customClass="ExerciseSetCell" customModule="EZWorkout" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="270" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="oyZ-Z6-ljP" id="7ip-By-ILw">
-                                            <rect key="frame" x="0.0" y="0.0" width="270" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="270" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MXK-rW-vVH" customClass="ExerciseSetView" customModule="EZWorkout" customModuleProvider="target">
+                                                    <rect key="frame" x="0.0" y="0.0" width="270" height="43.5"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </view>
+                                            </subviews>
                                             <color key="backgroundColor" red="1" green="0.86091302579999995" blue="0.026286063320000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            <constraints>
+                                                <constraint firstItem="MXK-rW-vVH" firstAttribute="leading" secondItem="7ip-By-ILw" secondAttribute="leading" id="6sW-MZ-2Be"/>
+                                                <constraint firstItem="MXK-rW-vVH" firstAttribute="top" secondItem="7ip-By-ILw" secondAttribute="top" id="DAz-0W-RmF"/>
+                                                <constraint firstAttribute="bottom" secondItem="MXK-rW-vVH" secondAttribute="bottom" id="Z7d-TO-wcY"/>
+                                                <constraint firstAttribute="trailing" secondItem="MXK-rW-vVH" secondAttribute="trailing" id="oxV-wv-0X0"/>
+                                            </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="exerciseSetView" destination="MXK-rW-vVH" id="Ydy-QJ-Qhx"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>

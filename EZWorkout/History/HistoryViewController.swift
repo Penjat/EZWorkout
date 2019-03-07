@@ -9,7 +9,9 @@ class HistoryViewController: UIViewController {
   
   var workouts : [WorkoutRealm]?
   var curWorkout: WorkoutRealm?
-  var exercises: [ExcerciseRealm]?
+  
+  //and array of exercises orginized by type with the array showing each set
+  var exercisesByType: [[ExcerciseRealm]]?
   
   var exerciseTableManager: ExerciseTableManager!
   var workoutTableManager: WorkoutTableManager!
@@ -32,6 +34,8 @@ class HistoryViewController: UIViewController {
     //set the delegate for the workout table
     workoutTableView.delegate = workoutTableManager
     workoutTableView.dataSource = workoutTableManager
+    
+    exerciseTableView.sectionHeaderHeight = 80
  
   }
   

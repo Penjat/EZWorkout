@@ -23,13 +23,37 @@ extension HistoryViewController : WorkoutTableManagerDelegate{
   }
   
   func workoutPressed(atIndex index:IndexPath){
+    
     if let workouts = workouts  {
       
       curWorkout = workouts[index.row]
       //TODO check if different
-      exercises = workouts[index.row].excerciseArray.map{$0}
+      exercisesByType = [[ExcerciseRealm]]()
+      for exercise in workouts[index.row].excerciseArray{
+        addExerciseByType(exercise:exercise , exercisTypeArray:exercisesByType!)
+      }
+      print("exerciseByType count is \(exercisesByType!.count)")
       exerciseTableView.reloadData()
+      print("exercises by type = \(exercisesByType)")
     }
     
   }
+  func addExerciseByType(exercise:ExcerciseRealm , exercisTypeArray:[[ExcerciseRealm]]){
+    
+    for var exerciseType in exercisTypeArray{
+      
+      if exercise.name! == exerciseType[0].name!{
+        //if the type is the same, add it as a set
+        exerciseType.append(exercise)
+        return
+      }
+      
+    }
+    //if the type is not yet in the array, add a new entry
+    //TODO check if ok to modify param
+    exercisesByType?.append([exercise])
+  }
+  
+  
+  
 }

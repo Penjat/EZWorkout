@@ -3,11 +3,16 @@ import UIKit
 
 extension HistoryViewController : ExerciseTableManagerDelegate{
   
-  func getExercises() -> [ExcerciseRealm]{
+  
+  
+  func getExercisesByType() -> [[ExcerciseRealm]]{
     
-    if let exercises = exercises {
+    if let exercises = exercisesByType {
       return exercises
     }
     return []
+  }
+  func getExercise(indexPath:IndexPath)->ExcerciseRealm{
+    return exercisesByType![indexPath.section][indexPath.row]
   }
 }
