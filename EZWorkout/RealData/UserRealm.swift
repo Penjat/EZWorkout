@@ -26,4 +26,23 @@ class UserRealm: Object {
     }
     return exercises
   }
+  func getYearsWorkingOut()->[String]{
+    //TODO do this on realm side
+    let dateFormatter = DateFormatter()
+    dateFormatter.dateFormat = "yyyy"
+    
+    var dateSet = Set<Date>()
+    var yearsWorkingOut = [String]()
+    
+    for workout in workoutArray{
+      if dateSet.contains(workout.startTime!){
+        
+      }else{
+        //add to array and set
+        dateSet.insert(workout.startTime!)
+        yearsWorkingOut.append(dateFormatter.string(from: workout.startTime!))
+      }
+    }
+    return yearsWorkingOut
+  }
 }

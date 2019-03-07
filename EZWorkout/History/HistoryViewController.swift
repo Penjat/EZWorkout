@@ -20,8 +20,13 @@ class HistoryViewController: UIViewController {
   //and array of exercises orginized by type with the array showing each set
   var exercisesByType: [[ExcerciseRealm]]?
   
+  //Table Managers
   var exerciseTableManager: ExerciseTableManager!
   var workoutTableManager: WorkoutTableManager!
+  
+  @IBOutlet weak var monthYearPicker: UIPickerView!
+  var years = ["2017","2018","2019"]
+  let months = ["January","February"]
   
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -30,9 +35,17 @@ class HistoryViewController: UIViewController {
     workoutTableManager = WorkoutTableManager(delegate: self)
     exerciseTableManager = ExerciseTableManager(delegate: self)
     
+    //picker controllers
+    //TODO get the years the user worked out
+    
+    
+    
     //get the user
     RealmDataMangers.retrieveUser()
     workouts = UserRealm.curUser.workoutArray.map{$0}
+    
+    //get the years the user has been working out
+    years = UserRealm.curUser.getYearsWorkingOut()
     
     //set the delegate for exercises table
     exerciseTableView.delegate = exerciseTableManager
@@ -51,6 +64,10 @@ class HistoryViewController: UIViewController {
     timeFormater.dateFormat = "h:mm"
     //timeFormater.timeStyle = .short
  
+    monthYearPicker.delegate = self
+    monthYearPicker.dataSource = self
+    
+    
   }
   
   func updateWorkoutLabels(){

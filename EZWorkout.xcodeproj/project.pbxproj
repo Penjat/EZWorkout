@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0B38BDB92231D13D00DEA358 /* HistoryViewController+PickerDelegateDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B38BDB82231D13D00DEA358 /* HistoryViewController+PickerDelegateDataSource.swift */; };
 		0B5013EC222F25F7004A64EC /* CenterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B5013EB222F25F7004A64EC /* CenterViewController.swift */; };
 		0B5013EE222F2DB2004A64EC /* CenterViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B5013ED222F2DB2004A64EC /* CenterViewProtocol.swift */; };
 		0B5013F0222F2F9F004A64EC /* RecordWorkoutMasterViewController+ContainerFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B5013EF222F2F9F004A64EC /* RecordWorkoutMasterViewController+ContainerFunctions.swift */; };
@@ -74,6 +75,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0B38BDB82231D13D00DEA358 /* HistoryViewController+PickerDelegateDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HistoryViewController+PickerDelegateDataSource.swift"; sourceTree = "<group>"; };
 		0B5013EB222F25F7004A64EC /* CenterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CenterViewController.swift; sourceTree = "<group>"; };
 		0B5013ED222F2DB2004A64EC /* CenterViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CenterViewProtocol.swift; sourceTree = "<group>"; };
 		0B5013EF222F2F9F004A64EC /* RecordWorkoutMasterViewController+ContainerFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RecordWorkoutMasterViewController+ContainerFunctions.swift"; sourceTree = "<group>"; };
@@ -172,6 +174,7 @@
 				0BF84E7F22309F7100DFC6B0 /* HistoryViewController.swift */,
 				0BF84E892230A99800DFC6B0 /* HistoryViewController+WorkoutTableDelegate.swift */,
 				0BF84E8B2230C2A900DFC6B0 /* HistoryViewController+ExerciseTableDelegate.swift */,
+				0B38BDB82231D13D00DEA358 /* HistoryViewController+PickerDelegateDataSource.swift */,
 				0BF84E8122309F8B00DFC6B0 /* ExerciseTableManager.swift */,
 				0BF84E8322309FA600DFC6B0 /* WorkoutTableManager.swift */,
 				0BF84E952231B8BA00DFC6B0 /* Cells and Xibs */,
@@ -496,6 +499,7 @@
 				0BF84E902230ED2700DFC6B0 /* ExerciseTypeView.swift in Sources */,
 				0BF84E862230A32D00DFC6B0 /* ExerciseSetCell.swift in Sources */,
 				0BA3032B222DE8EA0046FDB9 /* ExerciseView.swift in Sources */,
+				0B38BDB92231D13D00DEA358 /* HistoryViewController+PickerDelegateDataSource.swift in Sources */,
 				0BCA1AC42228D30100B51C27 /* EZWorkout.xcdatamodeld in Sources */,
 				0BF84E8222309F8B00DFC6B0 /* ExerciseTableManager.swift in Sources */,
 				0BA3DB99222DD2FC00AC7538 /* SpeechRecognizer.swift in Sources */,

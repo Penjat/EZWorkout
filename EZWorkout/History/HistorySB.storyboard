@@ -19,7 +19,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="gUi-jF-WZQ">
-                                <rect key="frame" x="8" y="28" width="100.5" height="631"/>
+                                <rect key="frame" x="8" y="126" width="100.5" height="533"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="workoutCell" rowHeight="100" id="LTI-WA-LAZ" customClass="WorkoutCell" customModule="EZWorkout" customModuleProvider="target">
@@ -59,15 +59,15 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="q77-n3-S6b">
-                                <rect key="frame" x="116.5" y="131" width="250.5" height="528"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="q77-n3-S6b">
+                                <rect key="frame" x="117" y="232" width="251" height="427"/>
                                 <color key="backgroundColor" white="1" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="setCell" id="oyZ-Z6-ljP" customClass="ExerciseSetCell" customModule="EZWorkout" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="250.5" height="44"/>
+                                        <rect key="frame" x="0.0" y="28" width="251" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="oyZ-Z6-ljP" id="7ip-By-ILw">
-                                            <rect key="frame" x="0.0" y="0.0" width="250.5" height="44"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="251" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MXK-rW-vVH" customClass="ExerciseSetView" customModule="EZWorkout" customModuleProvider="target">
@@ -90,7 +90,7 @@
                                 </prototypes>
                             </tableView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="N82-fP-iEE">
-                                <rect key="frame" x="116.5" y="28" width="250.5" height="95"/>
+                                <rect key="frame" x="116.5" y="126" width="250.5" height="95"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gMQ-VE-7UL">
                                         <rect key="frame" x="8" y="8" width="234.5" height="21"/>
@@ -125,15 +125,34 @@
                                     <constraint firstItem="uTB-yR-m5Z" firstAttribute="top" secondItem="snz-hI-Ryw" secondAttribute="bottom" constant="8" id="vpy-hI-IWO"/>
                                 </constraints>
                             </view>
+                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0Hl-XL-FIN">
+                                <rect key="frame" x="8" y="28" width="359" height="90"/>
+                                <subviews>
+                                    <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8Vd-c6-0Lf">
+                                        <rect key="frame" x="0.0" y="0.0" width="359" height="90"/>
+                                    </pickerView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="8Vd-c6-0Lf" secondAttribute="trailing" id="8ef-Df-LFH"/>
+                                    <constraint firstAttribute="height" constant="90" id="NlE-GM-5TA"/>
+                                    <constraint firstItem="8Vd-c6-0Lf" firstAttribute="top" secondItem="0Hl-XL-FIN" secondAttribute="top" id="YlY-2j-glp"/>
+                                    <constraint firstItem="8Vd-c6-0Lf" firstAttribute="leading" secondItem="0Hl-XL-FIN" secondAttribute="leading" id="qeP-Wr-wXn"/>
+                                    <constraint firstAttribute="bottom" secondItem="8Vd-c6-0Lf" secondAttribute="bottom" id="snu-eX-Jy5"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="N82-fP-iEE" firstAttribute="top" secondItem="0Hl-XL-FIN" secondAttribute="bottom" constant="8" id="2e2-U8-hA2"/>
                             <constraint firstItem="q77-n3-S6b" firstAttribute="top" secondItem="N82-fP-iEE" secondAttribute="bottom" constant="8" id="3le-eW-1ae"/>
+                            <constraint firstItem="0Hl-XL-FIN" firstAttribute="leading" secondItem="fKt-Lb-57k" secondAttribute="leading" constant="8" id="9sS-Tb-1J0"/>
                             <constraint firstItem="fKt-Lb-57k" firstAttribute="bottom" secondItem="q77-n3-S6b" secondAttribute="bottom" constant="8" id="Cqd-SV-g9T"/>
-                            <constraint firstItem="gUi-jF-WZQ" firstAttribute="top" secondItem="fKt-Lb-57k" secondAttribute="top" constant="8" id="D2g-zT-RfQ"/>
-                            <constraint firstItem="N82-fP-iEE" firstAttribute="top" secondItem="fKt-Lb-57k" secondAttribute="top" constant="8" id="FXQ-wu-qzc"/>
                             <constraint firstItem="q77-n3-S6b" firstAttribute="leading" secondItem="gUi-jF-WZQ" secondAttribute="trailing" constant="8" id="K4S-kM-ox6"/>
+                            <constraint firstItem="gUi-jF-WZQ" firstAttribute="top" secondItem="0Hl-XL-FIN" secondAttribute="bottom" constant="8" id="KgY-yP-O2x"/>
+                            <constraint firstItem="fKt-Lb-57k" firstAttribute="trailing" secondItem="0Hl-XL-FIN" secondAttribute="trailing" constant="8" id="RNg-tb-Oos"/>
                             <constraint firstItem="N82-fP-iEE" firstAttribute="leading" secondItem="gUi-jF-WZQ" secondAttribute="trailing" constant="8" id="Sbn-nQ-5X2"/>
+                            <constraint firstItem="0Hl-XL-FIN" firstAttribute="top" secondItem="fKt-Lb-57k" secondAttribute="top" constant="8" id="UVL-De-DPT"/>
                             <constraint firstItem="fKt-Lb-57k" firstAttribute="trailing" secondItem="N82-fP-iEE" secondAttribute="trailing" constant="8" id="VrQ-hK-jZS"/>
                             <constraint firstItem="fKt-Lb-57k" firstAttribute="bottom" secondItem="gUi-jF-WZQ" secondAttribute="bottom" constant="8" id="a1m-U0-tcH"/>
                             <constraint firstItem="fKt-Lb-57k" firstAttribute="trailing" secondItem="q77-n3-S6b" secondAttribute="trailing" constant="8" id="qHZ-lu-ace"/>
@@ -147,6 +166,7 @@
                     <connections>
                         <outlet property="dateLabel" destination="gMQ-VE-7UL" id="7gg-5R-m2S"/>
                         <outlet property="exerciseTableView" destination="q77-n3-S6b" id="i6p-Xe-lBI"/>
+                        <outlet property="monthYearPicker" destination="8Vd-c6-0Lf" id="cFr-Xq-cVj"/>
                         <outlet property="startEndLabel" destination="snz-hI-Ryw" id="xT7-O6-v73"/>
                         <outlet property="timeSpentLabel" destination="uTB-yR-m5Z" id="6MC-lT-029"/>
                         <outlet property="workoutTableView" destination="gUi-jF-WZQ" id="jwA-Ov-f10"/>
