@@ -10,28 +10,30 @@ class StatsCenterVC: UIViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     
+    print(UserRealm.curUser.name)
+    let exerciseDict = self.getRealmData()
+    print("this  is a dictionary of  \(exerciseDict.count) ")
+    let topSevenDict = self.sortRealmDict(Dict: exerciseDict)
+    print("this is top 7 sport \(topSevenDict)")
+    setUpTestData(chart: chart1 , chartLabels: topSevenDict.map{$0.0} , chartValues: topSevenDict.map{$0.1})
+//    setUpTestData(chart: chart1 , chartLabels: chartLabels , chartValues: chartValues)
+   
+    
   }
   
   override func viewDidAppear(_ animated: Bool) {
     super.viewDidAppear(animated)
     
-    let chartValues = [20.0, 4.0, 6.0, 3.0, 12.0, 16.0, 4.0, 18.0, 2.0, 4.0, 5.0, 4.0]
-    let chartLabels = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"]
-    
-    setUpTestData(chart: chart1 , chartLabels: chartLabels , chartValues: chartValues)
-    let weight = [20.0, 4.0, 6.0, 3.0, 12.0, 16.0, 4.0]
-    let days = ["mon", "tue", "wed", "thu", "fri","sat","sun"]
-    setUpTestData(chart: chart2 , chartLabels: days , chartValues: weight)
     
     chart1.animate(xAxisDuration: 2.0, yAxisDuration: 2.0)
-    
+//    chart2.animate(xAxisDuration: 2.0, yAxisDuration: 2.0)
     
   }
   func navTo(page:Int){
     //TODO call animate on the correct page
   }
   
-  func setUpTestData(chart: BarChartView , chartLabels:[String] , chartValues:[Double]){
+  func setUpTestData(chart: BarChartView , chartLabels:[String] , chartValues:[Int]){
     //chart.delegate = self
     chart.noDataText = "You need to provide data for the chart."
     
@@ -40,7 +42,7 @@ class StatsCenterVC: UIViewController {
     for i in 0 ..< chartLabels.count{
       //            Double(test[i])
       
-      let dataEntry = BarChartDataEntry(x: Double(i), y: Double(chartValues[i]))
+        let dataEntry = BarChartDataEntry(x: Double(i), y: Double(chartValues[i]))
       dataEntries.append(dataEntry)
     }
     
@@ -63,14 +65,47 @@ class StatsCenterVC: UIViewController {
     let ll = ChartLimitLine(limit: 9.0, label: "Average")
     chart.rightAxis.addLimitLine(ll)
   }
-  
-  func setChart(dataPoints: [String], values:[Double])
-  {
+    func getRealmData()->[String:Int]{
+        let results = UserRealm.curUser.getAllExercises()
+        var emptyDict = [String:Int]()
+        for item in results{
+            
+            if emptyDict.index(forKey: item.name!) == nil {
+                emptyDict[item.name!] = 1
+            } else{
+                let num = emptyDict[item.name!]
+                emptyDict.updateValue(num!+1, forKey: item.name!)
+            }
+        }
+        return emptyDict
+        
+    }
+
     
-    
-    
-  }
+    func sortRealmDict(Dict:[String:Int])->[(String,Int)]{
+        
+        var emptyDict = [String:Int]()
+        for newItem in Dict{
+            if emptyDict.count < 7 {
+                print("the count is \(emptyDict.count) adding \(newItem.key)")
+                emptyDict[newItem.key] = newItem.value
+            }else{
+                for oldItem in emptyDict{
+                    if(newItem.value > oldItem.value){
+                      emptyDict.removeValue(forKey: oldItem.key)
+                      emptyDict[newItem.key] = newItem.value
+                        break
+                    }
+                }
+            }
+        }
+
+        
+        return emptyDict.sorted(by: {$0.value > $1.value})
+    }
   
   
   
 }
+
+
