@@ -13,7 +13,6 @@ class StatVC: UIViewController {
     @IBOutlet weak var barChart: BarChartView!
     
     var months: [String]!
-    
     override func viewDidLoad()
     {
         super.viewDidLoad()
@@ -40,6 +39,9 @@ class StatVC: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         barChart.animate(xAxisDuration: 2.0, yAxisDuration: 2.0)
     }
+//    override func viewDidAppear(_ animated: Bool) {
+//        barChart.animate(xAxisDuration: 2.0, yAxisDuration: 2.0)
+//    }
 
    
     

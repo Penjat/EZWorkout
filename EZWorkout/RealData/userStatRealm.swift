@@ -12,4 +12,6 @@ import RealmSwift
 class userStatRealm: Object {
     @objc dynamic var date: Date?
     @objc dynamic var weight = 0
+  
+  
 }

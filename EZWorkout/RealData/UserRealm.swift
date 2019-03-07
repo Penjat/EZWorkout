@@ -11,11 +11,19 @@ import RealmSwift
 
 class UserRealm: Object {
     static var curUser = UserRealm()
-    @objc dynamic var name: String?
-    @objc dynamic var gender: String?
+    @objc dynamic var name: String!
+    @objc dynamic var gender: String!
     @objc dynamic var birthday: Date?
     
     let userStatArray = List<userStatRealm>()
     let workoutArray = List<WorkoutRealm>()
   
+  func getAllExercises() -> [ExcerciseRealm]{
+    
+    var exercises = [ExcerciseRealm]()
+    for workout in workoutArray{
+      exercises = exercises + workout.excerciseArray
+    }
+    return exercises
+  }
 }

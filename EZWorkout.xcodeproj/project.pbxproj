@@ -64,7 +64,6 @@
 		285A56DB2229DB2E003E4AA0 /* ExcerciseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 285A56DA2229DB2E003E4AA0 /* ExcerciseTableViewCell.swift */; };
 		28812196222DA4DA007042C1 /* StatVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28812195222DA4DA007042C1 /* StatVC.swift */; };
 		288121DE222F53DC007042C1 /* StatPVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 288121DD222F53DC007042C1 /* StatPVC.swift */; };
-		288121E0222F5548007042C1 /* ScrollStats.xib in Resources */ = {isa = PBXBuildFile; fileRef = 288121DF222F5548007042C1 /* ScrollStats.xib */; };
 		288121E2222F5598007042C1 /* ScrollStatsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 288121E1222F5598007042C1 /* ScrollStatsView.swift */; };
 		288121E7222F6B63007042C1 /* RealmDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 288121E6222F6B63007042C1 /* RealmDataManager.swift */; };
 		288121E9222F6D05007042C1 /* Cats.swift in Sources */ = {isa = PBXBuildFile; fileRef = 288121E8222F6D05007042C1 /* Cats.swift */; };
@@ -133,7 +132,6 @@
 		285A56DA2229DB2E003E4AA0 /* ExcerciseTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExcerciseTableViewCell.swift; sourceTree = "<group>"; };
 		28812195222DA4DA007042C1 /* StatVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatVC.swift; sourceTree = "<group>"; };
 		288121DD222F53DC007042C1 /* StatPVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatPVC.swift; sourceTree = "<group>"; };
-		288121DF222F5548007042C1 /* ScrollStats.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ScrollStats.xib; sourceTree = "<group>"; };
 		288121E1222F5598007042C1 /* ScrollStatsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollStatsView.swift; sourceTree = "<group>"; };
 		288121E6222F6B63007042C1 /* RealmDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmDataManager.swift; sourceTree = "<group>"; };
 		288121E8222F6D05007042C1 /* Cats.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cats.swift; sourceTree = "<group>"; };
@@ -311,7 +309,6 @@
 				288121DD222F53DC007042C1 /* StatPVC.swift */,
 				28812195222DA4DA007042C1 /* StatVC.swift */,
 				0BA30330222E09870046FDB9 /* StatsSB.storyboard */,
-				288121DF222F5548007042C1 /* ScrollStats.xib */,
 				288121E1222F5598007042C1 /* ScrollStatsView.swift */,
 				0BB1CEC12230496400F386C3 /* StatsMasterController.swift */,
 				0BB1CEC7223060AA00F386C3 /* StatsMasterController+ScrollViewDelegate.swift */,
@@ -422,7 +419,6 @@
 				0B5013F4222F6653004A64EC /* FeedbackMsg.xib in Resources */,
 				0BA30345222EDDFA0046FDB9 /* Help.xib in Resources */,
 				0BA3032D222E08530046FDB9 /* RecWorkoutSB.storyboard in Resources */,
-				288121E0222F5548007042C1 /* ScrollStats.xib in Resources */,
 				0BA30331222E09870046FDB9 /* StatsSB.storyboard in Resources */,
 				0BA30333222E09F00046FDB9 /* HistorySB.storyboard in Resources */,
 			);
