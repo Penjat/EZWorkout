@@ -27,7 +27,7 @@ class RecordWorkoutMasterViewController: UIViewController {
   
   override func viewDidLoad() {
     super.viewDidLoad()
-    
+ 
     speechRecognizer = SpeechRecognizer(delegate: self)
     
     DataManager.dataManager.testSingelton()

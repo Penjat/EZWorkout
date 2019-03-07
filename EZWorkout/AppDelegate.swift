@@ -28,7 +28,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             }
     })
     Realm.Configuration.defaultConfiguration = config
-    try! Realm()
+    RealmDataMangers.retrieveUser()
     return true
   }
 
