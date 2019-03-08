@@ -44,6 +44,7 @@
 		0BB1CEC8223060AA00F386C3 /* StatsMasterController+ScrollViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BB1CEC7223060AA00F386C3 /* StatsMasterController+ScrollViewDelegate.swift */; };
 		0BB1CECA2230690900F386C3 /* TopBarDelegateProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BB1CEC92230690900F386C3 /* TopBarDelegateProtocol.swift */; };
 		0BB1CECC223069B900F386C3 /* StatsMasterController+TopBarDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BB1CECB223069B900F386C3 /* StatsMasterController+TopBarDelegate.swift */; };
+		0BB7E9952231F249000C285D /* MasterTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BB7E9942231F249000C285D /* MasterTabBarController.swift */; };
 		0BCA1ABC2228D30000B51C27 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BCA1ABB2228D30000B51C27 /* AppDelegate.swift */; };
 		0BCA1AC12228D30100B51C27 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0BCA1ABF2228D30100B51C27 /* Main.storyboard */; };
 		0BCA1AC42228D30100B51C27 /* EZWorkout.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0BCA1AC22228D30100B51C27 /* EZWorkout.xcdatamodeld */; };
@@ -112,6 +113,7 @@
 		0BB1CEC7223060AA00F386C3 /* StatsMasterController+ScrollViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "StatsMasterController+ScrollViewDelegate.swift"; sourceTree = "<group>"; };
 		0BB1CEC92230690900F386C3 /* TopBarDelegateProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopBarDelegateProtocol.swift; sourceTree = "<group>"; };
 		0BB1CECB223069B900F386C3 /* StatsMasterController+TopBarDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "StatsMasterController+TopBarDelegate.swift"; sourceTree = "<group>"; };
+		0BB7E9942231F249000C285D /* MasterTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterTabBarController.swift; sourceTree = "<group>"; };
 		0BCA1AB82228D30000B51C27 /* EZWorkout.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EZWorkout.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0BCA1ABB2228D30000B51C27 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0BCA1AC02228D30100B51C27 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -259,6 +261,7 @@
 				285A56DA2229DB2E003E4AA0 /* ExcerciseTableViewCell.swift */,
 				0B5013F1222F4CDC004A64EC /* DataManager.swift */,
 				0BCA1ABF2228D30100B51C27 /* Main.storyboard */,
+				0BB7E9942231F249000C285D /* MasterTabBarController.swift */,
 				0BCA1AC52228D30100B51C27 /* Assets.xcassets */,
 				0BCA1AC72228D30100B51C27 /* LaunchScreen.storyboard */,
 				0BCA1ACA2228D30100B51C27 /* Info.plist */,
@@ -508,6 +511,7 @@
 				0BB1CECA2230690900F386C3 /* TopBarDelegateProtocol.swift in Sources */,
 				0BF84E8C2230C2A900DFC6B0 /* HistoryViewController+ExerciseTableDelegate.swift in Sources */,
 				0BA3DB93222DD0F200AC7538 /* ExerciseRefernceProtocol.swift in Sources */,
+				0BB7E9952231F249000C285D /* MasterTabBarController.swift in Sources */,
 				0BB1CEC622304BD800F386C3 /* StatsTopBarVC.swift in Sources */,
 				0BA3033F222ED8050046FDB9 /* RecordWorkoutMasterViewController.swift in Sources */,
 				0BA3033D222E28290046FDB9 /* ExerciseCell.swift in Sources */,
