@@ -84,6 +84,7 @@ class HistoryViewController: UIViewController {
   
   
   func testRealm(){
+    //TODO take this out
     let realm = try! Realm()
     
     RealmDataMangers.retrieveUser()
@@ -96,6 +97,7 @@ class HistoryViewController: UIViewController {
     let exercise1 = RealmDataMangers.createExcercise(calory: 2, type: "Bodyweight", name: "benchpress", modified: "", reps: 12, weight: 66)
     
     let workout = RealmDataMangers.createWorkout(endTime: Date(), startTime: Date(), location: "here", excerciseArray: [exercise1,exercise2])
+    
     try! realm.write {
       UserRealm.curUser.workoutArray.append(workout)
     }
