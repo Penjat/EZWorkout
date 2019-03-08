@@ -85,10 +85,10 @@
             </objects>
             <point key="canvasLocation" x="3314" y="197"/>
         </scene>
-        <!--Tab Bar Controller-->
+        <!--Master Tab Bar Controller-->
         <scene sceneID="w3i-ST-2EP">
             <objects>
-                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="nyw-w4-oX0" sceneMemberID="viewController">
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="nyw-w4-oX0" customClass="MasterTabBarController" customModule="EZWorkout" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="6GN-aH-5St">
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
