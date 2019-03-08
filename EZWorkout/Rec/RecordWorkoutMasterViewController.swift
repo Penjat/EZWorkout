@@ -52,13 +52,16 @@ class RecordWorkoutMasterViewController: UIViewController {
     feebBackLabel.isHidden = false
     feebBackLabel.text = "recording"
     speechRecognizer.startRecognizing()
+    centerController?.startRec()
   }
   @IBAction func recReleasedInside(_ sender: Any) {
     feebBackLabel.isHidden = true
     speechRecognizer.stopRecognizing()
+    centerController?.stopRec()
   }
   @IBAction func recReleasedOutside(_ sender: Any) {
     //speechRecognizer.stopRecognizing()
+    //TODO check if all button press cases are covered
   }
   
   
