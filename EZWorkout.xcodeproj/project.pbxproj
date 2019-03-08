@@ -44,6 +44,7 @@
 		0BB1CEC8223060AA00F386C3 /* StatsMasterController+ScrollViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BB1CEC7223060AA00F386C3 /* StatsMasterController+ScrollViewDelegate.swift */; };
 		0BB1CECA2230690900F386C3 /* TopBarDelegateProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BB1CEC92230690900F386C3 /* TopBarDelegateProtocol.swift */; };
 		0BB1CECC223069B900F386C3 /* StatsMasterController+TopBarDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BB1CECB223069B900F386C3 /* StatsMasterController+TopBarDelegate.swift */; };
+		0BB4470622331893004BEDD1 /* RecordWorkoutMasterViewController+StartEnd.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BB4470522331893004BEDD1 /* RecordWorkoutMasterViewController+StartEnd.swift */; };
 		0BB7E9952231F249000C285D /* MasterTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BB7E9942231F249000C285D /* MasterTabBarController.swift */; };
 		0BB7E9BA2232D7DC000C285D /* SpeechVisulizerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BB7E9B92232D7DC000C285D /* SpeechVisulizerView.swift */; };
 		0BB7E9BC2232FB21000C285D /* RecordWorkoutMasterViewController+Visualizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BB7E9BB2232FB21000C285D /* RecordWorkoutMasterViewController+Visualizer.swift */; };
@@ -116,6 +117,7 @@
 		0BB1CEC7223060AA00F386C3 /* StatsMasterController+ScrollViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "StatsMasterController+ScrollViewDelegate.swift"; sourceTree = "<group>"; };
 		0BB1CEC92230690900F386C3 /* TopBarDelegateProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopBarDelegateProtocol.swift; sourceTree = "<group>"; };
 		0BB1CECB223069B900F386C3 /* StatsMasterController+TopBarDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "StatsMasterController+TopBarDelegate.swift"; sourceTree = "<group>"; };
+		0BB4470522331893004BEDD1 /* RecordWorkoutMasterViewController+StartEnd.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RecordWorkoutMasterViewController+StartEnd.swift"; sourceTree = "<group>"; };
 		0BB7E9942231F249000C285D /* MasterTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterTabBarController.swift; sourceTree = "<group>"; };
 		0BB7E9B92232D7DC000C285D /* SpeechVisulizerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeechVisulizerView.swift; sourceTree = "<group>"; };
 		0BB7E9BB2232FB21000C285D /* RecordWorkoutMasterViewController+Visualizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RecordWorkoutMasterViewController+Visualizer.swift"; sourceTree = "<group>"; };
@@ -307,6 +309,7 @@
 				0B5013EF222F2F9F004A64EC /* RecordWorkoutMasterViewController+ContainerFunctions.swift */,
 				0B5013F7222F67BC004A64EC /* RecordWorkoutMasterViewController+ShowFeedback.swift */,
 				0BB7E9BB2232FB21000C285D /* RecordWorkoutMasterViewController+Visualizer.swift */,
+				0BB4470522331893004BEDD1 /* RecordWorkoutMasterViewController+StartEnd.swift */,
 				0B5013EB222F25F7004A64EC /* CenterViewController.swift */,
 				0BA3032C222E08530046FDB9 /* RecWorkoutSB.storyboard */,
 				0B5013ED222F2DB2004A64EC /* CenterViewProtocol.swift */,
@@ -512,6 +515,7 @@
 				0B5013EE222F2DB2004A64EC /* CenterViewProtocol.swift in Sources */,
 				288121DE222F53DC007042C1 /* StatPVC.swift in Sources */,
 				288121F1222F7D83007042C1 /* userStatRealm.swift in Sources */,
+				0BB4470622331893004BEDD1 /* RecordWorkoutMasterViewController+StartEnd.swift in Sources */,
 				0BF84E8A2230A99800DFC6B0 /* HistoryViewController+WorkoutTableDelegate.swift in Sources */,
 				0BA30337222E1CDC0046FDB9 /* WorkoutModel.swift in Sources */,
 				285A56D52228D587003E4AA0 /* User.swift in Sources */,
