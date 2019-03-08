@@ -1,6 +1,7 @@
 
 
 import UIKit
+import RealmSwift
 
 class HistoryViewController: UIViewController {
   
@@ -39,7 +40,7 @@ class HistoryViewController: UIViewController {
     //TODO get the years the user worked out
     
     
-    
+    //testRealm()
     //get the user
     RealmDataMangers.retrieveUser()
     workouts = UserRealm.curUser.workoutArray.map{$0}
@@ -79,6 +80,27 @@ class HistoryViewController: UIViewController {
       
       timeSpentLabel.text = "\(workout.startTime!.timeIntervalSince(workout.endTime!)) hours"
     }
+  }
+  
+  
+  func testRealm(){
+    let realm = try! Realm()
+    
+    RealmDataMangers.retrieveUser()
+    
+    
+    
+    
+    let exercise2 = RealmDataMangers.createExcercise(calory: 4, type: "Bodyweight", name: "legpress", modified: "", reps: 10, weight: 100)
+    
+    let exercise1 = RealmDataMangers.createExcercise(calory: 2, type: "Bodyweight", name: "benchpress", modified: "", reps: 12, weight: 66)
+    
+    let workout = RealmDataMangers.createWorkout(endTime: Date(), startTime: Date(), location: "here", excerciseArray: [exercise1,exercise2])
+    try! realm.write {
+      UserRealm.curUser.workoutArray.append(workout)
+    }
+    
+    
   }
   
   
