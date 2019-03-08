@@ -37,8 +37,8 @@ class RealmDataMangers {
     
     static func retrieveUser(){
         let realm = try! Realm()
-        let results = realm.objects(UserRealm.self)
-        UserRealm.curUser = results.last!
+        let results = realm.objects(UserRealm.self).filter("name == 'Jason'").first!
+        UserRealm.curUser = results
         
     }
     
