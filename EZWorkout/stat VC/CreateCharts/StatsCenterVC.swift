@@ -19,6 +19,7 @@ class StatsCenterVC: UIViewController {
     setUpTestData(chart: chart1 , chartLabels: topSevenDict.map{$0.0} , chartValues: topSevenDict.map{$0.1})
     let typeDitc = StaticDataManager.getRealmData(type: .type)
     let topTypeDict = StaticDataManager.sortRealmDict(Dict: typeDitc)
+    print("this is top 7 sport \(topTypeDict)")
     setUpTestData(chart: chart2 , chartLabels: topTypeDict.map{$0.0} , chartValues: topTypeDict.map{$0.1})
         updateChartData(theChart: TypePieChartView, chartLabel: topTypeDict.map{$0.0},data: topTypeDict.map{ (key, value) in
             let k = PieChartDataEntry(value: Double(value))
