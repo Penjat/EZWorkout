@@ -7,6 +7,9 @@ class SpeechRecognizer{
   
   let delegate :RecognizerReturnDelegate
   
+  
+  
+  
   let audioEngine = AVAudioEngine()
   let speechRecognizer: SFSpeechRecognizer? = SFSpeechRecognizer()
   var request = SFSpeechAudioBufferRecognitionRequest()
@@ -33,6 +36,7 @@ class SpeechRecognizer{
   }
   
   func startRecognizing(){
+    
     print("start recognizing")
     recordAndRecognizeSpeech()
   }
@@ -55,7 +59,9 @@ class SpeechRecognizer{
   func recordAndRecognizeSpeech(){
     let node = audioEngine.inputNode
     let recordingFormat = node.outputFormat(forBus: 0)
-    node.installTap(onBus: 0, bufferSize: 1024, format: recordingFormat, block: {buffer, _ in self.request.append(buffer)})
+    node.installTap(onBus: 0, bufferSize: 1024, format: recordingFormat, block: {buffer, _ in self.request.append(buffer)
+      
+    })
     
     audioEngine.prepare()
     
