@@ -32,7 +32,7 @@ class RealmDataMangers {
     let type = exerciseModel.exerciseRef!.exerciseType.toString()
     let name = exerciseModel.exerciseRef!.getName()
     let modified = ""
-    let reps = exerciseModel.reps!
+    let reps = exerciseModel.reps != nil ? exerciseModel.reps! : -1
     let weight: Int = exerciseModel.value != nil ? exerciseModel.value! : -1
     
     //TODO careful of force unwraps
