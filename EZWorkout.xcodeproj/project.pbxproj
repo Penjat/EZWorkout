@@ -45,6 +45,8 @@
 		0BB1CECA2230690900F386C3 /* TopBarDelegateProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BB1CEC92230690900F386C3 /* TopBarDelegateProtocol.swift */; };
 		0BB1CECC223069B900F386C3 /* StatsMasterController+TopBarDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BB1CECB223069B900F386C3 /* StatsMasterController+TopBarDelegate.swift */; };
 		0BB7E9952231F249000C285D /* MasterTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BB7E9942231F249000C285D /* MasterTabBarController.swift */; };
+		0BB7E9BA2232D7DC000C285D /* SpeechVisulizerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BB7E9B92232D7DC000C285D /* SpeechVisulizerView.swift */; };
+		0BB7E9BC2232FB21000C285D /* RecordWorkoutMasterViewController+Visualizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BB7E9BB2232FB21000C285D /* RecordWorkoutMasterViewController+Visualizer.swift */; };
 		0BCA1ABC2228D30000B51C27 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BCA1ABB2228D30000B51C27 /* AppDelegate.swift */; };
 		0BCA1AC12228D30100B51C27 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0BCA1ABF2228D30100B51C27 /* Main.storyboard */; };
 		0BCA1AC42228D30100B51C27 /* EZWorkout.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0BCA1AC22228D30100B51C27 /* EZWorkout.xcdatamodeld */; };
@@ -114,6 +116,8 @@
 		0BB1CEC92230690900F386C3 /* TopBarDelegateProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopBarDelegateProtocol.swift; sourceTree = "<group>"; };
 		0BB1CECB223069B900F386C3 /* StatsMasterController+TopBarDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "StatsMasterController+TopBarDelegate.swift"; sourceTree = "<group>"; };
 		0BB7E9942231F249000C285D /* MasterTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterTabBarController.swift; sourceTree = "<group>"; };
+		0BB7E9B92232D7DC000C285D /* SpeechVisulizerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeechVisulizerView.swift; sourceTree = "<group>"; };
+		0BB7E9BB2232FB21000C285D /* RecordWorkoutMasterViewController+Visualizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RecordWorkoutMasterViewController+Visualizer.swift"; sourceTree = "<group>"; };
 		0BCA1AB82228D30000B51C27 /* EZWorkout.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EZWorkout.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0BCA1ABB2228D30000B51C27 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0BCA1AC02228D30100B51C27 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -165,6 +169,7 @@
 			children = (
 				0BA30328222DE70A0046FDB9 /* Exercise.xib */,
 				0BA3032A222DE8EA0046FDB9 /* ExerciseView.swift */,
+				0BB7E9B92232D7DC000C285D /* SpeechVisulizerView.swift */,
 			);
 			path = "Custom Views";
 			sourceTree = "<group>";
@@ -290,6 +295,7 @@
 				0BA3033E222ED8050046FDB9 /* RecordWorkoutMasterViewController.swift */,
 				0B5013EF222F2F9F004A64EC /* RecordWorkoutMasterViewController+ContainerFunctions.swift */,
 				0B5013F7222F67BC004A64EC /* RecordWorkoutMasterViewController+ShowFeedback.swift */,
+				0BB7E9BB2232FB21000C285D /* RecordWorkoutMasterViewController+Visualizer.swift */,
 				0B5013EB222F25F7004A64EC /* CenterViewController.swift */,
 				0BA3032C222E08530046FDB9 /* RecWorkoutSB.storyboard */,
 				0B5013ED222F2DB2004A64EC /* CenterViewProtocol.swift */,
@@ -491,6 +497,7 @@
 				288121E2222F5598007042C1 /* ScrollStatsView.swift in Sources */,
 				0B5013F0222F2F9F004A64EC /* RecordWorkoutMasterViewController+ContainerFunctions.swift in Sources */,
 				0BF84E8422309FA600DFC6B0 /* WorkoutTableManager.swift in Sources */,
+				0BB7E9BC2232FB21000C285D /* RecordWorkoutMasterViewController+Visualizer.swift in Sources */,
 				0B5013EE222F2DB2004A64EC /* CenterViewProtocol.swift in Sources */,
 				288121DE222F53DC007042C1 /* StatPVC.swift in Sources */,
 				288121F1222F7D83007042C1 /* userStatRealm.swift in Sources */,
@@ -506,6 +513,7 @@
 				0BCA1AC42228D30100B51C27 /* EZWorkout.xcdatamodeld in Sources */,
 				0BF84E8222309F8B00DFC6B0 /* ExerciseTableManager.swift in Sources */,
 				0BA3DB99222DD2FC00AC7538 /* SpeechRecognizer.swift in Sources */,
+				0BB7E9BA2232D7DC000C285D /* SpeechVisulizerView.swift in Sources */,
 				288121EF222F7B85007042C1 /* WorkoutRealm.swift in Sources */,
 				0BB1CEC8223060AA00F386C3 /* StatsMasterController+ScrollViewDelegate.swift in Sources */,
 				0BB1CECA2230690900F386C3 /* TopBarDelegateProtocol.swift in Sources */,

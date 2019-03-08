@@ -1,15 +1,18 @@
 
-
+import AVFoundation
 import UIKit
 
 class RecordWorkoutMasterViewController: UIViewController {
+  
+  var recorder:AVAudioRecorder!
   
   @IBOutlet weak var centerScrollView: UIScrollView!
   @IBOutlet weak var centerContainerView: UIView!
   @IBOutlet weak var timerLabel: UILabel!
   @IBOutlet weak var feebBackLabel: UILabel!
+  @IBOutlet weak var feedbackVisualizer: SpeechVisulizerView!
   
-  var centerController: CenterViewController?
+    var centerController: CenterViewController?
   
   let speechInputManager = SpeechInputManager()
   var startDate: Date?
@@ -32,7 +35,9 @@ class RecordWorkoutMasterViewController: UIViewController {
     
     DataManager.dataManager.testSingelton()
     feebBackLabel.isHidden = true
+    feedbackVisualizer.isHidden = true
     
+    prepareVisualizer()
   }
   override func viewDidAppear(_ animated: Bool) {
     super.viewDidAppear(animated)
@@ -49,15 +54,22 @@ class RecordWorkoutMasterViewController: UIViewController {
   }
   
   @IBAction func recPressedDown(_ sender: Any) {
+    //TODO animate in and out
     feebBackLabel.isHidden = false
+    feedbackVisualizer.isHidden = false
     feebBackLabel.text = "recording"
     speechRecognizer.startRecognizing()
     centerController?.startRec()
+    startVisualization()
+    
   }
   @IBAction func recReleasedInside(_ sender: Any) {
+    //TODO animate in and out
     feebBackLabel.isHidden = true
+    feedbackVisualizer.isHidden = true
     speechRecognizer.stopRecognizing()
     centerController?.stopRec()
+    stopVisualization()
   }
   @IBAction func recReleasedOutside(_ sender: Any) {
     //speechRecognizer.stopRecognizing()
