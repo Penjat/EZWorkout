@@ -61,6 +61,7 @@
 		0BF84E922231B0E900DFC6B0 /* ExerciseSet.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0BF84E912231B0E900DFC6B0 /* ExerciseSet.xib */; };
 		0BF84E942231B16A00DFC6B0 /* ExerciseSetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BF84E932231B16A00DFC6B0 /* ExerciseSetView.swift */; };
 		1BD8438B9947517B54131039 /* Pods_EZWorkout.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 56613A7F23DBE1C05BB336A2 /* Pods_EZWorkout.framework */; };
+		2851C8812231F23A005E4384 /* StaticDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2851C8802231F23A005E4384 /* StaticDataManager.swift */; };
 		285A56D52228D587003E4AA0 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 285A56D42228D587003E4AA0 /* User.swift */; };
 		285A56DB2229DB2E003E4AA0 /* ExcerciseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 285A56DA2229DB2E003E4AA0 /* ExcerciseTableViewCell.swift */; };
 		28812196222DA4DA007042C1 /* StatVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28812195222DA4DA007042C1 /* StatVC.swift */; };
@@ -130,6 +131,7 @@
 		0BF84E8F2230ED2700DFC6B0 /* ExerciseTypeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseTypeView.swift; sourceTree = "<group>"; };
 		0BF84E912231B0E900DFC6B0 /* ExerciseSet.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ExerciseSet.xib; sourceTree = "<group>"; };
 		0BF84E932231B16A00DFC6B0 /* ExerciseSetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseSetView.swift; sourceTree = "<group>"; };
+		2851C8802231F23A005E4384 /* StaticDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StaticDataManager.swift; sourceTree = "<group>"; };
 		285A56D42228D587003E4AA0 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		285A56DA2229DB2E003E4AA0 /* ExcerciseTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExcerciseTableViewCell.swift; sourceTree = "<group>"; };
 		28812195222DA4DA007042C1 /* StatVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatVC.swift; sourceTree = "<group>"; };
@@ -280,6 +282,15 @@
 			path = "Cells and Xibs";
 			sourceTree = "<group>";
 		};
+		2851C8842231F43A005E4384 /* CreateCharts */ = {
+			isa = PBXGroup;
+			children = (
+				2851C8802231F23A005E4384 /* StaticDataManager.swift */,
+				0BB1CEC322304BC700F386C3 /* StatsCenterVC.swift */,
+			);
+			path = CreateCharts;
+			sourceTree = "<group>";
+		};
 		285A56D82228E358003E4AA0 /* Rec */ = {
 			isa = PBXGroup;
 			children = (
@@ -309,14 +320,14 @@
 		28812197222DBD59007042C1 /* stat VC */ = {
 			isa = PBXGroup;
 			children = (
+				2851C8842231F43A005E4384 /* CreateCharts */,
+				0BA30330222E09870046FDB9 /* StatsSB.storyboard */,
 				288121DD222F53DC007042C1 /* StatPVC.swift */,
 				28812195222DA4DA007042C1 /* StatVC.swift */,
-				0BA30330222E09870046FDB9 /* StatsSB.storyboard */,
 				288121E1222F5598007042C1 /* ScrollStatsView.swift */,
 				0BB1CEC12230496400F386C3 /* StatsMasterController.swift */,
 				0BB1CEC7223060AA00F386C3 /* StatsMasterController+ScrollViewDelegate.swift */,
 				0BB1CECB223069B900F386C3 /* StatsMasterController+TopBarDelegate.swift */,
-				0BB1CEC322304BC700F386C3 /* StatsCenterVC.swift */,
 				0BB1CEC522304BD800F386C3 /* StatsTopBarVC.swift */,
 				0BB1CEC92230690900F386C3 /* TopBarDelegateProtocol.swift */,
 			);
@@ -518,6 +529,7 @@
 				0BA3DB92222DD0F200AC7538 /* ExerciseTypes.swift in Sources */,
 				0B5013F2222F4CDC004A64EC /* DataManager.swift in Sources */,
 				0BA3DB90222DD0F200AC7538 /* ExerciseRef.swift in Sources */,
+				2851C8812231F23A005E4384 /* StaticDataManager.swift in Sources */,
 				0BB1CECC223069B900F386C3 /* StatsMasterController+TopBarDelegate.swift in Sources */,
 				0BF84E8022309F7100DFC6B0 /* HistoryViewController.swift in Sources */,
 				0BB1CEC22230496400F386C3 /* StatsMasterController.swift in Sources */,
