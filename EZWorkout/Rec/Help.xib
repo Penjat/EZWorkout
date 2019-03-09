@@ -43,14 +43,32 @@
                     <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <nil key="highlightedColor"/>
                 </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="other commands:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kGg-W1-AdV">
+                    <rect key="frame" x="36.5" y="501.5" width="198" height="24"/>
+                    <fontDescription key="fontDescription" name="SimplyRounded-BoldItalic" family="Simply Rounded" pointSize="22"/>
+                    <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="&quot;leg press, 60 pounds, 10 reps&quot;" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="icY-15-BQT">
                     <rect key="frame" x="27.5" y="308" width="320" height="21.5"/>
                     <fontDescription key="fontDescription" name="SimplyRounded-BoldItalic" family="Simply Rounded" pointSize="20"/>
                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="&quot;20 push ups&quot;" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i0J-XK-xIc">
-                    <rect key="frame" x="122" y="361.5" width="141" height="22"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="&quot;20 push ups&quot;" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i0J-XK-xIc">
+                    <rect key="frame" x="117" y="361.5" width="141" height="22"/>
+                    <fontDescription key="fontDescription" name="SimplyRounded-BoldItalic" family="Simply Rounded" pointSize="20"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="&quot;running 10 minutes&quot;" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eYE-km-6sB">
+                    <rect key="frame" x="79.5" y="415.5" width="216" height="22"/>
+                    <fontDescription key="fontDescription" name="SimplyRounded-BoldItalic" family="Simply Rounded" pointSize="20"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="&quot;undo&quot;" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ib8-h5-puZ">
+                    <rect key="frame" x="153" y="541.5" width="69" height="22"/>
                     <fontDescription key="fontDescription" name="SimplyRounded-BoldItalic" family="Simply Rounded" pointSize="20"/>
                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <nil key="highlightedColor"/>
@@ -61,15 +79,21 @@
                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="&quot;running 10 minutes&quot;" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eYE-km-6sB">
-                    <rect key="frame" x="84" y="415.5" width="216" height="22"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="&quot;end workout&quot;" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mxk-74-WmH">
+                    <rect key="frame" x="115.5" y="579.5" width="144" height="22"/>
                     <fontDescription key="fontDescription" name="SimplyRounded-BoldItalic" family="Simply Rounded" pointSize="20"/>
                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <nil key="highlightedColor"/>
                 </label>
             </subviews>
             <constraints>
+                <constraint firstItem="i0J-XK-xIc" firstAttribute="centerX" secondItem="vUN-kp-3ea" secondAttribute="centerX" id="1ef-Yg-u4p"/>
+                <constraint firstItem="Ib8-h5-puZ" firstAttribute="centerX" secondItem="vUN-kp-3ea" secondAttribute="centerX" id="7qJ-PZ-j6a"/>
+                <constraint firstItem="Ib8-h5-puZ" firstAttribute="top" secondItem="kGg-W1-AdV" secondAttribute="bottom" constant="16" id="9Id-sX-xKB"/>
+                <constraint firstItem="mxk-74-WmH" firstAttribute="centerX" secondItem="vUN-kp-3ea" secondAttribute="centerX" id="Gcf-qI-ttX"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="centerX" secondItem="Lny-IZ-ARg" secondAttribute="trailing" multiplier="0.8" id="I1C-dI-RSb"/>
+                <constraint firstItem="kGg-W1-AdV" firstAttribute="top" secondItem="eYE-km-6sB" secondAttribute="bottom" constant="64" id="OQ3-fj-ldN"/>
+                <constraint firstItem="eYE-km-6sB" firstAttribute="centerX" secondItem="vUN-kp-3ea" secondAttribute="centerX" id="PUz-wy-29F"/>
                 <constraint firstItem="gvy-mp-ASv" firstAttribute="top" secondItem="PVa-AJ-Y7u" secondAttribute="bottom" constant="16" id="QfN-fa-ARA"/>
                 <constraint firstItem="wAL-eh-aWV" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="32" id="RLo-ml-pVR"/>
                 <constraint firstItem="PVa-AJ-Y7u" firstAttribute="top" secondItem="wAL-eh-aWV" secondAttribute="bottom" constant="64" id="T7A-gG-9Sa"/>
@@ -81,6 +105,8 @@
                 <constraint firstItem="gvy-mp-ASv" firstAttribute="centerX" secondItem="vUN-kp-3ea" secondAttribute="centerX" id="gY6-zA-zcK"/>
                 <constraint firstItem="icY-15-BQT" firstAttribute="top" secondItem="Lny-IZ-ARg" secondAttribute="bottom" constant="16" id="iF9-A6-WVK"/>
                 <constraint firstItem="icY-15-BQT" firstAttribute="centerX" secondItem="vUN-kp-3ea" secondAttribute="centerX" id="jE8-zk-ubk"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="centerX" secondItem="kGg-W1-AdV" secondAttribute="trailing" multiplier="0.8" id="og8-18-KQK"/>
+                <constraint firstItem="mxk-74-WmH" firstAttribute="top" secondItem="Ib8-h5-puZ" secondAttribute="bottom" constant="16" id="pk3-NE-uiB"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
         </view>
