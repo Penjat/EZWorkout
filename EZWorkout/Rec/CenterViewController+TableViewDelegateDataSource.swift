@@ -17,6 +17,12 @@ extension CenterViewController : UITableViewDelegate, UITableViewDataSource{
     if let delegate = delegate , let exercise =  delegate.getExercise(atIndex:indexPath.row){
       cell.setUp(exerciseModel:exercise)
     }
+    
+    
+    cell.backgroundColor = #colorLiteral(red: 0.4500938654, green: 0.9813225865, blue: 0.4743030667, alpha: 0)
+    
+    
+    
     return cell
   }
   

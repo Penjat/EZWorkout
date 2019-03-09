@@ -194,9 +194,9 @@
                                 <subviews>
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="egL-ap-L8a">
                                         <rect key="frame" x="0.0" y="0.0" width="361.5" height="410"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="backgroundColor" white="1" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <prototypes>
-                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="exerciseCell" rowHeight="85" id="dZ2-Ch-ytf" customClass="ExerciseCell" customModule="EZWorkout" customModuleProvider="target">
+                                            <tableViewCell opaque="NO" clipsSubviews="YES" alpha="0.0" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="exerciseCell" rowHeight="85" id="dZ2-Ch-ytf" customClass="ExerciseCell" customModule="EZWorkout" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="28" width="361.5" height="85"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="dZ2-Ch-ytf" id="Or7-tw-QMf">
@@ -205,7 +205,6 @@
                                                     <subviews>
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="A9i-rj-R6y" customClass="ExerciseView" customModule="EZWorkout" customModuleProvider="target">
                                                             <rect key="frame" x="0.0" y="0.0" width="361.5" height="84.5"/>
-                                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </view>
                                                     </subviews>
                                                     <constraints>
@@ -215,6 +214,7 @@
                                                         <constraint firstItem="A9i-rj-R6y" firstAttribute="top" secondItem="Or7-tw-QMf" secondAttribute="top" id="z73-o1-isy"/>
                                                     </constraints>
                                                 </tableViewCellContentView>
+                                                <color key="backgroundColor" red="1" green="0.97074075339999999" blue="0.6149037624" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <connections>
                                                     <outlet property="exerciseView" destination="A9i-rj-R6y" id="1eh-6i-4Q1"/>
                                                 </connections>
@@ -222,7 +222,6 @@
                                         </prototypes>
                                     </tableView>
                                 </subviews>
-                                <color key="backgroundColor" red="1" green="0.86091302579999995" blue="0.026286063320000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstItem="egL-ap-L8a" firstAttribute="top" secondItem="Idq-kp-ykc" secondAttribute="top" id="1cn-wb-L5t"/>
                                     <constraint firstAttribute="bottom" secondItem="egL-ap-L8a" secondAttribute="bottom" id="8I7-z3-JBp"/>
