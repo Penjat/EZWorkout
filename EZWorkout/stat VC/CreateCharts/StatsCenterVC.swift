@@ -8,6 +8,9 @@ class StatsCenterVC: UIViewController {
   @IBOutlet weak var chart2: BarChartView!
   @IBOutlet weak var TypePieChartView: PieChartView!
     
+    
+    var userVC = StatUserVC()
+    
     override func viewDidLoad() {
     super.viewDidLoad()
     
@@ -28,8 +31,10 @@ class StatsCenterVC: UIViewController {
     })
    
    
+   
     
   }
+    
     
     func updateChartData(theChart: PieChartView, chartLabel:[String] ,data: [PieChartDataEntry]) {
         
@@ -43,15 +48,32 @@ class StatsCenterVC: UIViewController {
   
   override func viewDidAppear(_ animated: Bool) {
     super.viewDidAppear(animated)
-    
-    
-    chart1.animate(xAxisDuration: 2.0, yAxisDuration: 2.0)
-//    chart2.animate(xAxisDuration: 2.0, yAxisDuration: 2.0)
+    pageAnimation(page: 0)
+   
     
   }
-  func navTo(page:Int){
-
-  }
+    func pageAnimation(page:Int){
+        switch page {
+        case 0:
+            chart1.animate(xAxisDuration: 2.0, yAxisDuration: 2.0)
+        case 1:
+             chart2.animate(xAxisDuration: 2.0, yAxisDuration: 2.0)
+       case 3:
+            userVC.animateCircular()
+        default:
+            return
+        }
+    }
+    
+    
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if (segue.identifier == "goUser"){
+            userVC = segue.destination as! StatUserVC
+           // viewController.animateCircular()
+            
+        }
+    }
   
   func setUpTestData(chart: BarChartView , chartLabels:[String] , chartValues:[Int]){
     //chart.delegate = self

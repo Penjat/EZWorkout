@@ -6,6 +6,8 @@ target 'EZWorkout' do
   use_frameworks!
 pod 'Charts', '~> 3.2'
 pod 'RealmSwift'
+pod 'UICircularProgressRing'
+pod 'SkyFloatingLabelTextField', '~> 3.0'
   # Pods for EZWorkout
 
 end

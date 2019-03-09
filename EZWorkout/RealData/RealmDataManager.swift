@@ -37,14 +37,26 @@ class RealmDataMangers {
     
     static func retrieveUser(){
         let realm = try! Realm()
-        let results = realm.objects(UserRealm.self).filter("name == 'Jason'").first!
-        UserRealm.curUser = results
+        if let results = realm.objects(UserRealm.self).filter("name == 'Jason'").first{
+            UserRealm.curUser = results
+        }else{
+            let realm = try! Realm()
+            let firstExcerise = RealmDataMangers.createExcercise(calory: 10, type: "Bodyweight", name: "bench", modified: "incline", reps: 20, weight: 40)
+            let second = RealmDataMangers.createExcercise(calory: 10, type: "Cardio", name: "swimming", modified: "incline", reps: 20, weight: 40)
+            let workout = RealmDataMangers.createWorkout(endTime: Date(), startTime: Date(), location: "Light-house", excerciseArray: [firstExcerise,firstExcerise,second,second])
+            
+            let userSat =  RealmDataMangers.createUserStat(date: Date(), weight: 120)
+            let user = RealmDataMangers.createUser(name: "Jason", gender: "male", Date: Date(), userStatArray: [userSat,userSat], workoutArray: [workout,workout])
+            RealmDataMangers.save(object: user, realm: realm)
+            UserRealm.curUser = realm.objects(UserRealm.self).filter("name == 'Jason'").first!
+        }
         
     }
     
     static func retrieveExcercise(workoutNum:Int,excersierNum:Int,realm:Realm)->ExcerciseRealm{
-        let results = realm.objects(UserRealm.self).first!
-        return results.workoutArray[workoutNum].excerciseArray[excersierNum]
+       let results = realm.objects(UserRealm.self).first!
+            return results.workoutArray[workoutNum].excerciseArray[excersierNum]
+        
     }
    // static func save()
 }
@@ -59,7 +71,7 @@ class RealmDataManger: UIViewController{
         let firstExcerise = RealmDataMangers.createExcercise(calory: 10, type: "bodyweight", name: "bench", modified: "incline", reps: 20, weight: 40)
       let workout = RealmDataMangers.createWorkout(endTime: Date(), startTime: Date(), location: "Light-house", excerciseArray: [firstExcerise,firstExcerise])
       let userSat =  RealmDataMangers.createUserStat(date: Date(), weight: 120)
-      let user = RealmDataMangers.createUser(name: "Zoe", gender: "female", Date: Date(), userStatArray: [userSat,userSat], workoutArray: [workout,workout])
+      let user = RealmDataMangers.createUser(name: "Josh", gender: "female", Date: Date(), userStatArray: [userSat,userSat], workoutArray: [workout,workout])
       RealmDataMangers.save(object: user, realm: realm)
 //        print(RealmDataMangers.retrieveExcercise(workoutNum: 0, excersierNum: 0, realm: realm))
 //        print(UserRealm.curUser.workoutArray[0].excerciseArray[0])
