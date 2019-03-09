@@ -13,6 +13,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ExerciseView" customModule="EZWorkout" customModuleProvider="target">
             <connections>
                 <outlet property="contentView" destination="iN0-l3-epB" id="n3V-Wm-eGb"/>
+                <outlet property="exerciseImage" destination="ELW-Ce-n3S" id="kJm-9p-duD"/>
                 <outlet property="labelExerciseName" destination="WuB-nZ-KPa" id="lxG-sp-0Ea"/>
                 <outlet property="labelExerciseReps" destination="xCo-yM-Ml7" id="wPo-VC-9LT"/>
                 <outlet property="labelExerciseWeight" destination="pwU-MG-5Bn" id="8OC-8c-6IV"/>
@@ -20,42 +21,65 @@
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view contentMode="scaleToFill" id="iN0-l3-epB">
-            <rect key="frame" x="0.0" y="0.0" width="375" height="73"/>
+            <rect key="frame" x="0.0" y="0.0" width="375" height="85"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Exercise Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WuB-nZ-KPa">
-                    <rect key="frame" x="8" y="8" width="359" height="26"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="21"/>
-                    <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                    <nil key="highlightedColor"/>
-                </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Reps" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xCo-yM-Ml7">
-                    <rect key="frame" x="328.5" y="44" width="38.5" height="21"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <nil key="textColor"/>
-                    <nil key="highlightedColor"/>
-                </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Weight" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pwU-MG-5Bn">
-                    <rect key="frame" x="8" y="44" width="54" height="21"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <nil key="textColor"/>
-                    <nil key="highlightedColor"/>
-                </label>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="itf-Y3-7Nu">
+                    <rect key="frame" x="42.5" y="8" width="324.5" height="69"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Exercise Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WuB-nZ-KPa">
+                            <rect key="frame" x="0.0" y="8" width="324.5" height="26"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                            <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Weight" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pwU-MG-5Bn">
+                            <rect key="frame" x="135.5" y="40" width="54" height="21"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Reps" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xCo-yM-Ml7">
+                            <rect key="frame" x="278" y="40" width="38.5" height="21"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="bottom" secondItem="xCo-yM-Ml7" secondAttribute="bottom" constant="8" id="4uw-wm-G70"/>
+                        <constraint firstAttribute="trailing" secondItem="xCo-yM-Ml7" secondAttribute="trailing" constant="8" id="IHQ-94-LrV"/>
+                        <constraint firstAttribute="trailing" secondItem="WuB-nZ-KPa" secondAttribute="trailing" id="VRh-Z5-3RJ"/>
+                        <constraint firstItem="WuB-nZ-KPa" firstAttribute="leading" secondItem="itf-Y3-7Nu" secondAttribute="leading" id="hQP-b2-MaI"/>
+                        <constraint firstItem="WuB-nZ-KPa" firstAttribute="top" secondItem="itf-Y3-7Nu" secondAttribute="top" constant="8" id="j53-rB-K5F"/>
+                        <constraint firstAttribute="bottom" secondItem="pwU-MG-5Bn" secondAttribute="bottom" constant="8" id="kR3-XF-oIj"/>
+                        <constraint firstItem="pwU-MG-5Bn" firstAttribute="centerX" secondItem="itf-Y3-7Nu" secondAttribute="centerX" id="yr9-fX-mhg"/>
+                    </constraints>
+                </view>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ELW-Ce-n3S">
+                    <rect key="frame" x="0.0" y="0.0" width="85" height="85"/>
+                    <color key="backgroundColor" red="1" green="0.97074075339999999" blue="0.6149037624" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="ELW-Ce-n3S" secondAttribute="height" multiplier="1:1" id="fWc-QF-f3s"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="keyPath" value="YES"/>
+                    </userDefinedRuntimeAttributes>
+                </imageView>
             </subviews>
-            <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
-                <constraint firstItem="pwU-MG-5Bn" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="8" id="052-JQ-VHP"/>
-                <constraint firstItem="WuB-nZ-KPa" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="8" id="Dac-96-BJH"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="pwU-MG-5Bn" secondAttribute="bottom" constant="8" id="KdK-j6-Y8z"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="WuB-nZ-KPa" secondAttribute="trailing" constant="8" id="MMS-SO-DXc"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="xCo-yM-Ml7" secondAttribute="trailing" constant="8" id="Vuw-RX-PEq"/>
-                <constraint firstItem="WuB-nZ-KPa" firstAttribute="centerX" secondItem="vUN-kp-3ea" secondAttribute="centerX" id="YZ0-4R-4Bd"/>
-                <constraint firstItem="WuB-nZ-KPa" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="8" id="faF-8g-IpU"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="xCo-yM-Ml7" secondAttribute="bottom" constant="8" id="jc4-kx-K2D"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="itf-Y3-7Nu" secondAttribute="bottom" constant="8" id="3Hv-BA-daV"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="itf-Y3-7Nu" secondAttribute="trailing" constant="8" id="6HE-Ga-od4"/>
+                <constraint firstItem="ELW-Ce-n3S" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="EC7-to-eaJ"/>
+                <constraint firstItem="itf-Y3-7Nu" firstAttribute="leading" secondItem="ELW-Ce-n3S" secondAttribute="centerX" id="M7w-Bf-VPj"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="ELW-Ce-n3S" secondAttribute="bottom" id="e20-zJ-Dwu"/>
+                <constraint firstItem="itf-Y3-7Nu" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="8" id="hSr-kl-d6d"/>
+                <constraint firstItem="ELW-Ce-n3S" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="mfC-Gj-6QJ"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
-            <point key="canvasLocation" x="130.40000000000001" y="-117.39130434782609"/>
+            <point key="canvasLocation" x="130.40000000000001" y="-111.99400299850076"/>
         </view>
     </objects>
 </document>
