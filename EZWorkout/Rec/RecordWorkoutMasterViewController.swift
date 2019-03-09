@@ -39,6 +39,28 @@ class RecordWorkoutMasterViewController: UIViewController {
     feebBackLabel.isHidden = true
     feedbackVisualizer.isHidden = true
     
+    
+    let gradient: CAGradientLayer = CAGradientLayer()
+    
+    gradient.colors = [UIColor.blue.cgColor, UIColor.red.cgColor]
+    gradient.locations = [0.0 , 1.0]
+    gradient.startPoint = CGPoint(x: 0.0, y: 1.0)
+    gradient.endPoint = CGPoint(x: 1.0, y: 1.0)
+    gradient.frame = CGRect(x: 0.0, y: 0.0, width: self.view.frame.size.width, height: self.view.frame.size.height)
+    
+    self.view.layer.insertSublayer(gradient, at: 0)
+    let gradientChangeAnimation = CABasicAnimation(keyPath: "colors")
+    gradientChangeAnimation.duration = 2.0
+    gradientChangeAnimation.toValue = [UIColor.red.cgColor,UIColor.blue.cgColor]
+      gradientChangeAnimation.fillMode = CAMediaTimingFillMode.forwards
+    gradientChangeAnimation.isRemovedOnCompletion = false
+    gradientChangeAnimation.repeatCount = HUGE
+    gradientChangeAnimation.autoreverses = true
+    gradient.add(gradientChangeAnimation, forKey: "colorChange")
+    
+    
+    
+    
     prepareVisualizer()
   }
   override func viewDidAppear(_ animated: Bool) {
@@ -67,15 +89,16 @@ class RecordWorkoutMasterViewController: UIViewController {
   }
   @IBAction func recReleasedInside(_ sender: Any) {
     //TODO animate in and out
+    
+  }
+  @IBAction func recReleasedOutside(_ sender: Any) {
+    //speechRecognizer.stopRecognizing()
+    //TODO check if all button press cases are covered
     feebBackLabel.isHidden = true
     feedbackVisualizer.isHidden = true
     speechRecognizer.stopRecognizing()
     centerController?.stopRec()
     stopVisualization()
-  }
-  @IBAction func recReleasedOutside(_ sender: Any) {
-    //speechRecognizer.stopRecognizing()
-    //TODO check if all button press cases are covered
   }
   
   

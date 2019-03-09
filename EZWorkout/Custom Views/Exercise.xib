@@ -14,6 +14,7 @@
             <connections>
                 <outlet property="contentView" destination="iN0-l3-epB" id="n3V-Wm-eGb"/>
                 <outlet property="exerciseImage" destination="ELW-Ce-n3S" id="kJm-9p-duD"/>
+                <outlet property="infoContainer" destination="itf-Y3-7Nu" id="1xu-z7-wTw"/>
                 <outlet property="labelExerciseName" destination="WuB-nZ-KPa" id="lxG-sp-0Ea"/>
                 <outlet property="labelExerciseReps" destination="xCo-yM-Ml7" id="wPo-VC-9LT"/>
                 <outlet property="labelExerciseWeight" destination="pwU-MG-5Bn" id="8OC-8c-6IV"/>
@@ -57,7 +58,7 @@
                         <constraint firstItem="pwU-MG-5Bn" firstAttribute="centerX" secondItem="itf-Y3-7Nu" secondAttribute="centerX" id="yr9-fX-mhg"/>
                     </constraints>
                 </view>
-                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ELW-Ce-n3S">
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pushup" translatesAutoresizingMaskIntoConstraints="NO" id="ELW-Ce-n3S">
                     <rect key="frame" x="0.0" y="0.0" width="85" height="85"/>
                     <color key="backgroundColor" red="1" green="0.97074075339999999" blue="0.6149037624" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     <constraints>
@@ -82,4 +83,7 @@
             <point key="canvasLocation" x="130.40000000000001" y="-111.99400299850076"/>
         </view>
     </objects>
+    <resources>
+        <image name="pushup" width="720" height="720"/>
+    </resources>
 </document>

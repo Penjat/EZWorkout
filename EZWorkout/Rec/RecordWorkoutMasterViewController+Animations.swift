@@ -10,7 +10,7 @@ extension RecordWorkoutMasterViewController{
     let shortBlink = 0.1
     let longBlink = 0.15
     
-    UIView.animateKeyframes(withDuration: 5.0, delay: 0.0, options: [], animations: {
+    UIView.animateKeyframes(withDuration: 8.0, delay: 0.0, options: [], animations: {
       
       UIView.addKeyframe(withRelativeStartTime: relTime, relativeDuration: shortBlink, animations: {
 
