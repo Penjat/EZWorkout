@@ -75,4 +75,10 @@ extension RecordWorkoutMasterViewController{
       
     })
   }
+  func timerLabelFadeIn(){
+    //TODO add a scale transform
+    UIView.animate(withDuration: 1.0, animations: {
+      self.timerLabel.alpha = 1.0
+    })
+  }
 }

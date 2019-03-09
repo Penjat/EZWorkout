@@ -11,6 +11,7 @@ class RecordWorkoutMasterViewController: UIViewController {
   @IBOutlet weak var timerLabel: UILabel!
   @IBOutlet weak var feebBackLabel: UILabel!
   @IBOutlet weak var feedbackVisualizer: SpeechVisulizerView!
+  @IBOutlet weak var workoutStatusLabel: UILabel!
   
   
   
@@ -38,6 +39,8 @@ class RecordWorkoutMasterViewController: UIViewController {
     DataManager.dataManager.testSingelton()
     feebBackLabel.isHidden = true
     feedbackVisualizer.isHidden = true
+    
+    timerLabel.alpha = 0.0
     
     //TODO put in animation extention
     let gradient: CAGradientLayer = CAGradientLayer()

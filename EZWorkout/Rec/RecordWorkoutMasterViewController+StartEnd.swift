@@ -14,8 +14,11 @@ extension RecordWorkoutMasterViewController{
       workoutModel?.startTime = Date()
       exercises = [ExerciseModel]()
       
+      
       createFeedbackMessage(topMsg: "Starting Workout", bottomMsg: "")
       startWorkoutTimer()
+      timerLabelFadeIn()
+      workoutStatusLabel.text = "workout in progress..."
     }else{
       print("you are already working out")
       createFeedbackMessage(topMsg: "you are already working out", bottomMsg: "")
@@ -32,6 +35,7 @@ extension RecordWorkoutMasterViewController{
       save(workoutModel:workoutModel!)
       endWorkoutTimer()
       timerFlash()
+      workoutStatusLabel.text = "workout complete"
     }else{
       print("you need to start a workout first")
       createFeedbackMessage(topMsg: "you need to start a workout first", bottomMsg: "")

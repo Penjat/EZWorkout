@@ -24,18 +24,18 @@ class CenterViewController: UIViewController {
   
   func startRec(){
     //TODO animate properly
-    return
-    UIView.animate(withDuration: 0.5, animations: {
-      self.recView.backgroundColor = UIColor.white
-    })
+//
+//    UIView.animate(withDuration: 0.5, animations: {
+//      self.recView.backgroundColor = UIColor.white
+//    })
   }
   func stopRec(){
     //TODO animate properly
-    return
-    UIView.animate(withDuration: 0.5, animations: {
-      //TODO get correct color of blue
-      self.recView.backgroundColor = UIColor(red:0.23, green:0.49, blue:0.93, alpha:1.0)
-    })
+
+//    UIView.animate(withDuration: 0.5, animations: {
+//      //TODO get correct color of blue
+//      self.recView.backgroundColor = UIColor(red:0.23, green:0.49, blue:0.93, alpha:1.0)
+//    })
   }
   
 }
