@@ -39,7 +39,7 @@ class RecordWorkoutMasterViewController: UIViewController {
     feebBackLabel.isHidden = true
     feedbackVisualizer.isHidden = true
     
-    
+    //TODO put in animation extention
     let gradient: CAGradientLayer = CAGradientLayer()
     
     gradient.colors = [UIColor.blue.cgColor, UIColor.red.cgColor]
