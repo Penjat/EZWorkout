@@ -37,7 +37,7 @@ class SpeechVisulizerView: UIView {
     // Animate y position
     var i : CGFloat = 0.0
     for index in 0..<barArray.count{
-      let indexFromCenter = abs(i-15)
+      let indexFromCenter = abs(i-CGFloat( barArray.count/2))
       let moveAnim = CAKeyframeAnimation(keyPath: "bounds.size.height")
       //moveAnim.fromValue =
       //moveAnim.toValue = 300*vol
