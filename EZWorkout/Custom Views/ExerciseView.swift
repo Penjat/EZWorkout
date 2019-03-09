@@ -10,6 +10,8 @@ class ExerciseView: UIView {
   @IBOutlet weak var labelExerciseName: UILabel!
   @IBOutlet weak var labelExerciseWeight: UILabel!
   @IBOutlet weak var labelExerciseReps: UILabel!
+  @IBOutlet weak var exerciseImage: UIImageView!
+  @IBOutlet weak var infoContainer: UIView!
   
   override init(frame: CGRect) {
     super.init(frame: frame)
@@ -31,6 +33,8 @@ class ExerciseView: UIView {
   func setUp(exerciseModel:ExerciseModel){
     
     //TODO adjust text presentation
+    infoContainer.layer.cornerRadius = 12
+    exerciseImage.layer.cornerRadius = exerciseImage.frame.size.width / 2
     labelExerciseName.text = exerciseModel.name
     if let reps = exerciseModel.reps {
       labelExerciseReps.text = "\(reps) reps"

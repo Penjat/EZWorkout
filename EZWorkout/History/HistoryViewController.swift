@@ -78,32 +78,23 @@ class HistoryViewController: UIViewController {
       let endTime = timeFormater.string(from: workout.endTime!)
       startEndLabel.text = "\(startTime) - \(endTime)"
       
-      timeSpentLabel.text = "\(workout.startTime!.timeIntervalSince(workout.endTime!)) hours"
+      
+      //----TODO keep a ref to this instead of re-creating
+      let formatter = DateComponentsFormatter()
+      formatter.unitsStyle = .short
+      formatter.allowedUnits = [.second ,.minute , .hour]
+   
+      let formattedWorkoutTime = formatter.string(from: workout.startTime!, to: workout.endTime!)!
+      
+      timeSpentLabel.text = "\(formattedWorkoutTime)"
     }
   }
   
   
-  func testRealm(){
-    //TODO take this out
-    let realm = try! Realm()
-    
-    RealmDataMangers.retrieveUser()
+  
     
     
-    
-    
-    let exercise2 = RealmDataMangers.createExcercise(calory: 4, type: "Bodyweight", name: "legpress", modified: "", reps: 10, weight: 100)
-    
-    let exercise1 = RealmDataMangers.createExcercise(calory: 2, type: "Bodyweight", name: "benchpress", modified: "", reps: 12, weight: 66)
-    
-    let workout = RealmDataMangers.createWorkout(endTime: Date(), startTime: Date(), location: "here", excerciseArray: [exercise1,exercise2])
-    
-    try! realm.write {
-      UserRealm.curUser.workoutArray.append(workout)
-    }
-    
-    
-  }
+  
   
   
   

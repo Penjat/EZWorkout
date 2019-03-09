@@ -61,7 +61,6 @@
                                         </connections>
                                     </containerView>
                                 </subviews>
-                                <color key="backgroundColor" red="0.93120175599999999" green="0.58680915810000001" blue="0.0019564292579999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstItem="GuP-wI-WAn" firstAttribute="height" secondItem="sKg-ac-tKm" secondAttribute="height" id="6zM-bu-O3u"/>
                                     <constraint firstItem="GuP-wI-WAn" firstAttribute="width" secondItem="sKg-ac-tKm" secondAttribute="width" multiplier="3" id="Pge-JN-rpf"/>
@@ -104,7 +103,6 @@
                                 </constraints>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="uqK-KA-Ytp" firstAttribute="trailing" secondItem="uPl-eA-GDb" secondAttribute="trailing" id="3aQ-Kd-8rh"/>
                             <constraint firstItem="Kzz-Do-4qQ" firstAttribute="leading" secondItem="uqK-KA-Ytp" secondAttribute="leading" id="3px-GF-lfS"/>
@@ -184,7 +182,6 @@
                                         <rect key="frame" x="8" y="8" width="346" height="394"/>
                                     </imageView>
                                 </subviews>
-                                <color key="backgroundColor" red="0.23137254901960785" green="0.48627450980392156" blue="0.93333333333333335" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="bottom" secondItem="HZX-HF-4iC" secondAttribute="bottom" constant="8" id="6S2-af-2nc"/>
                                     <constraint firstItem="HZX-HF-4iC" firstAttribute="top" secondItem="hg6-aN-6eO" secondAttribute="top" constant="8" id="7Em-7Z-1XP"/>
@@ -234,7 +231,6 @@
                                 </constraints>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="hg6-aN-6eO" firstAttribute="top" secondItem="FyU-hU-Lc7" secondAttribute="topMargin" id="0aA-3s-ZgY"/>
                             <constraint firstItem="Idq-kp-ykc" firstAttribute="leading" secondItem="hg6-aN-6eO" secondAttribute="trailing" id="GEx-Xf-rAG"/>

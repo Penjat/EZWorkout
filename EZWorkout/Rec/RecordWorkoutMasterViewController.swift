@@ -14,14 +14,14 @@ class RecordWorkoutMasterViewController: UIViewController {
   
   
   
-    var centerController: CenterViewController?
+  var centerController: CenterViewController?
   
   let speechInputManager = SpeechInputManager()
   var startDate: Date?
   
   var workoutModel: WorkoutModel?
   var exercises: [ExerciseModel]?
-  
+  var lastExercise: ExerciseModel?
   
   var isWorkingOut = false
   
@@ -38,6 +38,28 @@ class RecordWorkoutMasterViewController: UIViewController {
     DataManager.dataManager.testSingelton()
     feebBackLabel.isHidden = true
     feedbackVisualizer.isHidden = true
+    
+    
+    let gradient: CAGradientLayer = CAGradientLayer()
+    
+    gradient.colors = [UIColor.blue.cgColor, UIColor.red.cgColor]
+    gradient.locations = [0.0 , 1.0]
+    gradient.startPoint = CGPoint(x: 0.0, y: 1.0)
+    gradient.endPoint = CGPoint(x: 1.0, y: 1.0)
+    gradient.frame = CGRect(x: 0.0, y: 0.0, width: self.view.frame.size.width, height: self.view.frame.size.height)
+    
+    self.view.layer.insertSublayer(gradient, at: 0)
+    let gradientChangeAnimation = CABasicAnimation(keyPath: "colors")
+    gradientChangeAnimation.duration = 2.0
+    gradientChangeAnimation.toValue = [UIColor.red.cgColor,UIColor.blue.cgColor]
+      gradientChangeAnimation.fillMode = CAMediaTimingFillMode.forwards
+    gradientChangeAnimation.isRemovedOnCompletion = false
+    gradientChangeAnimation.repeatCount = HUGE
+    gradientChangeAnimation.autoreverses = true
+    gradient.add(gradientChangeAnimation, forKey: "colorChange")
+    
+    
+    
     
     prepareVisualizer()
   }
@@ -67,15 +89,16 @@ class RecordWorkoutMasterViewController: UIViewController {
   }
   @IBAction func recReleasedInside(_ sender: Any) {
     //TODO animate in and out
+    
+  }
+  @IBAction func recReleasedOutside(_ sender: Any) {
+    //speechRecognizer.stopRecognizing()
+    //TODO check if all button press cases are covered
     feebBackLabel.isHidden = true
     feedbackVisualizer.isHidden = true
     speechRecognizer.stopRecognizing()
     centerController?.stopRec()
     stopVisualization()
-  }
-  @IBAction func recReleasedOutside(_ sender: Any) {
-    //speechRecognizer.stopRecognizing()
-    //TODO check if all button press cases are covered
   }
   
   
@@ -146,49 +169,4 @@ class RecordWorkoutMasterViewController: UIViewController {
   
 }
 
-extension RecordWorkoutMasterViewController : RecognizerReturnDelegate {
-  
-  func recieveInProgress(speech: String) {
-    feebBackLabel.text = speech
-  }
-  
-  func recieve(speech: String) {
-    print("speech recieved: \(speech)")
-    
-    //if working out, check exercises first
-    
-      //process for exercise data
-      var exerciseModel = speechInputManager.findExercise(input: speech)
-      if let exerciseModel = exerciseModel {
-        print("found an exercise with the name \(exerciseModel.name)")
-        if isWorkingOut{
-          createExerciseView(exerciseModel: exerciseModel)
-        }else{
-          //TODO auto start workout
-          createFeedbackMessage(topMsg: "you must start a workout first", bottomMsg: "")
-        }
-        
-        return
-      }
-    
-    
-    //then check the commands
-    let cmd = speechInputManager.findCommand(inputSpeech: speech)
-    
-    if let cmd = cmd{
-      switch (cmd){
-      case .StartWorkout:
-        startWorkout()
-      case .EndWorkout:
-        endWorkout()
-      }
-    }else{
-      print("did not understand command")
-      createFeedbackMessage(topMsg: "did not understand command", bottomMsg: "\'\(speech)\'")
-    }
-    
-    
-  }
-  
-  
-}
+
