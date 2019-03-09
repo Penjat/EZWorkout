@@ -12,6 +12,8 @@ class RecordWorkoutMasterViewController: UIViewController {
   @IBOutlet weak var feebBackLabel: UILabel!
   @IBOutlet weak var feedbackVisualizer: SpeechVisulizerView!
   
+  
+  
     var centerController: CenterViewController?
   
   let speechInputManager = SpeechInputManager()

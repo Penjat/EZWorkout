@@ -71,6 +71,7 @@ extension SpeechInputManager{
         numberArray.append(number)
       }
     }
+    
     return numberArray
   }
   
