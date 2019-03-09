@@ -14,8 +14,10 @@ extension StatsMasterController : UIScrollViewDelegate{
     let pageFloat =  round(centerScrollView.contentOffset.x / centerScrollView.frame.size.width)
     let page = Int(pageFloat)
     if page != curPage {
-      curPage = page
-      setStatBarPos(pageNum: curPage)
+        curPage = page
+        setStatBarPos(pageNum: curPage)
+        centerController.pageAnimation(page: curPage)
     }
   }
+
 }

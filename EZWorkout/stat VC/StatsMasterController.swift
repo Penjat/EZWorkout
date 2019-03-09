@@ -7,7 +7,7 @@ class StatsMasterController: UIViewController {
   var centerController: StatsCenterVC!
   var topBarController: StatsTopBarVC!
   
-  var curPage = 0
+ var curPage = 0
   
   @IBOutlet weak var topBarScrollView: UIScrollView!
   @IBOutlet weak var centerScrollView: UIScrollView!
