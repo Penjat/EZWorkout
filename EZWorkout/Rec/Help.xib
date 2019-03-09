@@ -9,6 +9,11 @@
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Simply Rounded Bold Italic.ttf">
+            <string>SimplyRounded-BoldItalic</string>
+        </array>
+    </customFonts>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HelpView" customModule="EZWorkout" customModuleProvider="target">
             <connections>
@@ -20,45 +25,62 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="need help?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wAL-eh-aWV">
-                    <rect key="frame" x="135" y="52" width="105" height="27"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="need help?" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wAL-eh-aWV">
+                    <rect key="frame" x="26" y="52" width="153.5" height="27.5"/>
+                    <fontDescription key="fontDescription" name="SimplyRounded-BoldItalic" family="Simply Rounded" pointSize="26"/>
                     <color key="textColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="hold rec and say:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PVa-AJ-Y7u">
-                    <rect key="frame" x="56.5" y="111" width="131" height="21"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <nil key="textColor"/>
+                    <rect key="frame" x="38" y="143.5" width="196.5" height="23.5"/>
+                    <fontDescription key="fontDescription" name="SimplyRounded-BoldItalic" family="Simply Rounded" pointSize="22"/>
+                    <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="enter an exercise:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lny-IZ-ARg">
-                    <rect key="frame" x="56" y="218" width="135" height="21"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <nil key="textColor"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="enter an exercise:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lny-IZ-ARg">
+                    <rect key="frame" x="27.5" y="268.5" width="207" height="23.5"/>
+                    <fontDescription key="fontDescription" name="SimplyRounded-BoldItalic" family="Simply Rounded" pointSize="22"/>
+                    <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="&quot;leg press, 60 pounds, 10 reps&quot;" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="icY-15-BQT">
-                    <rect key="frame" x="83" y="279" width="241" height="21"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="&quot;leg press, 60 pounds, 10 reps&quot;" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="icY-15-BQT">
+                    <rect key="frame" x="27.5" y="308" width="320" height="21.5"/>
+                    <fontDescription key="fontDescription" name="SimplyRounded-BoldItalic" family="Simply Rounded" pointSize="20"/>
                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="&quot;start workout&quot;" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gvy-mp-ASv">
-                    <rect key="frame" x="132" y="168" width="116" height="21"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="&quot;20 push ups&quot;" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i0J-XK-xIc">
+                    <rect key="frame" x="122" y="361.5" width="141" height="22"/>
+                    <fontDescription key="fontDescription" name="SimplyRounded-BoldItalic" family="Simply Rounded" pointSize="20"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="&quot;start workout&quot;" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gvy-mp-ASv">
+                    <rect key="frame" x="112" y="183" width="151.5" height="21.5"/>
+                    <fontDescription key="fontDescription" name="SimplyRounded-BoldItalic" family="Simply Rounded" pointSize="20"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="&quot;running 10 minutes&quot;" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eYE-km-6sB">
+                    <rect key="frame" x="84" y="415.5" width="216" height="22"/>
+                    <fontDescription key="fontDescription" name="SimplyRounded-BoldItalic" family="Simply Rounded" pointSize="20"/>
                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <nil key="highlightedColor"/>
                 </label>
             </subviews>
             <constraints>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="centerX" secondItem="Lny-IZ-ARg" secondAttribute="trailing" multiplier="0.8" id="I1C-dI-RSb"/>
+                <constraint firstItem="gvy-mp-ASv" firstAttribute="top" secondItem="PVa-AJ-Y7u" secondAttribute="bottom" constant="16" id="QfN-fa-ARA"/>
                 <constraint firstItem="wAL-eh-aWV" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="32" id="RLo-ml-pVR"/>
-                <constraint firstItem="PVa-AJ-Y7u" firstAttribute="top" secondItem="wAL-eh-aWV" secondAttribute="bottom" constant="32" id="T7A-gG-9Sa"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="centerX" secondItem="PVa-AJ-Y7u" secondAttribute="trailing" id="ffO-Nc-zP1"/>
-                <constraint firstItem="wAL-eh-aWV" firstAttribute="centerX" secondItem="vUN-kp-3ea" secondAttribute="centerX" id="lli-IT-OpV"/>
+                <constraint firstItem="PVa-AJ-Y7u" firstAttribute="top" secondItem="wAL-eh-aWV" secondAttribute="bottom" constant="64" id="T7A-gG-9Sa"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="centerX" secondItem="wAL-eh-aWV" secondAttribute="trailing" constant="8" id="YGa-G3-xeC"/>
+                <constraint firstItem="eYE-km-6sB" firstAttribute="top" secondItem="i0J-XK-xIc" secondAttribute="bottom" constant="32" id="e6w-kp-9If"/>
+                <constraint firstItem="i0J-XK-xIc" firstAttribute="top" secondItem="icY-15-BQT" secondAttribute="bottom" constant="32" id="eh7-LJ-587"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="centerX" secondItem="PVa-AJ-Y7u" secondAttribute="trailing" multiplier="0.8" id="ffO-Nc-zP1"/>
+                <constraint firstItem="Lny-IZ-ARg" firstAttribute="top" secondItem="gvy-mp-ASv" secondAttribute="bottom" constant="64" id="fgY-9H-fCZ"/>
+                <constraint firstItem="gvy-mp-ASv" firstAttribute="centerX" secondItem="vUN-kp-3ea" secondAttribute="centerX" id="gY6-zA-zcK"/>
+                <constraint firstItem="icY-15-BQT" firstAttribute="top" secondItem="Lny-IZ-ARg" secondAttribute="bottom" constant="16" id="iF9-A6-WVK"/>
+                <constraint firstItem="icY-15-BQT" firstAttribute="centerX" secondItem="vUN-kp-3ea" secondAttribute="centerX" id="jE8-zk-ubk"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
         </view>
