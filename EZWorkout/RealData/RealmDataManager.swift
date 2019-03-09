@@ -57,10 +57,7 @@ class RealmDataMangers {
         
     }
     
-    static func retrieveExcercise(workoutNum:Int,excersierNum:Int,realm:Realm)->ExcerciseRealm{
-       let results = realm.objects(UserRealm.self).first!
-            return results.workoutArray[workoutNum].excerciseArray[excersierNum]
-    }
+    
 
     
   static func createExcercise(calory:Int, type:String, name:String, modified:String, reps:Int, weight:Int)->ExcerciseRealm{
@@ -95,12 +92,7 @@ class RealmDataMangers {
   }
   
   
-  static func retrieveUser(){
-    let realm = try! Realm()
-    let results = realm.objects(UserRealm.self).filter("name == 'Jason'").first!
-    UserRealm.curUser = results
-    
-  }
+  
   
   static func retrieveExcercise(workoutNum:Int,excersierNum:Int,realm:Realm)->ExcerciseRealm{
     let results = realm.objects(UserRealm.self).first!

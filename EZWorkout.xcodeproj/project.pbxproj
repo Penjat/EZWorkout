@@ -80,8 +80,6 @@
 		288121F1222F7D83007042C1 /* userStatRealm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 288121F0222F7D83007042C1 /* userStatRealm.swift */; };
 		28DC63FF223324E5002FC4E0 /* StatUserVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28DC63FE223324E5002FC4E0 /* StatUserVC.swift */; };
 		28DC642B22333BDD002FC4E0 /* StatUserProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28DC642A22333BDD002FC4E0 /* StatUserProfileVC.swift */; };
-		28DC642F223359F4002FC4E0 /* age.png in Resources */ = {isa = PBXBuildFile; fileRef = 28DC642E223359F3002FC4E0 /* age.png */; };
-		28DC643122335A6B002FC4E0 /* gym.png in Resources */ = {isa = PBXBuildFile; fileRef = 28DC643022335A6B002FC4E0 /* gym.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -171,8 +169,6 @@
 		288121F0222F7D83007042C1 /* userStatRealm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = userStatRealm.swift; sourceTree = "<group>"; };
 		28DC63FE223324E5002FC4E0 /* StatUserVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatUserVC.swift; sourceTree = "<group>"; };
 		28DC642A22333BDD002FC4E0 /* StatUserProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatUserProfileVC.swift; sourceTree = "<group>"; };
-		28DC642E223359F3002FC4E0 /* age.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = age.png; path = ../../../../Downloads/age.png; sourceTree = "<group>"; };
-		28DC643022335A6B002FC4E0 /* gym.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = gym.png; path = ../../../../Downloads/gym.png; sourceTree = "<group>"; };
 		56613A7F23DBE1C05BB336A2 /* Pods_EZWorkout.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EZWorkout.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8872BA68D8FE0B972398D279 /* Pods-EZWorkout.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EZWorkout.debug.xcconfig"; path = "Pods/Target Support Files/Pods-EZWorkout/Pods-EZWorkout.debug.xcconfig"; sourceTree = "<group>"; };
 		FEEC72732415616696171480 /* Pods-EZWorkout.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EZWorkout.release.xcconfig"; path = "Pods/Target Support Files/Pods-EZWorkout/Pods-EZWorkout.release.xcconfig"; sourceTree = "<group>"; };
@@ -302,9 +298,7 @@
 				0B5013F1222F4CDC004A64EC /* DataManager.swift */,
 				0BCA1ABF2228D30100B51C27 /* Main.storyboard */,
 				0BB7E9942231F249000C285D /* MasterTabBarController.swift */,
-				28DC642E223359F3002FC4E0 /* age.png */,
 				0BCA1AC52228D30100B51C27 /* Assets.xcassets */,
-				28DC643022335A6B002FC4E0 /* gym.png */,
 				0BCA1AC72228D30100B51C27 /* LaunchScreen.storyboard */,
 				0BCA1ACA2228D30100B51C27 /* Info.plist */,
 				0BCA1AC22228D30100B51C27 /* EZWorkout.xcdatamodeld */,
@@ -507,9 +501,7 @@
 				0BCA1AC92228D30100B51C27 /* LaunchScreen.storyboard in Resources */,
 				0BA30329222DE70A0046FDB9 /* Exercise.xib in Resources */,
 				0BCA1AC62228D30100B51C27 /* Assets.xcassets in Resources */,
-				28DC643122335A6B002FC4E0 /* gym.png in Resources */,
 				0BCA1AC12228D30100B51C27 /* Main.storyboard in Resources */,
-				28DC642F223359F4002FC4E0 /* age.png in Resources */,
 				0BF84E8E2230EC3D00DFC6B0 /* ExerciseType.xib in Resources */,
 				0B5013F4222F6653004A64EC /* FeedbackMsg.xib in Resources */,
 				0BA30345222EDDFA0046FDB9 /* Help.xib in Resources */,
