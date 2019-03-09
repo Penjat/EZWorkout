@@ -13,6 +13,7 @@ extension RecordWorkoutMasterViewController{
       workoutModel = WorkoutModel()
       workoutModel?.startTime = Date()
       exercises = [ExerciseModel]()
+      
       createFeedbackMessage(topMsg: "Starting Workout", bottomMsg: "")
       startWorkoutTimer()
     }else{

@@ -45,6 +45,8 @@
 		0BB1CECA2230690900F386C3 /* TopBarDelegateProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BB1CEC92230690900F386C3 /* TopBarDelegateProtocol.swift */; };
 		0BB1CECC223069B900F386C3 /* StatsMasterController+TopBarDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BB1CECB223069B900F386C3 /* StatsMasterController+TopBarDelegate.swift */; };
 		0BB2A5C422337CA3006C8FF7 /* RecordWorkoutMasterViewController+Animations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BB2A5C322337CA3006C8FF7 /* RecordWorkoutMasterViewController+Animations.swift */; };
+		0BB2A5C6223382F2006C8FF7 /* RecordWorkoutMasterViewController+RecognizerReturn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BB2A5C5223382F2006C8FF7 /* RecordWorkoutMasterViewController+RecognizerReturn.swift */; };
+		0BB2A5C822338358006C8FF7 /* RecordWorkoutMasterViewController+Commands.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BB2A5C722338358006C8FF7 /* RecordWorkoutMasterViewController+Commands.swift */; };
 		0BB4470622331893004BEDD1 /* RecordWorkoutMasterViewController+StartEnd.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BB4470522331893004BEDD1 /* RecordWorkoutMasterViewController+StartEnd.swift */; };
 		0BB7E9952231F249000C285D /* MasterTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BB7E9942231F249000C285D /* MasterTabBarController.swift */; };
 		0BB7E9BA2232D7DC000C285D /* SpeechVisulizerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BB7E9B92232D7DC000C285D /* SpeechVisulizerView.swift */; };
@@ -132,6 +134,8 @@
 		0BB1CEC92230690900F386C3 /* TopBarDelegateProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopBarDelegateProtocol.swift; sourceTree = "<group>"; };
 		0BB1CECB223069B900F386C3 /* StatsMasterController+TopBarDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "StatsMasterController+TopBarDelegate.swift"; sourceTree = "<group>"; };
 		0BB2A5C322337CA3006C8FF7 /* RecordWorkoutMasterViewController+Animations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RecordWorkoutMasterViewController+Animations.swift"; sourceTree = "<group>"; };
+		0BB2A5C5223382F2006C8FF7 /* RecordWorkoutMasterViewController+RecognizerReturn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RecordWorkoutMasterViewController+RecognizerReturn.swift"; sourceTree = "<group>"; };
+		0BB2A5C722338358006C8FF7 /* RecordWorkoutMasterViewController+Commands.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RecordWorkoutMasterViewController+Commands.swift"; sourceTree = "<group>"; };
 		0BB4470522331893004BEDD1 /* RecordWorkoutMasterViewController+StartEnd.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RecordWorkoutMasterViewController+StartEnd.swift"; sourceTree = "<group>"; };
 		0BB7E9942231F249000C285D /* MasterTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterTabBarController.swift; sourceTree = "<group>"; };
 		0BB7E9B92232D7DC000C285D /* SpeechVisulizerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeechVisulizerView.swift; sourceTree = "<group>"; };
@@ -346,10 +350,12 @@
 			children = (
 				0BA3033C222E28290046FDB9 /* ExerciseCell.swift */,
 				0BA3033E222ED8050046FDB9 /* RecordWorkoutMasterViewController.swift */,
+				0BB2A5C5223382F2006C8FF7 /* RecordWorkoutMasterViewController+RecognizerReturn.swift */,
 				0B5013EF222F2F9F004A64EC /* RecordWorkoutMasterViewController+ContainerFunctions.swift */,
 				0B5013F7222F67BC004A64EC /* RecordWorkoutMasterViewController+ShowFeedback.swift */,
 				0BB7E9BB2232FB21000C285D /* RecordWorkoutMasterViewController+Visualizer.swift */,
 				0BB4470522331893004BEDD1 /* RecordWorkoutMasterViewController+StartEnd.swift */,
+				0BB2A5C722338358006C8FF7 /* RecordWorkoutMasterViewController+Commands.swift */,
 				0BB2A5C322337CA3006C8FF7 /* RecordWorkoutMasterViewController+Animations.swift */,
 				0B5013EB222F25F7004A64EC /* CenterViewController.swift */,
 				0BA3032C222E08530046FDB9 /* RecWorkoutSB.storyboard */,
@@ -596,6 +602,7 @@
 				285A56D52228D587003E4AA0 /* User.swift in Sources */,
 				0BA3DB94222DD0F200AC7538 /* SpeechInputManager+InputParsing.swift in Sources */,
 				0BA3DB95222DD0F200AC7538 /* SpeechInputManager+UserAddedExercises.swift in Sources */,
+				0BB2A5C822338358006C8FF7 /* RecordWorkoutMasterViewController+Commands.swift in Sources */,
 				0BF84E902230ED2700DFC6B0 /* ExerciseTypeView.swift in Sources */,
 				0BF84E862230A32D00DFC6B0 /* ExerciseSetCell.swift in Sources */,
 				0BA3032B222DE8EA0046FDB9 /* ExerciseView.swift in Sources */,
@@ -614,6 +621,7 @@
 				0BB1CEC622304BD800F386C3 /* StatsTopBarVC.swift in Sources */,
 				28DC63FF223324E5002FC4E0 /* StatUserVC.swift in Sources */,
 				0BA3033F222ED8050046FDB9 /* RecordWorkoutMasterViewController.swift in Sources */,
+				0BB2A5C6223382F2006C8FF7 /* RecordWorkoutMasterViewController+RecognizerReturn.swift in Sources */,
 				0BA3033D222E28290046FDB9 /* ExerciseCell.swift in Sources */,
 				0BA30347222EDE2C0046FDB9 /* HelpView.swift in Sources */,
 				288121E9222F6D05007042C1 /* Cats.swift in Sources */,
