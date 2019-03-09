@@ -12,6 +12,8 @@ class RecordWorkoutMasterViewController: UIViewController {
   @IBOutlet weak var feebBackLabel: UILabel!
   @IBOutlet weak var feedbackVisualizer: SpeechVisulizerView!
   
+  
+  
     var centerController: CenterViewController?
   
   let speechInputManager = SpeechInputManager()
@@ -139,32 +141,7 @@ class RecordWorkoutMasterViewController: UIViewController {
     timer.invalidate()
   }
   
-  func startWorkout(){
-    if !isWorkingOut {
-      print("start workout")
-      isWorkingOut = true
-      startDate = Date()
-      workoutModel = WorkoutModel()
-      exercises = [ExerciseModel]()
-      createFeedbackMessage(topMsg: "Starting Workout", bottomMsg: "")
-      startWorkoutTimer()
-    }else{
-      print("you are already working out")
-      createFeedbackMessage(topMsg: "you are already working out", bottomMsg: "")
-    }
-  }
   
-  func endWorkout(){
-    if isWorkingOut {
-      print("ending workout")
-      createFeedbackMessage(topMsg: "Ending Workout", bottomMsg: "")
-      isWorkingOut = false
-      endWorkoutTimer()
-    }else{
-      print("you need to start a workout first")
-      createFeedbackMessage(topMsg: "you need to start a workout first", bottomMsg: "")
-    }
-  }
   
   
 }

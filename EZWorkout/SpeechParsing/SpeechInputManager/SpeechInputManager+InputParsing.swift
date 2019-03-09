@@ -65,13 +65,49 @@ extension SpeechInputManager{
     
     let stringNumberArray = inputString.components(separatedBy: CharacterSet.decimalDigits.inverted)
     var numberArray = [Int]()
+    var i = 0
     for item in stringNumberArray {
       if let number = Int(item) {
         //print("number: \(number)")
         numberArray.append(number)
+        print("number found at \(i)")
+      }
+      i += 1
+    }
+    numberArray = setValueRepOrder(inputString: inputString , numberArray:numberArray)
+    return numberArray
+  }
+  
+  func setValueRepOrder(inputString:String , numberArray:[Int]) -> [Int]{
+    let outputArray = numberArray
+    let valueIndex = positionInString(posibleTerms: ["pound"] , inputString: inputString)
+    
+    let repIndex = positionInString(posibleTerms: ["rep"] , inputString: inputString)
+    
+    if let repIndex = repIndex , let valueIndex = valueIndex{
+      if repIndex < valueIndex{
+        //if the reps came first
+        print("reversing")
+        return outputArray.reversed()
+      }else{
+        print("not reversing")
+      }
+    }else{
+      print("couldn't find both reps and pounds")
+    }
+    
+   return outputArray
+  }
+  func positionInString(posibleTerms:[String] , inputString: String )->Int?{
+    
+    for searchTerm in posibleTerms{
+      if let range: Range<String.Index> = inputString.range(of: searchTerm){
+        let index: Int = inputString.distance(from: inputString.startIndex, to: range.lowerBound)
+        return index
       }
     }
-    return numberArray
+    return nil
+    
   }
   
   func calculateReps(numbers:[Int] , exerciseRef:ExerciseRefernce?) -> Int?{
