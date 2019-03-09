@@ -256,6 +256,8 @@
                     </view>
                     <connections>
                         <outlet property="exerciseTableView" destination="egL-ap-L8a" id="c1T-9o-aKr"/>
+                        <outlet property="helpScrollView" destination="dqb-Eg-MwZ" id="6aL-ae-3us"/>
+                        <outlet property="helpView" destination="LNi-CZ-r6C" id="GqW-3s-MMe"/>
                         <outlet property="recView" destination="hg6-aN-6eO" id="0Rb-1e-5QX"/>
                     </connections>
                 </viewController>

@@ -2,11 +2,14 @@
 
 import UIKit
 
-class CenterViewController: UIViewController {
+class CenterViewController: UIViewController , CALayerDelegate ,UIScrollViewDelegate {
   
   @IBOutlet weak var recView: UIView!
   @IBOutlet weak var exerciseTableView: UITableView!
+  @IBOutlet weak var helpView: HelpView!
+  var gradient: CAGradientLayer!
   
+  @IBOutlet weak var helpScrollView: UIScrollView!
   
   
   var delegate: CenterViewProtocol?
@@ -16,10 +19,37 @@ class CenterViewController: UIViewController {
     exerciseTableView.dataSource = self
     exerciseTableView.delegate = self
     
+    helpScrollView.delegate = self
+    
+  }
+  override func viewDidAppear(_ animated: Bool) {
+    gradient = CAGradientLayer()
+    gradient.delegate = self
+    gradient.frame = helpScrollView.bounds
+    gradient.colors = [UIColor.clear.cgColor, UIColor.black.cgColor, UIColor.black.cgColor, UIColor.clear.cgColor]
+    gradient.locations = [0, 0.1, 0.9, 1]
+    helpScrollView.layer.mask = gradient
+  }
+  
+  func scrollViewDidScroll(_ scrollView: UIScrollView) {
+    updateGradientFrame()
+  }
+  // MARK: - CALayerDelegate
+  func action(for layer: CALayer, forKey event: String) -> CAAction? {
+    return NSNull()
   }
   
   func reloadTable(){
     exerciseTableView.reloadData()
+  }
+  
+  func updateGradientFrame() {
+    gradient.frame = CGRect(
+      x: 0,
+      y: helpScrollView.contentOffset.y,
+      width: helpScrollView.bounds.width,
+      height: helpScrollView.bounds.height
+    )
   }
   
   func startRec(){
