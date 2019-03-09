@@ -23,7 +23,7 @@ class SpeechVisulizerView: UIView {
       moveAnim.autoreverses = true
       //newLayer.add(moveAnim, forKey: nil)
       
-      layer.addSublayer(newLayer)
+      layer.insertSublayer(newLayer ,at:0 )
       i += 1.0
     }
   }
