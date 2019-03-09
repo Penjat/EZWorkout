@@ -64,6 +64,7 @@
 		0BF84E902230ED2700DFC6B0 /* ExerciseTypeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BF84E8F2230ED2700DFC6B0 /* ExerciseTypeView.swift */; };
 		0BF84E922231B0E900DFC6B0 /* ExerciseSet.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0BF84E912231B0E900DFC6B0 /* ExerciseSet.xib */; };
 		0BF84E942231B16A00DFC6B0 /* ExerciseSetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BF84E932231B16A00DFC6B0 /* ExerciseSetView.swift */; };
+		0BFDDB6F22334B2700318F80 /* EZWorkoutTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BFDDB6E22334B2700318F80 /* EZWorkoutTests.swift */; };
 		1BD8438B9947517B54131039 /* Pods_EZWorkout.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 56613A7F23DBE1C05BB336A2 /* Pods_EZWorkout.framework */; };
 		2851C8812231F23A005E4384 /* StaticDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2851C8802231F23A005E4384 /* StaticDataManager.swift */; };
 		285A56D52228D587003E4AA0 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 285A56D42228D587003E4AA0 /* User.swift */; };
@@ -78,6 +79,16 @@
 		288121EF222F7B85007042C1 /* WorkoutRealm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 288121EE222F7B85007042C1 /* WorkoutRealm.swift */; };
 		288121F1222F7D83007042C1 /* userStatRealm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 288121F0222F7D83007042C1 /* userStatRealm.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		0BFDDB7122334B2700318F80 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0BCA1AB02228D30000B51C27 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0BCA1AB72228D30000B51C27;
+			remoteInfo = EZWorkout;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		0B38BDB82231D13D00DEA358 /* HistoryViewController+PickerDelegateDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HistoryViewController+PickerDelegateDataSource.swift"; sourceTree = "<group>"; };
@@ -139,6 +150,9 @@
 		0BF84E8F2230ED2700DFC6B0 /* ExerciseTypeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseTypeView.swift; sourceTree = "<group>"; };
 		0BF84E912231B0E900DFC6B0 /* ExerciseSet.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ExerciseSet.xib; sourceTree = "<group>"; };
 		0BF84E932231B16A00DFC6B0 /* ExerciseSetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseSetView.swift; sourceTree = "<group>"; };
+		0BFDDB6C22334B2700318F80 /* EZWorkoutTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EZWorkoutTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		0BFDDB6E22334B2700318F80 /* EZWorkoutTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EZWorkoutTests.swift; sourceTree = "<group>"; };
+		0BFDDB7022334B2700318F80 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2851C8802231F23A005E4384 /* StaticDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StaticDataManager.swift; sourceTree = "<group>"; };
 		285A56D42228D587003E4AA0 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		285A56DA2229DB2E003E4AA0 /* ExcerciseTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExcerciseTableViewCell.swift; sourceTree = "<group>"; };
@@ -162,6 +176,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				1BD8438B9947517B54131039 /* Pods_EZWorkout.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0BFDDB6922334B2700318F80 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -241,6 +262,7 @@
 			isa = PBXGroup;
 			children = (
 				0BCA1ABA2228D30000B51C27 /* EZWorkout */,
+				0BFDDB6D22334B2700318F80 /* EZWorkoutTests */,
 				0BCA1AB92228D30000B51C27 /* Products */,
 				C49D9F006CB39973E8274E43 /* Pods */,
 				9B3B0D97047C304E4AF59A10 /* Frameworks */,
@@ -251,6 +273,7 @@
 			isa = PBXGroup;
 			children = (
 				0BCA1AB82228D30000B51C27 /* EZWorkout.app */,
+				0BFDDB6C22334B2700318F80 /* EZWorkoutTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -290,6 +313,15 @@
 				0BF84E932231B16A00DFC6B0 /* ExerciseSetView.swift */,
 			);
 			path = "Cells and Xibs";
+			sourceTree = "<group>";
+		};
+		0BFDDB6D22334B2700318F80 /* EZWorkoutTests */ = {
+			isa = PBXGroup;
+			children = (
+				0BFDDB6E22334B2700318F80 /* EZWorkoutTests.swift */,
+				0BFDDB7022334B2700318F80 /* Info.plist */,
+			);
+			path = EZWorkoutTests;
 			sourceTree = "<group>";
 		};
 		2851C8842231F43A005E4384 /* CreateCharts */ = {
@@ -398,6 +430,24 @@
 			productReference = 0BCA1AB82228D30000B51C27 /* EZWorkout.app */;
 			productType = "com.apple.product-type.application";
 		};
+		0BFDDB6B22334B2700318F80 /* EZWorkoutTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0BFDDB7522334B2700318F80 /* Build configuration list for PBXNativeTarget "EZWorkoutTests" */;
+			buildPhases = (
+				0BFDDB6822334B2700318F80 /* Sources */,
+				0BFDDB6922334B2700318F80 /* Frameworks */,
+				0BFDDB6A22334B2700318F80 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				0BFDDB7222334B2700318F80 /* PBXTargetDependency */,
+			);
+			name = EZWorkoutTests;
+			productName = EZWorkoutTests;
+			productReference = 0BFDDB6C22334B2700318F80 /* EZWorkoutTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -410,6 +460,10 @@
 				TargetAttributes = {
 					0BCA1AB72228D30000B51C27 = {
 						CreatedOnToolsVersion = 10.1;
+					};
+					0BFDDB6B22334B2700318F80 = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = 0BCA1AB72228D30000B51C27;
 					};
 				};
 			};
@@ -427,6 +481,7 @@
 			projectRoot = "";
 			targets = (
 				0BCA1AB72228D30000B51C27 /* EZWorkout */,
+				0BFDDB6B22334B2700318F80 /* EZWorkoutTests */,
 			);
 		};
 /* End PBXProject section */
@@ -447,6 +502,13 @@
 				0BA3032D222E08530046FDB9 /* RecWorkoutSB.storyboard in Resources */,
 				0BA30331222E09870046FDB9 /* StatsSB.storyboard in Resources */,
 				0BA30333222E09F00046FDB9 /* HistorySB.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0BFDDB6A22334B2700318F80 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -569,7 +631,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		0BFDDB6822334B2700318F80 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0BFDDB6F22334B2700318F80 /* EZWorkoutTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		0BFDDB7222334B2700318F80 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0BCA1AB72228D30000B51C27 /* EZWorkout */;
+			targetProxy = 0BFDDB7122334B2700318F80 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		0BCA1ABF2228D30100B51C27 /* Main.storyboard */ = {
@@ -745,6 +823,44 @@
 			};
 			name = Release;
 		};
+		0BFDDB7322334B2700318F80 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = EZWorkoutTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.spencersymington.EZWorkoutTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/EZWorkout.app/EZWorkout";
+			};
+			name = Debug;
+		};
+		0BFDDB7422334B2700318F80 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = EZWorkoutTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.spencersymington.EZWorkoutTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/EZWorkout.app/EZWorkout";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -762,6 +878,15 @@
 			buildConfigurations = (
 				0BCA1ACE2228D30100B51C27 /* Debug */,
 				0BCA1ACF2228D30100B51C27 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0BFDDB7522334B2700318F80 /* Build configuration list for PBXNativeTarget "EZWorkoutTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0BFDDB7322334B2700318F80 /* Debug */,
+				0BFDDB7422334B2700318F80 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
