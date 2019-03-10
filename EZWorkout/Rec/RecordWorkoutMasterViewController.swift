@@ -34,7 +34,7 @@ class RecordWorkoutMasterViewController: UIViewController {
   
   override func viewDidLoad() {
     super.viewDidLoad()
- 
+    
     speechRecognizer = SpeechRecognizer(delegate: self)
     
     DataManager.dataManager.testSingelton()
@@ -61,21 +61,51 @@ class RecordWorkoutMasterViewController: UIViewController {
     prepareVisualizer()
   }
   func startAnimatingGradient(){
-//    gradient.colors = [UIColor.blue.cgColor, UIColor.red.cgColor]
-//    gradient.locations = [0.0 , 1.0]
-//    gradient.startPoint = CGPoint(x: 0.0, y: 1.0)
-//    gradient.endPoint = CGPoint(x: 1.0, y: 1.0)
+    //    gradient.colors = [UIColor.blue.cgColor, UIColor.red.cgColor]
+    //    gradient.locations = [0.0 , 1.0]
+    //    gradient.startPoint = CGPoint(x: 0.0, y: 1.0)
+    //    gradient.endPoint = CGPoint(x: 1.0, y: 1.0)
     
     
     
-    let gradientChangeAnimation = CABasicAnimation(keyPath: "colors")
-    gradientChangeAnimation.duration = 2.0
-    gradientChangeAnimation.toValue = [UIColor.red.cgColor,UIColor.blue.cgColor]
-    gradientChangeAnimation.fillMode = CAMediaTimingFillMode.forwards
-    gradientChangeAnimation.isRemovedOnCompletion = false
-    gradientChangeAnimation.repeatCount = HUGE
-    gradientChangeAnimation.autoreverses = true
-    gradient.add(gradientChangeAnimation, forKey: "colorChange")
+    //animate from old colors to new
+    CATransaction.begin()
+    CATransaction.setCompletionBlock {
+      // This is called when all the animations in the transaction has completed
+      print("Finished animating layer two assmass")
+      self.startLoopingAnimation()
+    }
+    
+    let fromAnimation = CABasicAnimation(keyPath: "colors")
+    fromAnimation.duration = 2.0
+    fromAnimation.toValue = [UIColor.red.cgColor,UIColor.blue.cgColor]
+    fromAnimation.fillMode = CAMediaTimingFillMode.forwards
+    fromAnimation.isRemovedOnCompletion = false
+    //fromAnimation.repeatCount = HUGE
+    //fromAnimation.autoreverses = true
+    gradient.add(fromAnimation, forKey: "colorChange")
+    
+    CATransaction.commit()
+    
+    
+    
+  }
+  
+  func startLoopingAnimation(){
+    gradient.colors = [UIColor.red.cgColor, UIColor.blue.cgColor]
+        let loopAnimation = CABasicAnimation(keyPath: "colors")
+        loopAnimation.duration = 2.0
+        loopAnimation.toValue = [UIColor.blue.cgColor,UIColor.red.cgColor]
+        loopAnimation.fillMode = CAMediaTimingFillMode.forwards
+        loopAnimation.isRemovedOnCompletion = false
+        loopAnimation.repeatCount = HUGE
+        loopAnimation.autoreverses = true
+        gradient.add(loopAnimation, forKey: "colorChange")
+    
+    
+    
+    
+    
     
   }
   override func viewDidAppear(_ animated: Bool) {
