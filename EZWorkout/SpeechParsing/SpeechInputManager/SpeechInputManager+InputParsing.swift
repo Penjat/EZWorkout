@@ -134,6 +134,10 @@ extension SpeechInputManager{
           return numbers[0]
         }
         return nil
+      case .Timed:
+        if numbers.count > 0{
+          return numbers[0]
+        }
       }
       
     }
@@ -169,6 +173,10 @@ extension SpeechInputManager{
           return numbers[0]
         }
         return nil
+      case .Timed:
+        if numbers.count > 0{
+          return numbers[0]
+        }
       }
       
     }

@@ -3,7 +3,7 @@
 import Foundation
 
 enum ExerciseType{
-  case BodyWeight,Weight,Distance
+  case BodyWeight,Weight,Distance,Timed
   
   func toString()->String{
     
@@ -14,6 +14,8 @@ enum ExerciseType{
       return "weight"
     case .Distance:
       return "distance"
+    case .Timed:
+      return "timed"
       
     }
   }
