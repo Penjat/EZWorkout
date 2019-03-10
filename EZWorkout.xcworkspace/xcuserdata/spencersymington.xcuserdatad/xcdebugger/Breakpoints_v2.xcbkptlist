@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "EZWorkout/Rec/RecordWorkoutMasterViewController.swift"
-            timestampString = "573879008.82621"
+            timestampString = "573879510.8957779"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "155"
-            endingLineNumber = "155"
+            startingLineNumber = "160"
+            endingLineNumber = "160"
             landmarkName = "createExerciseView(exerciseModel:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -26,27 +26,27 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "EZWorkout/Rec/RecordWorkoutMasterViewController.swift"
-            timestampString = "573879008.826653"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "153"
-            endingLineNumber = "153"
-            landmarkName = "createExerciseView(exerciseModel:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "EZWorkout/Rec/RecordWorkoutMasterViewController.swift"
-            timestampString = "573879008.826952"
+            timestampString = "573879510.896224"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "158"
             endingLineNumber = "158"
+            landmarkName = "createExerciseView(exerciseModel:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "EZWorkout/Rec/RecordWorkoutMasterViewController.swift"
+            timestampString = "573879510.89653"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "163"
+            endingLineNumber = "163"
             landmarkName = "createExerciseView(exerciseModel:)"
             landmarkType = "7">
          </BreakpointContent>

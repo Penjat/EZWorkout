@@ -60,14 +60,20 @@ class RecordWorkoutMasterViewController: UIViewController {
     
     prepareVisualizer()
   }
+  func animateRecPressed(){
+    
+    let fromAnimation = CABasicAnimation(keyPath: "colors")
+    fromAnimation.duration = 2.0
+    fromAnimation.toValue = [UIColor.white.cgColor,UIColor.white.cgColor]
+    fromAnimation.fillMode = CAMediaTimingFillMode.forwards
+    fromAnimation.isRemovedOnCompletion = false
+    //fromAnimation.repeatCount = HUGE
+    //fromAnimation.autoreverses = true
+    gradient.add(fromAnimation, forKey: "colorChange")
+    
+  }
   func startAnimatingGradient(){
-    //    gradient.colors = [UIColor.blue.cgColor, UIColor.red.cgColor]
-    //    gradient.locations = [0.0 , 1.0]
-    //    gradient.startPoint = CGPoint(x: 0.0, y: 1.0)
-    //    gradient.endPoint = CGPoint(x: 1.0, y: 1.0)
-    
-    
-    
+   
     //animate from old colors to new
     CATransaction.begin()
     CATransaction.setCompletionBlock {
@@ -103,10 +109,6 @@ class RecordWorkoutMasterViewController: UIViewController {
         gradient.add(loopAnimation, forKey: "colorChange")
     
     
-    
-    
-    
-    
   }
   override func viewDidAppear(_ animated: Bool) {
     super.viewDidAppear(animated)
@@ -130,7 +132,7 @@ class RecordWorkoutMasterViewController: UIViewController {
     speechRecognizer.startRecognizing()
     centerController?.startRec()
     startVisualization()
-    
+    animateRecPressed()
   }
   @IBAction func recReleasedInside(_ sender: Any) {
     //TODO animate in and out
@@ -144,6 +146,9 @@ class RecordWorkoutMasterViewController: UIViewController {
     speechRecognizer.stopRecognizing()
     centerController?.stopRec()
     stopVisualization()
+    if isWorkingOut {
+      startAnimatingGradient()
+    }
   }
   
   
