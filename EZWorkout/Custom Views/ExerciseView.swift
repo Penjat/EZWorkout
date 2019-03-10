@@ -45,5 +45,21 @@ class ExerciseView: UIView {
     
     
   }
+  
+  func setUp(exerciseRealm:ExcerciseRealm){
+    
+    //TODO adjust text presentation
+    infoContainer.layer.cornerRadius = 12
+    exerciseImage.layer.cornerRadius = exerciseImage.frame.size.width / 2
+    //TODO add modifiers
+    labelExerciseName.text = exerciseRealm.name
+    
+    labelExerciseReps.text = "\(exerciseRealm.reps) reps"
+    
+    //TODO check the exercise type for correct data
+    let weightString = exerciseRealm.weight.value != nil ?  "\(exerciseRealm.weight.value!) lbs" : ""
+    labelExerciseWeight.text = weightString
+
+  }
 
 }
