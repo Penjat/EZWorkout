@@ -19,6 +19,7 @@ extension RecordWorkoutMasterViewController{
       startWorkoutTimer()
       timerLabelFadeIn()
       workoutStatusLabel.text = "workout in progress..."
+      startAnimatingGradient()
     }else{
       print("you are already working out")
       createFeedbackMessage(topMsg: "you are already working out", bottomMsg: "")

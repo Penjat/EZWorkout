@@ -30,6 +30,7 @@ class RecordWorkoutMasterViewController: UIViewController {
   
   var timer = Timer()
   
+  var gradient: CAGradientLayer!
   
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -43,28 +44,39 @@ class RecordWorkoutMasterViewController: UIViewController {
     timerLabel.alpha = 0.0
     
     //TODO put in animation extention
-    let gradient: CAGradientLayer = CAGradientLayer()
+    gradient = CAGradientLayer()
+    //startGradient()
     
-    gradient.colors = [UIColor.blue.cgColor, UIColor.red.cgColor]
+    gradient.colors = [UIColor.blue.cgColor, UIColor.blue.cgColor]
     gradient.locations = [0.0 , 1.0]
     gradient.startPoint = CGPoint(x: 0.0, y: 1.0)
     gradient.endPoint = CGPoint(x: 1.0, y: 1.0)
-    gradient.frame = CGRect(x: 0.0, y: 0.0, width: self.view.frame.size.width, height: self.view.frame.size.height)
     
+    gradient.frame = CGRect(x: 0.0, y: 0.0, width: self.view.frame.size.width, height: self.view.frame.size.height)
     self.view.layer.insertSublayer(gradient, at: 0)
+    
+    print("gradient colors = \(gradient.colors)")
+    
+    
+    prepareVisualizer()
+  }
+  func startAnimatingGradient(){
+//    gradient.colors = [UIColor.blue.cgColor, UIColor.red.cgColor]
+//    gradient.locations = [0.0 , 1.0]
+//    gradient.startPoint = CGPoint(x: 0.0, y: 1.0)
+//    gradient.endPoint = CGPoint(x: 1.0, y: 1.0)
+    
+    
+    
     let gradientChangeAnimation = CABasicAnimation(keyPath: "colors")
     gradientChangeAnimation.duration = 2.0
     gradientChangeAnimation.toValue = [UIColor.red.cgColor,UIColor.blue.cgColor]
-      gradientChangeAnimation.fillMode = CAMediaTimingFillMode.forwards
+    gradientChangeAnimation.fillMode = CAMediaTimingFillMode.forwards
     gradientChangeAnimation.isRemovedOnCompletion = false
     gradientChangeAnimation.repeatCount = HUGE
     gradientChangeAnimation.autoreverses = true
     gradient.add(gradientChangeAnimation, forKey: "colorChange")
     
-    
-    
-    
-    prepareVisualizer()
   }
   override func viewDidAppear(_ animated: Bool) {
     super.viewDidAppear(animated)
