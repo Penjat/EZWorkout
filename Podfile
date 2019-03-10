@@ -8,6 +8,7 @@ pod 'Charts', '~> 3.2'
 pod 'RealmSwift'
 pod 'UICircularProgressRing'
 pod 'SkyFloatingLabelTextField', '~> 3.0'
+pod 'FSCalendar'
   # Pods for EZWorkout
 
 end
