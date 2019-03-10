@@ -9,6 +9,10 @@ extension SpeechInputManager{
     //-----------------exercise Refs --------------------------------
     exerciseRefs.append(ExerciseRef(name: "benchpress",muscleGroups: [MuscleGroup.Chest],exerciseType: ExerciseType.Weight))
     
+    exerciseRefs.append(ExerciseRef(name: "twist",muscleGroups: [MuscleGroup.Core],exerciseType: ExerciseType.BodyWeight))
+    
+    exerciseRefs.append(ExerciseRef(name: "plank",muscleGroups: [MuscleGroup.Core],exerciseType: ExerciseType.Timed))
+    
     exerciseRefs.append(ExerciseRef(name: "squat",muscleGroups: [MuscleGroup.Chest],exerciseType: ExerciseType.Weight))
     
     //TODO make sure this doesn't override others
