@@ -9,6 +9,11 @@
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="KeepCalm-Medium.ttf">
+            <string>KeepCalm-Medium</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--History View Controller-->
         <scene sceneID="Q4c-WB-Kap">
@@ -192,21 +197,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lrb-Qq-AiC" customClass="FSCalendar">
-                                <rect key="frame" x="32" y="20" width="311" height="311"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="lrb-Qq-AiC" secondAttribute="height" multiplier="1:1" id="qqe-Jt-ytC"/>
-                                </constraints>
-                            </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7g7-s0-Mak">
-                                <rect key="frame" x="8" y="339" width="359" height="24"/>
+                                <rect key="frame" x="8" y="381.5" width="359" height="24"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Twg-QI-ei7">
-                                <rect key="frame" x="8" y="371" width="359" height="239"/>
+                                <rect key="frame" x="8" y="413.5" width="359" height="196.5"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell opaque="NO" clipsSubviews="YES" alpha="0.0" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="exerciseCell" rowHeight="85" id="2Re-fV-X8q" customClass="ExerciseCell" customModule="EZWorkout" customModuleProvider="target">
@@ -234,16 +232,32 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="History" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2DR-86-TSz">
+                                <rect key="frame" x="8" y="28" width="359" height="26.5"/>
+                                <fontDescription key="fontDescription" name="KeepCalm-Medium" family="Keep Calm" pointSize="22"/>
+                                <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lrb-Qq-AiC" customClass="FSCalendar">
+                                <rect key="frame" x="32" y="62.5" width="311" height="311"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="lrb-Qq-AiC" secondAttribute="height" multiplier="1:1" id="qqe-Jt-ytC"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="ZZ9-u0-Fo4" firstAttribute="bottom" secondItem="Twg-QI-ei7" secondAttribute="bottom" constant="8" id="0JZ-3p-fhM"/>
                             <constraint firstItem="Twg-QI-ei7" firstAttribute="top" secondItem="7g7-s0-Mak" secondAttribute="bottom" constant="8" id="5N5-Ma-A9g"/>
+                            <constraint firstItem="2DR-86-TSz" firstAttribute="top" secondItem="ZZ9-u0-Fo4" secondAttribute="top" constant="8" id="8Oa-ag-dsA"/>
+                            <constraint firstItem="2DR-86-TSz" firstAttribute="leading" secondItem="ZZ9-u0-Fo4" secondAttribute="leading" constant="8" id="A1M-H8-Ojz"/>
                             <constraint firstItem="ZZ9-u0-Fo4" firstAttribute="trailing" secondItem="Twg-QI-ei7" secondAttribute="trailing" constant="8" id="HbL-Gc-Eo8"/>
                             <constraint firstItem="Twg-QI-ei7" firstAttribute="leading" secondItem="ZZ9-u0-Fo4" secondAttribute="leading" constant="8" id="ID6-Us-1gG"/>
+                            <constraint firstItem="lrb-Qq-AiC" firstAttribute="top" secondItem="2DR-86-TSz" secondAttribute="bottom" constant="8" id="OkI-Sx-4Ib"/>
+                            <constraint firstItem="ZZ9-u0-Fo4" firstAttribute="trailing" secondItem="2DR-86-TSz" secondAttribute="trailing" constant="8" id="W6t-zS-Pnx"/>
                             <constraint firstItem="7g7-s0-Mak" firstAttribute="leading" secondItem="ZZ9-u0-Fo4" secondAttribute="leading" constant="8" id="cAN-RB-71H"/>
                             <constraint firstItem="ZZ9-u0-Fo4" firstAttribute="trailing" secondItem="7g7-s0-Mak" secondAttribute="trailing" constant="8" id="csx-aD-JME"/>
-                            <constraint firstItem="lrb-Qq-AiC" firstAttribute="top" secondItem="ZZ9-u0-Fo4" secondAttribute="top" id="pKv-p7-9xb"/>
                             <constraint firstItem="lrb-Qq-AiC" firstAttribute="leading" secondItem="ZZ9-u0-Fo4" secondAttribute="leading" constant="32" id="qth-up-ImQ"/>
                             <constraint firstItem="7g7-s0-Mak" firstAttribute="top" secondItem="lrb-Qq-AiC" secondAttribute="bottom" constant="8" id="v71-ki-LUO"/>
                             <constraint firstItem="ZZ9-u0-Fo4" firstAttribute="trailing" secondItem="lrb-Qq-AiC" secondAttribute="trailing" constant="32" id="xSO-Up-EhL"/>
