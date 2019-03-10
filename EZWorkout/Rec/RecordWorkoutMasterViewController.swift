@@ -32,6 +32,7 @@ class RecordWorkoutMasterViewController: UIViewController {
   
   var gradient: CAGradientLayer!
   
+  
   override func viewDidLoad() {
     super.viewDidLoad()
     
@@ -42,6 +43,8 @@ class RecordWorkoutMasterViewController: UIViewController {
     feedbackVisualizer.isHidden = true
     
     timerLabel.alpha = 0.0
+    
+    
     
     //TODO put in animation extention
     gradient = CAGradientLayer()

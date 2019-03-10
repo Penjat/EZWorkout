@@ -18,7 +18,7 @@
         </array>
     </customFonts>
     <scenes>
-        <!--Item-->
+        <!--workout-->
         <scene sceneID="tjb-mF-5F8">
             <objects>
                 <viewController id="0wt-EP-H08" customClass="RecordWorkoutMasterViewController" customModule="EZWorkout" customModuleProvider="target" sceneMemberID="viewController">
@@ -134,7 +134,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="uqK-KA-Ytp"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" badgeValue="Workout" id="Rxq-g5-AWv"/>
+                    <tabBarItem key="tabBarItem" title="workout" image="Fill 136" selectedImage="Fill 136" id="Rxq-g5-AWv"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="centerContainerView" destination="GuP-wI-WAn" id="9oE-87-mxC"/>
@@ -279,6 +279,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Fill 136" width="62" height="35"/>
         <image name="baseline_settings_voice_black_48pt_1x" width="48" height="48"/>
         <image name="pushup" width="720" height="720"/>
     </resources>

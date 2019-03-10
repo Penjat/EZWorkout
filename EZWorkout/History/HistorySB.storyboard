@@ -10,7 +10,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Item-->
+        <!--history-->
         <scene sceneID="Q4c-WB-Kap">
             <objects>
                 <viewController id="ATW-XT-C7g" customClass="HistoryViewController" customModule="EZWorkout" customModuleProvider="target" sceneMemberID="viewController">
@@ -18,6 +18,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" alpha="0.40000000000000002" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="d63279" translatesAutoresizingMaskIntoConstraints="NO" id="clB-Lm-xIl">
+                                <rect key="frame" x="0.0" y="156" width="375" height="375"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="clB-Lm-xIl" secondAttribute="height" multiplier="1:1" id="Kia-Qe-4Sa"/>
+                                </constraints>
+                            </imageView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="gUi-jF-WZQ">
                                 <rect key="frame" x="8" y="126" width="100.5" height="533"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -71,7 +77,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MXK-rW-vVH" customClass="ExerciseSetView" customModule="EZWorkout" customModuleProvider="target">
-                                                    <rect key="frame" x="0.0" y="0.0" width="270" height="44"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="250.5" height="44"/>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </view>
                                             </subviews>
@@ -142,7 +148,7 @@
                                 </constraints>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="0.599677959476972" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="N82-fP-iEE" firstAttribute="top" secondItem="0Hl-XL-FIN" secondAttribute="bottom" constant="8" id="2e2-U8-hA2"/>
                             <constraint firstItem="q77-n3-S6b" firstAttribute="top" secondItem="N82-fP-iEE" secondAttribute="bottom" constant="8" id="3le-eW-1ae"/>
@@ -150,11 +156,14 @@
                             <constraint firstItem="fKt-Lb-57k" firstAttribute="bottom" secondItem="q77-n3-S6b" secondAttribute="bottom" constant="8" id="Cqd-SV-g9T"/>
                             <constraint firstItem="q77-n3-S6b" firstAttribute="leading" secondItem="gUi-jF-WZQ" secondAttribute="trailing" constant="8" id="K4S-kM-ox6"/>
                             <constraint firstItem="gUi-jF-WZQ" firstAttribute="top" secondItem="0Hl-XL-FIN" secondAttribute="bottom" constant="8" id="KgY-yP-O2x"/>
+                            <constraint firstItem="clB-Lm-xIl" firstAttribute="leading" secondItem="fKt-Lb-57k" secondAttribute="leading" id="MZk-kK-HOv"/>
                             <constraint firstItem="fKt-Lb-57k" firstAttribute="trailing" secondItem="0Hl-XL-FIN" secondAttribute="trailing" constant="8" id="RNg-tb-Oos"/>
                             <constraint firstItem="N82-fP-iEE" firstAttribute="leading" secondItem="gUi-jF-WZQ" secondAttribute="trailing" constant="8" id="Sbn-nQ-5X2"/>
                             <constraint firstItem="0Hl-XL-FIN" firstAttribute="top" secondItem="fKt-Lb-57k" secondAttribute="top" constant="8" id="UVL-De-DPT"/>
                             <constraint firstItem="fKt-Lb-57k" firstAttribute="trailing" secondItem="N82-fP-iEE" secondAttribute="trailing" constant="8" id="VrQ-hK-jZS"/>
                             <constraint firstItem="fKt-Lb-57k" firstAttribute="bottom" secondItem="gUi-jF-WZQ" secondAttribute="bottom" constant="8" id="a1m-U0-tcH"/>
+                            <constraint firstItem="clB-Lm-xIl" firstAttribute="centerY" secondItem="fKt-Lb-57k" secondAttribute="centerY" id="kBO-79-JgZ"/>
+                            <constraint firstItem="fKt-Lb-57k" firstAttribute="trailing" secondItem="clB-Lm-xIl" secondAttribute="trailing" id="lvJ-0M-2u3"/>
                             <constraint firstItem="fKt-Lb-57k" firstAttribute="trailing" secondItem="q77-n3-S6b" secondAttribute="trailing" constant="8" id="qHZ-lu-ace"/>
                             <constraint firstItem="q77-n3-S6b" firstAttribute="leading" secondItem="gUi-jF-WZQ" secondAttribute="trailing" constant="8" id="qk7-N7-Jfn"/>
                             <constraint firstItem="gUi-jF-WZQ" firstAttribute="width" secondItem="q77-n3-S6b" secondAttribute="width" multiplier="0.4" id="tFc-Lf-cYw"/>
@@ -162,7 +171,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="fKt-Lb-57k"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" badgeValue="History" id="nXn-gx-rks"/>
+                    <tabBarItem key="tabBarItem" title="history" image="Fill 75" selectedImage="Fill 75" id="nXn-gx-rks"/>
                     <connections>
                         <outlet property="dateLabel" destination="gMQ-VE-7UL" id="7gg-5R-m2S"/>
                         <outlet property="exerciseTableView" destination="q77-n3-S6b" id="i6p-Xe-lBI"/>
@@ -177,4 +186,8 @@
             <point key="canvasLocation" x="365.60000000000002" y="223.53823088455775"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Fill 75" width="46" height="62"/>
+        <image name="d63279" width="300" height="300"/>
+    </resources>
 </document>
