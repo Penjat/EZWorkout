@@ -8,6 +8,7 @@ class CenterViewController: UIViewController , CALayerDelegate ,UIScrollViewDele
   @IBOutlet weak var exerciseTableView: UITableView!
   @IBOutlet weak var helpView: HelpView!
   var gradient: CAGradientLayer!
+  var gradient2: CAGradientLayer!
   
   @IBOutlet weak var helpScrollView: UIScrollView!
   
@@ -29,10 +30,26 @@ class CenterViewController: UIViewController , CALayerDelegate ,UIScrollViewDele
     gradient.colors = [UIColor.clear.cgColor, UIColor.black.cgColor, UIColor.black.cgColor, UIColor.clear.cgColor]
     gradient.locations = [0, 0.1, 0.9, 1]
     helpScrollView.layer.mask = gradient
+    
+    
+    gradient2 = CAGradientLayer()
+    gradient2.delegate = self
+    gradient2.frame = helpScrollView.bounds
+    gradient2.colors = [UIColor.clear.cgColor, UIColor.black.cgColor, UIColor.black.cgColor, UIColor.clear.cgColor]
+    gradient2.locations = [0, 0.1, 0.9, 1]
+    exerciseTableView.layer.mask = gradient2
+    
   }
   
   func scrollViewDidScroll(_ scrollView: UIScrollView) {
+    
     updateGradientFrame()
+    gradient2.frame = CGRect(
+      x: 0,
+      y: exerciseTableView.contentOffset.y,
+      width: exerciseTableView.bounds.width,
+      height: exerciseTableView.bounds.height
+    )
   }
   // MARK: - CALayerDelegate
   func action(for layer: CALayer, forKey event: String) -> CAAction? {

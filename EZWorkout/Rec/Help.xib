@@ -26,61 +26,61 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="need help?" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wAL-eh-aWV">
-                    <rect key="frame" x="26" y="52" width="153.5" height="27.5"/>
+                    <rect key="frame" x="26" y="84" width="153.5" height="27.5"/>
                     <fontDescription key="fontDescription" name="SimplyRounded-BoldItalic" family="Simply Rounded" pointSize="26"/>
                     <color key="textColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="hold rec and say:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PVa-AJ-Y7u">
-                    <rect key="frame" x="38" y="143.5" width="196.5" height="23.5"/>
+                    <rect key="frame" x="38" y="175.5" width="196.5" height="23.5"/>
                     <fontDescription key="fontDescription" name="SimplyRounded-BoldItalic" family="Simply Rounded" pointSize="22"/>
                     <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="enter an exercise:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lny-IZ-ARg">
-                    <rect key="frame" x="27.5" y="268.5" width="207" height="23.5"/>
+                    <rect key="frame" x="27.5" y="300.5" width="207" height="23.5"/>
                     <fontDescription key="fontDescription" name="SimplyRounded-BoldItalic" family="Simply Rounded" pointSize="22"/>
                     <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="other commands:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kGg-W1-AdV">
-                    <rect key="frame" x="36.5" y="501.5" width="198" height="24"/>
+                    <rect key="frame" x="36.5" y="533.5" width="198" height="24"/>
                     <fontDescription key="fontDescription" name="SimplyRounded-BoldItalic" family="Simply Rounded" pointSize="22"/>
                     <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="&quot;leg press, 60 pounds, 10 reps&quot;" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="icY-15-BQT">
-                    <rect key="frame" x="27.5" y="308" width="320" height="21.5"/>
+                    <rect key="frame" x="27.5" y="340" width="320" height="21.5"/>
                     <fontDescription key="fontDescription" name="SimplyRounded-BoldItalic" family="Simply Rounded" pointSize="20"/>
                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="&quot;20 push ups&quot;" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i0J-XK-xIc">
-                    <rect key="frame" x="117" y="361.5" width="141" height="22"/>
+                    <rect key="frame" x="117" y="393.5" width="141" height="22"/>
                     <fontDescription key="fontDescription" name="SimplyRounded-BoldItalic" family="Simply Rounded" pointSize="20"/>
                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="&quot;running 10 minutes&quot;" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eYE-km-6sB">
-                    <rect key="frame" x="79.5" y="415.5" width="216" height="22"/>
+                    <rect key="frame" x="79.5" y="447.5" width="216" height="22"/>
                     <fontDescription key="fontDescription" name="SimplyRounded-BoldItalic" family="Simply Rounded" pointSize="20"/>
                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="&quot;undo&quot;" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ib8-h5-puZ">
-                    <rect key="frame" x="153" y="541.5" width="69" height="22"/>
+                    <rect key="frame" x="153" y="573.5" width="69" height="22"/>
                     <fontDescription key="fontDescription" name="SimplyRounded-BoldItalic" family="Simply Rounded" pointSize="20"/>
                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="&quot;start workout&quot;" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gvy-mp-ASv">
-                    <rect key="frame" x="112" y="183" width="151.5" height="21.5"/>
+                    <rect key="frame" x="112" y="215" width="151.5" height="21.5"/>
                     <fontDescription key="fontDescription" name="SimplyRounded-BoldItalic" family="Simply Rounded" pointSize="20"/>
                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="&quot;end workout&quot;" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mxk-74-WmH">
-                    <rect key="frame" x="115.5" y="579.5" width="144" height="22"/>
+                    <rect key="frame" x="115.5" y="611.5" width="144" height="22"/>
                     <fontDescription key="fontDescription" name="SimplyRounded-BoldItalic" family="Simply Rounded" pointSize="20"/>
                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <nil key="highlightedColor"/>
@@ -95,7 +95,7 @@
                 <constraint firstItem="kGg-W1-AdV" firstAttribute="top" secondItem="eYE-km-6sB" secondAttribute="bottom" constant="64" id="OQ3-fj-ldN"/>
                 <constraint firstItem="eYE-km-6sB" firstAttribute="centerX" secondItem="vUN-kp-3ea" secondAttribute="centerX" id="PUz-wy-29F"/>
                 <constraint firstItem="gvy-mp-ASv" firstAttribute="top" secondItem="PVa-AJ-Y7u" secondAttribute="bottom" constant="16" id="QfN-fa-ARA"/>
-                <constraint firstItem="wAL-eh-aWV" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="32" id="RLo-ml-pVR"/>
+                <constraint firstItem="wAL-eh-aWV" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="64" id="RLo-ml-pVR"/>
                 <constraint firstItem="PVa-AJ-Y7u" firstAttribute="top" secondItem="wAL-eh-aWV" secondAttribute="bottom" constant="64" id="T7A-gG-9Sa"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="centerX" secondItem="wAL-eh-aWV" secondAttribute="trailing" constant="8" id="YGa-G3-xeC"/>
                 <constraint firstItem="eYE-km-6sB" firstAttribute="top" secondItem="i0J-XK-xIc" secondAttribute="bottom" constant="32" id="e6w-kp-9If"/>

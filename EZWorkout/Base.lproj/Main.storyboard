@@ -90,11 +90,12 @@
             <objects>
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="nyw-w4-oX0" customClass="MasterTabBarController" customModule="EZWorkout" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="6GN-aH-5St">
+                    <tabBar key="tabBar" opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="6GN-aH-5St">
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </tabBar>
                     <connections>
+                        <outlet property="mainTabBar" destination="6GN-aH-5St" id="zYr-Fs-8wc"/>
                         <segue destination="2XQ-of-DbQ" kind="relationship" relationship="viewControllers" id="LXE-ia-9O9"/>
                         <segue destination="Wk5-Te-RN0" kind="relationship" relationship="viewControllers" id="Jjf-7A-YDW"/>
                         <segue destination="XYp-LP-5x1" kind="relationship" relationship="viewControllers" id="pu8-IT-bUw"/>

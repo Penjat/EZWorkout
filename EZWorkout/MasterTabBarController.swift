@@ -4,10 +4,11 @@ import UIKit
 
 class MasterTabBarController: UITabBarController {
   
+  @IBOutlet weak var mainTabBar: UITabBar!
   override func viewDidLoad() {
     super.viewDidLoad()
     delegate = self
-    
+    tabBar.backgroundImage = UIColor.clear.image()
   }
   
   
