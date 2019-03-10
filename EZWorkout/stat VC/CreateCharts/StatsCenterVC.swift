@@ -74,6 +74,10 @@ class StatsCenterVC: UIViewController {
             
         }
     }
+//    
+//    func (){
+//        
+//    }
   
   func setUpTestData(chart: BarChartView , chartLabels:[String] , chartValues:[Int]){
     //chart.delegate = self

@@ -26,6 +26,8 @@ class UserRealm: Object {
     }
     return exercises
   }
+
+  func getAllTime()
   func getYearsWorkingOut()->[String]{
     //TODO do this on realm side
     let dateFormatter = DateFormatter()
