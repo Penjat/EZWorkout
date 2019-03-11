@@ -32,6 +32,20 @@ class NewHistoryViewController: UIViewController {
     timeFormater.dateFormat = "h:mm"
     //timeFormater.timeStyle = .short
     updateSelected(date: Date())
+    
+    let idleColor1 = #colorLiteral(red: 0.9764705896, green: 0.850980401, blue: 0.5490196347, alpha: 1)
+    let idleColor2 = #colorLiteral(red: 0.9529411793, green: 0.7047749625, blue: 0.1462456667, alpha: 1)
+    //TODO put in animation extention
+    let gradient = CAGradientLayer()
+    //startGradient()
+    
+    gradient.colors = [idleColor1.cgColor, idleColor2.cgColor]
+    gradient.locations = [0.0 , 1.0]
+    gradient.startPoint = CGPoint(x: 0.0, y: 1.0)
+    gradient.endPoint = CGPoint(x: 1.0, y: 0.0)
+    
+    gradient.frame = CGRect(x: 0.0, y: 0.0, width: self.view.frame.size.width, height: self.view.frame.size.height)
+    self.view.layer.insertSublayer(gradient, at: 0)
   }
   
   func updateSelected(date:Date){
