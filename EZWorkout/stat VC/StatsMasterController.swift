@@ -7,20 +7,20 @@ class StatsMasterController: UIViewController {
   var centerController: StatsCenterVC!
   var topBarController: StatsTopBarVC!
   
- var curPage = 0
-    @IBOutlet weak var StatsIcon: UITabBarItem!
-    
+  var curPage = 0
+  @IBOutlet weak var StatsIcon: UITabBarItem!
+  
   @IBOutlet weak var topBarScrollView: UIScrollView!
   @IBOutlet weak var centerScrollView: UIScrollView!
   
   
   
-    override func viewDidLoad() {
-        super.viewDidLoad()
-       topBarController.animateTopBars(page: curPage)
-
-      
-    }
+  override func viewDidLoad() {
+    super.viewDidLoad()
+    topBarController.animateTopBars(page: curPage)
+    
+    
+  }
   override func viewDidAppear(_ animated: Bool) {
     
     super.viewDidAppear(animated)
@@ -61,5 +61,5 @@ class StatsMasterController: UIViewController {
   
   
   
-
+  
 }
