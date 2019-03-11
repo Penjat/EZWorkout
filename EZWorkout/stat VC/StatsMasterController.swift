@@ -17,7 +17,7 @@ class StatsMasterController: UIViewController {
   
     override func viewDidLoad() {
         super.viewDidLoad()
-       
+       topBarController.animateTopBars(page: curPage)
 
       
     }
@@ -47,6 +47,7 @@ class StatsMasterController: UIViewController {
     //get the button for the current page and make sure it is at the center of the screen
     let offest = -view.frame.width/2  + topBarController.getButtonXPos(atIndex: pageNum)
     
+    topBarController.animateTopBars(page: pageNum)
     topBarScrollView.setContentOffset(CGPoint(x: offest, y: 0), animated: true)
   }
   

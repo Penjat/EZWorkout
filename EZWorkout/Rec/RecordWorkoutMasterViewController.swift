@@ -51,6 +51,7 @@ class RecordWorkoutMasterViewController: UIViewController {
     feedbackVisualizer.alpha = 0.0
     
     timerLabel.alpha = 0.0
+    topBarController.animateTopBars(page: curPage)
     
     idleColor1 = #colorLiteral(red: 0.2392156869, green: 0.6745098233, blue: 0.9686274529, alpha: 1)
     idleColor2 = #colorLiteral(red: 0.1411764771, green: 0.3960784376, blue: 0.5647059083, alpha: 1)
