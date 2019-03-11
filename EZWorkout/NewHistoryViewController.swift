@@ -5,6 +5,7 @@ import FSCalendar
 import RealmSwift
 
 class NewHistoryViewController: UIViewController {
+  @IBOutlet weak var noEventsMsg: UILabel!
   
   @IBOutlet weak var calendar: FSCalendar!
   @IBOutlet weak var selectedDateLabel: UILabel!
@@ -32,6 +33,28 @@ class NewHistoryViewController: UIViewController {
     timeFormater.dateFormat = "h:mm"
     //timeFormater.timeStyle = .short
     updateSelected(date: Date())
+    
+    let idleColor1 = #colorLiteral(red: 0.721568644, green: 0.8862745166, blue: 0.5921568871, alpha: 1)
+    let idleColor2 = #colorLiteral(red: 0.9515201449, green: 0.9560356736, blue: 0.8844186664, alpha: 1)
+    //TODO put in animation extention
+    let gradient = CAGradientLayer()
+    //startGradient()
+    
+    gradient.colors = [idleColor1.cgColor, idleColor2.cgColor]
+    gradient.locations = [0.0 , 1.0]
+    gradient.startPoint = CGPoint(x: 0.0, y: 1.0)
+    gradient.endPoint = CGPoint(x: 1.0, y: 0.0)
+    
+    gradient.frame = CGRect(x: 0.0, y: 0.0, width: self.view.frame.size.width, height: self.view.frame.size.height)
+    self.view.layer.insertSublayer(gradient, at: 0)
+    
+    
+    //set the font
+    calendar.appearance.headerTitleFont      = UIFont.init(name: "Simply Rounded", size: 22)
+    calendar.appearance.headerTitleColor = #colorLiteral(red: 0.2745098174, green: 0.4862745106, blue: 0.1411764771, alpha: 1)
+    calendar.appearance.weekdayFont          = UIFont.init(name: "Simply Rounded", size: 16)
+    calendar.appearance.weekdayTextColor = #colorLiteral(red: 0.2549019754, green: 0.2745098174, blue: 0.3019607961, alpha: 1)
+    calendar.appearance.titleFont            = UIFont.init(name: "Simply Rounded", size: 16)
   }
   
   func updateSelected(date:Date){
@@ -55,10 +78,16 @@ class NewHistoryViewController: UIViewController {
     
     if results.count > 0{
       exercises = results[0].excerciseArray.map{$0}
+      exerciseTableView.reloadData()
+      //TODO animate between the two
+      noEventsMsg.isHidden = true
+      exerciseTableView.isHidden = false
     }else{
+      noEventsMsg.isHidden = false
+      exerciseTableView.isHidden = true
       exercises = []
     }
-    exerciseTableView.reloadData()
+    
   }
   
   

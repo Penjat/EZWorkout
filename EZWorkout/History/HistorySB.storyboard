@@ -13,6 +13,9 @@
         <array key="KeepCalm-Medium.ttf">
             <string>KeepCalm-Medium</string>
         </array>
+        <array key="Simply Rounded.ttf">
+            <string>SimplyRounded</string>
+        </array>
     </customFonts>
     <scenes>
         <!--History View Controller-->
@@ -198,14 +201,20 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7g7-s0-Mak">
-                                <rect key="frame" x="8" y="381.5" width="359" height="24"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <nil key="textColor"/>
+                                <rect key="frame" x="8" y="320.5" width="359" height="23"/>
+                                <fontDescription key="fontDescription" name="SimplyRounded" family="Simply Rounded" pointSize="22"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="249" misplaced="YES" text="there are no workouts for this day" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="foa-ur-5J2" userLabel="no exercises msg">
+                                <rect key="frame" x="72" y="407" width="218" height="168"/>
+                                <fontDescription key="fontDescription" name="SimplyRounded" family="Simply Rounded" pointSize="20"/>
+                                <color key="textColor" red="0.23952772554772483" green="0.3333333432674408" blue="0.21483704100920764" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Twg-QI-ei7">
-                                <rect key="frame" x="8" y="413.5" width="359" height="196.5"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <rect key="frame" x="8" y="351.5" width="359" height="258.5"/>
+                                <color key="backgroundColor" white="1" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell opaque="NO" clipsSubviews="YES" alpha="0.0" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="exerciseCell" rowHeight="85" id="2Re-fV-X8q" customClass="ExerciseCell" customModule="EZWorkout" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="359" height="85"/>
@@ -235,32 +244,41 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="History" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2DR-86-TSz">
                                 <rect key="frame" x="8" y="28" width="359" height="26.5"/>
                                 <fontDescription key="fontDescription" name="KeepCalm-Medium" family="Keep Calm" pointSize="22"/>
-                                <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lrb-Qq-AiC" customClass="FSCalendar">
-                                <rect key="frame" x="32" y="62.5" width="311" height="311"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <rect key="frame" x="0.0" y="62.5" width="375" height="250"/>
+                                <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="0.4610980308219178" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" secondItem="lrb-Qq-AiC" secondAttribute="height" multiplier="1:1" id="qqe-Jt-ytC"/>
+                                    <constraint firstAttribute="width" secondItem="lrb-Qq-AiC" secondAttribute="height" multiplier="3:2" id="qqe-Jt-ytC"/>
                                 </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderRadius">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="ZZ9-u0-Fo4" firstAttribute="bottom" secondItem="Twg-QI-ei7" secondAttribute="bottom" constant="8" id="0JZ-3p-fhM"/>
                             <constraint firstItem="Twg-QI-ei7" firstAttribute="top" secondItem="7g7-s0-Mak" secondAttribute="bottom" constant="8" id="5N5-Ma-A9g"/>
+                            <constraint firstItem="foa-ur-5J2" firstAttribute="centerX" secondItem="Twg-QI-ei7" secondAttribute="centerX" id="5zT-Dc-0mB"/>
                             <constraint firstItem="2DR-86-TSz" firstAttribute="top" secondItem="ZZ9-u0-Fo4" secondAttribute="top" constant="8" id="8Oa-ag-dsA"/>
                             <constraint firstItem="2DR-86-TSz" firstAttribute="leading" secondItem="ZZ9-u0-Fo4" secondAttribute="leading" constant="8" id="A1M-H8-Ojz"/>
                             <constraint firstItem="ZZ9-u0-Fo4" firstAttribute="trailing" secondItem="Twg-QI-ei7" secondAttribute="trailing" constant="8" id="HbL-Gc-Eo8"/>
                             <constraint firstItem="Twg-QI-ei7" firstAttribute="leading" secondItem="ZZ9-u0-Fo4" secondAttribute="leading" constant="8" id="ID6-Us-1gG"/>
                             <constraint firstItem="lrb-Qq-AiC" firstAttribute="top" secondItem="2DR-86-TSz" secondAttribute="bottom" constant="8" id="OkI-Sx-4Ib"/>
+                            <constraint firstItem="foa-ur-5J2" firstAttribute="width" secondItem="Twg-QI-ei7" secondAttribute="width" multiplier="0.7" id="Qgi-lS-4Qa"/>
+                            <constraint firstItem="foa-ur-5J2" firstAttribute="centerY" secondItem="Twg-QI-ei7" secondAttribute="centerY" id="Ri5-Kg-Rta"/>
+                            <constraint firstItem="foa-ur-5J2" firstAttribute="height" secondItem="Twg-QI-ei7" secondAttribute="height" multiplier="0.7" id="SSi-24-xkx"/>
                             <constraint firstItem="ZZ9-u0-Fo4" firstAttribute="trailing" secondItem="2DR-86-TSz" secondAttribute="trailing" constant="8" id="W6t-zS-Pnx"/>
                             <constraint firstItem="7g7-s0-Mak" firstAttribute="leading" secondItem="ZZ9-u0-Fo4" secondAttribute="leading" constant="8" id="cAN-RB-71H"/>
                             <constraint firstItem="ZZ9-u0-Fo4" firstAttribute="trailing" secondItem="7g7-s0-Mak" secondAttribute="trailing" constant="8" id="csx-aD-JME"/>
-                            <constraint firstItem="lrb-Qq-AiC" firstAttribute="leading" secondItem="ZZ9-u0-Fo4" secondAttribute="leading" constant="32" id="qth-up-ImQ"/>
+                            <constraint firstItem="lrb-Qq-AiC" firstAttribute="leading" secondItem="ZZ9-u0-Fo4" secondAttribute="leading" id="qth-up-ImQ"/>
                             <constraint firstItem="7g7-s0-Mak" firstAttribute="top" secondItem="lrb-Qq-AiC" secondAttribute="bottom" constant="8" id="v71-ki-LUO"/>
-                            <constraint firstItem="ZZ9-u0-Fo4" firstAttribute="trailing" secondItem="lrb-Qq-AiC" secondAttribute="trailing" constant="32" id="xSO-Up-EhL"/>
+                            <constraint firstItem="ZZ9-u0-Fo4" firstAttribute="trailing" secondItem="lrb-Qq-AiC" secondAttribute="trailing" id="xSO-Up-EhL"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="ZZ9-u0-Fo4"/>
                     </view>
@@ -269,12 +287,13 @@
                     <connections>
                         <outlet property="calendar" destination="lrb-Qq-AiC" id="oYY-Cn-9OX"/>
                         <outlet property="exerciseTableView" destination="Twg-QI-ei7" id="c78-OG-el8"/>
+                        <outlet property="noEventsMsg" destination="foa-ur-5J2" id="E4T-Gz-63D"/>
                         <outlet property="selectedDateLabel" destination="7g7-s0-Mak" id="QqE-1K-imc"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BoZ-ug-2lJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="207" y="958"/>
+            <point key="canvasLocation" x="205.59999999999999" y="957.57121439280365"/>
         </scene>
     </scenes>
     <resources>
