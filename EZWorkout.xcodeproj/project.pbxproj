@@ -89,7 +89,7 @@
 		288121EF222F7B85007042C1 /* WorkoutRealm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 288121EE222F7B85007042C1 /* WorkoutRealm.swift */; };
 		288121F1222F7D83007042C1 /* userStatRealm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 288121F0222F7D83007042C1 /* userStatRealm.swift */; };
 		28DC63FF223324E5002FC4E0 /* StatUserVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28DC63FE223324E5002FC4E0 /* StatUserVC.swift */; };
-		28DC642B22333BDD002FC4E0 /* StatUserProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28DC642A22333BDD002FC4E0 /* StatUserProfileVC.swift */; };
+		28DC64352235C3EA002FC4E0 /* StatTotalVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28DC64342235C3EA002FC4E0 /* StatTotalVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -188,7 +188,7 @@
 		288121EE222F7B85007042C1 /* WorkoutRealm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutRealm.swift; sourceTree = "<group>"; };
 		288121F0222F7D83007042C1 /* userStatRealm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = userStatRealm.swift; sourceTree = "<group>"; };
 		28DC63FE223324E5002FC4E0 /* StatUserVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatUserVC.swift; sourceTree = "<group>"; };
-		28DC642A22333BDD002FC4E0 /* StatUserProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatUserProfileVC.swift; sourceTree = "<group>"; };
+		28DC64342235C3EA002FC4E0 /* StatTotalVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatTotalVC.swift; sourceTree = "<group>"; };
 		56613A7F23DBE1C05BB336A2 /* Pods_EZWorkout.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EZWorkout.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8872BA68D8FE0B972398D279 /* Pods-EZWorkout.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EZWorkout.debug.xcconfig"; path = "Pods/Target Support Files/Pods-EZWorkout/Pods-EZWorkout.debug.xcconfig"; sourceTree = "<group>"; };
 		FEEC72732415616696171480 /* Pods-EZWorkout.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EZWorkout.release.xcconfig"; path = "Pods/Target Support Files/Pods-EZWorkout/Pods-EZWorkout.release.xcconfig"; sourceTree = "<group>"; };
@@ -368,7 +368,7 @@
 				2851C8802231F23A005E4384 /* StaticDataManager.swift */,
 				0BB1CEC322304BC700F386C3 /* StatsCenterVC.swift */,
 				28DC63FE223324E5002FC4E0 /* StatUserVC.swift */,
-				28DC642A22333BDD002FC4E0 /* StatUserProfileVC.swift */,
+				28DC64342235C3EA002FC4E0 /* StatTotalVC.swift */,
 			);
 			path = CreateCharts;
 			sourceTree = "<group>";
@@ -635,8 +635,10 @@
 				0B38BDB92231D13D00DEA358 /* HistoryViewController+PickerDelegateDataSource.swift in Sources */,
 				0BCA1AC42228D30100B51C27 /* EZWorkout.xcdatamodeld in Sources */,
 				0BF84E8222309F8B00DFC6B0 /* ExerciseTableManager.swift in Sources */,
+
 				28DC642B22333BDD002FC4E0 /* StatUserProfileVC.swift in Sources */,
 				0B4AF2D52235B18E00A7CBF2 /* NewHistoryViewController+TableViewDataSourceDelegate.swift in Sources */,
+
 				0BA3DB99222DD2FC00AC7538 /* SpeechRecognizer.swift in Sources */,
 				0BB7E9BA2232D7DC000C285D /* SpeechVisulizerView.swift in Sources */,
 				0B4AF2D3223598FA00A7CBF2 /* NewHistoryViewController+FSCalendarDelegateDataSource.swift in Sources */,
@@ -668,6 +670,7 @@
 				0B5013EC222F25F7004A64EC /* CenterViewController.swift in Sources */,
 				0B5013F6222F673E004A64EC /* FeedbackMsgView.swift in Sources */,
 				0BA3DB96222DD0F200AC7538 /* SpechInputManager+SetUp.swift in Sources */,
+				28DC64352235C3EA002FC4E0 /* StatTotalVC.swift in Sources */,
 				0B5013F8222F67BC004A64EC /* RecordWorkoutMasterViewController+ShowFeedback.swift in Sources */,
 				285A56DB2229DB2E003E4AA0 /* ExcerciseTableViewCell.swift in Sources */,
 				28812196222DA4DA007042C1 /* StatVC.swift in Sources */,
@@ -845,7 +848,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = L688AU9RCV;
 				INFOPLIST_FILE = EZWorkout/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -864,7 +867,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = L688AU9RCV;
 				INFOPLIST_FILE = EZWorkout/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

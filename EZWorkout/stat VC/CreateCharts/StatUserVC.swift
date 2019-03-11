@@ -35,7 +35,7 @@ class StatUserVC: UIViewController, UITextFieldDelegate {
         for text in textFields{
             text.delegate = self
         }
-        caloryField.becomeFirstResponder()
+//        caloryField.becomeFirstResponder()
         
     }
     func textFieldDidEndEditing(_ textField: UITextField, reason: UITextField.DidEndEditingReason) {
@@ -77,13 +77,13 @@ class StatUserVC: UIViewController, UITextFieldDelegate {
         self.applySkyscannerThemeWithIcon(textField: caloryField)
         self.applySkyscannerThemeWithIcon(textField: weightField)
         heightField.title = "              Height"
-        //heightField.iconImage = UIImage(named: "height")
+        heightField.iconImage = UIImage(named: "height")
         ageField.title = "              Age"
-//        ageField.iconImage = UIImage(named: "age")
+        ageField.iconImage = UIImage(named: "age")
         caloryField.title = "              calories"
-//        caloryField.iconImage = UIImage(named: "gym")
+        caloryField.iconImage = UIImage(named: "gym")
         weightField.title = "              Weight lb"
-//        weightField.iconImage = UIImage(named: "weight")
+        weightField.iconImage = UIImage(named: "weight")
         // plane icon as per https://fortawesome.github.io/Font-Awesome/cheatsheet/
         //heightField.iconText = "\u{f072}"
        

@@ -29,6 +29,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     })
     Realm.Configuration.defaultConfiguration = config
     RealmDataMangers.retrieveUser()
+     print(Realm.Configuration.defaultConfiguration.fileURL!)
+    UserRealm.curUser.getAllTime()
     return true
   }
 
