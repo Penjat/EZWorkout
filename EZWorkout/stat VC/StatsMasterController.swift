@@ -30,7 +30,7 @@ class StatsMasterController: UIViewController {
     gradient.endPoint = CGPoint(x: 1.0, y: 0.0)
     
     gradient.frame = CGRect(x: 0.0, y: 0.0, width: self.view.frame.size.width, height: self.view.frame.size.height)
-    self.view.layer.insertSublayer(gradient, at: 1)
+    self.view.layer.insertSublayer(gradient, at: 0)
     
   }
   override func viewDidAppear(_ animated: Bool) {
