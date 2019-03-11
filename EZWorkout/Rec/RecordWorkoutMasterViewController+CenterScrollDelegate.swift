@@ -11,7 +11,7 @@ extension RecordWorkoutMasterViewController : UIScrollViewDelegate{
     if page != curPage {
       print("changing page \(page)")
       curPage = page
-      setStatBarPos(pageNum: curPage)
+      setStatBarPos(pageNum: page)
       
       //centerController.pageAnimation(page: curPage)
     }
@@ -19,7 +19,7 @@ extension RecordWorkoutMasterViewController : UIScrollViewDelegate{
   func setStatBarPos(pageNum: Int){
     let offest = -view.frame.width/2  + topBarController.getButtonXPos(atIndex: pageNum)
     
-    
+    topBarController.animateTopBars(page: curPage)
     topBarScrollView.setContentOffset(CGPoint(x: offest, y: 0), animated: true)
   }
   
