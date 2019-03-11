@@ -78,18 +78,33 @@ class NewHistoryViewController: UIViewController {
     
     if results.count > 0{
       exercises = results[0].excerciseArray.map{$0}
-      exerciseTableView.reloadData()
-      //TODO animate between the two
-      noEventsMsg.isHidden = true
-      exerciseTableView.isHidden = false
+      exerciseTableChangeWithFade()
+      
+      UIView.animate(withDuration: 0.5, animations: {
+        self.noEventsMsg.alpha = 0.0
+      })
+
     }else{
-      noEventsMsg.isHidden = false
-      exerciseTableView.isHidden = true
+
+      UIView.animate(withDuration: 0.5, animations: {
+        self.noEventsMsg.alpha = 1.0
+        self.exerciseTableView.alpha = 0.0
+      })
       exercises = []
     }
-    
+   
   }
-  
+  func exerciseTableChangeWithFade(){
+    UIView.animate(withDuration: 0.5, delay: 0.0, options: [], animations: {
+      self.exerciseTableView.alpha = 0.0
+      
+    }, completion: {_ in
+      UIView.animate(withDuration: 0.5, animations: {
+        self.exerciseTableView.reloadData()
+        self.exerciseTableView.alpha = 1.0
+      })
+    })
+  }
   
   
   

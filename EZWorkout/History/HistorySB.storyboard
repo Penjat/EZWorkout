@@ -201,7 +201,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7g7-s0-Mak">
-                                <rect key="frame" x="8" y="320.5" width="359" height="23"/>
+                                <rect key="frame" x="8" y="328.5" width="359" height="23"/>
                                 <fontDescription key="fontDescription" name="SimplyRounded" family="Simply Rounded" pointSize="22"/>
                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -213,7 +213,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Twg-QI-ei7">
-                                <rect key="frame" x="8" y="351.5" width="359" height="258.5"/>
+                                <rect key="frame" x="8" y="367.5" width="359" height="242.5"/>
                                 <color key="backgroundColor" white="1" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell opaque="NO" clipsSubviews="YES" alpha="0.0" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="exerciseCell" rowHeight="85" id="2Re-fV-X8q" customClass="ExerciseCell" customModule="EZWorkout" customModuleProvider="target">
@@ -263,7 +263,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="ZZ9-u0-Fo4" firstAttribute="bottom" secondItem="Twg-QI-ei7" secondAttribute="bottom" constant="8" id="0JZ-3p-fhM"/>
-                            <constraint firstItem="Twg-QI-ei7" firstAttribute="top" secondItem="7g7-s0-Mak" secondAttribute="bottom" constant="8" id="5N5-Ma-A9g"/>
+                            <constraint firstItem="Twg-QI-ei7" firstAttribute="top" secondItem="7g7-s0-Mak" secondAttribute="bottom" constant="16" id="5N5-Ma-A9g"/>
                             <constraint firstItem="foa-ur-5J2" firstAttribute="centerX" secondItem="Twg-QI-ei7" secondAttribute="centerX" id="5zT-Dc-0mB"/>
                             <constraint firstItem="2DR-86-TSz" firstAttribute="top" secondItem="ZZ9-u0-Fo4" secondAttribute="top" constant="8" id="8Oa-ag-dsA"/>
                             <constraint firstItem="2DR-86-TSz" firstAttribute="leading" secondItem="ZZ9-u0-Fo4" secondAttribute="leading" constant="8" id="A1M-H8-Ojz"/>
@@ -277,7 +277,7 @@
                             <constraint firstItem="7g7-s0-Mak" firstAttribute="leading" secondItem="ZZ9-u0-Fo4" secondAttribute="leading" constant="8" id="cAN-RB-71H"/>
                             <constraint firstItem="ZZ9-u0-Fo4" firstAttribute="trailing" secondItem="7g7-s0-Mak" secondAttribute="trailing" constant="8" id="csx-aD-JME"/>
                             <constraint firstItem="lrb-Qq-AiC" firstAttribute="leading" secondItem="ZZ9-u0-Fo4" secondAttribute="leading" id="qth-up-ImQ"/>
-                            <constraint firstItem="7g7-s0-Mak" firstAttribute="top" secondItem="lrb-Qq-AiC" secondAttribute="bottom" constant="8" id="v71-ki-LUO"/>
+                            <constraint firstItem="7g7-s0-Mak" firstAttribute="top" secondItem="lrb-Qq-AiC" secondAttribute="bottom" constant="16" id="v71-ki-LUO"/>
                             <constraint firstItem="ZZ9-u0-Fo4" firstAttribute="trailing" secondItem="lrb-Qq-AiC" secondAttribute="trailing" id="xSO-Up-EhL"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="ZZ9-u0-Fo4"/>
