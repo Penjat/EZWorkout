@@ -4,6 +4,8 @@ import UIKit
 
 class CenterViewController: UIViewController , CALayerDelegate ,UIScrollViewDelegate {
   
+
+  
   @IBOutlet weak var recView: UIView!
   @IBOutlet weak var exerciseTableView: UITableView!
   @IBOutlet weak var helpView: HelpView!
@@ -84,7 +86,16 @@ class CenterViewController: UIViewController , CALayerDelegate ,UIScrollViewDele
 //      self.recView.backgroundColor = UIColor(red:0.23, green:0.49, blue:0.93, alpha:1.0)
 //    })
   }
-  
+  @IBAction func recordPressed(_ sender: Any) {
+    if let delgate = delegate{
+      delgate.recPressed()
+    }
+  }
+  @IBAction func recReleased(_ sender: Any) {
+    if let delgate = delegate{
+      delgate.recReleased()
+    }
+  }
 }
 
 
