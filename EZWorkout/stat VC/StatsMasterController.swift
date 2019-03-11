@@ -18,7 +18,19 @@ class StatsMasterController: UIViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     topBarController.animateTopBars(page: curPage)
+    let idleColor1 = #colorLiteral(red: 0.8964110017, green: 0.6467557549, blue: 0.6463074088, alpha: 1)
+    let idleColor2 = #colorLiteral(red: 0.1764705926, green: 0.01176470611, blue: 0.5607843399, alpha: 1)
+    //TODO put in animation extention
+    let gradient = CAGradientLayer()
+    //startGradient()
     
+    gradient.colors = [idleColor1.cgColor, idleColor2.cgColor]
+    gradient.locations = [0.0 , 1.0]
+    gradient.startPoint = CGPoint(x: 0.0, y: 1.0)
+    gradient.endPoint = CGPoint(x: 1.0, y: 0.0)
+    
+    gradient.frame = CGRect(x: 0.0, y: 0.0, width: self.view.frame.size.width, height: self.view.frame.size.height)
+    self.view.layer.insertSublayer(gradient, at: 1)
     
   }
   override func viewDidAppear(_ animated: Bool) {

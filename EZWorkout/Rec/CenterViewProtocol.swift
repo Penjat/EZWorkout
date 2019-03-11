@@ -8,5 +8,6 @@ protocol CenterViewProtocol{
   
   func recPressed()
   func recReleased()
+  func getStartDate()->Date
   
 }

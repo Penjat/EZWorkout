@@ -34,7 +34,7 @@ class NewHistoryViewController: UIViewController {
     //timeFormater.timeStyle = .short
     updateSelected(date: Date())
     
-    let idleColor1 = #colorLiteral(red: 0.721568644, green: 0.8862745166, blue: 0.5921568871, alpha: 1)
+    let idleColor1 = #colorLiteral(red: 0.8740196824, green: 0.868240416, blue: 0.2171982229, alpha: 0.9366973459)
     let idleColor2 = #colorLiteral(red: 0.9515201449, green: 0.9560356736, blue: 0.8844186664, alpha: 1)
     //TODO put in animation extention
     let gradient = CAGradientLayer()

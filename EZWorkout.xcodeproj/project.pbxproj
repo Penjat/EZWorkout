@@ -14,6 +14,10 @@
 		0B4AF2D722360EA500A7CBF2 /* RecordWorkoutMasterViewController+CenterScrollDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B4AF2D622360EA500A7CBF2 /* RecordWorkoutMasterViewController+CenterScrollDelegate.swift */; };
 		0B4AF2D92236100B00A7CBF2 /* RecTopBarVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B4AF2D82236100A00A7CBF2 /* RecTopBarVC.swift */; };
 		0B4AF2DB223613F000A7CBF2 /* RecordWorkoutMasterViewController+TopBarDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B4AF2DA223613F000A7CBF2 /* RecordWorkoutMasterViewController+TopBarDelegate.swift */; };
+		0B4AF2DD2236CD9400A7CBF2 /* CursedTimerULiL.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0B4AF2DC2236CD9400A7CBF2 /* CursedTimerULiL.ttf */; };
+		0B4AF2DF2236CE0C00A7CBF2 /* timeburnernormal.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0B4AF2DE2236CE0C00A7CBF2 /* timeburnernormal.ttf */; };
+		0B4AF2E12236CF8B00A7CBF2 /* CenterViewController+TimerFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B4AF2E02236CF8B00A7CBF2 /* CenterViewController+TimerFunctions.swift */; };
+		0B4AF2E32236D3BC00A7CBF2 /* SVBasicManual.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0B4AF2E22236D3BC00A7CBF2 /* SVBasicManual.ttf */; };
 		0B5013EC222F25F7004A64EC /* CenterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B5013EB222F25F7004A64EC /* CenterViewController.swift */; };
 		0B5013EE222F2DB2004A64EC /* CenterViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B5013ED222F2DB2004A64EC /* CenterViewProtocol.swift */; };
 		0B5013F0222F2F9F004A64EC /* RecordWorkoutMasterViewController+ContainerFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B5013EF222F2F9F004A64EC /* RecordWorkoutMasterViewController+ContainerFunctions.swift */; };
@@ -114,6 +118,10 @@
 		0B4AF2D622360EA500A7CBF2 /* RecordWorkoutMasterViewController+CenterScrollDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RecordWorkoutMasterViewController+CenterScrollDelegate.swift"; sourceTree = "<group>"; };
 		0B4AF2D82236100A00A7CBF2 /* RecTopBarVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecTopBarVC.swift; sourceTree = "<group>"; };
 		0B4AF2DA223613F000A7CBF2 /* RecordWorkoutMasterViewController+TopBarDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RecordWorkoutMasterViewController+TopBarDelegate.swift"; sourceTree = "<group>"; };
+		0B4AF2DC2236CD9400A7CBF2 /* CursedTimerULiL.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = CursedTimerULiL.ttf; sourceTree = "<group>"; };
+		0B4AF2DE2236CE0C00A7CBF2 /* timeburnernormal.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = timeburnernormal.ttf; sourceTree = "<group>"; };
+		0B4AF2E02236CF8B00A7CBF2 /* CenterViewController+TimerFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CenterViewController+TimerFunctions.swift"; sourceTree = "<group>"; };
+		0B4AF2E22236D3BC00A7CBF2 /* SVBasicManual.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = SVBasicManual.ttf; sourceTree = "<group>"; };
 		0B5013EB222F25F7004A64EC /* CenterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CenterViewController.swift; sourceTree = "<group>"; };
 		0B5013ED222F2DB2004A64EC /* CenterViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CenterViewProtocol.swift; sourceTree = "<group>"; };
 		0B5013EF222F2F9F004A64EC /* RecordWorkoutMasterViewController+ContainerFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RecordWorkoutMasterViewController+ContainerFunctions.swift"; sourceTree = "<group>"; };
@@ -293,6 +301,9 @@
 		0BAA18312234720A00EC40D8 /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
+				0B4AF2E22236D3BC00A7CBF2 /* SVBasicManual.ttf */,
+				0B4AF2DE2236CE0C00A7CBF2 /* timeburnernormal.ttf */,
+				0B4AF2DC2236CD9400A7CBF2 /* CursedTimerULiL.ttf */,
 				0BAA183822349D9E00EC40D8 /* Simply Rounded.ttf */,
 				0BAA18342234745C00EC40D8 /* Simply Rounded Bold Italic.ttf */,
 				0BAA18322234720A00EC40D8 /* KeepCalm-Medium.ttf */,
@@ -397,6 +408,7 @@
 				0B4AF2D622360EA500A7CBF2 /* RecordWorkoutMasterViewController+CenterScrollDelegate.swift */,
 				0B4AF2DA223613F000A7CBF2 /* RecordWorkoutMasterViewController+TopBarDelegate.swift */,
 				0B5013EB222F25F7004A64EC /* CenterViewController.swift */,
+				0B4AF2E02236CF8B00A7CBF2 /* CenterViewController+TimerFunctions.swift */,
 				0BB2A5C9223434E3006C8FF7 /* CenterViewController+TableViewDelegateDataSource.swift */,
 				0B4AF2D82236100A00A7CBF2 /* RecTopBarVC.swift */,
 				0BA3032C222E08530046FDB9 /* RecWorkoutSB.storyboard */,
@@ -540,10 +552,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				0BF84E922231B0E900DFC6B0 /* ExerciseSet.xib in Resources */,
+				0B4AF2DD2236CD9400A7CBF2 /* CursedTimerULiL.ttf in Resources */,
 				0BCA1AC92228D30100B51C27 /* LaunchScreen.storyboard in Resources */,
+				0B4AF2E32236D3BC00A7CBF2 /* SVBasicManual.ttf in Resources */,
 				0BA30329222DE70A0046FDB9 /* Exercise.xib in Resources */,
 				0BCA1AC62228D30100B51C27 /* Assets.xcassets in Resources */,
 				0BCA1AC12228D30100B51C27 /* Main.storyboard in Resources */,
+				0B4AF2DF2236CE0C00A7CBF2 /* timeburnernormal.ttf in Resources */,
 				0BF84E8E2230EC3D00DFC6B0 /* ExerciseType.xib in Resources */,
 				0B5013F4222F6653004A64EC /* FeedbackMsg.xib in Resources */,
 				0BA30345222EDDFA0046FDB9 /* Help.xib in Resources */,
@@ -660,6 +675,7 @@
 				0BB1CECA2230690900F386C3 /* TopBarDelegateProtocol.swift in Sources */,
 				0BF84E8C2230C2A900DFC6B0 /* HistoryViewController+ExerciseTableDelegate.swift in Sources */,
 				0BA3DB93222DD0F200AC7538 /* ExerciseRefernceProtocol.swift in Sources */,
+				0B4AF2E12236CF8B00A7CBF2 /* CenterViewController+TimerFunctions.swift in Sources */,
 				0BB7E9952231F249000C285D /* MasterTabBarController.swift in Sources */,
 				0BB1CEC622304BD800F386C3 /* StatsTopBarVC.swift in Sources */,
 				28DC63FF223324E5002FC4E0 /* StatUserVC.swift in Sources */,

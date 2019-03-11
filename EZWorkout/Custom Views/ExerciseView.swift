@@ -35,13 +35,41 @@ class ExerciseView: UIView {
     //TODO adjust text presentation
     infoContainer.layer.cornerRadius = 12
     exerciseImage.layer.cornerRadius = exerciseImage.frame.size.width / 2
-    labelExerciseName.text = exerciseModel.name
-    if let reps = exerciseModel.reps {
-      labelExerciseReps.text = "\(reps) reps"
+    
+    
+    let nameString = exerciseModel.name
+    var weightString = ""
+    var repsString = ""
+    
+    let exerciseType = exerciseModel.exerciseRef!.exerciseType
+    switch (exerciseType){
+    case .BodyWeight:
+      //only track reps
+      repsString = "\(exerciseModel.reps) reps"
+      
+    case .Weight:
+      //track weight and reps
+      repsString = "\(exerciseModel.reps) reps"
+      weightString = "\(exerciseModel.value)"
+      
+    case .Timed:
+      repsString = "\(exerciseModel.reps) min"
+      
+    case .Distance:
+      weightString = "\(exerciseModel.value) km"
+      
+    case .TimedDistance:
+      weightString = "\(exerciseModel.value) km"
+      repsString = "\(exerciseModel.reps) min"
     }
-    if let weight = exerciseModel.value {
-      labelExerciseWeight.text = "\(weight) lbs"
-    }
+    
+    
+    
+    
+    
+    labelExerciseName.text = nameString
+    labelExerciseReps.text = repsString
+    labelExerciseWeight.text = weightString
     
     
   }

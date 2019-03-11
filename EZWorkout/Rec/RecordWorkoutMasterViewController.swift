@@ -8,10 +8,8 @@ class RecordWorkoutMasterViewController: UIViewController {
   
   @IBOutlet weak var centerScrollView: UIScrollView!
   @IBOutlet weak var centerContainerView: UIView!
-  @IBOutlet weak var timerLabel: UILabel!
   @IBOutlet weak var feebBackLabel: UILabel!
   @IBOutlet weak var feedbackVisualizer: SpeechVisulizerView!
-  @IBOutlet weak var workoutStatusLabel: UILabel!
   
   @IBOutlet weak var topBarScrollView: UIScrollView!
   
@@ -36,7 +34,7 @@ class RecordWorkoutMasterViewController: UIViewController {
   
   var speechRecognizer: SpeechRecognizer!
   
-  var timer = Timer()
+  
   
   var gradient: CAGradientLayer!
   
@@ -50,7 +48,7 @@ class RecordWorkoutMasterViewController: UIViewController {
     //feebBackLabel
     feedbackVisualizer.alpha = 0.0
     
-    timerLabel.alpha = 0.0
+    //timerLabel.alpha = 0.0
     topBarController.animateTopBars(page: curPage)
     
     idleColor1 = #colorLiteral(red: 0.2392156869, green: 0.6745098233, blue: 0.9686274529, alpha: 1)
@@ -198,22 +196,7 @@ class RecordWorkoutMasterViewController: UIViewController {
     
     
   }
-  @objc func tick() {
-    let ti = Int(Date().timeIntervalSince(startDate!))
-    let seconds = ti % 60
-    let minutes = (ti / 60) % 60
-    let hours = (ti / 3600)
-    let hoursString = hours > 0 ?  "\(hours):" : ""
-    
-    timerLabel.text = NSString(format: "%@%0.2d:%0.2d",hoursString,minutes,seconds) as String
-  }
-  func startWorkoutTimer(){
-    //start a workout timer
-    timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector:#selector(self.tick) , userInfo: nil, repeats: true)
-  }
-  func endWorkoutTimer(){
-    timer.invalidate()
-  }
+  
   
   
   

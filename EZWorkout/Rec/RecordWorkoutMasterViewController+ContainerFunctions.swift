@@ -3,6 +3,10 @@
 import Foundation
 
 extension RecordWorkoutMasterViewController : CenterViewProtocol  {
+  func getStartDate() -> Date {
+    return startDate!// != nil ? startDate! : Date()
+  }
+  
  
   
   func getExerciseArray() -> [ExerciseModel]{
@@ -14,6 +18,7 @@ extension RecordWorkoutMasterViewController : CenterViewProtocol  {
     
     
   }
+  
   func getExercise(atIndex index:Int) -> ExerciseModel?{
     if let exercises = exercises {
       return exercises[index]

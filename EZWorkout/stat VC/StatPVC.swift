@@ -30,6 +30,9 @@ class StatPVC: UIPageViewController, UIPageViewControllerDataSource {
         configurePageControl()
         
         // Do any additional setup after loading the view.
+      
+      
+      
     }
     
     func configurePageControl() {
