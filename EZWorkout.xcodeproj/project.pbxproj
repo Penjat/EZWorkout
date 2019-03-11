@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		0B38BDB92231D13D00DEA358 /* HistoryViewController+PickerDelegateDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B38BDB82231D13D00DEA358 /* HistoryViewController+PickerDelegateDataSource.swift */; };
+		0B4AF2D1223597C400A7CBF2 /* NewHistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B4AF2D0223597C400A7CBF2 /* NewHistoryViewController.swift */; };
+		0B4AF2D3223598FA00A7CBF2 /* NewHistoryViewController+FSCalendarDelegateDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B4AF2D2223598FA00A7CBF2 /* NewHistoryViewController+FSCalendarDelegateDataSource.swift */; };
+		0B4AF2D52235B18E00A7CBF2 /* NewHistoryViewController+TableViewDataSourceDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B4AF2D42235B18E00A7CBF2 /* NewHistoryViewController+TableViewDataSourceDelegate.swift */; };
 		0B5013EC222F25F7004A64EC /* CenterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B5013EB222F25F7004A64EC /* CenterViewController.swift */; };
 		0B5013EE222F2DB2004A64EC /* CenterViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B5013ED222F2DB2004A64EC /* CenterViewProtocol.swift */; };
 		0B5013F0222F2F9F004A64EC /* RecordWorkoutMasterViewController+ContainerFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B5013EF222F2F9F004A64EC /* RecordWorkoutMasterViewController+ContainerFunctions.swift */; };
@@ -75,7 +78,6 @@
 		0BFDDB6F22334B2700318F80 /* EZWorkoutTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BFDDB6E22334B2700318F80 /* EZWorkoutTests.swift */; };
 		1BD8438B9947517B54131039 /* Pods_EZWorkout.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 56613A7F23DBE1C05BB336A2 /* Pods_EZWorkout.framework */; };
 		2851C8812231F23A005E4384 /* StaticDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2851C8802231F23A005E4384 /* StaticDataManager.swift */; };
-		285A56D52228D587003E4AA0 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 285A56D42228D587003E4AA0 /* User.swift */; };
 		285A56DB2229DB2E003E4AA0 /* ExcerciseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 285A56DA2229DB2E003E4AA0 /* ExcerciseTableViewCell.swift */; };
 		28812196222DA4DA007042C1 /* StatVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28812195222DA4DA007042C1 /* StatVC.swift */; };
 		288121DE222F53DC007042C1 /* StatPVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 288121DD222F53DC007042C1 /* StatPVC.swift */; };
@@ -102,6 +104,9 @@
 
 /* Begin PBXFileReference section */
 		0B38BDB82231D13D00DEA358 /* HistoryViewController+PickerDelegateDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HistoryViewController+PickerDelegateDataSource.swift"; sourceTree = "<group>"; };
+		0B4AF2D0223597C400A7CBF2 /* NewHistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = NewHistoryViewController.swift; path = EZWorkout/NewHistoryViewController.swift; sourceTree = SOURCE_ROOT; };
+		0B4AF2D2223598FA00A7CBF2 /* NewHistoryViewController+FSCalendarDelegateDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NewHistoryViewController+FSCalendarDelegateDataSource.swift"; sourceTree = "<group>"; };
+		0B4AF2D42235B18E00A7CBF2 /* NewHistoryViewController+TableViewDataSourceDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NewHistoryViewController+TableViewDataSourceDelegate.swift"; sourceTree = "<group>"; };
 		0B5013EB222F25F7004A64EC /* CenterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CenterViewController.swift; sourceTree = "<group>"; };
 		0B5013ED222F2DB2004A64EC /* CenterViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CenterViewProtocol.swift; sourceTree = "<group>"; };
 		0B5013EF222F2F9F004A64EC /* RecordWorkoutMasterViewController+ContainerFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RecordWorkoutMasterViewController+ContainerFunctions.swift"; sourceTree = "<group>"; };
@@ -172,7 +177,6 @@
 		0BFDDB6E22334B2700318F80 /* EZWorkoutTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EZWorkoutTests.swift; sourceTree = "<group>"; };
 		0BFDDB7022334B2700318F80 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2851C8802231F23A005E4384 /* StaticDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StaticDataManager.swift; sourceTree = "<group>"; };
-		285A56D42228D587003E4AA0 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		285A56DA2229DB2E003E4AA0 /* ExcerciseTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExcerciseTableViewCell.swift; sourceTree = "<group>"; };
 		28812195222DA4DA007042C1 /* StatVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatVC.swift; sourceTree = "<group>"; };
 		288121DD222F53DC007042C1 /* StatPVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatPVC.swift; sourceTree = "<group>"; };
@@ -314,10 +318,12 @@
 				0BCA1ABB2228D30000B51C27 /* AppDelegate.swift */,
 				0BA30327222DE6D30046FDB9 /* Custom Views */,
 				0BA3DB82222DD0D500AC7538 /* SpeechParsing */,
-				285A56D92228E367003E4AA0 /* Core Data Extentions */,
 				0BA30335222E1CB90046FDB9 /* Data Models */,
 				285A56D82228E358003E4AA0 /* Rec */,
 				0BA30334222E0A540046FDB9 /* History */,
+				0B4AF2D0223597C400A7CBF2 /* NewHistoryViewController.swift */,
+				0B4AF2D2223598FA00A7CBF2 /* NewHistoryViewController+FSCalendarDelegateDataSource.swift */,
+				0B4AF2D42235B18E00A7CBF2 /* NewHistoryViewController+TableViewDataSourceDelegate.swift */,
 				28812197222DBD59007042C1 /* stat VC */,
 				288121E5222F6B10007042C1 /* RealData */,
 				0BAA18312234720A00EC40D8 /* Fonts */,
@@ -389,14 +395,6 @@
 				0B5013F5222F673E004A64EC /* FeedbackMsgView.swift */,
 			);
 			path = Rec;
-			sourceTree = "<group>";
-		};
-		285A56D92228E367003E4AA0 /* Core Data Extentions */ = {
-			isa = PBXGroup;
-			children = (
-				285A56D42228D587003E4AA0 /* User.swift */,
-			);
-			path = "Core Data Extentions";
 			sourceTree = "<group>";
 		};
 		28812197222DBD59007042C1 /* stat VC */ = {
@@ -627,7 +625,6 @@
 				0BB4470622331893004BEDD1 /* RecordWorkoutMasterViewController+StartEnd.swift in Sources */,
 				0BF84E8A2230A99800DFC6B0 /* HistoryViewController+WorkoutTableDelegate.swift in Sources */,
 				0BA30337222E1CDC0046FDB9 /* WorkoutModel.swift in Sources */,
-				285A56D52228D587003E4AA0 /* User.swift in Sources */,
 				0BA3DB94222DD0F200AC7538 /* SpeechInputManager+InputParsing.swift in Sources */,
 				0BA3DB95222DD0F200AC7538 /* SpeechInputManager+UserAddedExercises.swift in Sources */,
 				0BAA18372234896000EC40D8 /* UIImage+createWithColor.swift in Sources */,
@@ -639,8 +636,11 @@
 				0BCA1AC42228D30100B51C27 /* EZWorkout.xcdatamodeld in Sources */,
 				0BF84E8222309F8B00DFC6B0 /* ExerciseTableManager.swift in Sources */,
 				28DC642B22333BDD002FC4E0 /* StatUserProfileVC.swift in Sources */,
+				0B4AF2D52235B18E00A7CBF2 /* NewHistoryViewController+TableViewDataSourceDelegate.swift in Sources */,
 				0BA3DB99222DD2FC00AC7538 /* SpeechRecognizer.swift in Sources */,
 				0BB7E9BA2232D7DC000C285D /* SpeechVisulizerView.swift in Sources */,
+				0B4AF2D3223598FA00A7CBF2 /* NewHistoryViewController+FSCalendarDelegateDataSource.swift in Sources */,
+				0B4AF2D1223597C400A7CBF2 /* NewHistoryViewController.swift in Sources */,
 				288121EF222F7B85007042C1 /* WorkoutRealm.swift in Sources */,
 				0BB1CEC8223060AA00F386C3 /* StatsMasterController+ScrollViewDelegate.swift in Sources */,
 				0BB1CECA2230690900F386C3 /* TopBarDelegateProtocol.swift in Sources */,

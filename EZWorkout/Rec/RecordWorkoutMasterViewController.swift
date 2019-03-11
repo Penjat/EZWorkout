@@ -13,7 +13,10 @@ class RecordWorkoutMasterViewController: UIViewController {
   @IBOutlet weak var feedbackVisualizer: SpeechVisulizerView!
   @IBOutlet weak var workoutStatusLabel: UILabel!
   
-  
+  var idleColor1: UIColor!
+  var idleColor2: UIColor!
+  var activeColor1: UIColor!
+  var activeColor2: UIColor!
   
   var centerController: CenterViewController?
   
@@ -44,13 +47,13 @@ class RecordWorkoutMasterViewController: UIViewController {
     
     timerLabel.alpha = 0.0
     
-    
-    
+    idleColor1 = #colorLiteral(red: 0.2392156869, green: 0.6745098233, blue: 0.9686274529, alpha: 1)
+    idleColor2 = #colorLiteral(red: 0.1411764771, green: 0.3960784376, blue: 0.5647059083, alpha: 1)
     //TODO put in animation extention
     gradient = CAGradientLayer()
     //startGradient()
     
-    gradient.colors = [UIColor.blue.cgColor, UIColor.blue.cgColor]
+    gradient.colors = [idleColor1.cgColor, idleColor2.cgColor]
     gradient.locations = [0.0 , 1.0]
     gradient.startPoint = CGPoint(x: 0.0, y: 1.0)
     gradient.endPoint = CGPoint(x: 1.0, y: 1.0)

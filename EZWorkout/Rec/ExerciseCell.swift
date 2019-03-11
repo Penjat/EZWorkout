@@ -18,5 +18,8 @@ class ExerciseCell: UITableViewCell {
   func setUp(exerciseModel:ExerciseModel){
     exerciseView.setUp(exerciseModel: exerciseModel)
   }
+  func setUp(exerciseRealm:ExcerciseRealm){
+    exerciseView.setUp(exerciseRealm: exerciseRealm)
+  }
 
 }
