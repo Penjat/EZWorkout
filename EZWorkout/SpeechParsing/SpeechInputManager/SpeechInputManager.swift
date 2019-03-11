@@ -10,13 +10,13 @@ class SpeechInputManager {
   var exerciseRefs = [ExerciseRefernce]()
   var exerciseModifiers = [ExerciseModifier]()
   
-  
+  var commands = [CommandModel]()
   
   init() {
     
     setUpExerciseRefs()
     setUpModifiers()
-    
+    setUpCommands()
   }
   
 }

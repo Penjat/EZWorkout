@@ -18,6 +18,7 @@
 		0B4AF2DF2236CE0C00A7CBF2 /* timeburnernormal.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0B4AF2DE2236CE0C00A7CBF2 /* timeburnernormal.ttf */; };
 		0B4AF2E12236CF8B00A7CBF2 /* CenterViewController+TimerFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B4AF2E02236CF8B00A7CBF2 /* CenterViewController+TimerFunctions.swift */; };
 		0B4AF2E32236D3BC00A7CBF2 /* SVBasicManual.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0B4AF2E22236D3BC00A7CBF2 /* SVBasicManual.ttf */; };
+		0B4AF2E52236EF3B00A7CBF2 /* CommandModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B4AF2E42236EF3B00A7CBF2 /* CommandModel.swift */; };
 		0B5013EC222F25F7004A64EC /* CenterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B5013EB222F25F7004A64EC /* CenterViewController.swift */; };
 		0B5013EE222F2DB2004A64EC /* CenterViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B5013ED222F2DB2004A64EC /* CenterViewProtocol.swift */; };
 		0B5013F0222F2F9F004A64EC /* RecordWorkoutMasterViewController+ContainerFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B5013EF222F2F9F004A64EC /* RecordWorkoutMasterViewController+ContainerFunctions.swift */; };
@@ -122,6 +123,7 @@
 		0B4AF2DE2236CE0C00A7CBF2 /* timeburnernormal.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = timeburnernormal.ttf; sourceTree = "<group>"; };
 		0B4AF2E02236CF8B00A7CBF2 /* CenterViewController+TimerFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CenterViewController+TimerFunctions.swift"; sourceTree = "<group>"; };
 		0B4AF2E22236D3BC00A7CBF2 /* SVBasicManual.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = SVBasicManual.ttf; sourceTree = "<group>"; };
+		0B4AF2E42236EF3B00A7CBF2 /* CommandModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommandModel.swift; sourceTree = "<group>"; };
 		0B5013EB222F25F7004A64EC /* CenterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CenterViewController.swift; sourceTree = "<group>"; };
 		0B5013ED222F2DB2004A64EC /* CenterViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CenterViewProtocol.swift; sourceTree = "<group>"; };
 		0B5013EF222F2F9F004A64EC /* RecordWorkoutMasterViewController+ContainerFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RecordWorkoutMasterViewController+ContainerFunctions.swift"; sourceTree = "<group>"; };
@@ -285,6 +287,7 @@
 				0BA3DB8C222DD0F200AC7538 /* SpechInputManager+SetUp.swift */,
 				0BA30338222E1E220046FDB9 /* SpeechInputManager+Commands.swift */,
 				0BA3DB8D222DD0F200AC7538 /* SpeechInputManager.swift */,
+				0B4AF2E42236EF3B00A7CBF2 /* CommandModel.swift */,
 			);
 			path = SpeechInputManager;
 			sourceTree = "<group>";
@@ -644,6 +647,7 @@
 			files = (
 				288121E2222F5598007042C1 /* ScrollStatsView.swift in Sources */,
 				0B5013F0222F2F9F004A64EC /* RecordWorkoutMasterViewController+ContainerFunctions.swift in Sources */,
+				0B4AF2E52236EF3B00A7CBF2 /* CommandModel.swift in Sources */,
 				0BF84E8422309FA600DFC6B0 /* WorkoutTableManager.swift in Sources */,
 				0BB7E9BC2232FB21000C285D /* RecordWorkoutMasterViewController+Visualizer.swift in Sources */,
 				0B5013EE222F2DB2004A64EC /* CenterViewProtocol.swift in Sources */,

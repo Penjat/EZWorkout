@@ -160,5 +160,17 @@ extension SpeechInputManager{
     
     exerciseModifiers.append(ExerciseModifier(returnName: "with medicine ball", searchName: "medicineball", modifierType: .Postfix))
   }
+  func setUpCommands(){
+    
+    //TODO expand with more commands
+    
+    commands.append(CommandModel(keyWords: ["startwork","start","begin"] , speechCommand:.StartWorkout))
+    
+    commands.append(CommandModel(keyWords: ["endtwork","end","finish","andwork"] , speechCommand:.EndWorkout))
+    
+    commands.append(CommandModel(keyWords: ["undo"] , speechCommand:.Undo))
+    
+
+  }
   
 }
