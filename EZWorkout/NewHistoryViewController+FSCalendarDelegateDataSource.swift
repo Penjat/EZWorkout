@@ -31,7 +31,7 @@ extension NewHistoryViewController : FSCalendarDelegate , FSCalendarDataSource, 
     let results = realm.objects(WorkoutRealm.self).filter("startTime BETWEEN %@", [selectedDate, selectedDateEnd])
     if results.count > 0{
       
-      return #colorLiteral(red: 0.4666666687, green: 0.7647058964, blue: 0.2666666806, alpha: 1)
+      return #colorLiteral(red: 0.1411764771, green: 0.3960784376, blue: 0.5647059083, alpha: 1)
     }
     return #colorLiteral(red: 1, green: 1, blue: 1, alpha: 0)
     
