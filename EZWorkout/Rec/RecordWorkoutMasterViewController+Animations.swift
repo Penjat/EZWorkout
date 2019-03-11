@@ -81,4 +81,15 @@ extension RecordWorkoutMasterViewController{
       self.timerLabel.alpha = 1.0
     })
   }
+  
+  func visulizerIn(){
+    UIView.animate(withDuration: 0.3, animations: {
+      self.feedbackVisualizer.alpha = 1.0
+    })
+  }
+  func visulizerOut(){
+    UIView.animate(withDuration: 0.3, animations: {
+      self.feedbackVisualizer.alpha = 0.0
+    })
+  }
 }

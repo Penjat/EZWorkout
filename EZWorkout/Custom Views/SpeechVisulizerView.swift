@@ -5,13 +5,13 @@ import UIKit
 class SpeechVisulizerView: UIView {
   var barArray = [CALayer]()
   func setUpBars(){
-    
+    let barColor = #colorLiteral(red: 0.9686274529, green: 0.8377109634, blue: 0.3450980484, alpha: 0.7473244863)
     var i : CGFloat = 0.0
     for index in 0...40{
       let newLayer = CALayer()
       barArray.append(newLayer)
       newLayer.frame = CGRect(x:i*10.0,y: frame.height/2.0, width:8, height:1)
-      newLayer.backgroundColor = UIColor.red.cgColor
+      newLayer.backgroundColor = barColor.cgColor
       
       // Animate y position
       let moveAnim = CABasicAnimation(keyPath: "bounds.size.height")

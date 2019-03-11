@@ -42,8 +42,8 @@ class RecordWorkoutMasterViewController: UIViewController {
     speechRecognizer = SpeechRecognizer(delegate: self)
     
     DataManager.dataManager.testSingelton()
-    feebBackLabel.isHidden = true
-    feedbackVisualizer.isHidden = true
+    //feebBackLabel
+    feedbackVisualizer.alpha = 0.0
     
     timerLabel.alpha = 0.0
     
@@ -55,8 +55,8 @@ class RecordWorkoutMasterViewController: UIViewController {
     
     gradient.colors = [idleColor1.cgColor, idleColor2.cgColor]
     gradient.locations = [0.0 , 1.0]
-    gradient.startPoint = CGPoint(x: 0.0, y: 1.0)
-    gradient.endPoint = CGPoint(x: 1.0, y: 1.0)
+    gradient.startPoint = CGPoint(x: 0.0, y: 0.0)
+    gradient.endPoint = CGPoint(x: 1.0, y: 0.0)
     
     gradient.frame = CGRect(x: 0.0, y: 0.0, width: self.view.frame.size.width, height: self.view.frame.size.height)
     self.view.layer.insertSublayer(gradient, at: 0)
@@ -131,30 +131,14 @@ class RecordWorkoutMasterViewController: UIViewController {
   }
   
   @IBAction func recPressedDown(_ sender: Any) {
-    //TODO animate in and out
-    feebBackLabel.isHidden = false
-    feedbackVisualizer.isHidden = false
-    feebBackLabel.text = "recording"
-    speechRecognizer.startRecognizing()
-    centerController?.startRec()
-    startVisualization()
-    animateRecPressed()
+    
   }
   @IBAction func recReleasedInside(_ sender: Any) {
     //TODO animate in and out
     
   }
   @IBAction func recReleasedOutside(_ sender: Any) {
-    //speechRecognizer.stopRecognizing()
-    //TODO check if all button press cases are covered
-    feebBackLabel.isHidden = true
-    feedbackVisualizer.isHidden = true
-    speechRecognizer.stopRecognizing()
-    centerController?.stopRec()
-    stopVisualization()
-    if isWorkingOut {
-      startAnimatingGradient()
-    }
+    
   }
   
   
