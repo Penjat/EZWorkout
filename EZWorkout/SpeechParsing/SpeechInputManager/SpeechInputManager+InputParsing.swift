@@ -128,6 +128,12 @@ extension SpeechInputManager{
           return numbers[1]
         }
         return nil
+      
+      case .TimedDistance:
+        if numbers.count > 1{
+          return numbers[1]
+        }
+        return nil
         
       case .Distance:
         if numbers.count > 0{
@@ -163,6 +169,12 @@ extension SpeechInputManager{
         return nil
         
       case .Weight:
+        if numbers.count > 0{
+          return numbers[0]
+        }
+        return nil
+        
+      case .TimedDistance:
         if numbers.count > 0{
           return numbers[0]
         }

@@ -59,14 +59,52 @@ class ExerciseView: UIView {
     
     infoContainer.layer.borderColor = UIColor.black.cgColor
     infoContainer.layer.borderWidth = 2.0
+    
+    
+    
     //TODO add modifiers
-    labelExerciseName.text = exerciseRealm.name
+    //TODO take out weight and rep postfixes
     
-    labelExerciseReps.text = "\(exerciseRealm.reps) reps"
+    let nameString = exerciseRealm.name
+    var weightString = ""
+    var repsString = ""
     
-    //TODO check the exercise type for correct data
-    let weightString = exerciseRealm.weight.value != nil ?  "\(exerciseRealm.weight.value!) lbs" : ""
+    let exerciseType = ExerciseType.exerciseType(string: exerciseRealm.type)
+    switch (exerciseType){
+    case .BodyWeight:
+      //only track reps
+      repsString = "\(exerciseRealm.reps) reps"
+      
+    case .Weight:
+      //track weight and reps
+      repsString = "\(exerciseRealm.reps) reps"
+      weightString = exerciseRealm.weight.value != nil ?  "\(exerciseRealm.weight.value!) lbs" : "???"
+      
+    case .Timed:
+      repsString = "\(exerciseRealm.reps) min"
+      
+    case .Distance:
+      weightString = "\(exerciseRealm.weight) km"
+      
+    case .TimedDistance:
+      weightString = "\(exerciseRealm.weight) km"
+      repsString = "\(exerciseRealm.reps) min"
+    }
+    
+    
+    
+    
+    
+    labelExerciseName.text = nameString
+    labelExerciseReps.text = repsString
     labelExerciseWeight.text = weightString
+    
+    
+    
+    
+    
+    
+    
 
   }
 
