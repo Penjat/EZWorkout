@@ -11,6 +11,9 @@
 		0B4AF2D1223597C400A7CBF2 /* NewHistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B4AF2D0223597C400A7CBF2 /* NewHistoryViewController.swift */; };
 		0B4AF2D3223598FA00A7CBF2 /* NewHistoryViewController+FSCalendarDelegateDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B4AF2D2223598FA00A7CBF2 /* NewHistoryViewController+FSCalendarDelegateDataSource.swift */; };
 		0B4AF2D52235B18E00A7CBF2 /* NewHistoryViewController+TableViewDataSourceDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B4AF2D42235B18E00A7CBF2 /* NewHistoryViewController+TableViewDataSourceDelegate.swift */; };
+		0B4AF2D722360EA500A7CBF2 /* RecordWorkoutMasterViewController+CenterScrollDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B4AF2D622360EA500A7CBF2 /* RecordWorkoutMasterViewController+CenterScrollDelegate.swift */; };
+		0B4AF2D92236100B00A7CBF2 /* RecTopBarVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B4AF2D82236100A00A7CBF2 /* RecTopBarVC.swift */; };
+		0B4AF2DB223613F000A7CBF2 /* RecordWorkoutMasterViewController+TopBarDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B4AF2DA223613F000A7CBF2 /* RecordWorkoutMasterViewController+TopBarDelegate.swift */; };
 		0B5013EC222F25F7004A64EC /* CenterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B5013EB222F25F7004A64EC /* CenterViewController.swift */; };
 		0B5013EE222F2DB2004A64EC /* CenterViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B5013ED222F2DB2004A64EC /* CenterViewProtocol.swift */; };
 		0B5013F0222F2F9F004A64EC /* RecordWorkoutMasterViewController+ContainerFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B5013EF222F2F9F004A64EC /* RecordWorkoutMasterViewController+ContainerFunctions.swift */; };
@@ -108,6 +111,9 @@
 		0B4AF2D0223597C400A7CBF2 /* NewHistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = NewHistoryViewController.swift; path = EZWorkout/NewHistoryViewController.swift; sourceTree = SOURCE_ROOT; };
 		0B4AF2D2223598FA00A7CBF2 /* NewHistoryViewController+FSCalendarDelegateDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NewHistoryViewController+FSCalendarDelegateDataSource.swift"; sourceTree = "<group>"; };
 		0B4AF2D42235B18E00A7CBF2 /* NewHistoryViewController+TableViewDataSourceDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NewHistoryViewController+TableViewDataSourceDelegate.swift"; sourceTree = "<group>"; };
+		0B4AF2D622360EA500A7CBF2 /* RecordWorkoutMasterViewController+CenterScrollDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RecordWorkoutMasterViewController+CenterScrollDelegate.swift"; sourceTree = "<group>"; };
+		0B4AF2D82236100A00A7CBF2 /* RecTopBarVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecTopBarVC.swift; sourceTree = "<group>"; };
+		0B4AF2DA223613F000A7CBF2 /* RecordWorkoutMasterViewController+TopBarDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RecordWorkoutMasterViewController+TopBarDelegate.swift"; sourceTree = "<group>"; };
 		0B5013EB222F25F7004A64EC /* CenterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CenterViewController.swift; sourceTree = "<group>"; };
 		0B5013ED222F2DB2004A64EC /* CenterViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CenterViewProtocol.swift; sourceTree = "<group>"; };
 		0B5013EF222F2F9F004A64EC /* RecordWorkoutMasterViewController+ContainerFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RecordWorkoutMasterViewController+ContainerFunctions.swift"; sourceTree = "<group>"; };
@@ -388,8 +394,11 @@
 				0BB4470522331893004BEDD1 /* RecordWorkoutMasterViewController+StartEnd.swift */,
 				0BB2A5C722338358006C8FF7 /* RecordWorkoutMasterViewController+Commands.swift */,
 				0BB2A5C322337CA3006C8FF7 /* RecordWorkoutMasterViewController+Animations.swift */,
+				0B4AF2D622360EA500A7CBF2 /* RecordWorkoutMasterViewController+CenterScrollDelegate.swift */,
+				0B4AF2DA223613F000A7CBF2 /* RecordWorkoutMasterViewController+TopBarDelegate.swift */,
 				0B5013EB222F25F7004A64EC /* CenterViewController.swift */,
 				0BB2A5C9223434E3006C8FF7 /* CenterViewController+TableViewDelegateDataSource.swift */,
+				0B4AF2D82236100A00A7CBF2 /* RecTopBarVC.swift */,
 				0BA3032C222E08530046FDB9 /* RecWorkoutSB.storyboard */,
 				0B5013ED222F2DB2004A64EC /* CenterViewProtocol.swift */,
 				0BA30344222EDDFA0046FDB9 /* Help.xib */,
@@ -631,12 +640,14 @@
 				0BA3DB94222DD0F200AC7538 /* SpeechInputManager+InputParsing.swift in Sources */,
 				0BA3DB95222DD0F200AC7538 /* SpeechInputManager+UserAddedExercises.swift in Sources */,
 				0BAA18372234896000EC40D8 /* UIImage+createWithColor.swift in Sources */,
+				0B4AF2DB223613F000A7CBF2 /* RecordWorkoutMasterViewController+TopBarDelegate.swift in Sources */,
 				0BB2A5C822338358006C8FF7 /* RecordWorkoutMasterViewController+Commands.swift in Sources */,
 				0BF84E902230ED2700DFC6B0 /* ExerciseTypeView.swift in Sources */,
 				0BF84E862230A32D00DFC6B0 /* ExerciseSetCell.swift in Sources */,
 				0BA3032B222DE8EA0046FDB9 /* ExerciseView.swift in Sources */,
 				0B38BDB92231D13D00DEA358 /* HistoryViewController+PickerDelegateDataSource.swift in Sources */,
 				0BCA1AC42228D30100B51C27 /* EZWorkout.xcdatamodeld in Sources */,
+				0B4AF2D92236100B00A7CBF2 /* RecTopBarVC.swift in Sources */,
 				0BF84E8222309F8B00DFC6B0 /* ExerciseTableManager.swift in Sources */,
 				28DC64372235F820002FC4E0 /* StatLastWeekVC.swift in Sources */,
 				0B4AF2D52235B18E00A7CBF2 /* NewHistoryViewController+TableViewDataSourceDelegate.swift in Sources */,
@@ -660,6 +671,7 @@
 				288121EB222F7311007042C1 /* ExcerciseRealm.swift in Sources */,
 				0BB2A5CA223434E3006C8FF7 /* CenterViewController+TableViewDelegateDataSource.swift in Sources */,
 				0BA3DB9B222DD3ED00AC7538 /* RecognizerReturnDelegate.swift in Sources */,
+				0B4AF2D722360EA500A7CBF2 /* RecordWorkoutMasterViewController+CenterScrollDelegate.swift in Sources */,
 				0BA3DB92222DD0F200AC7538 /* ExerciseTypes.swift in Sources */,
 				0B5013F2222F4CDC004A64EC /* DataManager.swift in Sources */,
 				0BA3DB90222DD0F200AC7538 /* ExerciseRef.swift in Sources */,

@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "EZWorkout/Rec/RecordWorkoutMasterViewController.swift"
-            timestampString = "573958770.579425"
+            timestampString = "573969517.103093"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "150"
-            endingLineNumber = "150"
+            startingLineNumber = "160"
+            endingLineNumber = "160"
             landmarkName = "createExerciseView(exerciseModel:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -26,11 +26,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "EZWorkout/Rec/RecordWorkoutMasterViewController.swift"
-            timestampString = "573958770.5795"
+            timestampString = "573969517.103181"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "148"
-            endingLineNumber = "148"
+            startingLineNumber = "158"
+            endingLineNumber = "158"
             landmarkName = "createExerciseView(exerciseModel:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -42,11 +42,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "EZWorkout/Rec/RecordWorkoutMasterViewController.swift"
-            timestampString = "573958770.579571"
+            timestampString = "573969517.10324"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "153"
-            endingLineNumber = "153"
+            startingLineNumber = "163"
+            endingLineNumber = "163"
             landmarkName = "createExerciseView(exerciseModel:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -58,7 +58,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "EZWorkout/stat VC/ScrollStatsView.swift"
-            timestampString = "573965625.219263"
+            timestampString = "573969517.103297"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "10"
