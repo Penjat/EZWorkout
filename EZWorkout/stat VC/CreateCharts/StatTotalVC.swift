@@ -28,8 +28,8 @@ class StatTotalVC: UIViewController {
                 })
         let exerciseDict = StaticDataManager.getRealmData(type: .numberOfTimes)
         let topSevenDict = StaticDataManager.sortRealmDict(Dict: exerciseDict)
-        StaticDataManager.setUpTestData(chart: static1, chartLabels: exerciseDict.map{$0.0}, chartValues: topSevenDict.map{$0.1})
-        StaticDataManager.setUpTestData(chart: timeGraph, chartLabels: exerciseDict.map{$0.0}, chartValues: topSevenDict.map{$0.1})
+        StaticDataManager.setUpChart(chart: static1, chartLabels: exerciseDict.map{$0.0}, chartValues: topSevenDict.map{$0.1},colors: [UIColor.black])
+        StaticDataManager.setUpChart(chart: timeGraph, chartLabels: exerciseDict.map{$0.0}, chartValues: topSevenDict.map{$0.1},colors: [UIColor.black])
     }
     func animateGraph(){
         piePercentGraph!.animate(yAxisDuration: 1.4, easing: EasingFunctions.EaseOutBack)

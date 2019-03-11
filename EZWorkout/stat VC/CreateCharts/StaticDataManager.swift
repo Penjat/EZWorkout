@@ -16,7 +16,7 @@ class StaticDataManager{
         case numberOfTimes, type, weight
     }
     
-    static func setUpTestData(chart: BarChartView , chartLabels:[String] , chartValues:[Int]){
+  static func setUpChart(chart: BarChartView , chartLabels:[String] , chartValues:[Int], colors:[UIColor] , bottomLabelText:String = "please provide label"){
         //chart.delegate = self
         chart.noDataText = "You need to provide data for the chart."
         
@@ -29,9 +29,11 @@ class StaticDataManager{
             dataEntries.append(dataEntry)
         }
         
-        let chartDataSet = BarChartDataSet(values: dataEntries, label: "Visitor count")
+        let chartDataSet = BarChartDataSet(values: dataEntries, label: bottomLabelText)
+    
+        
         let chartData = BarChartData(dataSet: chartDataSet)
-        //chartDataSet.colors = ChartColorTemplates.joyful()
+        chartDataSet.colors = colors//ChartColorTemplates.joyful()
         chart.data = chartData
         
         chart.xAxis.valueFormatter = IndexAxisValueFormatter(values: chartLabels)

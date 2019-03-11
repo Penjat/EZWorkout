@@ -155,20 +155,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="1875" height="503.5"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ORA-y4-afk" userLabel="top7">
-                                <rect key="frame" x="20" y="20" width="367" height="483.5"/>
-                                <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kpc-bm-iSk" customClass="BarChartView" customModule="Charts">
-                                        <rect key="frame" x="0.0" y="0.0" width="367" height="483.5"/>
-                                    </view>
-                                </subviews>
-                                <constraints>
-                                    <constraint firstItem="kpc-bm-iSk" firstAttribute="top" secondItem="ORA-y4-afk" secondAttribute="top" id="0eQ-r2-ThV"/>
-                                    <constraint firstItem="kpc-bm-iSk" firstAttribute="leading" secondItem="ORA-y4-afk" secondAttribute="leading" id="JaM-6H-NpQ"/>
-                                    <constraint firstAttribute="bottom" secondItem="kpc-bm-iSk" secondAttribute="bottom" id="M8L-mH-ERx"/>
-                                    <constraint firstAttribute="trailing" secondItem="kpc-bm-iSk" secondAttribute="trailing" id="jbr-Ov-myJ"/>
-                                </constraints>
-                            </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bf3-ti-CJu" userLabel="LastWeek">
                                 <rect key="frame" x="754" y="20" width="367" height="483.5"/>
                                 <subviews>
@@ -264,6 +250,22 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="21v-Qb-KH1">
                                 <rect key="frame" x="1488" y="20" width="367" height="483.5"/>
                                 <color key="backgroundColor" red="1" green="0.86091302579999995" blue="0.026286063320000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ORA-y4-afk" userLabel="top7">
+                                <rect key="frame" x="20" y="20" width="367" height="483.5"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kpc-bm-iSk" customClass="HorizontalBarChartView" customModule="Charts">
+                                        <rect key="frame" x="0.0" y="0.0" width="367" height="330"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="kpc-bm-iSk" secondAttribute="height" multiplier="367:330" id="tkV-mL-San"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="kpc-bm-iSk" firstAttribute="top" secondItem="ORA-y4-afk" secondAttribute="top" id="0eQ-r2-ThV"/>
+                                    <constraint firstItem="kpc-bm-iSk" firstAttribute="leading" secondItem="ORA-y4-afk" secondAttribute="leading" id="JaM-6H-NpQ"/>
+                                    <constraint firstAttribute="trailing" secondItem="kpc-bm-iSk" secondAttribute="trailing" id="jbr-Ov-myJ"/>
+                                </constraints>
                             </view>
                         </subviews>
                         <constraints>
