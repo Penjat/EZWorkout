@@ -10,6 +10,11 @@
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Simply Rounded.ttf">
+            <string>SimplyRounded</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--StatPVC-->
         <scene sceneID="nFR-YD-bU7">
@@ -79,7 +84,6 @@
                                         </constraints>
                                     </scrollView>
                                 </subviews>
-                                <color key="backgroundColor" red="1" green="0.57810515169999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="bottom" secondItem="1bj-c2-RW7" secondAttribute="bottom" id="9ct-B2-psi"/>
                                     <constraint firstItem="1bj-c2-RW7" firstAttribute="leading" secondItem="Oq7-u1-2Hb" secondAttribute="leading" id="F66-ox-YzS"/>
@@ -108,7 +112,7 @@
                                 </constraints>
                             </scrollView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="Oq7-u1-2Hb" firstAttribute="top" secondItem="Qcb-un-bb3" secondAttribute="top" id="4bo-U3-aDE"/>
                             <constraint firstItem="Qcb-un-bb3" firstAttribute="trailing" secondItem="nef-wC-lVu" secondAttribute="trailing" id="7mF-bh-zIP"/>
@@ -144,10 +148,8 @@
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kpc-bm-iSk" customClass="BarChartView" customModule="Charts">
                                         <rect key="frame" x="0.0" y="0.0" width="367" height="518"/>
-                                        <color key="backgroundColor" red="0.66422420739999999" green="0.66424006219999998" blue="0.66423153879999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </view>
                                 </subviews>
-                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstItem="kpc-bm-iSk" firstAttribute="top" secondItem="ORA-y4-afk" secondAttribute="top" id="0eQ-r2-ThV"/>
                                     <constraint firstItem="kpc-bm-iSk" firstAttribute="leading" secondItem="ORA-y4-afk" secondAttribute="leading" id="JaM-6H-NpQ"/>
@@ -214,7 +216,6 @@
                                         </constraints>
                                     </scrollView>
                                 </subviews>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="B1L-K1-MT4" secondAttribute="trailing" id="8iM-Ct-f5q"/>
                                     <constraint firstItem="B1L-K1-MT4" firstAttribute="leading" secondItem="Hhf-go-Aia" secondAttribute="leading" id="MTf-Gv-Zdq"/>
@@ -227,7 +228,6 @@
                                 <color key="backgroundColor" red="1" green="0.86091302579999995" blue="0.026286063320000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstAttribute="bottomMargin" secondItem="21v-Qb-KH1" secondAttribute="bottom" id="331-lh-bEw"/>
                             <constraint firstItem="Hhf-go-Aia" firstAttribute="leading" secondItem="ORA-y4-afk" secondAttribute="trailing" id="4Cu-PO-K32"/>
@@ -316,7 +316,6 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" red="0.1764705882352941" green="0.1764705882352941" blue="0.18431372549019609" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstItem="HPr-dB-iZF" firstAttribute="centerY" secondItem="d8i-0s-Pm5" secondAttribute="centerY" id="0Mc-1T-LKE"/>
                             <constraint firstItem="bma-BG-UYu" firstAttribute="centerY" secondItem="d8i-0s-Pm5" secondAttribute="centerY" id="70m-rJ-aAQ"/>
@@ -498,7 +497,7 @@
         <scene sceneID="KgD-Ns-dNf">
             <objects>
                 <viewController id="4N4-PZ-5Sr" customClass="StatTotalVC" customModule="EZWorkout" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="v8k-zh-H9B">
+                    <view key="view" opaque="NO" contentMode="scaleToFill" id="v8k-zh-H9B">
                         <rect key="frame" x="0.0" y="0.0" width="367" height="1554"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -512,7 +511,6 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
-                                <color key="backgroundColor" red="0.66422420739999999" green="0.66424006219999998" blue="0.66423153879999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstItem="7Qy-It-M4v" firstAttribute="centerX" secondItem="YbN-az-Dxh" secondAttribute="centerX" id="A6P-pn-bqf"/>
                                     <constraint firstItem="7Qy-It-M4v" firstAttribute="top" secondItem="YbN-az-Dxh" secondAttribute="top" id="QwP-vB-c3U"/>
@@ -528,7 +526,6 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
-                                <color key="backgroundColor" red="0.66422420739999999" green="0.66424006219999998" blue="0.66423153879999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstItem="nab-dt-J4s" firstAttribute="top" secondItem="rLb-qH-jhi" secondAttribute="top" id="crQ-uv-N7q"/>
                                     <constraint firstItem="nab-dt-J4s" firstAttribute="centerX" secondItem="rLb-qH-jhi" secondAttribute="centerX" id="dcP-ZF-2Qp"/>
@@ -538,13 +535,12 @@
                                 <rect key="frame" x="30" y="0.0" width="307" height="466"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Excercise Type" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3az-dH-CFu">
-                                        <rect key="frame" x="96" y="10" width="115" height="21"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <rect key="frame" x="98.5" y="10" width="110" height="18"/>
+                                        <fontDescription key="fontDescription" name="SimplyRounded" family="Simply Rounded" pointSize="17"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
-                                <color key="backgroundColor" red="0.66422420739999999" green="0.66424006219999998" blue="0.66423153879999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="tintColor" red="1" green="0.57810515169999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstItem="3az-dH-CFu" firstAttribute="top" secondItem="cq6-QM-tKg" secondAttribute="top" constant="10" id="rhF-LM-Wba"/>
@@ -552,7 +548,6 @@
                                 </constraints>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" red="0.1764705882" green="0.1764705882" blue="0.1843137255" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstItem="rLb-qH-jhi" firstAttribute="leading" secondItem="v8k-zh-H9B" secondAttribute="leading" constant="30" id="CBT-hU-KrZ"/>
                             <constraint firstItem="rLb-qH-jhi" firstAttribute="top" secondItem="YbN-az-Dxh" secondAttribute="bottom" constant="10" id="HlA-Da-0Mj"/>
@@ -567,6 +562,7 @@
                             <constraint firstItem="YbN-az-Dxh" firstAttribute="leading" secondItem="v8k-zh-H9B" secondAttribute="leading" constant="30" id="pwr-iS-sfE"/>
                             <constraint firstAttribute="trailing" secondItem="rLb-qH-jhi" secondAttribute="trailing" constant="30" id="qen-9b-R41"/>
                         </constraints>
+                        <viewLayoutGuide key="safeArea" id="lTy-am-KCW"/>
                     </view>
                     <connections>
                         <outlet property="piePercentGraph" destination="cq6-QM-tKg" id="pnv-GP-md6"/>

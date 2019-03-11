@@ -44,7 +44,7 @@ class StaticDataManager{
         //barChart.rightAxis.drawGridLinesEnabled = false
         chart.xAxis.drawGridLinesEnabled = false
         //chart.backgroundColor = UIColor(red: 189/255, green: 195/255, blue: 199/255, alpha: 1)
-        chart.backgroundColor = #colorLiteral(red: 0.1764492095, green: 0.1764859259, blue: 0.1850380898, alpha: 1)
+        //chart.backgroundColor = #colorLiteral(red: 0.1764492095, green: 0.1764859259, blue: 0.1850380898, alpha: 1)
         chart.xAxis.gridColor = .white
         chart.xAxis.axisLineColor = .white
         chart.xAxis.labelTextColor = .white
