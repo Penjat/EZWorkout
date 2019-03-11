@@ -7,11 +7,51 @@
 //
 
 import Foundation
+import Charts
+import UIKit
 
 class StaticDataManager{
     
     enum checkType {
         case numberOfTimes, type, weight
+    }
+    
+    static func setUpTestData(chart: BarChartView , chartLabels:[String] , chartValues:[Int]){
+        //chart.delegate = self
+        chart.noDataText = "You need to provide data for the chart."
+        
+        var dataEntries: [BarChartDataEntry] = []
+        
+        for i in 0 ..< chartLabels.count{
+            //            Double(test[i])
+            
+            let dataEntry = BarChartDataEntry(x: Double(i), y: Double(chartValues[i]))
+            dataEntries.append(dataEntry)
+        }
+        
+        let chartDataSet = BarChartDataSet(values: dataEntries, label: "Visitor count")
+        let chartData = BarChartData(dataSet: chartDataSet)
+        //chartDataSet.colors = ChartColorTemplates.joyful()
+        chart.data = chartData
+        
+        chart.xAxis.valueFormatter = IndexAxisValueFormatter(values: chartLabels)
+        chart.xAxis.granularity = 1
+        chart.chartDescription?.text = ""
+        chart.xAxis.labelPosition = .bottom
+        
+        //barChart.leftAxis.drawGridLinesEnabled = false
+        chart.rightAxis.enabled = false
+        //barChart.rightAxis.drawGridLinesEnabled = false
+        chart.xAxis.drawGridLinesEnabled = false
+        //chart.backgroundColor = UIColor(red: 189/255, green: 195/255, blue: 199/255, alpha: 1)
+        chart.backgroundColor = #colorLiteral(red: 0.1764492095, green: 0.1764859259, blue: 0.1850380898, alpha: 1)
+        chart.xAxis.gridColor = .white
+        chart.xAxis.axisLineColor = .white
+        chart.xAxis.labelTextColor = .white
+        chart.leftAxis.labelTextColor = .white
+        //chart.backgroundColor = UIColor(white: 1, alpha: 0.5)
+        let ll = ChartLimitLine(limit: 9.0, label: "Average")
+        chart.rightAxis.addLimitLine(ll)
     }
    
     static func getRealmData(type:checkType)->[String:Int]{

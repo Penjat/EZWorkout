@@ -5,11 +5,10 @@ import Charts
 
 class StatsCenterVC: UIViewController {
   @IBOutlet weak var chart1: BarChartView!
-  @IBOutlet weak var chart2: BarChartView!
-  @IBOutlet weak var TypePieChartView: PieChartView!
     
     
     var userVC = StatUserVC()
+    var totalVC = StatTotalVC()
     
     override func viewDidLoad() {
     super.viewDidLoad()
@@ -19,32 +18,11 @@ class StatsCenterVC: UIViewController {
     print("this  is a dictionary of  \(exerciseDict.count) ")
     let topSevenDict = StaticDataManager.sortRealmDict(Dict: exerciseDict)
     print("this is top 7 sport \(topSevenDict)")
-    setUpTestData(chart: chart1 , chartLabels: topSevenDict.map{$0.0} , chartValues: topSevenDict.map{$0.1})
-    let typeDitc = StaticDataManager.getRealmData(type: .type)
-    let topTypeDict = StaticDataManager.sortRealmDict(Dict: typeDitc)
-    setUpTestData(chart: chart2 , chartLabels: topTypeDict.map{$0.0} , chartValues: topTypeDict.map{$0.1})
-        updateChartData(theChart: TypePieChartView, chartLabel: topTypeDict.map{$0.0},data: topTypeDict.map{ (key, value) in
-            let k = PieChartDataEntry(value: Double(value))
-            k.label = key
-        return k
-        
-    })
-   
-   
-   
+    StaticDataManager.setUpTestData(chart: chart1 , chartLabels: topSevenDict.map{$0.0} , chartValues: topSevenDict.map{$0.1})
+
     
   }
-    
-    
-    func updateChartData(theChart: PieChartView, chartLabel:[String] ,data: [PieChartDataEntry]) {
-        
-        let dataInfo = PieChartDataSet(values: data, label: nil)
-        let chartData = PieChartData(dataSet: dataInfo)
-        let colors = [UIColor(named: "iosColor"), UIColor(named: "macColor"),UIColor.darkGray]
-        dataInfo.colors = colors as![NSUIColor]
-        theChart.data = chartData
-        theChart.chartDescription?.text = ""
-    }
+
   
   override func viewDidAppear(_ animated: Bool) {
     super.viewDidAppear(animated)
@@ -57,7 +35,9 @@ class StatsCenterVC: UIViewController {
         case 0:
             chart1.animate(xAxisDuration: 2.0, yAxisDuration: 2.0)
         case 1:
-             chart2.animate(xAxisDuration: 2.0, yAxisDuration: 2.0)
+            totalVC.animateGraph()
+       // case 2:
+           // TypePieChartView.animate(yAxisDuration: 1)
        case 3:
             userVC.animateCircular()
         default:
@@ -72,48 +52,40 @@ class StatsCenterVC: UIViewController {
             userVC = segue.destination as! StatUserVC
            // viewController.animateCircular()
             
+        }else if (segue.identifier == "goTotal"){
+            totalVC = segue.destination as! StatTotalVC
         }
     }
-//    
-//    func (){
-//        
-//    }
   
-  func setUpTestData(chart: BarChartView , chartLabels:[String] , chartValues:[Int]){
-    //chart.delegate = self
-    chart.noDataText = "You need to provide data for the chart."
+ 
     
-    var dataEntries: [BarChartDataEntry] = []
-    
-    for i in 0 ..< chartLabels.count{
-      //            Double(test[i])
-      
-        let dataEntry = BarChartDataEntry(x: Double(i), y: Double(chartValues[i]))
-      dataEntries.append(dataEntry)
+    func hexStringToUIColor (hex:String) -> UIColor {
+        var cString:String = hex.trimmingCharacters(in: .whitespacesAndNewlines).uppercased()
+        
+        if (cString.hasPrefix("#")) {
+            cString.remove(at: cString.startIndex)
+        }
+        
+        if ((cString.count) != 6) {
+            return UIColor.gray
+        }
+        
+        var rgbValue:UInt32 = 0
+        Scanner(string: cString).scanHexInt32(&rgbValue)
+        
+        return UIColor(
+            red: CGFloat((rgbValue & 0xFF0000) >> 16) / 255.0,
+            green: CGFloat((rgbValue & 0x00FF00) >> 8) / 255.0,
+            blue: CGFloat(rgbValue & 0x0000FF) / 255.0,
+            alpha: CGFloat(1.0)
+        )
     }
-    
-    let chartDataSet = BarChartDataSet(values: dataEntries, label: "Visitor count")
-    let chartData = BarChartData(dataSet: chartDataSet)
-    //chartDataSet.colors = ChartColorTemplates.joyful()
-    chart.data = chartData
-    
-    chart.xAxis.valueFormatter = IndexAxisValueFormatter(values: chartLabels)
-    chart.xAxis.granularity = 1
-    chart.chartDescription?.text = ""
-    chart.xAxis.labelPosition = .bottom
-    
-    //barChart.leftAxis.drawGridLinesEnabled = false
-    chart.rightAxis.enabled = false
-    //barChart.rightAxis.drawGridLinesEnabled = false
-    chart.xAxis.drawGridLinesEnabled = false
-    chart.backgroundColor = UIColor(red: 189/255, green: 195/255, blue: 199/255, alpha: 1)
-    let ll = ChartLimitLine(limit: 9.0, label: "Average")
-    chart.rightAxis.addLimitLine(ll)
-  }
    
   
   
   
 }
+
+
 
 

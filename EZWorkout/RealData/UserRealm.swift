@@ -26,8 +26,20 @@ class UserRealm: Object {
     }
     return exercises
   }
+    
+    func getAllTime()->[Date]{
+        var workOut = [Date]()
+        for item in workoutArray{
+            let dateFromatter = DateFormatter()
+            dateFromatter.dateFormat = "MM/dd/yyyy"
+            print(dateFromatter.string(from: item.endTime!))
+//            workOut = workOut + (item.endTime?.timeIntervalSince1970 - item.startTime?.timeIntervalSince1970)
+        }
+        return workOut
+        
+    }
 
-  func getAllTime()
+ // func getAllTime()
   func getYearsWorkingOut()->[String]{
     //TODO do this on realm side
     let dateFormatter = DateFormatter()
