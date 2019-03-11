@@ -48,9 +48,17 @@ class ExerciseView: UIView {
   
   func setUp(exerciseRealm:ExcerciseRealm){
     
+    
+    
     //TODO adjust text presentation
     infoContainer.layer.cornerRadius = 12
     exerciseImage.layer.cornerRadius = exerciseImage.frame.size.width / 2
+    
+    exerciseImage.layer.borderColor = UIColor.black.cgColor
+    exerciseImage.layer.borderWidth = 3.0
+    
+    infoContainer.layer.borderColor = UIColor.black.cgColor
+    infoContainer.layer.borderWidth = 2.0
     //TODO add modifiers
     labelExerciseName.text = exerciseRealm.name
     

@@ -33,8 +33,8 @@ class NewHistoryViewController: UIViewController {
     //timeFormater.timeStyle = .short
     updateSelected(date: Date())
     
-    let idleColor1 = #colorLiteral(red: 0.9764705896, green: 0.850980401, blue: 0.5490196347, alpha: 1)
-    let idleColor2 = #colorLiteral(red: 0.9529411793, green: 0.7047749625, blue: 0.1462456667, alpha: 1)
+    let idleColor1 = #colorLiteral(red: 0.721568644, green: 0.8862745166, blue: 0.5921568871, alpha: 1)
+    let idleColor2 = #colorLiteral(red: 0.9515201449, green: 0.9560356736, blue: 0.8844186664, alpha: 1)
     //TODO put in animation extention
     let gradient = CAGradientLayer()
     //startGradient()
@@ -46,6 +46,14 @@ class NewHistoryViewController: UIViewController {
     
     gradient.frame = CGRect(x: 0.0, y: 0.0, width: self.view.frame.size.width, height: self.view.frame.size.height)
     self.view.layer.insertSublayer(gradient, at: 0)
+    
+    
+    //set the font
+    calendar.appearance.headerTitleFont      = UIFont.init(name: "Simply Rounded", size: 22)
+    calendar.appearance.headerTitleColor = #colorLiteral(red: 0.2745098174, green: 0.4862745106, blue: 0.1411764771, alpha: 1)
+    calendar.appearance.weekdayFont          = UIFont.init(name: "Simply Rounded", size: 16)
+    calendar.appearance.weekdayTextColor = #colorLiteral(red: 0.2549019754, green: 0.2745098174, blue: 0.3019607961, alpha: 1)
+    calendar.appearance.titleFont            = UIFont.init(name: "Simply Rounded", size: 16)
   }
   
   func updateSelected(date:Date){
