@@ -8,7 +8,8 @@ class StatsMasterController: UIViewController {
   var topBarController: StatsTopBarVC!
   
  var curPage = 0
-  
+    @IBOutlet weak var StatsIcon: UITabBarItem!
+    
   @IBOutlet weak var topBarScrollView: UIScrollView!
   @IBOutlet weak var centerScrollView: UIScrollView!
   
@@ -16,6 +17,7 @@ class StatsMasterController: UIViewController {
   
     override func viewDidLoad() {
         super.viewDidLoad()
+       
 
       
     }
