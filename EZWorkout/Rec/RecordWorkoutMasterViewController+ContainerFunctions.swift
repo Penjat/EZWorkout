@@ -23,18 +23,21 @@ extension RecordWorkoutMasterViewController : CenterViewProtocol  {
   func recPressed() {
     //TODO animate in and out
     feebBackLabel.isHidden = false
-    feedbackVisualizer.isHidden = false
+    //feedbackVisualizer.isHidden = false
+    visulizerIn()
     feebBackLabel.text = "recording"
     speechRecognizer.startRecognizing()
     centerController?.startRec()
     startVisualization()
     //animateRecPressed()
+    feedbackVisualizer.setBarBasedOn(vol:0.4)
   }
   func recReleased() {
     //speechRecognizer.stopRecognizing()
     //TODO check if all button press cases are covered
     feebBackLabel.isHidden = true
-    feedbackVisualizer.isHidden = true
+    //feedbackVisualizer.isHidden = true
+    visulizerOut()
     speechRecognizer.stopRecognizing()
     centerController?.stopRec()
     stopVisualization()

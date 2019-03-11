@@ -42,8 +42,8 @@ class RecordWorkoutMasterViewController: UIViewController {
     speechRecognizer = SpeechRecognizer(delegate: self)
     
     DataManager.dataManager.testSingelton()
-    feebBackLabel.isHidden = true
-    feedbackVisualizer.isHidden = true
+    //feebBackLabel
+    feedbackVisualizer.alpha = 0.0
     
     timerLabel.alpha = 0.0
     
