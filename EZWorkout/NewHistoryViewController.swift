@@ -5,6 +5,7 @@ import FSCalendar
 import RealmSwift
 
 class NewHistoryViewController: UIViewController {
+  @IBOutlet weak var noEventsMsg: UILabel!
   
   @IBOutlet weak var calendar: FSCalendar!
   @IBOutlet weak var selectedDateLabel: UILabel!
@@ -77,10 +78,16 @@ class NewHistoryViewController: UIViewController {
     
     if results.count > 0{
       exercises = results[0].excerciseArray.map{$0}
+      exerciseTableView.reloadData()
+      //TODO animate between the two
+      noEventsMsg.isHidden = true
+      exerciseTableView.isHidden = false
     }else{
+      noEventsMsg.isHidden = false
+      exerciseTableView.isHidden = true
       exercises = []
     }
-    exerciseTableView.reloadData()
+    
   }
   
   
