@@ -14,61 +14,61 @@ extension RecordWorkoutMasterViewController{
       
       UIView.addKeyframe(withRelativeStartTime: relTime, relativeDuration: shortBlink, animations: {
 
-        self.timerLabel.alpha = 0.0
+        //self.timerLabel.alpha = 0.0
       })
       
         relTime += shortBlink
       UIView.addKeyframe(withRelativeStartTime: relTime , relativeDuration:longBlink , animations: {
       
-        self.timerLabel.alpha = 1.0
+        //self.timerLabel.alpha = 1.0
       })
       relTime += longBlink
       
       UIView.addKeyframe(withRelativeStartTime: relTime, relativeDuration: shortBlink, animations: {
         
-        self.timerLabel.alpha = 0.0
+        //self.timerLabel.alpha = 0.0
       })
       
       relTime += shortBlink
       UIView.addKeyframe(withRelativeStartTime: relTime, relativeDuration: longBlink, animations: {
         
-        self.timerLabel.alpha = 1.0
+        //self.timerLabel.alpha = 1.0
       })
       relTime += longBlink
       
       UIView.addKeyframe(withRelativeStartTime: relTime, relativeDuration: shortBlink, animations: {
         
-        self.timerLabel.alpha = 0.0
+        //self.timerLabel.alpha = 0.0
       })
       
       relTime += shortBlink
       UIView.addKeyframe(withRelativeStartTime: relTime, relativeDuration: longBlink, animations: {
         
-        self.timerLabel.alpha = 1.0
+        //self.timerLabel.alpha = 1.0
       })
       relTime += longBlink
       
       UIView.addKeyframe(withRelativeStartTime: relTime, relativeDuration: shortBlink, animations: {
         
-        self.timerLabel.alpha = 0.0
+        //self.timerLabel.alpha = 0.0
       })
       
       relTime += shortBlink
       UIView.addKeyframe(withRelativeStartTime: relTime, relativeDuration: longBlink, animations: {
         
-        self.timerLabel.alpha = 1.0
+        //self.timerLabel.alpha = 1.0
       })
       relTime += longBlink
       
       UIView.addKeyframe(withRelativeStartTime: relTime, relativeDuration: shortBlink, animations: {
         
-        self.timerLabel.alpha = 0.0
+        //self.timerLabel.alpha = 0.0
       })
       
       relTime += shortBlink
       UIView.addKeyframe(withRelativeStartTime: relTime, relativeDuration: longBlink, animations: {
         
-        self.timerLabel.alpha = 1.0
+        //self.timerLabel.alpha = 1.0
       })
 
       
@@ -78,7 +78,7 @@ extension RecordWorkoutMasterViewController{
   func timerLabelFadeIn(){
     //TODO add a scale transform
     UIView.animate(withDuration: 1.0, animations: {
-      self.timerLabel.alpha = 1.0
+      //self.timerLabel.alpha = 1.0
     })
   }
   

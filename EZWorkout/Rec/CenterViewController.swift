@@ -4,13 +4,15 @@ import UIKit
 
 class CenterViewController: UIViewController , CALayerDelegate ,UIScrollViewDelegate {
   
-
+  var timer = Timer()
   
   @IBOutlet weak var recView: UIView!
   @IBOutlet weak var exerciseTableView: UITableView!
   @IBOutlet weak var helpView: HelpView!
   var gradient: CAGradientLayer!
   var gradient2: CAGradientLayer!
+  
+  @IBOutlet weak var timerLabel: UILabel!
   
   @IBOutlet weak var helpScrollView: UIScrollView!
   
