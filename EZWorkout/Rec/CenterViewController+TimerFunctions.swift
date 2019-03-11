@@ -15,6 +15,14 @@ extension CenterViewController {
   func startWorkoutTimer(){
     //start a workout timer
     
+    UIView.animate(withDuration: 0.4, animations: {
+      self.timerLabel.transform = CGAffineTransform(scaleX: 1.1, y: 1.1)
+    }, completion: {_ in
+      UIView.animate(withDuration: 0.4, animations: {
+        self.timerLabel.transform = CGAffineTransform(scaleX: 1.0, y: 1.0)
+      })
+    })
+    
     timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector:#selector(self.tick) , userInfo: nil, repeats: true)
   }
   func endWorkoutTimer(){

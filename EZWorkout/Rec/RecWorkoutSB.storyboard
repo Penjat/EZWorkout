@@ -229,8 +229,8 @@
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3GD-1s-s26">
-                                        <rect key="frame" x="125.5" y="64" width="111.5" height="46.5"/>
-                                        <fontDescription key="fontDescription" name="SVBasicManual" family="SV Basic Manual" pointSize="44"/>
+                                        <rect key="frame" x="115.5" y="64" width="131.5" height="55"/>
+                                        <fontDescription key="fontDescription" name="SVBasicManual" family="SV Basic Manual" pointSize="52"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
