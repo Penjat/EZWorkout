@@ -40,7 +40,7 @@ class StaticDataManager{
         chart.xAxis.granularity = 1
         chart.chartDescription?.text = ""
         chart.xAxis.labelPosition = .bottom
-        
+        chart.legend.verticalAlignment = .top
         //barChart.leftAxis.drawGridLinesEnabled = false
         chart.rightAxis.enabled = false
         //barChart.rightAxis.drawGridLinesEnabled = false

@@ -19,6 +19,7 @@
 		0B4AF2E12236CF8B00A7CBF2 /* CenterViewController+TimerFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B4AF2E02236CF8B00A7CBF2 /* CenterViewController+TimerFunctions.swift */; };
 		0B4AF2E32236D3BC00A7CBF2 /* SVBasicManual.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0B4AF2E22236D3BC00A7CBF2 /* SVBasicManual.ttf */; };
 		0B4AF2E52236EF3B00A7CBF2 /* CommandModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B4AF2E42236EF3B00A7CBF2 /* CommandModel.swift */; };
+		0B4AF2E922370C1B00A7CBF2 /* StatsPage1Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B4AF2E822370C1B00A7CBF2 /* StatsPage1Controller.swift */; };
 		0B5013EC222F25F7004A64EC /* CenterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B5013EB222F25F7004A64EC /* CenterViewController.swift */; };
 		0B5013EE222F2DB2004A64EC /* CenterViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B5013ED222F2DB2004A64EC /* CenterViewProtocol.swift */; };
 		0B5013F0222F2F9F004A64EC /* RecordWorkoutMasterViewController+ContainerFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B5013EF222F2F9F004A64EC /* RecordWorkoutMasterViewController+ContainerFunctions.swift */; };
@@ -124,6 +125,7 @@
 		0B4AF2E02236CF8B00A7CBF2 /* CenterViewController+TimerFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CenterViewController+TimerFunctions.swift"; sourceTree = "<group>"; };
 		0B4AF2E22236D3BC00A7CBF2 /* SVBasicManual.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = SVBasicManual.ttf; sourceTree = "<group>"; };
 		0B4AF2E42236EF3B00A7CBF2 /* CommandModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommandModel.swift; sourceTree = "<group>"; };
+		0B4AF2E822370C1B00A7CBF2 /* StatsPage1Controller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatsPage1Controller.swift; sourceTree = "<group>"; };
 		0B5013EB222F25F7004A64EC /* CenterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CenterViewController.swift; sourceTree = "<group>"; };
 		0B5013ED222F2DB2004A64EC /* CenterViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CenterViewProtocol.swift; sourceTree = "<group>"; };
 		0B5013EF222F2F9F004A64EC /* RecordWorkoutMasterViewController+ContainerFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RecordWorkoutMasterViewController+ContainerFunctions.swift"; sourceTree = "<group>"; };
@@ -430,6 +432,7 @@
 				2851C8842231F43A005E4384 /* CreateCharts */,
 				0BA30330222E09870046FDB9 /* StatsSB.storyboard */,
 				288121DD222F53DC007042C1 /* StatPVC.swift */,
+				0B4AF2E822370C1B00A7CBF2 /* StatsPage1Controller.swift */,
 				28812195222DA4DA007042C1 /* StatVC.swift */,
 				288121E1222F5598007042C1 /* ScrollStatsView.swift */,
 				0BB1CEC12230496400F386C3 /* StatsMasterController.swift */,
@@ -695,6 +698,7 @@
 				0BA3DB92222DD0F200AC7538 /* ExerciseTypes.swift in Sources */,
 				0B5013F2222F4CDC004A64EC /* DataManager.swift in Sources */,
 				0BA3DB90222DD0F200AC7538 /* ExerciseRef.swift in Sources */,
+				0B4AF2E922370C1B00A7CBF2 /* StatsPage1Controller.swift in Sources */,
 				2851C8812231F23A005E4384 /* StaticDataManager.swift in Sources */,
 				0BB1CECC223069B900F386C3 /* StatsMasterController+TopBarDelegate.swift in Sources */,
 				0BF84E8022309F7100DFC6B0 /* HistoryViewController.swift in Sources */,
