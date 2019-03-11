@@ -5,9 +5,9 @@ extension RecordWorkoutMasterViewController : TopBarDelegate{
   func scrollTo(pageNum: Int) {
     
     
-    curPage = pageNum
-    setStatBarPos(pageNum: curPage)
-    setCenterPos(pageNum: curPage)
+    //curPage = pageNum
+    //setStatBarPos(pageNum: pageNum)
+    setCenterPos(pageNum: pageNum)
     
   }
   

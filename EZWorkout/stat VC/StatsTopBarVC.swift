@@ -39,6 +39,37 @@ class StatsTopBarVC: UIViewController {
     }
   }
   
+  func animateTopBars(page:Int){
+    
+    if let buttonArray = buttonArray{
+      for barButton in buttonArray {
+        if barButton.tag == page{
+          animateIn(button:barButton)
+        }else{
+          animateOut(button:barButton)
+        }
+      }
+    }
+    
+  }
+  
+  func animateIn(button:UIButton){
+    UIView.animate(withDuration: 0.4, animations: {
+      button.alpha = 1.0
+      
+    })
+    
+    UIView.animate(withDuration: 0.6, delay: 0.0, usingSpringWithDamping: 0.4, initialSpringVelocity: 0.8, options: [], animations: {
+      button.transform = CGAffineTransform(scaleX: 1.4, y: 1.4)
+    }, completion: {_ in})
+  }
+  func animateOut(button:UIButton){
+    UIView.animate(withDuration: 0.4, animations: {
+      button.alpha = 0.4
+      button.transform = CGAffineTransform(scaleX: 1.0, y: 1.0)
+    })
+    
+  }
   
   
 }
