@@ -100,7 +100,7 @@
                                     <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sWg-qN-GhR">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="60"/>
                                         <connections>
-                                            <segue destination="Sff-SN-z86" kind="embed" id="TD2-ap-DeF"/>
+                                            <segue destination="Sff-SN-z86" kind="embed" identifier="embedTopBar" id="TD2-ap-DeF"/>
                                         </connections>
                                     </containerView>
                                 </subviews>
@@ -143,6 +143,7 @@
                         <outlet property="feebBackLabel" destination="uPl-eA-GDb" id="IW5-9A-cRu"/>
                         <outlet property="feedbackVisualizer" destination="aUb-ar-Hd0" id="iJe-NA-8QB"/>
                         <outlet property="timerLabel" destination="LRs-Ia-OVI" id="bIn-qc-smz"/>
+                        <outlet property="topBarScrollView" destination="veW-Gs-40g" id="ex5-Je-j4g"/>
                         <outlet property="workoutStatusLabel" destination="ZRR-L4-mEG" id="itJ-BE-tPM"/>
                     </connections>
                 </viewController>
@@ -304,28 +305,35 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kbs-e3-N5R" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1169" y="-585"/>
         </scene>
-        <!--View Controller-->
+        <!--Rec Top BarVC-->
         <scene sceneID="O93-TR-ylv">
             <objects>
-                <viewController id="Sff-SN-z86" sceneMemberID="viewController">
+                <viewController id="Sff-SN-z86" customClass="RecTopBarVC" customModule="EZWorkout" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="mTg-Ko-8cp">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="60"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5xc-Ws-E6c">
+                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5xc-Ws-E6c">
                                 <rect key="frame" x="158" y="14" width="59" height="32"/>
                                 <fontDescription key="fontDescription" name="SimplyRounded" family="Simply Rounded" pointSize="19"/>
                                 <state key="normal" title="Record">
                                     <color key="titleColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="barButtonPressed:" destination="Sff-SN-z86" eventType="touchUpInside" id="D1I-RE-2sX"/>
+                                </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CGi-Jd-UVP">
+                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CGi-Jd-UVP">
                                 <rect key="frame" x="291" y="14" width="76" height="32"/>
                                 <fontDescription key="fontDescription" name="SimplyRounded" family="Simply Rounded" pointSize="19"/>
                                 <state key="normal" title="Exercises">
                                     <color key="titleColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="barButtonPressed:" destination="Sff-SN-z86" eventType="touchUpInside" id="8Qn-uE-HIh"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Xh-hH-ISs">
                                 <rect key="frame" x="24" y="14" width="39" height="32"/>
@@ -333,6 +341,9 @@
                                 <state key="normal" title="Help">
                                     <color key="titleColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="barButtonPressed:" destination="Sff-SN-z86" eventType="touchUpInside" id="rYf-c5-pvg"/>
+                                </connections>
                             </button>
                         </subviews>
                         <constraints>
@@ -344,6 +355,11 @@
                             <constraint firstItem="5xc-Ws-E6c" firstAttribute="centerX" secondItem="mTg-Ko-8cp" secondAttribute="centerX" id="tCn-kV-4pd"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="barButton1" destination="4Xh-hH-ISs" id="qAn-1t-4kJ"/>
+                        <outlet property="barButton2" destination="5xc-Ws-E6c" id="CrK-Vx-uGY"/>
+                        <outlet property="barButton3" destination="CGi-Jd-UVP" id="RQK-47-mhY"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="w8b-af-IXn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

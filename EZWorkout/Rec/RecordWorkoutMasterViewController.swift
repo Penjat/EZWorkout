@@ -13,6 +13,11 @@ class RecordWorkoutMasterViewController: UIViewController {
   @IBOutlet weak var feedbackVisualizer: SpeechVisulizerView!
   @IBOutlet weak var workoutStatusLabel: UILabel!
   
+  @IBOutlet weak var topBarScrollView: UIScrollView!
+  
+  var topBarController : RecTopBarVC!
+  
+  var curPage = 1
   var idleColor1: UIColor!
   var idleColor2: UIColor!
   var activeColor1: UIColor!
@@ -119,6 +124,7 @@ class RecordWorkoutMasterViewController: UIViewController {
   override func viewDidAppear(_ animated: Bool) {
     super.viewDidAppear(animated)
     centerScrollView.setContentOffset(CGPoint(x:view.frame.width, y:0), animated: false)
+    centerScrollView.delegate = self
   }
   override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
     if segue.identifier == "toCenterController"{
@@ -127,6 +133,10 @@ class RecordWorkoutMasterViewController: UIViewController {
       
       print("setting the content offset \(view.frame.width)")
       
+    }else if segue.identifier == "embedTopBar"{
+      //get the scroll view controller
+      topBarController = segue.destination as! RecTopBarVC
+      topBarController.delegate = self
     }
   }
   
