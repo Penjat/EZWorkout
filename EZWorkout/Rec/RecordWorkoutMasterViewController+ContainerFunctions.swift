@@ -28,7 +28,7 @@ extension RecordWorkoutMasterViewController : CenterViewProtocol  {
     speechRecognizer.startRecognizing()
     centerController?.startRec()
     startVisualization()
-    animateRecPressed()
+    //animateRecPressed()
   }
   func recReleased() {
     //speechRecognizer.stopRecognizing()
@@ -39,7 +39,7 @@ extension RecordWorkoutMasterViewController : CenterViewProtocol  {
     centerController?.stopRec()
     stopVisualization()
     if isWorkingOut {
-      startAnimatingGradient()
+      //startAnimatingGradient()
     }
   }
   
