@@ -21,6 +21,7 @@
 		0B4AF2E52236EF3B00A7CBF2 /* CommandModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B4AF2E42236EF3B00A7CBF2 /* CommandModel.swift */; };
 		0B4AF2E922370C1B00A7CBF2 /* StatsPage1Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B4AF2E822370C1B00A7CBF2 /* StatsPage1Controller.swift */; };
 		0B4AF2EB223725F400A7CBF2 /* StatPage4Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B4AF2EA223725F400A7CBF2 /* StatPage4Controller.swift */; };
+		0B4AF2F02237313B00A7CBF2 /* StatPage3Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B4AF2EF2237313B00A7CBF2 /* StatPage3Controller.swift */; };
 		0B5013EC222F25F7004A64EC /* CenterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B5013EB222F25F7004A64EC /* CenterViewController.swift */; };
 		0B5013EE222F2DB2004A64EC /* CenterViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B5013ED222F2DB2004A64EC /* CenterViewProtocol.swift */; };
 		0B5013F0222F2F9F004A64EC /* RecordWorkoutMasterViewController+ContainerFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B5013EF222F2F9F004A64EC /* RecordWorkoutMasterViewController+ContainerFunctions.swift */; };
@@ -128,6 +129,7 @@
 		0B4AF2E42236EF3B00A7CBF2 /* CommandModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommandModel.swift; sourceTree = "<group>"; };
 		0B4AF2E822370C1B00A7CBF2 /* StatsPage1Controller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatsPage1Controller.swift; sourceTree = "<group>"; };
 		0B4AF2EA223725F400A7CBF2 /* StatPage4Controller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatPage4Controller.swift; sourceTree = "<group>"; };
+		0B4AF2EF2237313B00A7CBF2 /* StatPage3Controller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatPage3Controller.swift; sourceTree = "<group>"; };
 		0B5013EB222F25F7004A64EC /* CenterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CenterViewController.swift; sourceTree = "<group>"; };
 		0B5013ED222F2DB2004A64EC /* CenterViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CenterViewProtocol.swift; sourceTree = "<group>"; };
 		0B5013EF222F2F9F004A64EC /* RecordWorkoutMasterViewController+ContainerFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RecordWorkoutMasterViewController+ContainerFunctions.swift"; sourceTree = "<group>"; };
@@ -235,6 +237,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0B4AF2EE22372F0300A7CBF2 /* stats pages */ = {
+			isa = PBXGroup;
+			children = (
+				0B4AF2E822370C1B00A7CBF2 /* StatsPage1Controller.swift */,
+				0B4AF2EF2237313B00A7CBF2 /* StatPage3Controller.swift */,
+				0B4AF2EA223725F400A7CBF2 /* StatPage4Controller.swift */,
+			);
+			path = "stats pages";
+			sourceTree = "<group>";
+		};
 		0BA30327222DE6D30046FDB9 /* Custom Views */ = {
 			isa = PBXGroup;
 			children = (
@@ -433,9 +445,8 @@
 			children = (
 				2851C8842231F43A005E4384 /* CreateCharts */,
 				0BA30330222E09870046FDB9 /* StatsSB.storyboard */,
-				0B4AF2EA223725F400A7CBF2 /* StatPage4Controller.swift */,
 				288121DD222F53DC007042C1 /* StatPVC.swift */,
-				0B4AF2E822370C1B00A7CBF2 /* StatsPage1Controller.swift */,
+				0B4AF2EE22372F0300A7CBF2 /* stats pages */,
 				28812195222DA4DA007042C1 /* StatVC.swift */,
 				288121E1222F5598007042C1 /* ScrollStatsView.swift */,
 				0BB1CEC12230496400F386C3 /* StatsMasterController.swift */,
@@ -663,6 +674,7 @@
 				0BF84E8A2230A99800DFC6B0 /* HistoryViewController+WorkoutTableDelegate.swift in Sources */,
 				0BA30337222E1CDC0046FDB9 /* WorkoutModel.swift in Sources */,
 				0BA3DB94222DD0F200AC7538 /* SpeechInputManager+InputParsing.swift in Sources */,
+				0B4AF2F02237313B00A7CBF2 /* StatPage3Controller.swift in Sources */,
 				0BA3DB95222DD0F200AC7538 /* SpeechInputManager+UserAddedExercises.swift in Sources */,
 				0BAA18372234896000EC40D8 /* UIImage+createWithColor.swift in Sources */,
 				0B4AF2DB223613F000A7CBF2 /* RecordWorkoutMasterViewController+TopBarDelegate.swift in Sources */,
