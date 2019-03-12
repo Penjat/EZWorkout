@@ -14,5 +14,7 @@ extension Date{
     
     return selectedDate
   }
-  
+  func adding(timeInterval:Calendar.Component ,amt:  Int) -> Date {
+    return Calendar.current.date(byAdding: timeInterval, value: amt, to: self)!
+  }
 }

@@ -37,7 +37,7 @@ class StatPage4Controller: UIViewController {
     
     let barColor = #colorLiteral(red: 0.9428298473, green: 0.9622165561, blue: 0, alpha: 1)
     
-    StaticDataManager.setUpChart(chart: chartCaloriesBurned, chartLabels: stringTimeArray.map{$0.0}, chartValues: calsBurned,colors: [barColor],bottomLabelText: "Total Calories Burned")
+    StaticDataManager.setUpChart(chart: chartCaloriesBurned, chartLabels: stringTimeArray.map{$0.0}, chartValues: calsBurned,colors: [barColor],bottomLabelText: "Calories Burned")
     
     //      chart1.leftAxis.labelFont = UIFont(name: "Simply Rounded", size: 20.0)!
     chartCaloriesBurned.xAxis.labelFont  = UIFont(name: "Simply Rounded", size: 20.0)!

@@ -157,7 +157,18 @@ extension StaticDataManager{
     }
     return output
   }
-  
+  static func getTotalTime(beforeDate:Date)->Int{
+    let realm = try! Realm()
+    let workouts = realm.objects(WorkoutRealm.self).filter("startTime <= %@", beforeDate)
+    var time = 0.0
+    for workout in workouts{
+      if let startTime = workout.startTime , let endTime = workout.endTime{
+        time += endTime.timeIntervalSince(startTime)
+      }
+      
+    }
+    return Int(time)
+  }
   static func getTotalTime()->Double{
     let realm = try! Realm()
     let workouts = realm.objects(WorkoutRealm.self)
