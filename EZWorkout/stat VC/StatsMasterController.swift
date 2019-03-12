@@ -3,6 +3,7 @@
 import UIKit
 
 class StatsMasterController: UIViewController {
+  @IBOutlet weak var sectionTitle: UILabel!
   
   var centerController: StatsCenterVC!
   var topBarController: StatsTopBarVC!
@@ -36,6 +37,12 @@ class StatsMasterController: UIViewController {
   override func viewDidAppear(_ animated: Bool) {
     
     super.viewDidAppear(animated)
+    sectionTitle.alpha = 0.3
+    sectionTitle.transform = CGAffineTransform(scaleX: 1.4, y: 1.4)
+    UIView.animate(withDuration: 1.0, animations: {
+      self.sectionTitle.alpha = 1.0
+      self.sectionTitle.transform = CGAffineTransform(scaleX: 1, y: 1)
+    })
     centerScrollView.delegate = self
     topBarController.delegate = self
     

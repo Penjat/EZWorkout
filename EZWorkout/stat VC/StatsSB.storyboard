@@ -103,6 +103,7 @@
                     <connections>
                         <outlet property="StatsIcon" destination="wI0-Wg-ubc" id="tZy-pT-pRq"/>
                         <outlet property="centerScrollView" destination="nef-wC-lVu" id="AbS-mp-z03"/>
+                        <outlet property="sectionTitle" destination="6Oc-qC-48Q" id="R7w-rK-Fcb"/>
                         <outlet property="topBarScrollView" destination="1bj-c2-RW7" id="2XV-H8-EiS"/>
                     </connections>
                 </viewController>
@@ -793,6 +794,7 @@
                             <constraint firstItem="NYf-XN-rJ0" firstAttribute="leading" secondItem="BOx-02-d9g" secondAttribute="leadingMargin" constant="8" id="rcC-3W-AH9"/>
                             <constraint firstItem="p6J-Z8-g9i" firstAttribute="top" secondItem="L83-kl-pjg" secondAttribute="bottom" constant="64" id="yJE-fP-XjR"/>
                         </constraints>
+                        <viewLayoutGuide key="safeArea" id="HTb-si-CBd"/>
                     </view>
                     <connections>
                         <outlet property="chart1" destination="Hsj-Zv-VWA" id="WaL-Rs-gh2"/>

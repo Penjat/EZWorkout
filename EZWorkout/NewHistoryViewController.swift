@@ -6,6 +6,7 @@ import RealmSwift
 
 class NewHistoryViewController: UIViewController {
   @IBOutlet weak var noEventsMsg: UILabel!
+  @IBOutlet weak var sectionTitle: UILabel!
   
   @IBOutlet weak var calendar: FSCalendar!
   @IBOutlet weak var selectedDateLabel: UILabel!
@@ -55,6 +56,15 @@ class NewHistoryViewController: UIViewController {
     calendar.appearance.weekdayFont          = UIFont.init(name: "Simply Rounded", size: 16)
     calendar.appearance.weekdayTextColor = #colorLiteral(red: 0.2549019754, green: 0.2745098174, blue: 0.3019607961, alpha: 1)
     calendar.appearance.titleFont            = UIFont.init(name: "Simply Rounded", size: 16)
+  }
+  override func viewDidAppear(_ animated: Bool) {
+    super.viewDidAppear(animated)
+    sectionTitle.alpha = 0.3
+    sectionTitle.transform = CGAffineTransform(scaleX: 1.4, y: 1.4)
+    UIView.animate(withDuration: 1.0, animations: {
+      self.sectionTitle.alpha = 1.0
+      self.sectionTitle.transform = CGAffineTransform(scaleX: 1, y: 1)
+    })
   }
   
   func updateSelected(date:Date){

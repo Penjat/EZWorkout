@@ -115,6 +115,7 @@
                         <outlet property="centerScrollView" destination="sKg-ac-tKm" id="AOp-lB-eor"/>
                         <outlet property="feebBackLabel" destination="uPl-eA-GDb" id="IW5-9A-cRu"/>
                         <outlet property="feedbackVisualizer" destination="aUb-ar-Hd0" id="iJe-NA-8QB"/>
+                        <outlet property="sectionTitle" destination="fbb-Vn-wfB" id="y2Q-da-eH1"/>
                         <outlet property="topBarScrollView" destination="veW-Gs-40g" id="ex5-Je-j4g"/>
                     </connections>
                 </viewController>

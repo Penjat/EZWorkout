@@ -3,6 +3,7 @@
 import UIKit
 import Charts
 
+
 class StatsPage1Controller: UIViewController {
   @IBOutlet weak var chart1: HorizontalBarChartView!
   @IBOutlet weak var chart2: HorizontalBarChartView!
@@ -36,12 +37,14 @@ class StatsPage1Controller: UIViewController {
     
     let barColor = #colorLiteral(red: 0.9428298473, green: 0.9622165561, blue: 0, alpha: 1)
     
-    StaticDataManager.setUpChart(chart: chart1 , chartLabels: topSevenDict.map{$0.0} , chartValues: topSevenDict.map{$0.1} , colors: [barColor],bottomLabelText: "Weigth")
+    StaticDataManager.setUpChart(chart: chart1 , chartLabels: topSevenDict.map{$0.0} , chartValues: topSevenDict.map{$0.1} , colors: [barColor],bottomLabelText: "Total Weigth Moved")
     
     //      chart1.leftAxis.labelFont = UIFont(name: "Simply Rounded", size: 20.0)!
     chart1.xAxis.labelFont  = UIFont(name: "Simply Rounded", size: 20.0)!
     
     chart1.legend.font = UIFont(name: "Simply Rounded", size: 20.0)!
+    
+    
     
     
     //      chart1.legend.formSize = 20.0
@@ -63,10 +66,10 @@ class StatsPage1Controller: UIViewController {
     
     let barColor = #colorLiteral(red: 0.9428298473, green: 0.9622165561, blue: 0, alpha: 1)
     
-    StaticDataManager.setUpChart(chart: chart1 , chartLabels: topSevenDict.map{$0.0} , chartValues: topSevenDict.map{$0.1} , colors: [barColor],bottomLabelText: "Weigth")
     
     
-    StaticDataManager.setUpChart(chart: chart2 , chartLabels: topSevenDict.map{$0.0} , chartValues: topSevenDict.map{$0.1} , colors: [barColor],bottomLabelText: "Sets")
+    
+    StaticDataManager.setUpChart(chart: chart2 , chartLabels: topSevenDict.map{$0.0} , chartValues: topSevenDict.map{$0.1} , colors: [barColor],bottomLabelText: "Total Sets")
     
     chart2.xAxis.labelFont  = UIFont(name: "Simply Rounded", size: 20.0)!
     
@@ -84,9 +87,9 @@ class StatsPage1Controller: UIViewController {
     
     let barColor = #colorLiteral(red: 0.9428298473, green: 0.9622165561, blue: 0, alpha: 1)
     
-    StaticDataManager.setUpChart(chart: chart1 , chartLabels: topSevenDict.map{$0.0} , chartValues: topSevenDict.map{$0.1} , colors: [barColor],bottomLabelText: "Weigth")
     
-    StaticDataManager.setUpChart(chart: chart3 , chartLabels: topSevenDict.map{$0.0} , chartValues: topSevenDict.map{$0.1} , colors: [barColor],bottomLabelText: "Reps")
+    
+    StaticDataManager.setUpChart(chart: chart3 , chartLabels: topSevenDict.map{$0.0} , chartValues: topSevenDict.map{$0.1} , colors: [barColor],bottomLabelText: "Total Reps")
     
     chart3.xAxis.labelFont  = UIFont(name: "Simply Rounded", size: 20.0)!
     

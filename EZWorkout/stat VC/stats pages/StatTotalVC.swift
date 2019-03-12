@@ -64,8 +64,11 @@ class StatTotalVC: UIViewController {
     let monthArray = stringTimeArray.map{$0.1}
     let totalTime = createTotal(timeArray: monthArray, closure: StaticDataManager.getTotalWeight(beforeDate:))
     
-    StaticDataManager.setUpChart(chart: timeGraph, chartLabels: labelArray, chartValues: totalTime,colors: [UIColor.black])
+    StaticDataManager.setUpChart(chart: timeGraph, chartLabels: labelArray, chartValues: totalTime,colors: [UIColor.black],bottomLabelText: "Total Time Working Out")
     
+    //timeGraph.xAxis.labelFont  = UIFont(name: "Simply Rounded", size: 20.0)!
+    
+    timeGraph.legend.font = UIFont(name: "Simply Rounded", size: 20.0)!
   }
   
   func setUpChart2(){
@@ -73,15 +76,23 @@ class StatTotalVC: UIViewController {
     let monthArray = stringTimeArray.map{$0.1}
     let totalWeight = createTotal(timeArray: monthArray, closure: StaticDataManager.getTotalWeight(beforeDate:))
     
-    StaticDataManager.setUpChart(chart: static1, chartLabels: labelArray, chartValues: totalWeight,colors: [UIColor.yellow])
+    StaticDataManager.setUpChart(chart: static1, chartLabels: labelArray, chartValues: totalWeight,colors: [UIColor.yellow],bottomLabelText: "Total Weight Lifted")
+    
+    //static1.xAxis.labelFont  = UIFont(name: "Simply Rounded", size: 20.0)!
+    
+    static1.legend.font = UIFont(name: "Simply Rounded", size: 20.0)!
   }
   
   func setUpChart3(){
-    
+    //TODO change to calories
     let monthArray = stringTimeArray.map{$0.1}
     let totalReps = createTotal(timeArray: monthArray , closure: StaticDataManager.getTotalReps(date:))
     
-    StaticDataManager.setUpChart(chart: chartTotalReps, chartLabels: stringTimeArray.map{$0.0}, chartValues: totalReps,colors: [UIColor.yellow])
+    StaticDataManager.setUpChart(chart: chartTotalReps, chartLabels: stringTimeArray.map{$0.0}, chartValues: totalReps,colors: [UIColor.yellow],bottomLabelText: "Total Calories Burned")
+    
+    //chartTotalReps.xAxis.labelFont  = UIFont(name: "Simply Rounded", size: 20.0)!
+    
+    chartTotalReps.legend.font = UIFont(name: "Simply Rounded", size: 20.0)!
   }
   
   func createTotal(timeArray:[Date] , closure:(Date)->Int )->[Int]{

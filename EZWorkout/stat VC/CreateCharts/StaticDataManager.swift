@@ -36,7 +36,14 @@ class StaticDataManager{
     chartDataSet.colors = colors//ChartColorTemplates.joyful()
     chart.data = chartData
     
+    let valueLabelColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
+    chartData.setValueFont(UIFont(name: "Simply Rounded", size: 14))
+    chartData.setValueTextColor(valueLabelColor)
+    
+    
+    
     chart.xAxis.valueFormatter = IndexAxisValueFormatter(values: chartLabels)
+    
     chart.xAxis.granularity = 1
     chart.chartDescription?.text = ""
     chart.xAxis.labelPosition = .bottom
@@ -52,6 +59,18 @@ class StaticDataManager{
     chart.xAxis.labelTextColor = .white
     chart.leftAxis.labelTextColor = .white
     //chart.backgroundColor = UIColor(white: 1, alpha: 0.5)
+    
+    
+    let leftAxis = chart.leftAxis
+    leftAxis.labelFont = .systemFont(ofSize: 10, weight: .light)
+    
+    leftAxis.spaceTop = 0.35
+    chart.drawValueAboveBarEnabled = true
+    
+    
+    //leftAxis.inverted = true
+    leftAxis.axisMinimum = 0
+    
     let ll = ChartLimitLine(limit: 9.0, label: "Average")
     chart.rightAxis.addLimitLine(ll)
   }
