@@ -16,12 +16,42 @@ class StatPage4Controller: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-      setupChart1()
-      setupChart2()
-      setupChart3()
+      setupChart1(timeFrame: .day)
+      setupChart2(timeFrame: .day)
+      setupChart3(timeFrame: .day)
     }
   
-  func setupChart1(){
+  @IBAction func chart1Toggle(_ sender: UISegmentedControl) {
+    print("you pressed \(sender.selectedSegmentIndex)")
+    toggleInput(input:sender.selectedSegmentIndex,closure:setupChart1(timeFrame: ))
+  }
+  @IBAction func chart2Toggle(_ sender: UISegmentedControl) {print("you pressed \(sender.selectedSegmentIndex)")
+    toggleInput(input:sender.selectedSegmentIndex,closure:setupChart2(timeFrame: ))
+  }
+  @IBAction func chart3Toggle(_ sender: UISegmentedControl) {
+    print("you pressed \(sender.selectedSegmentIndex)")
+    toggleInput(input:sender.selectedSegmentIndex,closure:setupChart3(timeFrame: ))
+  }
+  
+  func toggleInput(input:Int , closure:(Calendar.Component)->Void){
+    switch (input){
+    case 0:
+      closure(.day)
+      break
+    case 1:
+      //TODO figure out week
+      //setupChart1(timeFrame: .day)
+      break
+    case 2:
+      
+      closure(.month)
+      break
+    default:
+      break
+    }
+  }
+  
+  func setupChart1(timeFrame:Calendar.Component){
     //calculate calory percent
     //if daily
     
@@ -29,19 +59,30 @@ class StatPage4Controller: UIViewController {
     
     let year = calendar.component(.year, from: Date())
     let month = calendar.component(.month, from: Date())
-    let day = 0
+    var day = 0
+    
+    var calGoal = 300.0
+    
+    if timeFrame == .day{
+      //check if day is signifigant
+      day = calendar.component(.day, from: Date())
+      calGoal = 300.0
+    }else if timeFrame == .month{
+      calGoal *= 1
+    }
+    
     let components = DateComponents(year: year, month: month, day: day, hour: 0, minute: 0, second: 0)
     
     //add one of time interval to date
     let startDate = calendar.date(from: components)!
-    let endDate = startDate.adding(timeInterval: .day, amt: 1)
-    let calsBurned = StaticDataManager.getCalForRange(startDate: startDate, endDate: endDate)
+    let endDate = startDate.adding(timeInterval: timeFrame, amt: 1)
+    let calsBurned = Double(StaticDataManager.getCalForRange(startDate: startDate, endDate: endDate))
     
     //assume daily calorie goal of 300
     
-    let goalPercent = CGFloat(calsBurned/300)
-      
-    chartCaloryGoal.startProgress(to: goalPercent, duration: 6) {
+    let goalPercent = CGFloat(calsBurned/calGoal)
+    
+    chartCaloryGoal.startProgress(to: goalPercent, duration: 2) {
 //      DispatchQueue.main.async {
 //        // We can animate the ring back to another value here, and it does so fluidly
 //        self.chartCaloryGoal.startProgress(to: 80, duration: 2)
@@ -51,11 +92,11 @@ class StatPage4Controller: UIViewController {
     
   }
   
-  func setupChart2(){
+  func setupChart2(timeFrame:Calendar.Component){
     //change for between date
-    let stringTimeArray = StatHelper.getLastDates(num: 7, timeInterval: .day)
+    let stringTimeArray = StatHelper.getLastDates(num: 7, timeInterval: timeFrame)
     let monthArray = stringTimeArray.map{$0.1}
-    let calsBurned = StatHelper.createTotalforRange(timeArray: monthArray, timeInterval: .day, closure: StaticDataManager.getCalForRange(startDate:endDate:))
+    let calsBurned = StatHelper.createTotalforRange(timeArray: monthArray, timeInterval: timeFrame, closure: StaticDataManager.getCalForRange(startDate:endDate:))
     
     
     
@@ -79,16 +120,16 @@ class StatPage4Controller: UIViewController {
     //      chart1.legend.yOffset = 20.0
     //      chart1.legend.neededHeight = 50
     //chart1.legend.enabled = false
-    
+    chartCaloriesBurned.animate(xAxisDuration: 0.8, yAxisDuration: 3.0)
     
     
     
   }
   
-  func setupChart3(){
+  func setupChart3(timeFrame:Calendar.Component){
     
-    let stringMonths = StatHelper.getLastDates(num: 7, timeInterval: .day)
-    let weightFormonths = StatHelper.createTotalforRange(timeArray: stringMonths.map{$0.1}, timeInterval: .day, closure: StaticDataManager.getWeightForRange(startDate:endDate:))
+    let stringMonths = StatHelper.getLastDates(num: 7, timeInterval: timeFrame)
+    let weightFormonths = StatHelper.createTotalforRange(timeArray: stringMonths.map{$0.1}, timeInterval: timeFrame, closure: StaticDataManager.getWeightForRange(startDate:endDate:))
     
     
     let barColor = #colorLiteral(red: 0.9428298473, green: 0.9622165561, blue: 0, alpha: 1)
@@ -107,7 +148,7 @@ class StatPage4Controller: UIViewController {
     //chart1.legend.enabled = false
     
     
-    
+    chartTimeSpent.animate(xAxisDuration: 0.8, yAxisDuration: 3.0)
     
   }
 

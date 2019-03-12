@@ -598,8 +598,53 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="highlightedColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </label>
-                            <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cML-3U-y6H" customClass="UICircularProgressRing" customModule="UICircularProgressRing">
-                                <rect key="frame" x="32" y="137" width="306" height="306"/>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="top" segmentControlStyle="bordered" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Ng2-4z-Qy3">
+                                <rect key="frame" x="89.5" y="395" width="191" height="29"/>
+                                <segments>
+                                    <segment title="daily"/>
+                                    <segment title="weekly"/>
+                                    <segment title="monthly"/>
+                                </segments>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <action selector="chart1Toggle:" destination="IcQ-FS-l8o" eventType="valueChanged" id="M00-mx-k9a"/>
+                                </connections>
+                            </segmentedControl>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="top" segmentControlStyle="bordered" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="5Kt-7n-zvz">
+                                <rect key="frame" x="89.5" y="873" width="191" height="29"/>
+                                <segments>
+                                    <segment title="daily"/>
+                                    <segment title="weekly"/>
+                                    <segment title="monthly"/>
+                                </segments>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <action selector="chart2Toggle:" destination="IcQ-FS-l8o" eventType="valueChanged" id="e9M-ef-Dot"/>
+                                </connections>
+                            </segmentedControl>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="67y-YM-cuz" customClass="BarChartView" customModule="Charts">
+                                <rect key="frame" x="8" y="487" width="354" height="354"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="67y-YM-cuz" secondAttribute="height" multiplier="1:1" id="0h7-Kp-qqF"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="U96-zM-lsB" customClass="BarChartView" customModule="Charts">
+                                <rect key="frame" x="8" y="965" width="354" height="354"/>
+                            </view>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="top" segmentControlStyle="bordered" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="WI8-Kb-SRB">
+                                <rect key="frame" x="89.5" y="1351" width="191" height="29"/>
+                                <segments>
+                                    <segment title="daily"/>
+                                    <segment title="weekly"/>
+                                    <segment title="monthly"/>
+                                </segments>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <action selector="chart3Toggle:" destination="IcQ-FS-l8o" eventType="valueChanged" id="c5G-Qp-Cgr"/>
+                                </connections>
+                            </segmentedControl>
+                            <view opaque="NO" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cML-3U-y6H" customClass="UICircularProgressRing" customModule="UICircularProgressRing">
+                                <rect key="frame" x="32" y="145" width="306" height="306"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="cML-3U-y6H" secondAttribute="height" multiplier="1:1" id="Uxl-Nw-ayZ"/>
                                 </constraints>
@@ -633,46 +678,10 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="top" segmentControlStyle="bordered" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Ng2-4z-Qy3">
-                                <rect key="frame" x="89.5" y="459" width="191" height="29"/>
-                                <segments>
-                                    <segment title="daily"/>
-                                    <segment title="weekly"/>
-                                    <segment title="monthly"/>
-                                </segments>
-                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            </segmentedControl>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="top" segmentControlStyle="bordered" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="5Kt-7n-zvz">
-                                <rect key="frame" x="89.5" y="937" width="191" height="29"/>
-                                <segments>
-                                    <segment title="daily"/>
-                                    <segment title="weekly"/>
-                                    <segment title="monthly"/>
-                                </segments>
-                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            </segmentedControl>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="67y-YM-cuz" customClass="BarChartView" customModule="Charts">
-                                <rect key="frame" x="8" y="551" width="354" height="354"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="67y-YM-cuz" secondAttribute="height" multiplier="1:1" id="0h7-Kp-qqF"/>
-                                </constraints>
-                            </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="U96-zM-lsB" customClass="BarChartView" customModule="Charts">
-                                <rect key="frame" x="8" y="1029" width="354" height="354"/>
-                            </view>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="top" segmentControlStyle="bordered" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="WI8-Kb-SRB">
-                                <rect key="frame" x="89.5" y="1415" width="191" height="29"/>
-                                <segments>
-                                    <segment title="daily"/>
-                                    <segment title="weekly"/>
-                                    <segment title="monthly"/>
-                                </segments>
-                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            </segmentedControl>
                         </subviews>
                         <constraints>
                             <constraint firstItem="Ng2-4z-Qy3" firstAttribute="top" secondItem="cML-3U-y6H" secondAttribute="bottom" constant="16" id="18i-Hr-oMF"/>
-                            <constraint firstAttribute="trailing" secondItem="cML-3U-y6H" secondAttribute="trailing" constant="32" id="5JN-at-zeJ"/>
+                            <constraint firstAttribute="trailing" secondItem="cML-3U-y6H" secondAttribute="trailing" constant="64" id="5JN-at-zeJ"/>
                             <constraint firstItem="WI8-Kb-SRB" firstAttribute="centerX" secondItem="U96-zM-lsB" secondAttribute="centerX" id="7Ss-CV-mjB"/>
                             <constraint firstItem="U96-zM-lsB" firstAttribute="width" secondItem="U96-zM-lsB" secondAttribute="height" multiplier="1:1" id="Azq-Ia-MjB"/>
                             <constraint firstItem="cML-3U-y6H" firstAttribute="top" secondItem="HqA-0c-i2X" secondAttribute="bottom" constant="32" id="DoE-jq-7IN"/>
@@ -683,7 +692,7 @@
                             <constraint firstItem="67y-YM-cuz" firstAttribute="top" secondItem="Ng2-4z-Qy3" secondAttribute="bottom" constant="64" id="WIW-AM-FEJ"/>
                             <constraint firstItem="5Kt-7n-zvz" firstAttribute="centerX" secondItem="vM0-nG-FWl" secondAttribute="centerX" id="d5e-uP-FzS"/>
                             <constraint firstItem="U96-zM-lsB" firstAttribute="top" secondItem="5Kt-7n-zvz" secondAttribute="bottom" constant="64" id="hHJ-uB-puX"/>
-                            <constraint firstItem="cML-3U-y6H" firstAttribute="leading" secondItem="6p8-jW-1me" secondAttribute="leading" constant="32" id="hdZ-AN-BMb"/>
+                            <constraint firstItem="cML-3U-y6H" firstAttribute="leading" secondItem="6p8-jW-1me" secondAttribute="leading" constant="64" id="hdZ-AN-BMb"/>
                             <constraint firstItem="HqA-0c-i2X" firstAttribute="top" secondItem="vM0-nG-FWl" secondAttribute="top" constant="64" id="jGN-dW-wmk"/>
                             <constraint firstItem="vM0-nG-FWl" firstAttribute="trailing" secondItem="HqA-0c-i2X" secondAttribute="trailing" constant="48" id="oco-fi-iNm"/>
                             <constraint firstItem="WI8-Kb-SRB" firstAttribute="top" secondItem="U96-zM-lsB" secondAttribute="bottom" constant="32" id="siv-ZK-hja"/>
