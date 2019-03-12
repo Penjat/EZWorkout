@@ -16,10 +16,40 @@ class StatPage4Controller: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+      setupChart1()
       setupChart2()
       setupChart3()
     }
   
+  func setupChart1(){
+    //calculate calory percent
+    //if daily
+    
+    let calendar = Calendar.current
+    
+    let year = calendar.component(.year, from: Date())
+    let month = calendar.component(.month, from: Date())
+    let day = 0
+    let components = DateComponents(year: year, month: month, day: day, hour: 0, minute: 0, second: 0)
+    
+    //add one of time interval to date
+    let startDate = calendar.date(from: components)!
+    let endDate = startDate.adding(timeInterval: .day, amt: 1)
+    let calsBurned = StaticDataManager.getCalForRange(startDate: startDate, endDate: endDate)
+    
+    //assume daily calorie goal of 300
+    
+    let goalPercent = CGFloat(calsBurned/300)
+      
+    chartCaloryGoal.startProgress(to: goalPercent, duration: 6) {
+//      DispatchQueue.main.async {
+//        // We can animate the ring back to another value here, and it does so fluidly
+//        self.chartCaloryGoal.startProgress(to: 80, duration: 2)
+//        //self.circuler.showsValueKnob = true
+//      }
+    }
+    
+  }
   
   func setupChart2(){
     //change for between date
