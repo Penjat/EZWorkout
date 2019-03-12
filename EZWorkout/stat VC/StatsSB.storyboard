@@ -677,7 +677,7 @@
                                     <constraint firstAttribute="width" secondItem="67y-YM-cuz" secondAttribute="height" multiplier="1:1" id="0h7-Kp-qqF"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="U96-zM-lsB">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="U96-zM-lsB" customClass="BarChartView" customModule="Charts">
                                 <rect key="frame" x="8" y="1023" width="351" height="351"/>
                             </view>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="top" segmentControlStyle="bordered" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="WI8-Kb-SRB">
@@ -713,6 +713,11 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="vM0-nG-FWl"/>
                     </view>
+                    <connections>
+                        <outlet property="chartCaloriesBurned" destination="67y-YM-cuz" id="8J7-Bp-gaZ"/>
+                        <outlet property="chartCaloryGoal" destination="cML-3U-y6H" id="862-ok-KuU"/>
+                        <outlet property="chartTimeSpent" destination="U96-zM-lsB" id="Di0-Nh-mTg"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Utb-Oh-D5u" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
