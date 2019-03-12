@@ -74,26 +74,7 @@ class StaticDataManager{
     
   }
   
-  static func getRealmDataGroupedbyWeight(startDate:Date? , endDate:Date?)->[String:Int]{
-    
-    
-    //returns all exercises between dates and the weight that was lifted
-    let results = UserRealm.curUser.getAllExercises()
-    var emptyDict = [String:Int]()
-    
-    
-    for item in results{
-      
-      if emptyDict.index(forKey: item.name!) == nil {
-        emptyDict[item.name!] = 1
-      } else{
-        let num = emptyDict[item.name!]
-        emptyDict.updateValue(num!+1, forKey: item.name!)
-      }
-    }
-    return emptyDict
-    
-  }
+  
   
   static func getRealmData(type:CheckType)->[String:Int]{
     

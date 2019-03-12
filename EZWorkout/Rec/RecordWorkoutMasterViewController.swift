@@ -41,6 +41,7 @@ class RecordWorkoutMasterViewController: UIViewController {
   
   override func viewDidLoad() {
     super.viewDidLoad()
+    print("data from the data manager = \( StaticDataManager.getRealmDataGroupedbyWeight(startDate: Date(), endDate: Date().plusOneDay()))")
     
     speechRecognizer = SpeechRecognizer(delegate: self)
     
@@ -56,7 +57,7 @@ class RecordWorkoutMasterViewController: UIViewController {
     //TODO put in animation extention
     gradient = CAGradientLayer()
     //startGradient()
-    
+  
     gradient.colors = [idleColor1.cgColor, idleColor2.cgColor]
     gradient.locations = [0.0 , 1.0]
     gradient.startPoint = CGPoint(x: 0.0, y: 0.0)

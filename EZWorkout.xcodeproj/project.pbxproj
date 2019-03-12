@@ -22,6 +22,8 @@
 		0B4AF2E922370C1B00A7CBF2 /* StatsPage1Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B4AF2E822370C1B00A7CBF2 /* StatsPage1Controller.swift */; };
 		0B4AF2EB223725F400A7CBF2 /* StatPage4Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B4AF2EA223725F400A7CBF2 /* StatPage4Controller.swift */; };
 		0B4AF2F02237313B00A7CBF2 /* StatPage3Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B4AF2EF2237313B00A7CBF2 /* StatPage3Controller.swift */; };
+		0B4AF2F22237487B00A7CBF2 /* StaticDataManger+RealmQueries.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B4AF2F12237487B00A7CBF2 /* StaticDataManger+RealmQueries.swift */; };
+		0B4AF2F422374D3C00A7CBF2 /* Date+easyFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B4AF2F322374D3C00A7CBF2 /* Date+easyFunctions.swift */; };
 		0B5013EC222F25F7004A64EC /* CenterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B5013EB222F25F7004A64EC /* CenterViewController.swift */; };
 		0B5013EE222F2DB2004A64EC /* CenterViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B5013ED222F2DB2004A64EC /* CenterViewProtocol.swift */; };
 		0B5013F0222F2F9F004A64EC /* RecordWorkoutMasterViewController+ContainerFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B5013EF222F2F9F004A64EC /* RecordWorkoutMasterViewController+ContainerFunctions.swift */; };
@@ -130,6 +132,8 @@
 		0B4AF2E822370C1B00A7CBF2 /* StatsPage1Controller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatsPage1Controller.swift; sourceTree = "<group>"; };
 		0B4AF2EA223725F400A7CBF2 /* StatPage4Controller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatPage4Controller.swift; sourceTree = "<group>"; };
 		0B4AF2EF2237313B00A7CBF2 /* StatPage3Controller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatPage3Controller.swift; sourceTree = "<group>"; };
+		0B4AF2F12237487B00A7CBF2 /* StaticDataManger+RealmQueries.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "StaticDataManger+RealmQueries.swift"; sourceTree = "<group>"; };
+		0B4AF2F322374D3C00A7CBF2 /* Date+easyFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+easyFunctions.swift"; sourceTree = "<group>"; };
 		0B5013EB222F25F7004A64EC /* CenterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CenterViewController.swift; sourceTree = "<group>"; };
 		0B5013ED222F2DB2004A64EC /* CenterViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CenterViewProtocol.swift; sourceTree = "<group>"; };
 		0B5013EF222F2F9F004A64EC /* RecordWorkoutMasterViewController+ContainerFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RecordWorkoutMasterViewController+ContainerFunctions.swift"; sourceTree = "<group>"; };
@@ -404,6 +408,8 @@
 			isa = PBXGroup;
 			children = (
 				2851C8802231F23A005E4384 /* StaticDataManager.swift */,
+				0B4AF2F12237487B00A7CBF2 /* StaticDataManger+RealmQueries.swift */,
+				0B4AF2F322374D3C00A7CBF2 /* Date+easyFunctions.swift */,
 				0BB1CEC322304BC700F386C3 /* StatsCenterVC.swift */,
 				28DC63FE223324E5002FC4E0 /* StatUserVC.swift */,
 				28DC64342235C3EA002FC4E0 /* StatTotalVC.swift */,
@@ -669,6 +675,7 @@
 				0BB7E9BC2232FB21000C285D /* RecordWorkoutMasterViewController+Visualizer.swift in Sources */,
 				0B5013EE222F2DB2004A64EC /* CenterViewProtocol.swift in Sources */,
 				288121DE222F53DC007042C1 /* StatPVC.swift in Sources */,
+				0B4AF2F422374D3C00A7CBF2 /* Date+easyFunctions.swift in Sources */,
 				288121F1222F7D83007042C1 /* userStatRealm.swift in Sources */,
 				0BB4470622331893004BEDD1 /* RecordWorkoutMasterViewController+StartEnd.swift in Sources */,
 				0BF84E8A2230A99800DFC6B0 /* HistoryViewController+WorkoutTableDelegate.swift in Sources */,
@@ -731,6 +738,7 @@
 				0BF84E942231B16A00DFC6B0 /* ExerciseSetView.swift in Sources */,
 				0BA3DB8E222DD0F200AC7538 /* MuscleGroup.swift in Sources */,
 				0BB2A5C422337CA3006C8FF7 /* RecordWorkoutMasterViewController+Animations.swift in Sources */,
+				0B4AF2F22237487B00A7CBF2 /* StaticDataManger+RealmQueries.swift in Sources */,
 				0BA3DB97222DD0F200AC7538 /* SpeechInputManager.swift in Sources */,
 				0BB1CEC422304BC700F386C3 /* StatsCenterVC.swift in Sources */,
 				0BCA1ABC2228D30000B51C27 /* AppDelegate.swift in Sources */,
