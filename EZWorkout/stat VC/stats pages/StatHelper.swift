@@ -62,11 +62,12 @@ class StatHelper{
   }
   
   static func createTotalforRange(timeArray:[Date] ,timeInterval:Calendar.Component, closure:(Date,Date)->Int )->[Int]{
+    //takes an array of dates, add gets everything before that date and that date minus the time interval (???)
     
     var repArray = [Int]()
-    for startDate in timeArray{
-      //let endDate addingTimeInterval(<#T##Date#>)
-      //repArray.append(closure(startDate,))
+    for endDate in timeArray{
+      let startDate = endDate.adding(timeInterval: timeInterval, amt: -1)
+      repArray.append(closure(startDate,endDate))
     }
     return repArray
   }

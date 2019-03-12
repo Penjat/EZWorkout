@@ -23,9 +23,9 @@ class StatPage4Controller: UIViewController {
   
   func setupChart2(){
     //change for between date
-    let stringTimeArray = StatHelper.getLastDates(num: 7, timeInterval: .month)
+    let stringTimeArray = StatHelper.getLastDates(num: 7, timeInterval: .day)
     let monthArray = stringTimeArray.map{$0.1}
-    let calsBurned = StatHelper.createTotal(timeArray: monthArray , closure: StaticDataManager.getCal(date:))
+    let calsBurned = StatHelper.createTotalforRange(timeArray: monthArray, timeInterval: .day, closure: StaticDataManager.getCalForRange(startDate:endDate:))
     
     
     
@@ -57,16 +57,13 @@ class StatPage4Controller: UIViewController {
   
   func setupChart3(){
     
-    print(UserRealm.curUser.name)
-    let exerciseDict = StaticDataManager.getRealmData(type: .numberOfTimes)
-    print("this  is a dictionary of  \(exerciseDict.count) ")
-    let topSevenDict = StaticDataManager.sortRealmDict(dict: exerciseDict)
-    print("this is top 7 sport \(topSevenDict)")
+    let stringMonths = StatHelper.getLastDates(num: 7, timeInterval: .day)
+    let weightFormonths = StatHelper.createTotalforRange(timeArray: stringMonths.map{$0.1}, timeInterval: .day, closure: StaticDataManager.getWeightForRange(startDate:endDate:))
     
     
     let barColor = #colorLiteral(red: 0.9428298473, green: 0.9622165561, blue: 0, alpha: 1)
     
-    StaticDataManager.setUpChart(chart: chartTimeSpent , chartLabels: topSevenDict.map{$0.0} , chartValues: topSevenDict.map{$0.1} , colors: [barColor],bottomLabelText: "Weigth")
+    StaticDataManager.setUpChart(chart: chartTimeSpent , chartLabels: stringMonths.map{$0.0} , chartValues: weightFormonths , colors: [barColor],bottomLabelText: "Weigth Lifted")
     
     //      chart1.leftAxis.labelFont = UIFont(name: "Simply Rounded", size: 20.0)!
     chartTimeSpent.xAxis.labelFont  = UIFont(name: "Simply Rounded", size: 20.0)!

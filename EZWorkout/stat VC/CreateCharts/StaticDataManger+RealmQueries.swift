@@ -233,5 +233,39 @@ extension StaticDataManager{
     return Int(cals)
   }
   
+  
+  static func getCalForRange(startDate: Date , endDate:Date)->Int{
+    //TODO finish building
+    
+    let weightPounds = getWeightForRange(startDate: startDate, endDate: endDate)
+    
+    
+    let weightKG : Double = Double(weightPounds)*2.2
+    
+    //estimate the distance moved to be half a meter
+    let joules = weightKG*0.5
+    
+    let cals = joules/4.184
+    //TODO maybe return a double
+    return Int(cals)
+    
+  }
+  
+  
+  
+  static func getWeightForRange(startDate: Date, endDate:Date)->Int{
+    
+    let realm = try! Realm()
+    var output = 0
+  
+      let workouts = realm.objects(WorkoutRealm.self).filter("startTime BETWEEN %@", [startDate, endDate])
+      
+      
+      for workout in workouts{
+        output += getWeight(exercises: workout.excerciseArray )
+      }
+    return output
+  }
+  
 }
 

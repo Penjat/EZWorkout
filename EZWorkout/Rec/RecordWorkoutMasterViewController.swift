@@ -44,7 +44,9 @@ class RecordWorkoutMasterViewController: UIViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     
-    print("the last 7 months are \(StatHelper.getLastDates(num: 7, timeInterval: .month))")
+    let months = StatHelper.getLastDates(num: 7, timeInterval: .month)
+    let weightFormonths = StatHelper.createTotalforRange(timeArray: months.map{$0.1}, timeInterval: .month, closure: StaticDataManager.getWeightForRange(startDate:endDate:))
+    print("weight for last months are \(weightFormonths)")
     speechRecognizer = SpeechRecognizer(delegate: self)
     
     DataManager.dataManager.testSingelton()
