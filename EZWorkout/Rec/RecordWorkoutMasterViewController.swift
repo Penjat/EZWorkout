@@ -41,8 +41,8 @@ class RecordWorkoutMasterViewController: UIViewController {
   
   override func viewDidLoad() {
     super.viewDidLoad()
-    print("data from the data manager = \( StaticDataManager.getRealmDataGroupedbyWeight(startDate: Date(), endDate: Date().plusOneDay()))")
-    print("the total time spent working out is \(StaticDataManager.getTotalTime())")
+    
+    
     speechRecognizer = SpeechRecognizer(delegate: self)
     
     DataManager.dataManager.testSingelton()

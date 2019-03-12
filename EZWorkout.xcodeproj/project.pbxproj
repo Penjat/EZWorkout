@@ -245,6 +245,7 @@
 			isa = PBXGroup;
 			children = (
 				0B4AF2E822370C1B00A7CBF2 /* StatsPage1Controller.swift */,
+				28DC64342235C3EA002FC4E0 /* StatTotalVC.swift */,
 				0B4AF2EF2237313B00A7CBF2 /* StatPage3Controller.swift */,
 				0B4AF2EA223725F400A7CBF2 /* StatPage4Controller.swift */,
 			);
@@ -412,7 +413,6 @@
 				0B4AF2F322374D3C00A7CBF2 /* Date+easyFunctions.swift */,
 				0BB1CEC322304BC700F386C3 /* StatsCenterVC.swift */,
 				28DC63FE223324E5002FC4E0 /* StatUserVC.swift */,
-				28DC64342235C3EA002FC4E0 /* StatTotalVC.swift */,
 				28DC64362235F820002FC4E0 /* StatLastWeekVC.swift */,
 			);
 			path = CreateCharts;

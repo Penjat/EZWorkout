@@ -11,20 +11,21 @@ import Charts
 
 class StatTotalVC: UIViewController {
     
-    
-    @IBOutlet weak var piePercentGraph: PieChartView!
+  
     @IBOutlet weak var timeGraph: BarChartView!
     @IBOutlet weak var static1: BarChartView!
-    
+  @IBOutlet weak var chartTotalReps: BarChartView!
+  
     override func viewDidLoad() {
         super.viewDidLoad()
       setUpChart1()
       setUpChart2()
+      setUpChart3()
     }
     func animateGraph(){
-        piePercentGraph!.animate(yAxisDuration: 1.4, easing: EasingFunctions.EaseOutBack)
-        timeGraph.animate(xAxisDuration: 2.0, yAxisDuration: 2.0)
-        static1.animate(xAxisDuration: 2.0, yAxisDuration: 2.0)
+//        piePercentGraph!.animate(yAxisDuration: 1.4, easing: EasingFunctions.EaseOutBack)
+//        timeGraph.animate(xAxisDuration: 2.0, yAxisDuration: 2.0)
+//        static1.animate(xAxisDuration: 2.0, yAxisDuration: 2.0)
     }
     
     internal struct EasingFunctions
@@ -53,25 +54,23 @@ class StatTotalVC: UIViewController {
     }
   
   func setUpChart1(){
-    let typeDitc = StaticDataManager.getRealmData(type: .type)
-    let topTypeDict = StaticDataManager.sortRealmDict(dict: typeDitc)
-    updateChartData(theChart: piePercentGraph, chartLabel: topTypeDict.map{$0.0},data: topTypeDict.map{ (key, value) in
-      let k = PieChartDataEntry(value: Double(value))
-      k.label = key
-      return k
-      
-    })
-    let exerciseDict = StaticDataManager.getRealmData(type: .numberOfTimes)
-    let topSevenDict = StaticDataManager.sortRealmDict(dict: exerciseDict)
-    StaticDataManager.setUpChart(chart: timeGraph, chartLabels: exerciseDict.map{$0.0}, chartValues: topSevenDict.map{$0.1},colors: [UIColor.black])
+    
+    
+    StaticDataManager.setUpChart(chart: timeGraph, chartLabels: ["total time"], chartValues: [Int(StaticDataManager.getTotalTime())],colors: [UIColor.black])
     
   }
   
   func setUpChart2(){
-    let chartLabels = ["total"]
+    let chartLabels = ["total weight"]
     let totalWeight = [StaticDataManager.getTotalWeight()]
     
     StaticDataManager.setUpChart(chart: static1, chartLabels: chartLabels, chartValues: totalWeight,colors: [UIColor.yellow])
   }
-
+  
+  func setUpChart3(){
+    let chartLabels = ["total reps"]
+    let totalReps = [StaticDataManager.getTotalReps(date:Date())]
+    
+    StaticDataManager.setUpChart(chart: chartTotalReps, chartLabels: chartLabels, chartValues: totalReps,colors: [UIColor.yellow])
+  }
 }

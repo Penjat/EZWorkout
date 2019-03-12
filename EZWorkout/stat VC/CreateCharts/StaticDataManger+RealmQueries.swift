@@ -171,5 +171,40 @@ extension StaticDataManager{
     return time
   }
   
+  static func getTotalReps(date:Date)->Int{
+    let realm = try! Realm()
+    let workouts = realm.objects(WorkoutRealm.self).filter("startTime < %@", date)
+    var reps = 0
+    for workout in workouts{
+      let exercises = workout.excerciseArray.filter("type == 'weight' OR type == 'bodyweight' ")
+      for exercise in exercises{
+        if exercise.reps > 0{
+          reps += exercise.reps
+        }
+      }
+    }
+    
+    return reps
+    
+  }
+  
+  static func getTotalReps()->Int{
+    let realm = try! Realm()
+    let exercises = realm.objects(ExcerciseRealm.self).filter("type == 'weight' OR type == 'bodyweight' ")
+    
+    return getRepsFrom(exercises: exercises)
+    
+  }
+  static func getRepsFrom(exercises:Results<ExcerciseRealm>)->Int{
+    var reps = 0
+    for exercise in exercises{
+      if exercise.reps > 0{
+        reps += exercise.reps
+      }
+      
+    }
+    return reps
+  }
+  
 }
 

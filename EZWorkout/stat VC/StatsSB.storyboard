@@ -493,7 +493,7 @@
                                     <constraint firstAttribute="width" secondItem="YbN-az-Dxh" secondAttribute="height" multiplier="1:1" id="im6-xa-Utc"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cq6-QM-tKg" customClass="PieChartView" customModule="Charts">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cq6-QM-tKg" customClass="BarChartView" customModule="Charts">
                                 <rect key="frame" x="8" y="1204" width="351" height="351"/>
                                 <color key="tintColor" red="1" green="0.57810515169999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
@@ -542,7 +542,7 @@
                         <viewLayoutGuide key="safeArea" id="lTy-am-KCW"/>
                     </view>
                     <connections>
-                        <outlet property="piePercentGraph" destination="cq6-QM-tKg" id="pnv-GP-md6"/>
+                        <outlet property="chartTotalReps" destination="cq6-QM-tKg" id="nKA-Ve-bbr"/>
                         <outlet property="static1" destination="rLb-qH-jhi" id="JRB-ED-4SN"/>
                         <outlet property="timeGraph" destination="YbN-az-Dxh" id="I78-8f-PYj"/>
                     </connections>
