@@ -19,7 +19,7 @@ class StatTotalVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         let typeDitc = StaticDataManager.getRealmData(type: .type)
-        let topTypeDict = StaticDataManager.sortRealmDict(Dict: typeDitc)
+      let topTypeDict = StaticDataManager.sortRealmDict(dict: typeDitc)
         updateChartData(theChart: piePercentGraph, chartLabel: topTypeDict.map{$0.0},data: topTypeDict.map{ (key, value) in
                         let k = PieChartDataEntry(value: Double(value))
                         k.label = key
@@ -27,7 +27,7 @@ class StatTotalVC: UIViewController {
             
                 })
         let exerciseDict = StaticDataManager.getRealmData(type: .numberOfTimes)
-        let topSevenDict = StaticDataManager.sortRealmDict(Dict: exerciseDict)
+      let topSevenDict = StaticDataManager.sortRealmDict(dict: exerciseDict)
         StaticDataManager.setUpChart(chart: static1, chartLabels: exerciseDict.map{$0.0}, chartValues: topSevenDict.map{$0.1},colors: [UIColor.black])
         StaticDataManager.setUpChart(chart: timeGraph, chartLabels: exerciseDict.map{$0.0}, chartValues: topSevenDict.map{$0.1},colors: [UIColor.black])
     }

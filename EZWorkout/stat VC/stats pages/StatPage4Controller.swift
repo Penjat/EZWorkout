@@ -26,7 +26,7 @@ class StatPage4Controller: UIViewController {
     print(UserRealm.curUser.name)
     let exerciseDict = StaticDataManager.getRealmData(type: .numberOfTimes)
     print("this  is a dictionary of  \(exerciseDict.count) ")
-    let topSevenDict = StaticDataManager.sortRealmDict(Dict: exerciseDict)
+    let topSevenDict = StaticDataManager.sortRealmDict(dict: exerciseDict)
     print("this is top 7 sport \(topSevenDict)")
     
     
@@ -55,7 +55,7 @@ class StatPage4Controller: UIViewController {
     print(UserRealm.curUser.name)
     let exerciseDict = StaticDataManager.getRealmData(type: .numberOfTimes)
     print("this  is a dictionary of  \(exerciseDict.count) ")
-    let topSevenDict = StaticDataManager.sortRealmDict(Dict: exerciseDict)
+    let topSevenDict = StaticDataManager.sortRealmDict(dict: exerciseDict)
     print("this is top 7 sport \(topSevenDict)")
     
     
