@@ -206,5 +206,21 @@ extension StaticDataManager{
     return reps
   }
   
+  
+  
+  static func getCal(date:Date?)->Int{
+    
+    //get the total weight lifted since date
+    let weightPounds = getTotalWeight(beforeDate: date)
+    let weightKG : Double = Double(weightPounds)*2.2
+    
+    //estimate the distance moved to be half a meter
+    let joules = weightKG*0.5
+    
+    let cals = joules/4.184
+    //TODO maybe return a double
+    return Int(cals)
+  }
+  
 }
 

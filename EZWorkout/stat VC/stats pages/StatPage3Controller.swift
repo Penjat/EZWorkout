@@ -14,6 +14,7 @@ class StatPage3Controller: UIViewController {
       setupChart1()
       setupChart2()
       setupChart3()
+      
     }
   
   func setupChart1(){
@@ -29,7 +30,7 @@ class StatPage3Controller: UIViewController {
       i += 1.0
     }
     
-    
+    let labelTextColor = #colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1)
     
     
     
@@ -43,10 +44,11 @@ class StatPage3Controller: UIViewController {
     set1.lineWidth = 1
     set1.circleRadius = 3
     set1.drawCircleHoleEnabled = false
-    set1.valueFont = .systemFont(ofSize: 9)
+    set1.valueFont = .systemFont(ofSize: 12)
     set1.formLineDashLengths = [5, 2.5]
     set1.formLineWidth = 1
     set1.formSize = 15
+    set1.valueColors = [.white]
     
     let gradientColors = [ChartColorTemplates.colorFromString("#00ff0000").cgColor,
                           ChartColorTemplates.colorFromString("#ffff0000").cgColor]
@@ -59,14 +61,15 @@ class StatPage3Controller: UIViewController {
     let data = LineChartData(dataSet: set1)
     
     chartRestingHeart.data = data
-    chartRestingHeart.legend.font = UIFont(name: "Simply Rounded", size: 20.0)!
+    chartRestingHeart.legend.font = UIFont(name: "Simply Rounded", size: 18.0)!
+    chartRestingHeart.legend.textColor = labelTextColor
   }
 
   
   func setupChart2(){
     //todo create fake user weights
     let numbers = [20.0,66.0,90.0,100.0]
-    
+    let labelTextColor = #colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1)
     var values = [ChartDataEntry]()
     var i = 0.0
     for num in numbers{
@@ -77,22 +80,23 @@ class StatPage3Controller: UIViewController {
     let gradient1 = #colorLiteral(red: 0.4745098054, green: 0.8392156959, blue: 0.9764705896, alpha: 0.05508882705)
     let gradient2 = #colorLiteral(red: 0.5568627715, green: 0.3529411852, blue: 0.9686274529, alpha: 0.6701626712)
     
+    let valueColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
     
-    
-    let set1 = LineChartDataSet(values: values, label: "resting Heart rate")
+    let set1 = LineChartDataSet(values: values, label: "user weight")
     set1.drawIconsEnabled = false
     
     set1.lineDashLengths = [5, 2.5]
     set1.highlightLineDashLengths = [5, 2.5]
-    set1.setColor(.black)
+    set1.setColor(valueColor)
     set1.setCircleColor(.black)
     set1.lineWidth = 1
     set1.circleRadius = 3
     set1.drawCircleHoleEnabled = false
-    set1.valueFont = .systemFont(ofSize: 9)
+    set1.valueFont = .systemFont(ofSize: 12)
     set1.formLineDashLengths = [5, 2.5]
     set1.formLineWidth = 1
-    set1.formSize = 15
+    set1.formSize = 20
+    set1.valueColors = [.white]
     
     let gradientColors = [gradient1.cgColor,
                           gradient2.cgColor]
@@ -104,12 +108,14 @@ class StatPage3Controller: UIViewController {
     
     let data = LineChartData(dataSet: set1)
     
+    chartUserWeight.legend.font = UIFont(name: "Simply Rounded", size: 18.0)!
     chartUserWeight.data = data
+    chartUserWeight.legend.textColor = labelTextColor
   }
   func setupChart3(){
     //todo create fake BMI
     let numbers = [20.0,66.0,90.0,100.0]
-    
+    let labelTextColor = #colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1)
     var values = [ChartDataEntry]()
     var i = 0.0
     for num in numbers{
@@ -121,7 +127,7 @@ class StatPage3Controller: UIViewController {
     
     
     
-    let set1 = LineChartDataSet(values: values, label: "resting Heart rate")
+    let set1 = LineChartDataSet(values: values, label: "BMI")
     set1.drawIconsEnabled = false
     
     set1.lineDashLengths = [5, 2.5]
@@ -131,7 +137,8 @@ class StatPage3Controller: UIViewController {
     set1.lineWidth = 1
     set1.circleRadius = 3
     set1.drawCircleHoleEnabled = false
-    set1.valueFont = .systemFont(ofSize: 9)
+    set1.valueFont = .systemFont(ofSize: 12)
+    set1.valueColors = [.white]
     set1.formLineDashLengths = [5, 2.5]
     set1.formLineWidth = 1
     set1.formSize = 15
@@ -148,8 +155,9 @@ class StatPage3Controller: UIViewController {
     set1.drawFilledEnabled = true
     
     let data = LineChartData(dataSet: set1)
-    
+    chartBMI.legend.font = UIFont(name: "Simply Rounded", size: 18.0)!
     chartBMI.data = data
+    chartBMI.legend.textColor = labelTextColor
   }
 
 }

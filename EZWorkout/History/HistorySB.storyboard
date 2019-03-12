@@ -201,7 +201,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7g7-s0-Mak">
-                                <rect key="frame" x="8" y="336" width="359" height="28"/>
+                                <rect key="frame" x="8" y="336" width="359" height="25.5"/>
                                 <fontDescription key="fontDescription" name="SimplyRounded" family="Simply Rounded" pointSize="24"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -213,7 +213,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Twg-QI-ei7">
-                                <rect key="frame" x="8" y="380" width="359" height="230"/>
+                                <rect key="frame" x="8" y="377.5" width="359" height="232.5"/>
                                 <color key="backgroundColor" white="1" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell opaque="NO" clipsSubviews="YES" alpha="0.0" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="exerciseCell" rowHeight="85" id="2Re-fV-X8q" customClass="ExerciseCell" customModule="EZWorkout" customModuleProvider="target">
@@ -288,6 +288,7 @@
                         <outlet property="calendar" destination="lrb-Qq-AiC" id="oYY-Cn-9OX"/>
                         <outlet property="exerciseTableView" destination="Twg-QI-ei7" id="c78-OG-el8"/>
                         <outlet property="noEventsMsg" destination="foa-ur-5J2" id="E4T-Gz-63D"/>
+                        <outlet property="sectionTitle" destination="2DR-86-TSz" id="dvj-EG-piP"/>
                         <outlet property="selectedDateLabel" destination="7g7-s0-Mak" id="QqE-1K-imc"/>
                     </connections>
                 </viewController>

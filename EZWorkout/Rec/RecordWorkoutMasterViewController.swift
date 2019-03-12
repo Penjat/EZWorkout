@@ -4,6 +4,8 @@ import UIKit
 
 class RecordWorkoutMasterViewController: UIViewController {
   
+  @IBOutlet weak var sectionTitle: UILabel!
+  
   var recorder:AVAudioRecorder!
   
   @IBOutlet weak var centerScrollView: UIScrollView!
@@ -125,6 +127,14 @@ class RecordWorkoutMasterViewController: UIViewController {
     super.viewDidAppear(animated)
     centerScrollView.setContentOffset(CGPoint(x:view.frame.width, y:0), animated: false)
     centerScrollView.delegate = self
+    
+    sectionTitle.alpha = 0.3
+    sectionTitle.transform = CGAffineTransform(scaleX: 1.4, y: 1.4)
+    UIView.animate(withDuration: 1.0, animations: {
+      self.sectionTitle.alpha = 1.0
+      self.sectionTitle.transform = CGAffineTransform(scaleX: 1, y: 1)
+      })
+    
   }
   override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
     if segue.identifier == "toCenterController"{
