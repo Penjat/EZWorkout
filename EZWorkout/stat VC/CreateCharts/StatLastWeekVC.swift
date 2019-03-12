@@ -21,10 +21,10 @@ class StatLastWeekVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         let exerciseDict = StaticDataManager.getRealmData(type: .numberOfTimes)
-        let topSevenDict = StaticDataManager.sortRealmDict(Dict: exerciseDict)
-        StaticDataManager.setUpTestData(chart: caloryGraph, chartLabels: exerciseDict.map{$0.0}, chartValues: topSevenDict.map{$0.1})
-        StaticDataManager.setUpTestData(chart: timeGraph, chartLabels: exerciseDict.map{$0.0}, chartValues: topSevenDict.map{$0.1})
-        StaticDataManager.setUpTestData(chart: weightGraph, chartLabels: exerciseDict.map{$0.0}, chartValues: topSevenDict.map{$0.1})
+        let topSevenDict = StaticDataManager.sortRealmDict(dict: exerciseDict)
+      StaticDataManager.setUpChart(chart: caloryGraph, chartLabels: exerciseDict.map{$0.0}, chartValues: topSevenDict.map{$0.1},colors: [UIColor.black])
+        StaticDataManager.setUpChart(chart: timeGraph, chartLabels: exerciseDict.map{$0.0}, chartValues: topSevenDict.map{$0.1},colors: [UIColor.black])
+        StaticDataManager.setUpChart(chart: weightGraph, chartLabels: exerciseDict.map{$0.0}, chartValues: topSevenDict.map{$0.1},colors: [UIColor.black])
        
     }
     
