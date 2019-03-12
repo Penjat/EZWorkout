@@ -18,18 +18,8 @@ class StatTotalVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        let typeDitc = StaticDataManager.getRealmData(type: .type)
-      let topTypeDict = StaticDataManager.sortRealmDict(dict: typeDitc)
-        updateChartData(theChart: piePercentGraph, chartLabel: topTypeDict.map{$0.0},data: topTypeDict.map{ (key, value) in
-                        let k = PieChartDataEntry(value: Double(value))
-                        k.label = key
-                    return k
-            
-                })
-        let exerciseDict = StaticDataManager.getRealmData(type: .numberOfTimes)
-      let topSevenDict = StaticDataManager.sortRealmDict(dict: exerciseDict)
-        StaticDataManager.setUpChart(chart: static1, chartLabels: exerciseDict.map{$0.0}, chartValues: topSevenDict.map{$0.1},colors: [UIColor.black])
-        StaticDataManager.setUpChart(chart: timeGraph, chartLabels: exerciseDict.map{$0.0}, chartValues: topSevenDict.map{$0.1},colors: [UIColor.black])
+      setUpChart1()
+      setUpChart2()
     }
     func animateGraph(){
         piePercentGraph!.animate(yAxisDuration: 1.4, easing: EasingFunctions.EaseOutBack)
@@ -61,6 +51,27 @@ class StatTotalVC: UIViewController {
         //theChart.backgroundColor = #colorLiteral(red: 0.1764492095, green: 0.1764859259, blue: 0.1850380898, alpha: 1)
         
     }
+  
+  func setUpChart1(){
+    let typeDitc = StaticDataManager.getRealmData(type: .type)
+    let topTypeDict = StaticDataManager.sortRealmDict(dict: typeDitc)
+    updateChartData(theChart: piePercentGraph, chartLabel: topTypeDict.map{$0.0},data: topTypeDict.map{ (key, value) in
+      let k = PieChartDataEntry(value: Double(value))
+      k.label = key
+      return k
+      
+    })
+    let exerciseDict = StaticDataManager.getRealmData(type: .numberOfTimes)
+    let topSevenDict = StaticDataManager.sortRealmDict(dict: exerciseDict)
+    StaticDataManager.setUpChart(chart: timeGraph, chartLabels: exerciseDict.map{$0.0}, chartValues: topSevenDict.map{$0.1},colors: [UIColor.black])
     
+  }
+  
+  func setUpChart2(){
+    let chartLabels = ["total"]
+    let totalWeight = [StaticDataManager.getTotalWeight()]
+    
+    StaticDataManager.setUpChart(chart: static1, chartLabels: chartLabels, chartValues: totalWeight,colors: [UIColor.yellow])
+  }
 
 }
