@@ -8,7 +8,6 @@ class StatsTopBarVC: UIViewController {
   @IBOutlet weak var chartButton2: UIButton!
   @IBOutlet weak var chartButton3: UIButton!
   @IBOutlet weak var chartButton4: UIButton!
-  @IBOutlet weak var chartButton5: UIButton!
   
   var buttonArray: [UIButton]?
   
@@ -16,7 +15,7 @@ class StatsTopBarVC: UIViewController {
   
   override func viewDidLoad() {
     super.viewDidLoad()
-    buttonArray = [chartButton1,chartButton2,chartButton3,chartButton4,chartButton5]
+    buttonArray = [chartButton1,chartButton2,chartButton3,chartButton4]
     
   }
  

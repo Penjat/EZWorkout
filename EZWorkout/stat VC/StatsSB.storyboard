@@ -62,7 +62,7 @@
                                 <rect key="frame" x="0.0" y="114.5" width="375" height="503.5"/>
                                 <subviews>
                                     <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ls6-41-nrz">
-                                        <rect key="frame" x="0.0" y="0.0" width="1875" height="503.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="1500" height="503.5"/>
                                         <connections>
                                             <segue destination="Vmz-gf-vKK" kind="embed" identifier="loadCenter" id="Jwv-FM-q6i"/>
                                         </connections>
@@ -70,7 +70,7 @@
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="Ls6-41-nrz" firstAttribute="top" secondItem="nef-wC-lVu" secondAttribute="top" id="2Hw-BQ-eUq"/>
-                                    <constraint firstItem="Ls6-41-nrz" firstAttribute="width" secondItem="nef-wC-lVu" secondAttribute="width" multiplier="5" id="I6F-xG-4RH"/>
+                                    <constraint firstItem="Ls6-41-nrz" firstAttribute="width" secondItem="nef-wC-lVu" secondAttribute="width" multiplier="4" id="I6F-xG-4RH"/>
                                     <constraint firstAttribute="bottom" secondItem="Ls6-41-nrz" secondAttribute="bottom" id="O36-pL-H8P"/>
                                     <constraint firstItem="Ls6-41-nrz" firstAttribute="leading" secondItem="nef-wC-lVu" secondAttribute="leading" id="Z1m-ta-uIh"/>
                                     <constraint firstItem="Ls6-41-nrz" firstAttribute="height" secondItem="nef-wC-lVu" secondAttribute="height" id="tSd-Nm-exT"/>
@@ -116,17 +116,17 @@
             <objects>
                 <viewController id="Vmz-gf-vKK" customClass="StatsCenterVC" customModule="EZWorkout" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="sFj-q0-egg">
-                        <rect key="frame" x="0.0" y="0.0" width="1875" height="503.5"/>
+                        <rect key="frame" x="0.0" y="0.0" width="1500" height="503.5"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bf3-ti-CJu" userLabel="LastWeek">
-                                <rect key="frame" x="754" y="20" width="367" height="483.5"/>
+                                <rect key="frame" x="760" y="20" width="370" height="483.5"/>
                                 <subviews>
                                     <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WHG-uZ-tdj">
-                                        <rect key="frame" x="0.0" y="0.0" width="367" height="483.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="370" height="483.5"/>
                                         <subviews>
                                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gyh-KC-LhW">
-                                                <rect key="frame" x="0.0" y="0.0" width="367" height="1450.5"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="370" height="1450.5"/>
                                                 <connections>
                                                     <segue destination="grc-di-eqk" kind="embed" id="eeS-e5-5n8"/>
                                                 </connections>
@@ -151,13 +151,13 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cA7-Qd-Nth" userLabel="UserView">
-                                <rect key="frame" x="1121" y="20" width="367" height="483.5"/>
+                                <rect key="frame" x="1130" y="20" width="370" height="483.5"/>
                                 <subviews>
                                     <scrollView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7es-yb-gHT">
-                                        <rect key="frame" x="0.0" y="0.0" width="367" height="483.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="370" height="483.5"/>
                                         <subviews>
                                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WgT-cK-zDg">
-                                                <rect key="frame" x="0.0" y="0.0" width="367" height="1450.5"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="370" height="1450.5"/>
                                                 <connections>
                                                     <segue destination="IcQ-FS-l8o" kind="embed" id="mSb-FB-ygU"/>
                                                 </connections>
@@ -167,9 +167,9 @@
                                             <constraint firstItem="WgT-cK-zDg" firstAttribute="leading" secondItem="7es-yb-gHT" secondAttribute="leading" id="4Bz-Au-vYo"/>
                                             <constraint firstAttribute="bottom" secondItem="WgT-cK-zDg" secondAttribute="bottom" id="ExE-xZ-U41"/>
                                             <constraint firstItem="WgT-cK-zDg" firstAttribute="top" secondItem="7es-yb-gHT" secondAttribute="top" id="Mqu-tw-EFD"/>
-                                            <constraint firstAttribute="trailing" secondItem="WgT-cK-zDg" secondAttribute="trailing" id="e2X-1M-JxI"/>
                                             <constraint firstItem="WgT-cK-zDg" firstAttribute="height" secondItem="7es-yb-gHT" secondAttribute="height" multiplier="3" id="liZ-hk-l9o"/>
                                             <constraint firstItem="WgT-cK-zDg" firstAttribute="width" secondItem="7es-yb-gHT" secondAttribute="width" id="nEA-7w-T8e"/>
+                                            <constraint firstAttribute="trailing" secondItem="WgT-cK-zDg" secondAttribute="trailing" id="tLB-Z4-Axg"/>
                                         </constraints>
                                     </scrollView>
                                 </subviews>
@@ -181,13 +181,13 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Hhf-go-Aia" userLabel="totalView">
-                                <rect key="frame" x="387" y="20" width="367" height="483.5"/>
+                                <rect key="frame" x="390" y="20" width="370" height="483.5"/>
                                 <subviews>
                                     <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="B1L-K1-MT4">
-                                        <rect key="frame" x="0.0" y="0.0" width="367" height="483.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="370" height="483.5"/>
                                         <subviews>
                                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="44R-1q-3oa">
-                                                <rect key="frame" x="0.0" y="0.0" width="367" height="1450.5"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="370" height="1450.5"/>
                                                 <connections>
                                                     <segue destination="4N4-PZ-5Sr" kind="embed" identifier="goTotal" id="uum-gv-SlB"/>
                                                 </connections>
@@ -210,18 +210,14 @@
                                     <constraint firstAttribute="bottom" secondItem="B1L-K1-MT4" secondAttribute="bottom" id="fPs-4e-xak"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="21v-Qb-KH1">
-                                <rect key="frame" x="1488" y="20" width="367" height="483.5"/>
-                                <color key="backgroundColor" red="1" green="0.86091302579999995" blue="0.026286063320000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                            </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ORA-y4-afk" userLabel="top7">
-                                <rect key="frame" x="20" y="20" width="367" height="483.5"/>
+                                <rect key="frame" x="20" y="20" width="370" height="483.5"/>
                                 <subviews>
                                     <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qSf-dL-L4V">
-                                        <rect key="frame" x="0.0" y="0.0" width="367" height="483.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="370" height="483.5"/>
                                         <subviews>
                                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="M9X-kT-o9V">
-                                                <rect key="frame" x="0.0" y="0.0" width="367" height="1547"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="370" height="1547"/>
                                                 <connections>
                                                     <segue destination="Ed5-UN-i11" kind="embed" id="Bt0-p3-qS6"/>
                                                 </connections>
@@ -246,7 +242,6 @@
                             </view>
                         </subviews>
                         <constraints>
-                            <constraint firstAttribute="bottomMargin" secondItem="21v-Qb-KH1" secondAttribute="bottom" id="331-lh-bEw"/>
                             <constraint firstItem="Hhf-go-Aia" firstAttribute="leading" secondItem="ORA-y4-afk" secondAttribute="trailing" id="4Cu-PO-K32"/>
                             <constraint firstItem="cA7-Qd-Nth" firstAttribute="top" secondItem="sFj-q0-egg" secondAttribute="topMargin" id="6uV-hD-Lcd"/>
                             <constraint firstItem="bf3-ti-CJu" firstAttribute="leading" secondItem="Hhf-go-Aia" secondAttribute="trailing" id="6wY-Q7-zO1"/>
@@ -254,8 +249,7 @@
                             <constraint firstItem="ORA-y4-afk" firstAttribute="width" secondItem="Hhf-go-Aia" secondAttribute="width" id="DlD-HA-Wtq"/>
                             <constraint firstItem="ORA-y4-afk" firstAttribute="leading" secondItem="sFj-q0-egg" secondAttribute="leadingMargin" id="I9p-RY-qau"/>
                             <constraint firstItem="Hhf-go-Aia" firstAttribute="top" secondItem="sFj-q0-egg" secondAttribute="topMargin" id="JeC-ca-bqm"/>
-                            <constraint firstItem="21v-Qb-KH1" firstAttribute="top" secondItem="sFj-q0-egg" secondAttribute="topMargin" id="Kgp-s3-Dg8"/>
-                            <constraint firstItem="21v-Qb-KH1" firstAttribute="leading" secondItem="cA7-Qd-Nth" secondAttribute="trailing" id="MFB-O2-T1f"/>
+                            <constraint firstItem="IwB-PQ-JIp" firstAttribute="trailing" secondItem="cA7-Qd-Nth" secondAttribute="trailing" id="KUb-JC-W42"/>
                             <constraint firstAttribute="bottomMargin" secondItem="cA7-Qd-Nth" secondAttribute="bottom" id="NvZ-Mn-Uee"/>
                             <constraint firstAttribute="bottomMargin" secondItem="Hhf-go-Aia" secondAttribute="bottom" id="ODl-f4-QyZ"/>
                             <constraint firstItem="Hhf-go-Aia" firstAttribute="width" secondItem="bf3-ti-CJu" secondAttribute="width" id="OVa-D2-UIP"/>
@@ -264,10 +258,8 @@
                             <constraint firstItem="bf3-ti-CJu" firstAttribute="leading" secondItem="Hhf-go-Aia" secondAttribute="trailing" id="VBw-OE-GBf"/>
                             <constraint firstItem="ORA-y4-afk" firstAttribute="top" secondItem="sFj-q0-egg" secondAttribute="topMargin" id="Wa1-d5-6aW"/>
                             <constraint firstItem="cA7-Qd-Nth" firstAttribute="leading" secondItem="bf3-ti-CJu" secondAttribute="trailing" id="fyH-eC-NXs"/>
-                            <constraint firstItem="cA7-Qd-Nth" firstAttribute="width" secondItem="21v-Qb-KH1" secondAttribute="width" id="hEZ-Xf-r71"/>
                             <constraint firstItem="bf3-ti-CJu" firstAttribute="top" secondItem="sFj-q0-egg" secondAttribute="topMargin" id="ioK-ad-qk5"/>
                             <constraint firstItem="Hhf-go-Aia" firstAttribute="leading" secondItem="ORA-y4-afk" secondAttribute="trailing" id="pir-pR-JcW"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="21v-Qb-KH1" secondAttribute="trailing" id="uYs-sy-qdZ"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="IwB-PQ-JIp"/>
                     </view>
@@ -285,7 +277,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HPr-dB-iZF">
-                                <rect key="frame" x="104" y="15" width="40" height="30"/>
+                                <rect key="frame" x="130" y="15" width="40" height="30"/>
                                 <fontDescription key="fontDescription" name="SimplyRounded" family="Simply Rounded" pointSize="17"/>
                                 <state key="normal" title="Top7">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -295,7 +287,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ihH-b6-GS9">
-                                <rect key="frame" x="224.5" y="15" width="46" height="30"/>
+                                <rect key="frame" x="277" y="15" width="46" height="30"/>
                                 <fontDescription key="fontDescription" name="SimplyRounded" family="Simply Rounded" pointSize="17"/>
                                 <state key="normal" title="Totals">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -305,7 +297,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bma-BG-UYu">
-                                <rect key="frame" x="354.5" y="15" width="41" height="30"/>
+                                <rect key="frame" x="429.5" y="15" width="41" height="30"/>
                                 <fontDescription key="fontDescription" name="SimplyRounded" family="Simply Rounded" pointSize="17"/>
                                 <state key="normal" title="Vitals">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -315,7 +307,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LLR-ZC-mPA">
-                                <rect key="frame" x="463" y="15" width="72" height="30"/>
+                                <rect key="frame" x="564" y="15" width="72" height="30"/>
                                 <fontDescription key="fontDescription" name="SimplyRounded" family="Simply Rounded" pointSize="17"/>
                                 <state key="normal" title="look back">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -324,27 +316,15 @@
                                     <action selector="navButtonPressed:" destination="e25-Av-2e7" eventType="touchUpInside" id="FlL-ia-yJd"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cOj-cg-wK2">
-                                <rect key="frame" x="596.5" y="15" width="52" height="30"/>
-                                <fontDescription key="fontDescription" name="SimplyRounded" family="Simply Rounded" pointSize="17"/>
-                                <state key="normal" title="Button">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <connections>
-                                    <action selector="navButtonPressed:" destination="e25-Av-2e7" eventType="touchUpInside" id="maQ-rC-cxW"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <constraints>
                             <constraint firstItem="HPr-dB-iZF" firstAttribute="centerY" secondItem="d8i-0s-Pm5" secondAttribute="centerY" id="0Mc-1T-LKE"/>
                             <constraint firstItem="bma-BG-UYu" firstAttribute="centerY" secondItem="d8i-0s-Pm5" secondAttribute="centerY" id="70m-rJ-aAQ"/>
-                            <constraint firstItem="cOj-cg-wK2" firstAttribute="centerY" secondItem="d8i-0s-Pm5" secondAttribute="centerY" id="B0g-tz-Wfk"/>
-                            <constraint firstItem="cOj-cg-wK2" firstAttribute="centerX" secondItem="d8i-0s-Pm5" secondAttribute="centerX" multiplier="1.66" id="NEx-YQ-ztB"/>
                             <constraint firstItem="LLR-ZC-mPA" firstAttribute="centerY" secondItem="d8i-0s-Pm5" secondAttribute="centerY" id="d5T-6t-NkR"/>
-                            <constraint firstItem="HPr-dB-iZF" firstAttribute="centerX" secondItem="d8i-0s-Pm5" secondAttribute="centerX" multiplier="0.33" id="d7h-MT-bbr"/>
-                            <constraint firstItem="ihH-b6-GS9" firstAttribute="centerX" secondItem="d8i-0s-Pm5" secondAttribute="centerX" multiplier="0.66" id="eMG-oN-BOh"/>
-                            <constraint firstItem="bma-BG-UYu" firstAttribute="centerX" secondItem="d8i-0s-Pm5" secondAttribute="centerX" id="sFN-eS-Wae"/>
-                            <constraint firstItem="LLR-ZC-mPA" firstAttribute="centerX" secondItem="d8i-0s-Pm5" secondAttribute="centerX" multiplier="1.33" id="y2u-9Y-NiD"/>
+                            <constraint firstItem="HPr-dB-iZF" firstAttribute="centerX" secondItem="d8i-0s-Pm5" secondAttribute="centerX" multiplier="0.4" id="d7h-MT-bbr"/>
+                            <constraint firstItem="ihH-b6-GS9" firstAttribute="centerX" secondItem="d8i-0s-Pm5" secondAttribute="centerX" multiplier="0.8" id="eMG-oN-BOh"/>
+                            <constraint firstItem="bma-BG-UYu" firstAttribute="centerX" secondItem="d8i-0s-Pm5" secondAttribute="centerX" multiplier="1.2" id="sFN-eS-Wae"/>
+                            <constraint firstItem="LLR-ZC-mPA" firstAttribute="centerX" secondItem="d8i-0s-Pm5" secondAttribute="centerX" multiplier="1.6" id="y2u-9Y-NiD"/>
                             <constraint firstItem="ihH-b6-GS9" firstAttribute="centerY" secondItem="d8i-0s-Pm5" secondAttribute="centerY" id="zWt-Ic-tlv"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Vax-KE-nho"/>
@@ -354,7 +334,6 @@
                         <outlet property="chartButton2" destination="ihH-b6-GS9" id="HaA-Tu-d6N"/>
                         <outlet property="chartButton3" destination="bma-BG-UYu" id="O6O-rL-VQG"/>
                         <outlet property="chartButton4" destination="LLR-ZC-mPA" id="ZWg-74-ncm"/>
-                        <outlet property="chartButton5" destination="cOj-cg-wK2" id="yaI-l5-Kcl"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="utW-3A-hrC" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -479,42 +458,42 @@
             <objects>
                 <viewController id="4N4-PZ-5Sr" customClass="StatTotalVC" customModule="EZWorkout" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" opaque="NO" contentMode="scaleToFill" id="v8k-zh-H9B">
-                        <rect key="frame" x="0.0" y="0.0" width="367" height="1450.5"/>
+                        <rect key="frame" x="0.0" y="0.0" width="370" height="1450.5"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jVn-L9-EK4">
-                                <rect key="frame" x="48" y="617" width="271" height="22"/>
+                                <rect key="frame" x="48" y="620" width="274" height="22"/>
                                 <fontDescription key="fontDescription" name="SimplyRounded" family="Simply Rounded" pointSize="21"/>
                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YbN-az-Dxh" customClass="BarChartView" customModule="Charts">
-                                <rect key="frame" x="8" y="671" width="351" height="351"/>
+                                <rect key="frame" x="8" y="674" width="354" height="354"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="YbN-az-Dxh" secondAttribute="height" multiplier="1:1" id="im6-xa-Utc"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cq6-QM-tKg" customClass="BarChartView" customModule="Charts">
-                                <rect key="frame" x="8" y="1204" width="351" height="351"/>
+                                <rect key="frame" x="8" y="1210" width="354" height="354"/>
                                 <color key="tintColor" red="1" green="0.57810515169999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="cq6-QM-tKg" secondAttribute="height" multiplier="1:1" id="o8o-Op-Kcb"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rLb-qH-jhi" userLabel="Total Weight Graph" customClass="BarChartView" customModule="Charts">
-                                <rect key="frame" x="8" y="138" width="351" height="351"/>
+                                <rect key="frame" x="8" y="138" width="354" height="354"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="rLb-qH-jhi" secondAttribute="height" multiplier="1:1" id="kPM-ay-VSB"/>
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Weight Description" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MGe-EX-WzK">
-                                <rect key="frame" x="48" y="84" width="271" height="22"/>
+                                <rect key="frame" x="48" y="84" width="274" height="22"/>
                                 <fontDescription key="fontDescription" name="SimplyRounded" family="Simply Rounded" pointSize="21"/>
                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2yG-Bd-zqp">
-                                <rect key="frame" x="48" y="1150" width="271" height="22"/>
+                                <rect key="frame" x="48" y="1156" width="274" height="22"/>
                                 <fontDescription key="fontDescription" name="SimplyRounded" family="Simply Rounded" pointSize="21"/>
                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -557,18 +536,18 @@
             <objects>
                 <viewController id="grc-di-eqk" customClass="StatPage3Controller" customModule="EZWorkout" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="HTf-27-HKb">
-                        <rect key="frame" x="0.0" y="0.0" width="367" height="1450.5"/>
+                        <rect key="frame" x="0.0" y="0.0" width="370" height="1450.5"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Agq-wx-BJn" customClass="LineChartView" customModule="Charts">
-                                <rect key="frame" x="8" y="64" width="351" height="351"/>
+                                <rect key="frame" x="8" y="64" width="354" height="354"/>
                                 <color key="tintColor" red="1" green="0.57810515169999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="Agq-wx-BJn" secondAttribute="height" multiplier="1:1" id="Xd9-6x-Aht"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FxH-1L-LyG" customClass="LineChartView" customModule="Charts">
-                                <rect key="frame" x="0.0" y="990" width="367" height="367"/>
+                                <rect key="frame" x="0.0" y="995.5" width="370" height="370"/>
                                 <color key="tintColor" red="1" green="0.57810515169999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="FxH-1L-LyG" secondAttribute="height" multiplier="1:1" id="ktw-Xl-zat"/>
@@ -610,17 +589,62 @@
             <objects>
                 <viewController id="IcQ-FS-l8o" customClass="StatPage4Controller" customModule="EZWorkout" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" opaque="NO" contentMode="scaleToFill" id="6p8-jW-1me">
-                        <rect key="frame" x="0.0" y="0.0" width="367" height="1450.5"/>
+                        <rect key="frame" x="0.0" y="0.0" width="370" height="1450.5"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Calorie Goal Today" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HqA-0c-i2X">
-                                <rect key="frame" x="48" y="84" width="271" height="21"/>
+                                <rect key="frame" x="48" y="84" width="274" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="highlightedColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </label>
-                            <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cML-3U-y6H" customClass="UICircularProgressRing" customModule="UICircularProgressRing">
-                                <rect key="frame" x="32" y="137" width="303" height="303"/>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="top" segmentControlStyle="bordered" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Ng2-4z-Qy3">
+                                <rect key="frame" x="89.5" y="395" width="191" height="29"/>
+                                <segments>
+                                    <segment title="daily"/>
+                                    <segment title="weekly"/>
+                                    <segment title="monthly"/>
+                                </segments>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <action selector="chart1Toggle:" destination="IcQ-FS-l8o" eventType="valueChanged" id="M00-mx-k9a"/>
+                                </connections>
+                            </segmentedControl>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="top" segmentControlStyle="bordered" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="5Kt-7n-zvz">
+                                <rect key="frame" x="89.5" y="873" width="191" height="29"/>
+                                <segments>
+                                    <segment title="daily"/>
+                                    <segment title="weekly"/>
+                                    <segment title="monthly"/>
+                                </segments>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <action selector="chart2Toggle:" destination="IcQ-FS-l8o" eventType="valueChanged" id="e9M-ef-Dot"/>
+                                </connections>
+                            </segmentedControl>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="67y-YM-cuz" customClass="BarChartView" customModule="Charts">
+                                <rect key="frame" x="8" y="487" width="354" height="354"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="67y-YM-cuz" secondAttribute="height" multiplier="1:1" id="0h7-Kp-qqF"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="U96-zM-lsB" customClass="BarChartView" customModule="Charts">
+                                <rect key="frame" x="8" y="965" width="354" height="354"/>
+                            </view>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="top" segmentControlStyle="bordered" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="WI8-Kb-SRB">
+                                <rect key="frame" x="89.5" y="1351" width="191" height="29"/>
+                                <segments>
+                                    <segment title="daily"/>
+                                    <segment title="weekly"/>
+                                    <segment title="monthly"/>
+                                </segments>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <action selector="chart3Toggle:" destination="IcQ-FS-l8o" eventType="valueChanged" id="c5G-Qp-Cgr"/>
+                                </connections>
+                            </segmentedControl>
+                            <view opaque="NO" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cML-3U-y6H" customClass="UICircularProgressRing" customModule="UICircularProgressRing">
+                                <rect key="frame" x="32" y="145" width="306" height="306"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="cML-3U-y6H" secondAttribute="height" multiplier="1:1" id="Uxl-Nw-ayZ"/>
                                 </constraints>
@@ -654,46 +678,10 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="top" segmentControlStyle="bordered" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Ng2-4z-Qy3">
-                                <rect key="frame" x="88" y="456" width="191" height="29"/>
-                                <segments>
-                                    <segment title="daily"/>
-                                    <segment title="weekly"/>
-                                    <segment title="monthly"/>
-                                </segments>
-                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            </segmentedControl>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="top" segmentControlStyle="bordered" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="5Kt-7n-zvz">
-                                <rect key="frame" x="88" y="931" width="191" height="29"/>
-                                <segments>
-                                    <segment title="daily"/>
-                                    <segment title="weekly"/>
-                                    <segment title="monthly"/>
-                                </segments>
-                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            </segmentedControl>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="67y-YM-cuz" customClass="BarChartView" customModule="Charts">
-                                <rect key="frame" x="8" y="548" width="351" height="351"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="67y-YM-cuz" secondAttribute="height" multiplier="1:1" id="0h7-Kp-qqF"/>
-                                </constraints>
-                            </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="U96-zM-lsB" customClass="BarChartView" customModule="Charts">
-                                <rect key="frame" x="8" y="1023" width="351" height="351"/>
-                            </view>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="top" segmentControlStyle="bordered" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="WI8-Kb-SRB">
-                                <rect key="frame" x="88" y="1406" width="191" height="29"/>
-                                <segments>
-                                    <segment title="daily"/>
-                                    <segment title="weekly"/>
-                                    <segment title="monthly"/>
-                                </segments>
-                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            </segmentedControl>
                         </subviews>
                         <constraints>
                             <constraint firstItem="Ng2-4z-Qy3" firstAttribute="top" secondItem="cML-3U-y6H" secondAttribute="bottom" constant="16" id="18i-Hr-oMF"/>
-                            <constraint firstAttribute="trailing" secondItem="cML-3U-y6H" secondAttribute="trailing" constant="32" id="5JN-at-zeJ"/>
+                            <constraint firstAttribute="trailing" secondItem="cML-3U-y6H" secondAttribute="trailing" constant="64" id="5JN-at-zeJ"/>
                             <constraint firstItem="WI8-Kb-SRB" firstAttribute="centerX" secondItem="U96-zM-lsB" secondAttribute="centerX" id="7Ss-CV-mjB"/>
                             <constraint firstItem="U96-zM-lsB" firstAttribute="width" secondItem="U96-zM-lsB" secondAttribute="height" multiplier="1:1" id="Azq-Ia-MjB"/>
                             <constraint firstItem="cML-3U-y6H" firstAttribute="top" secondItem="HqA-0c-i2X" secondAttribute="bottom" constant="32" id="DoE-jq-7IN"/>
@@ -704,7 +692,7 @@
                             <constraint firstItem="67y-YM-cuz" firstAttribute="top" secondItem="Ng2-4z-Qy3" secondAttribute="bottom" constant="64" id="WIW-AM-FEJ"/>
                             <constraint firstItem="5Kt-7n-zvz" firstAttribute="centerX" secondItem="vM0-nG-FWl" secondAttribute="centerX" id="d5e-uP-FzS"/>
                             <constraint firstItem="U96-zM-lsB" firstAttribute="top" secondItem="5Kt-7n-zvz" secondAttribute="bottom" constant="64" id="hHJ-uB-puX"/>
-                            <constraint firstItem="cML-3U-y6H" firstAttribute="leading" secondItem="6p8-jW-1me" secondAttribute="leading" constant="32" id="hdZ-AN-BMb"/>
+                            <constraint firstItem="cML-3U-y6H" firstAttribute="leading" secondItem="6p8-jW-1me" secondAttribute="leading" constant="64" id="hdZ-AN-BMb"/>
                             <constraint firstItem="HqA-0c-i2X" firstAttribute="top" secondItem="vM0-nG-FWl" secondAttribute="top" constant="64" id="jGN-dW-wmk"/>
                             <constraint firstItem="vM0-nG-FWl" firstAttribute="trailing" secondItem="HqA-0c-i2X" secondAttribute="trailing" constant="48" id="oco-fi-iNm"/>
                             <constraint firstItem="WI8-Kb-SRB" firstAttribute="top" secondItem="U96-zM-lsB" secondAttribute="bottom" constant="32" id="siv-ZK-hja"/>
@@ -729,44 +717,44 @@
             <objects>
                 <viewController id="Ed5-UN-i11" customClass="StatsPage1Controller" customModule="EZWorkout" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="BOx-02-d9g">
-                        <rect key="frame" x="0.0" y="0.0" width="367" height="1547"/>
+                        <rect key="frame" x="0.0" y="0.0" width="370" height="1547"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Hsj-Zv-VWA" customClass="HorizontalBarChartView" customModule="Charts">
-                                <rect key="frame" x="24" y="148" width="319" height="319"/>
+                                <rect key="frame" x="24" y="148" width="322" height="322"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="Hsj-Zv-VWA" secondAttribute="height" multiplier="1:1" id="iGr-Lb-tVT"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NYf-XN-rJ0" customClass="HorizontalBarChartView" customModule="Charts">
-                                <rect key="frame" x="24" y="581" width="319" height="319"/>
+                                <rect key="frame" x="24" y="584" width="322" height="322"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="NYf-XN-rJ0" secondAttribute="height" multiplier="1:1" id="Ufs-WY-3Vs"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="p6J-Z8-g9i" customClass="HorizontalBarChartView" customModule="Charts">
-                                <rect key="frame" x="24" y="1014" width="319" height="319"/>
+                                <rect key="frame" x="24" y="1020" width="322" height="322"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="p6J-Z8-g9i" secondAttribute="height" multiplier="1:1" id="s3E-E3-aRu"/>
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="text info for exercise weight" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LBv-Hd-yEF">
-                                <rect key="frame" x="64" y="499" width="239" height="18"/>
+                                <rect key="frame" x="64" y="502" width="242" height="18"/>
                                 <fontDescription key="fontDescription" name="SimplyRounded" family="Simply Rounded" pointSize="17"/>
                                 <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="text info for exercise weight" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L83-kl-pjg">
-                                <rect key="frame" x="64" y="932" width="239" height="18"/>
+                                <rect key="frame" x="64" y="938" width="242" height="18"/>
                                 <fontDescription key="fontDescription" name="SimplyRounded" family="Simply Rounded" pointSize="17"/>
                                 <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="text info for exercise weight" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DbX-Id-MLx">
-                                <rect key="frame" x="64" y="1365" width="239" height="18"/>
+                                <rect key="frame" x="64" y="1374" width="242" height="18"/>
                                 <fontDescription key="fontDescription" name="SimplyRounded" family="Simply Rounded" pointSize="17"/>
                                 <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>

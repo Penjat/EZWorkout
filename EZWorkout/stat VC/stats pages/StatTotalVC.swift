@@ -62,9 +62,9 @@ class StatTotalVC: UIViewController {
     //todo convert time to hours
     let labelArray = stringTimeArray.map{$0.0}
     let monthArray = stringTimeArray.map{$0.1}
-    let totalTime = StatHelper.createTotal(timeArray: monthArray, closure: StaticDataManager.getTotalWeight(beforeDate:))
+    let totalWeight = StatHelper.createTotal(timeArray: monthArray, closure: StaticDataManager.getTotalWeight(beforeDate:))
     
-    StaticDataManager.setUpChart(chart: timeGraph, chartLabels: labelArray, chartValues: totalTime,colors: [UIColor.black],bottomLabelText: "Total Time Working Out")
+    StaticDataManager.setUpChart(chart: timeGraph, chartLabels: labelArray, chartValues: totalWeight,colors: [UIColor.black],bottomLabelText: "Total Weight Lifted")
     
     //timeGraph.xAxis.labelFont  = UIFont(name: "Simply Rounded", size: 20.0)!
     
@@ -74,9 +74,10 @@ class StatTotalVC: UIViewController {
   func setUpChart2(){
     let labelArray = stringTimeArray.map{$0.0}
     let monthArray = stringTimeArray.map{$0.1}
-    let totalWeight = StatHelper.createTotal(timeArray: monthArray, closure: StaticDataManager.getTotalWeight(beforeDate:))
+    let totalTime = StatHelper.createTotal(timeArray: monthArray, closure: StaticDataManager.getTotalTime(beforeDate:))
     
-    StaticDataManager.setUpChart(chart: static1, chartLabels: labelArray, chartValues: totalWeight,colors: [UIColor.yellow],bottomLabelText: "Total Weight Lifted")
+    
+    StaticDataManager.setUpChart(chart: static1, chartLabels: labelArray, chartValues: totalTime,colors: [UIColor.yellow],bottomLabelText: "Total Time Working Out")
     
     //static1.xAxis.labelFont  = UIFont(name: "Simply Rounded", size: 20.0)!
     
