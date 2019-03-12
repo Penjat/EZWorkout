@@ -16,4 +16,12 @@ class StatHelper{
     }
     return stringDateArray
   }
+  
+  static func createTotal(timeArray:[Date] , closure:(Date)->Int )->[Int]{
+    var repArray = [Int]()
+    for date in timeArray{
+      repArray.append(closure(date))
+    }
+    return repArray
+  }
 }

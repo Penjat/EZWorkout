@@ -62,7 +62,7 @@ class StatTotalVC: UIViewController {
     //todo convert time to hours
     let labelArray = stringTimeArray.map{$0.0}
     let monthArray = stringTimeArray.map{$0.1}
-    let totalTime = createTotal(timeArray: monthArray, closure: StaticDataManager.getTotalWeight(beforeDate:))
+    let totalTime = StatHelper.createTotal(timeArray: monthArray, closure: StaticDataManager.getTotalWeight(beforeDate:))
     
     StaticDataManager.setUpChart(chart: timeGraph, chartLabels: labelArray, chartValues: totalTime,colors: [UIColor.black],bottomLabelText: "Total Time Working Out")
     
@@ -74,7 +74,7 @@ class StatTotalVC: UIViewController {
   func setUpChart2(){
     let labelArray = stringTimeArray.map{$0.0}
     let monthArray = stringTimeArray.map{$0.1}
-    let totalWeight = createTotal(timeArray: monthArray, closure: StaticDataManager.getTotalWeight(beforeDate:))
+    let totalWeight = StatHelper.createTotal(timeArray: monthArray, closure: StaticDataManager.getTotalWeight(beforeDate:))
     
     StaticDataManager.setUpChart(chart: static1, chartLabels: labelArray, chartValues: totalWeight,colors: [UIColor.yellow],bottomLabelText: "Total Weight Lifted")
     
@@ -86,7 +86,7 @@ class StatTotalVC: UIViewController {
   func setUpChart3(){
     //TODO change to calories
     let monthArray = stringTimeArray.map{$0.1}
-    let totalReps = createTotal(timeArray: monthArray , closure: StaticDataManager.getTotalReps(date:))
+    let totalReps = StatHelper.createTotal(timeArray: monthArray , closure: StaticDataManager.getTotalReps(date:))
     
     StaticDataManager.setUpChart(chart: chartTotalReps, chartLabels: stringTimeArray.map{$0.0}, chartValues: totalReps,colors: [UIColor.yellow],bottomLabelText: "Total Calories Burned")
     
@@ -95,13 +95,7 @@ class StatTotalVC: UIViewController {
     chartTotalReps.legend.font = UIFont(name: "Simply Rounded", size: 20.0)!
   }
   
-  func createTotal(timeArray:[Date] , closure:(Date)->Int )->[Int]{
-    var repArray = [Int]()
-    for date in timeArray{
-      repArray.append(closure(date))
-    }
-    return repArray
-  }
+  
   
   
 }
