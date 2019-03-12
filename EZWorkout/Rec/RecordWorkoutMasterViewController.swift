@@ -42,7 +42,7 @@ class RecordWorkoutMasterViewController: UIViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     
-    
+    print("the last 7 months are \(StatHelper.getLastDates(num: 7, timeInterval: .month))")
     speechRecognizer = SpeechRecognizer(delegate: self)
     
     DataManager.dataManager.testSingelton()

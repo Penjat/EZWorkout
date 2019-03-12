@@ -17,6 +17,9 @@ class StatPage3Controller: UIViewController {
     }
   
   func setupChart1(){
+    //todo create fake user resting heart rates
+    
+    
     let numbers = [20.0,66.0,90.0,100.0]
     
     var values = [ChartDataEntry]()
@@ -56,10 +59,12 @@ class StatPage3Controller: UIViewController {
     let data = LineChartData(dataSet: set1)
     
     chartRestingHeart.data = data
+    chartRestingHeart.legend.font = UIFont(name: "Simply Rounded", size: 20.0)!
   }
 
   
   func setupChart2(){
+    //todo create fake user weights
     let numbers = [20.0,66.0,90.0,100.0]
     
     var values = [ChartDataEntry]()
@@ -69,7 +74,8 @@ class StatPage3Controller: UIViewController {
       i += 1.0
     }
     
-    
+    let gradient1 = #colorLiteral(red: 0.4745098054, green: 0.8392156959, blue: 0.9764705896, alpha: 0.05508882705)
+    let gradient2 = #colorLiteral(red: 0.5568627715, green: 0.3529411852, blue: 0.9686274529, alpha: 0.6701626712)
     
     
     
@@ -88,8 +94,8 @@ class StatPage3Controller: UIViewController {
     set1.formLineWidth = 1
     set1.formSize = 15
     
-    let gradientColors = [ChartColorTemplates.colorFromString("#00ff0000").cgColor,
-                          ChartColorTemplates.colorFromString("#ffff0000").cgColor]
+    let gradientColors = [gradient1.cgColor,
+                          gradient2.cgColor]
     let gradient = CGGradient(colorsSpace: nil, colors: gradientColors as CFArray, locations: nil)!
     
     set1.fillAlpha = 1
@@ -101,6 +107,7 @@ class StatPage3Controller: UIViewController {
     chartUserWeight.data = data
   }
   func setupChart3(){
+    //todo create fake BMI
     let numbers = [20.0,66.0,90.0,100.0]
     
     var values = [ChartDataEntry]()
@@ -129,8 +136,11 @@ class StatPage3Controller: UIViewController {
     set1.formLineWidth = 1
     set1.formSize = 15
     
-    let gradientColors = [ChartColorTemplates.colorFromString("#00ff0000").cgColor,
-                          ChartColorTemplates.colorFromString("#ffff0000").cgColor]
+    let gradient1 = #colorLiteral(red: 0.9624674916, green: 0.9568081498, blue: 0.7134264112, alpha: 0.05508882705)
+    let gradient2 = #colorLiteral(red: 0.9421860576, green: 0.902207315, blue: 0, alpha: 0.8895815497)
+    
+    let gradientColors = [gradient1.cgColor,
+                          gradient2.cgColor]
     let gradient = CGGradient(colorsSpace: nil, colors: gradientColors as CFArray, locations: nil)!
     
     set1.fillAlpha = 1

@@ -121,7 +121,7 @@ extension StaticDataManager{
     var output = 0
     
     if let date = date{
-      let workouts = realm.objects(WorkoutRealm.self).filter("startTime BETWEEN %@", [startDate, date])
+      let workouts = realm.objects(WorkoutRealm.self).filter("startTime < %@", date)
       
       
       for workout in workouts{
@@ -129,7 +129,7 @@ extension StaticDataManager{
       }
     }else{
       let exercises = realm.objects(ExcerciseRealm.self).filter("type = %@", "weight")
-      print("the exercises with a weight over 200 are \(exercises.filter("weight > 0"))")
+      
       output += getWeight(exercises: exercises )
       
     }

@@ -16,6 +16,10 @@ class StatTotalVC: UIViewController {
     @IBOutlet weak var static1: BarChartView!
   @IBOutlet weak var chartTotalReps: BarChartView!
   
+  var stringTimeArray = StatHelper.getLastDates(num: 7, timeInterval: .month)
+  
+  
+  
     override func viewDidLoad() {
         super.viewDidLoad()
       setUpChart1()
@@ -55,22 +59,38 @@ class StatTotalVC: UIViewController {
   
   func setUpChart1(){
     
+    //todo convert time to hours
+    let labelArray = stringTimeArray.map{$0.0}
+    let monthArray = stringTimeArray.map{$0.1}
+    let totalTime = createTotal(timeArray: monthArray, closure: StaticDataManager.getTotalWeight(beforeDate:))
     
-    StaticDataManager.setUpChart(chart: timeGraph, chartLabels: ["total time"], chartValues: [Int(StaticDataManager.getTotalTime())],colors: [UIColor.black])
+    StaticDataManager.setUpChart(chart: timeGraph, chartLabels: labelArray, chartValues: totalTime,colors: [UIColor.black])
     
   }
   
   func setUpChart2(){
-    let chartLabels = ["total weight"]
-    let totalWeight = [StaticDataManager.getTotalWeight()]
+    let labelArray = stringTimeArray.map{$0.0}
+    let monthArray = stringTimeArray.map{$0.1}
+    let totalWeight = createTotal(timeArray: monthArray, closure: StaticDataManager.getTotalWeight(beforeDate:))
     
-    StaticDataManager.setUpChart(chart: static1, chartLabels: chartLabels, chartValues: totalWeight,colors: [UIColor.yellow])
+    StaticDataManager.setUpChart(chart: static1, chartLabels: labelArray, chartValues: totalWeight,colors: [UIColor.yellow])
   }
   
   func setUpChart3(){
-    let chartLabels = ["total reps"]
-    let totalReps = [StaticDataManager.getTotalReps(date:Date())]
     
-    StaticDataManager.setUpChart(chart: chartTotalReps, chartLabels: chartLabels, chartValues: totalReps,colors: [UIColor.yellow])
+    let monthArray = stringTimeArray.map{$0.1}
+    let totalReps = createTotal(timeArray: monthArray , closure: StaticDataManager.getTotalReps(date:))
+    
+    StaticDataManager.setUpChart(chart: chartTotalReps, chartLabels: stringTimeArray.map{$0.0}, chartValues: totalReps,colors: [UIColor.yellow])
   }
+  
+  func createTotal(timeArray:[Date] , closure:(Date)->Int )->[Int]{
+    var repArray = [Int]()
+    for date in timeArray{
+      repArray.append(closure(date))
+    }
+    return repArray
+  }
+  
+  
 }

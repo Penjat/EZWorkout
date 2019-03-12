@@ -24,6 +24,7 @@
 		0B4AF2F02237313B00A7CBF2 /* StatPage3Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B4AF2EF2237313B00A7CBF2 /* StatPage3Controller.swift */; };
 		0B4AF2F22237487B00A7CBF2 /* StaticDataManger+RealmQueries.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B4AF2F12237487B00A7CBF2 /* StaticDataManger+RealmQueries.swift */; };
 		0B4AF2F422374D3C00A7CBF2 /* Date+easyFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B4AF2F322374D3C00A7CBF2 /* Date+easyFunctions.swift */; };
+		0B4AF2F62237857400A7CBF2 /* StatHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B4AF2F52237857400A7CBF2 /* StatHelper.swift */; };
 		0B5013EC222F25F7004A64EC /* CenterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B5013EB222F25F7004A64EC /* CenterViewController.swift */; };
 		0B5013EE222F2DB2004A64EC /* CenterViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B5013ED222F2DB2004A64EC /* CenterViewProtocol.swift */; };
 		0B5013F0222F2F9F004A64EC /* RecordWorkoutMasterViewController+ContainerFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B5013EF222F2F9F004A64EC /* RecordWorkoutMasterViewController+ContainerFunctions.swift */; };
@@ -134,6 +135,7 @@
 		0B4AF2EF2237313B00A7CBF2 /* StatPage3Controller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatPage3Controller.swift; sourceTree = "<group>"; };
 		0B4AF2F12237487B00A7CBF2 /* StaticDataManger+RealmQueries.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "StaticDataManger+RealmQueries.swift"; sourceTree = "<group>"; };
 		0B4AF2F322374D3C00A7CBF2 /* Date+easyFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+easyFunctions.swift"; sourceTree = "<group>"; };
+		0B4AF2F52237857400A7CBF2 /* StatHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatHelper.swift; sourceTree = "<group>"; };
 		0B5013EB222F25F7004A64EC /* CenterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CenterViewController.swift; sourceTree = "<group>"; };
 		0B5013ED222F2DB2004A64EC /* CenterViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CenterViewProtocol.swift; sourceTree = "<group>"; };
 		0B5013EF222F2F9F004A64EC /* RecordWorkoutMasterViewController+ContainerFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RecordWorkoutMasterViewController+ContainerFunctions.swift"; sourceTree = "<group>"; };
@@ -248,6 +250,7 @@
 				28DC64342235C3EA002FC4E0 /* StatTotalVC.swift */,
 				0B4AF2EF2237313B00A7CBF2 /* StatPage3Controller.swift */,
 				0B4AF2EA223725F400A7CBF2 /* StatPage4Controller.swift */,
+				0B4AF2F52237857400A7CBF2 /* StatHelper.swift */,
 			);
 			path = "stats pages";
 			sourceTree = "<group>";
@@ -679,6 +682,7 @@
 				288121F1222F7D83007042C1 /* userStatRealm.swift in Sources */,
 				0BB4470622331893004BEDD1 /* RecordWorkoutMasterViewController+StartEnd.swift in Sources */,
 				0BF84E8A2230A99800DFC6B0 /* HistoryViewController+WorkoutTableDelegate.swift in Sources */,
+				0B4AF2F62237857400A7CBF2 /* StatHelper.swift in Sources */,
 				0BA30337222E1CDC0046FDB9 /* WorkoutModel.swift in Sources */,
 				0BA3DB94222DD0F200AC7538 /* SpeechInputManager+InputParsing.swift in Sources */,
 				0B4AF2F02237313B00A7CBF2 /* StatPage3Controller.swift in Sources */,
