@@ -80,9 +80,9 @@ extension SpeechInputManager{
   
   func setValueRepOrder(inputString:String , numberArray:[Int]) -> [Int]{
     let outputArray = numberArray
-    let valueIndex = positionInString(posibleTerms: ["pound"] , inputString: inputString)
+    let valueIndex = positionInString(posibleTerms: ["pound","k"] , inputString: inputString)
     
-    let repIndex = positionInString(posibleTerms: ["rep"] , inputString: inputString)
+    let repIndex = positionInString(posibleTerms: ["rep","min"] , inputString: inputString)
     
     if let repIndex = repIndex , let valueIndex = valueIndex{
       if repIndex < valueIndex{

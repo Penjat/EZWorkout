@@ -41,26 +41,64 @@ class ExerciseView: UIView {
     var weightString = ""
     var repsString = ""
     
+    let reps = exerciseModel.reps != nil ? exerciseModel.reps! : -1
+    let value = exerciseModel.value != nil ? exerciseModel.value! : -1
+    
     let exerciseType = exerciseModel.exerciseRef!.exerciseType
     switch (exerciseType){
     case .BodyWeight:
       //only track reps
-      repsString = "\(exerciseModel.reps) reps"
+      if reps < 0 {
+        repsString = ""
+      }else{
+        repsString = "\(reps) reps"
+      }
+      
       
     case .Weight:
       //track weight and reps
-      repsString = "\(exerciseModel.reps) reps"
-      weightString = "\(exerciseModel.value)"
+      if reps < 0 {
+        repsString = ""
+      }else{
+        repsString = "\(reps) reps"
+      }
+      
+      
+      if value < 0 {
+        weightString = ""
+      }else{
+        weightString = "\(value) lbs"
+      }
+      
       
     case .Timed:
-      repsString = "\(exerciseModel.reps) min"
+      if reps < 0 {
+        repsString = ""
+      }else{
+        repsString = "\(reps) min"
+      }
+     
       
     case .Distance:
-      weightString = "\(exerciseModel.value) km"
+      if value < 0 {
+        weightString = ""
+      }else{
+        weightString = "\(value) km"
+      }
+      
       
     case .TimedDistance:
-      weightString = "\(exerciseModel.value) km"
-      repsString = "\(exerciseModel.reps) min"
+      if reps < 0 {
+        repsString = ""
+      }else{
+        repsString = "\(reps) min"
+      }
+      if value < 0 {
+        weightString = ""
+      }else{
+        weightString = "\(value) km"
+      }
+      
     }
     
     

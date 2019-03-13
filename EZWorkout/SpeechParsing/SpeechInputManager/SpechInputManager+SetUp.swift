@@ -24,7 +24,7 @@ extension SpeechInputManager{
     
     exerciseRefs.append(ExerciseRef(name: "goodmorning",muscleGroups: [MuscleGroup.Biceps],exerciseType: ExerciseType.Weight , outputName:"good mornings"))
     
-    exerciseRefs.append(ExerciseRef(name: "situp",muscleGroups: [MuscleGroup.Biceps],exerciseType: ExerciseType.Weight , outputName:"sit-ups"))
+    exerciseRefs.append(ExerciseRef(name: "situp",muscleGroups: [MuscleGroup.Core],exerciseType: ExerciseType.BodyWeight , outputName:"sit-ups"))
     
     exerciseRefs.append(ExerciseRef(name: "skullcrusher",muscleGroups: [MuscleGroup.Biceps],exerciseType: ExerciseType.Weight , outputName:"skull crushers"))
     
@@ -39,7 +39,7 @@ extension SpeechInputManager{
     exerciseRefs.append(ExerciseRef(name: "legraise",muscleGroups: [MuscleGroup.Biceps],exerciseType: ExerciseType.Weight , outputName:"leg raise"))
     
     //TODO chinup and pull ups are the same
-    exerciseRefs.append(ExerciseRef(name: "pullup",muscleGroups: [MuscleGroup.Biceps],exerciseType: ExerciseType.Weight , outputName:"pull-ups"))
+    exerciseRefs.append(ExerciseRef(name: "pullup",muscleGroups: [MuscleGroup.Biceps],exerciseType: ExerciseType.BodyWeight , outputName:"pull-ups"))
     exerciseRefs.append(ExerciseRef(name: "chinup",muscleGroups: [MuscleGroup.Biceps],exerciseType: ExerciseType.Weight , outputName:"chin-ups"))
     //---------------------------------
     
@@ -59,7 +59,7 @@ extension SpeechInputManager{
     
     exerciseRefs.append(ExerciseRef(name: "cycling",muscleGroups: [MuscleGroup.Legs],exerciseType: ExerciseType.Distance ))
     
-    exerciseRefs.append(ExerciseRef(name: "skip",muscleGroups: [MuscleGroup.Legs],exerciseType: ExerciseType.BodyWeight , outputName:"skipping"))
+    exerciseRefs.append(ExerciseRef(name: "skip",muscleGroups: [MuscleGroup.Legs],exerciseType: ExerciseType.Timed , outputName:"skipping"))
     
     exerciseRefs.append(ExerciseRef(name: "calfraise",muscleGroups: [MuscleGroup.Legs],exerciseType: ExerciseType.BodyWeight , outputName:"calf raise"))
     
@@ -116,6 +116,10 @@ extension SpeechInputManager{
     
     exerciseRefs.append(ExerciseRef(name: "tricepkickback",muscleGroups: [.Chest],exerciseType: ExerciseType.Weight , outputName: "tricep kickbacks"))
     //------------------------
+    exerciseRefs.append(ExerciseRef(name: "run",muscleGroups: [.Legs],exerciseType: ExerciseType.TimedDistance , outputName: "running"))
+    
+    exerciseRefs.append(ExerciseRef(name: "jog",muscleGroups: [.Legs],exerciseType: ExerciseType.TimedDistance , outputName: "jogging"))
+    
   }
   
   func setUpModifiers(){
