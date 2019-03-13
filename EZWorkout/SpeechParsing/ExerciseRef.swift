@@ -37,6 +37,9 @@ struct ExerciseRef : ExerciseRefernce{
   func getName() -> String {
     return name
   }
+  func getOutputName() -> String{
+    return outputName
+  }
   
   func checkRedunant(modifier:ExerciseModifier) -> Bool{
     return name.contains(modifier.searchName)

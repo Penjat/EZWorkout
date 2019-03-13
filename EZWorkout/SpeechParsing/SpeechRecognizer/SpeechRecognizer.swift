@@ -46,7 +46,7 @@ class SpeechRecognizer{
     
     audioEngine.stop()
     
-    
+    request.endAudio()
     audioEngine.inputNode.removeTap(onBus: 0)
     
     recognitionTask?.cancel()
@@ -57,7 +57,9 @@ class SpeechRecognizer{
   }
   
   func recordAndRecognizeSpeech(){
+    
     let node = audioEngine.inputNode
+    request = SFSpeechAudioBufferRecognitionRequest()
     let recordingFormat = node.outputFormat(forBus: 0)
     node.installTap(onBus: 0, bufferSize: 1024, format: recordingFormat, block: {buffer, _ in self.request.append(buffer)
       

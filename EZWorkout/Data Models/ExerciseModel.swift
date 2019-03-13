@@ -18,7 +18,7 @@ struct ExerciseModel{
     var output = ""
     
     if let exerciseRef = exerciseRef{
-      output = exerciseRef.getName()
+      output = exerciseRef.getOutputName()
     }
     if let modifiers = modifiers{
       for modifier in modifiers{

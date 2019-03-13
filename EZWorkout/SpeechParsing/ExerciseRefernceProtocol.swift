@@ -9,4 +9,5 @@ protocol ExerciseRefernce {
   func checkMatches(input:String) -> Bool
   func getName() -> String
   func checkRedunant(modifier:ExerciseModifier) -> Bool
+  func getOutputName() -> String
 }
