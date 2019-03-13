@@ -4,7 +4,7 @@ import UIKit
 
 class ExerciseCell: UITableViewCell {
   @IBOutlet weak var exerciseView: ExerciseView!
-  
+  static var delegate : RecognizerReturnDelegate?
     override func awakeFromNib() {
         super.awakeFromNib()
         

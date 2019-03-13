@@ -97,7 +97,6 @@
 		288121DE222F53DC007042C1 /* StatPVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 288121DD222F53DC007042C1 /* StatPVC.swift */; };
 		288121E2222F5598007042C1 /* ScrollStatsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 288121E1222F5598007042C1 /* ScrollStatsView.swift */; };
 		288121E7222F6B63007042C1 /* RealmDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 288121E6222F6B63007042C1 /* RealmDataManager.swift */; };
-		288121E9222F6D05007042C1 /* Cats.swift in Sources */ = {isa = PBXBuildFile; fileRef = 288121E8222F6D05007042C1 /* Cats.swift */; };
 		288121EB222F7311007042C1 /* ExcerciseRealm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 288121EA222F7311007042C1 /* ExcerciseRealm.swift */; };
 		288121ED222F7B15007042C1 /* UserRealm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 288121EC222F7B15007042C1 /* UserRealm.swift */; };
 		288121EF222F7B85007042C1 /* WorkoutRealm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 288121EE222F7B85007042C1 /* WorkoutRealm.swift */; };
@@ -105,6 +104,19 @@
 		28DC63FF223324E5002FC4E0 /* StatUserVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28DC63FE223324E5002FC4E0 /* StatUserVC.swift */; };
 		28DC64352235C3EA002FC4E0 /* StatTotalVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28DC64342235C3EA002FC4E0 /* StatTotalVC.swift */; };
 		28DC64372235F820002FC4E0 /* StatLastWeekVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28DC64362235F820002FC4E0 /* StatLastWeekVC.swift */; };
+		28F4C08B22388371003318ED /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 28F4C08922388371003318ED /* Interface.storyboard */; };
+		28F4C08D22388372003318ED /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 28F4C08C22388372003318ED /* Assets.xcassets */; };
+		28F4C09422388372003318ED /* WorkoutWatch Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 28F4C09322388372003318ED /* WorkoutWatch Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		28F4C09922388372003318ED /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28F4C09822388372003318ED /* InterfaceController.swift */; };
+		28F4C09B22388372003318ED /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28F4C09A22388372003318ED /* ExtensionDelegate.swift */; };
+		28F4C09D22388372003318ED /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28F4C09C22388372003318ED /* NotificationController.swift */; };
+		28F4C09F22388373003318ED /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 28F4C09E22388373003318ED /* Assets.xcassets */; };
+		28F4C0A422388373003318ED /* WorkoutWatch.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 28F4C08722388371003318ED /* WorkoutWatch.app */; };
+		28F4C0E922388AEA003318ED /* DetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28F4C0E822388AEA003318ED /* DetailVC.swift */; };
+		28F4C0F022389272003318ED /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28F4C0EF22389272003318ED /* ViewController.swift */; };
+		28F4C0F422389917003318ED /* iosWatch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28F4C0F322389917003318ED /* iosWatch.swift */; };
+		28F4C0F522389919003318ED /* iosWatch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28F4C0F322389917003318ED /* iosWatch.swift */; };
+		28F4C0F722389FBA003318ED /* RecognizerReturnDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BA3DB9A222DD3ED00AC7538 /* RecognizerReturnDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -115,7 +127,53 @@
 			remoteGlobalIDString = 0BCA1AB72228D30000B51C27;
 			remoteInfo = EZWorkout;
 		};
+		28F4C09522388372003318ED /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0BCA1AB02228D30000B51C27 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 28F4C09222388372003318ED;
+			remoteInfo = "WorkoutWatch Extension";
+		};
+		28F4C0EA22388F38003318ED /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0BCA1AB02228D30000B51C27 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 28F4C08622388371003318ED;
+			remoteInfo = WorkoutWatch;
+		};
+		28F4C0EC22388F42003318ED /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0BCA1AB02228D30000B51C27 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 28F4C09222388372003318ED;
+			remoteInfo = "WorkoutWatch Extension";
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		28F4C0AA22388373003318ED /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				28F4C09422388372003318ED /* WorkoutWatch Extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		28F4C0AC22388373003318ED /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 12;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				28F4C0A422388373003318ED /* WorkoutWatch.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		0B38BDB82231D13D00DEA358 /* HistoryViewController+PickerDelegateDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HistoryViewController+PickerDelegateDataSource.swift"; sourceTree = "<group>"; };
@@ -211,7 +269,6 @@
 		288121DD222F53DC007042C1 /* StatPVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatPVC.swift; sourceTree = "<group>"; };
 		288121E1222F5598007042C1 /* ScrollStatsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollStatsView.swift; sourceTree = "<group>"; };
 		288121E6222F6B63007042C1 /* RealmDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmDataManager.swift; sourceTree = "<group>"; };
-		288121E8222F6D05007042C1 /* Cats.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cats.swift; sourceTree = "<group>"; };
 		288121EA222F7311007042C1 /* ExcerciseRealm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExcerciseRealm.swift; sourceTree = "<group>"; };
 		288121EC222F7B15007042C1 /* UserRealm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRealm.swift; sourceTree = "<group>"; };
 		288121EE222F7B85007042C1 /* WorkoutRealm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutRealm.swift; sourceTree = "<group>"; };
@@ -219,6 +276,21 @@
 		28DC63FE223324E5002FC4E0 /* StatUserVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatUserVC.swift; sourceTree = "<group>"; };
 		28DC64342235C3EA002FC4E0 /* StatTotalVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatTotalVC.swift; sourceTree = "<group>"; };
 		28DC64362235F820002FC4E0 /* StatLastWeekVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatLastWeekVC.swift; sourceTree = "<group>"; };
+		28F4C08722388371003318ED /* WorkoutWatch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WorkoutWatch.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		28F4C08A22388371003318ED /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
+		28F4C08C22388372003318ED /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		28F4C08E22388372003318ED /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		28F4C09322388372003318ED /* WorkoutWatch Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "WorkoutWatch Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		28F4C09822388372003318ED /* InterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceController.swift; sourceTree = "<group>"; };
+		28F4C09A22388372003318ED /* ExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDelegate.swift; sourceTree = "<group>"; };
+		28F4C09C22388372003318ED /* NotificationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationController.swift; sourceTree = "<group>"; };
+		28F4C09E22388373003318ED /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		28F4C0A022388373003318ED /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		28F4C0A122388373003318ED /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
+		28F4C0E722388A03003318ED /* EZWorkout.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = EZWorkout.entitlements; sourceTree = "<group>"; };
+		28F4C0E822388AEA003318ED /* DetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailVC.swift; sourceTree = "<group>"; };
+		28F4C0EF22389272003318ED /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		28F4C0F322389917003318ED /* iosWatch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iosWatch.swift; sourceTree = "<group>"; };
 		56613A7F23DBE1C05BB336A2 /* Pods_EZWorkout.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EZWorkout.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8872BA68D8FE0B972398D279 /* Pods-EZWorkout.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EZWorkout.debug.xcconfig"; path = "Pods/Target Support Files/Pods-EZWorkout/Pods-EZWorkout.debug.xcconfig"; sourceTree = "<group>"; };
 		FEEC72732415616696171480 /* Pods-EZWorkout.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EZWorkout.release.xcconfig"; path = "Pods/Target Support Files/Pods-EZWorkout/Pods-EZWorkout.release.xcconfig"; sourceTree = "<group>"; };
@@ -234,6 +306,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		0BFDDB6922334B2700318F80 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		28F4C09022388372003318ED /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -343,6 +422,8 @@
 			children = (
 				0BCA1ABA2228D30000B51C27 /* EZWorkout */,
 				0BFDDB6D22334B2700318F80 /* EZWorkoutTests */,
+				28F4C08822388371003318ED /* WorkoutWatch */,
+				28F4C09722388372003318ED /* WorkoutWatch Extension */,
 				0BCA1AB92228D30000B51C27 /* Products */,
 				C49D9F006CB39973E8274E43 /* Pods */,
 				9B3B0D97047C304E4AF59A10 /* Frameworks */,
@@ -354,6 +435,8 @@
 			children = (
 				0BCA1AB82228D30000B51C27 /* EZWorkout.app */,
 				0BFDDB6C22334B2700318F80 /* EZWorkoutTests.xctest */,
+				28F4C08722388371003318ED /* WorkoutWatch.app */,
+				28F4C09322388372003318ED /* WorkoutWatch Extension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -361,6 +444,7 @@
 		0BCA1ABA2228D30000B51C27 /* EZWorkout */ = {
 			isa = PBXGroup;
 			children = (
+				28F4C0E722388A03003318ED /* EZWorkout.entitlements */,
 				0BCA1ABB2228D30000B51C27 /* AppDelegate.swift */,
 				0BA30327222DE6D30046FDB9 /* Custom Views */,
 				0BA3DB82222DD0D500AC7538 /* SpeechParsing */,
@@ -425,6 +509,7 @@
 			isa = PBXGroup;
 			children = (
 				0BA3033C222E28290046FDB9 /* ExerciseCell.swift */,
+				28F4C0F322389917003318ED /* iosWatch.swift */,
 				0BA3033E222ED8050046FDB9 /* RecordWorkoutMasterViewController.swift */,
 				0BB2A5C5223382F2006C8FF7 /* RecordWorkoutMasterViewController+RecognizerReturn.swift */,
 				0B5013EF222F2F9F004A64EC /* RecordWorkoutMasterViewController+ContainerFunctions.swift */,
@@ -442,6 +527,7 @@
 				0BA3032C222E08530046FDB9 /* RecWorkoutSB.storyboard */,
 				0B5013ED222F2DB2004A64EC /* CenterViewProtocol.swift */,
 				0BA30344222EDDFA0046FDB9 /* Help.xib */,
+				28F4C0EF22389272003318ED /* ViewController.swift */,
 				0BA30346222EDE2C0046FDB9 /* HelpView.swift */,
 				0B5013F3222F6653004A64EC /* FeedbackMsg.xib */,
 				0B5013F5222F673E004A64EC /* FeedbackMsgView.swift */,
@@ -471,13 +557,36 @@
 			isa = PBXGroup;
 			children = (
 				288121E6222F6B63007042C1 /* RealmDataManager.swift */,
-				288121E8222F6D05007042C1 /* Cats.swift */,
 				288121F0222F7D83007042C1 /* userStatRealm.swift */,
 				288121EC222F7B15007042C1 /* UserRealm.swift */,
 				288121EE222F7B85007042C1 /* WorkoutRealm.swift */,
 				288121EA222F7311007042C1 /* ExcerciseRealm.swift */,
 			);
 			path = RealData;
+			sourceTree = "<group>";
+		};
+		28F4C08822388371003318ED /* WorkoutWatch */ = {
+			isa = PBXGroup;
+			children = (
+				28F4C08922388371003318ED /* Interface.storyboard */,
+				28F4C08C22388372003318ED /* Assets.xcassets */,
+				28F4C08E22388372003318ED /* Info.plist */,
+			);
+			path = WorkoutWatch;
+			sourceTree = "<group>";
+		};
+		28F4C09722388372003318ED /* WorkoutWatch Extension */ = {
+			isa = PBXGroup;
+			children = (
+				28F4C09822388372003318ED /* InterfaceController.swift */,
+				28F4C09A22388372003318ED /* ExtensionDelegate.swift */,
+				28F4C09C22388372003318ED /* NotificationController.swift */,
+				28F4C09E22388373003318ED /* Assets.xcassets */,
+				28F4C0A022388373003318ED /* Info.plist */,
+				28F4C0A122388373003318ED /* PushNotificationPayload.apns */,
+				28F4C0E822388AEA003318ED /* DetailVC.swift */,
+			);
+			path = "WorkoutWatch Extension";
 			sourceTree = "<group>";
 		};
 		9B3B0D97047C304E4AF59A10 /* Frameworks */ = {
@@ -509,10 +618,13 @@
 				0BCA1AB52228D30000B51C27 /* Frameworks */,
 				0BCA1AB62228D30000B51C27 /* Resources */,
 				91F88EDD6AAAE78E53AC0CC2 /* [CP] Embed Pods Frameworks */,
+				28F4C0AC22388373003318ED /* Embed Watch Content */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				28F4C0ED22388F42003318ED /* PBXTargetDependency */,
+				28F4C0EB22388F38003318ED /* PBXTargetDependency */,
 			);
 			name = EZWorkout;
 			productName = EZWorkout;
@@ -537,6 +649,40 @@
 			productReference = 0BFDDB6C22334B2700318F80 /* EZWorkoutTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		28F4C08622388371003318ED /* WorkoutWatch */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 28F4C0AB22388373003318ED /* Build configuration list for PBXNativeTarget "WorkoutWatch" */;
+			buildPhases = (
+				28F4C08522388371003318ED /* Resources */,
+				28F4C0AA22388373003318ED /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				28F4C09622388372003318ED /* PBXTargetDependency */,
+			);
+			name = WorkoutWatch;
+			productName = WorkoutWatch;
+			productReference = 28F4C08722388371003318ED /* WorkoutWatch.app */;
+			productType = "com.apple.product-type.application.watchapp2";
+		};
+		28F4C09222388372003318ED /* WorkoutWatch Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 28F4C0A922388373003318ED /* Build configuration list for PBXNativeTarget "WorkoutWatch Extension" */;
+			buildPhases = (
+				28F4C08F22388372003318ED /* Sources */,
+				28F4C09022388372003318ED /* Frameworks */,
+				28F4C09122388372003318ED /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "WorkoutWatch Extension";
+			productName = "WorkoutWatch Extension";
+			productReference = 28F4C09322388372003318ED /* WorkoutWatch Extension.appex */;
+			productType = "com.apple.product-type.watchkit2-extension";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -549,10 +695,21 @@
 				TargetAttributes = {
 					0BCA1AB72228D30000B51C27 = {
 						CreatedOnToolsVersion = 10.1;
+						SystemCapabilities = {
+							com.apple.HealthKit = {
+								enabled = 0;
+							};
+						};
 					};
 					0BFDDB6B22334B2700318F80 = {
 						CreatedOnToolsVersion = 10.1;
 						TestTargetID = 0BCA1AB72228D30000B51C27;
+					};
+					28F4C08622388371003318ED = {
+						CreatedOnToolsVersion = 10.1;
+					};
+					28F4C09222388372003318ED = {
+						CreatedOnToolsVersion = 10.1;
 					};
 				};
 			};
@@ -571,6 +728,8 @@
 			targets = (
 				0BCA1AB72228D30000B51C27 /* EZWorkout */,
 				0BFDDB6B22334B2700318F80 /* EZWorkoutTests */,
+				28F4C08622388371003318ED /* WorkoutWatch */,
+				28F4C09222388372003318ED /* WorkoutWatch Extension */,
 			);
 		};
 /* End PBXProject section */
@@ -604,6 +763,23 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		28F4C08522388371003318ED /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				28F4C08D22388372003318ED /* Assets.xcassets in Resources */,
+				28F4C08B22388371003318ED /* Interface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		28F4C09122388372003318ED /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				28F4C09F22388373003318ED /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -682,6 +858,7 @@
 				288121F1222F7D83007042C1 /* userStatRealm.swift in Sources */,
 				0BB4470622331893004BEDD1 /* RecordWorkoutMasterViewController+StartEnd.swift in Sources */,
 				0BF84E8A2230A99800DFC6B0 /* HistoryViewController+WorkoutTableDelegate.swift in Sources */,
+				28F4C0F422389917003318ED /* iosWatch.swift in Sources */,
 				0B4AF2F62237857400A7CBF2 /* StatHelper.swift in Sources */,
 				0BA30337222E1CDC0046FDB9 /* WorkoutModel.swift in Sources */,
 				0BA3DB94222DD0F200AC7538 /* SpeechInputManager+InputParsing.swift in Sources */,
@@ -693,6 +870,7 @@
 				0BF84E902230ED2700DFC6B0 /* ExerciseTypeView.swift in Sources */,
 				0BF84E862230A32D00DFC6B0 /* ExerciseSetCell.swift in Sources */,
 				0BA3032B222DE8EA0046FDB9 /* ExerciseView.swift in Sources */,
+				28F4C0F022389272003318ED /* ViewController.swift in Sources */,
 				0B38BDB92231D13D00DEA358 /* HistoryViewController+PickerDelegateDataSource.swift in Sources */,
 				0BCA1AC42228D30100B51C27 /* EZWorkout.xcdatamodeld in Sources */,
 				0B4AF2D92236100B00A7CBF2 /* RecTopBarVC.swift in Sources */,
@@ -717,7 +895,6 @@
 				0BB2A5C6223382F2006C8FF7 /* RecordWorkoutMasterViewController+RecognizerReturn.swift in Sources */,
 				0BA3033D222E28290046FDB9 /* ExerciseCell.swift in Sources */,
 				0BA30347222EDE2C0046FDB9 /* HelpView.swift in Sources */,
-				288121E9222F6D05007042C1 /* Cats.swift in Sources */,
 				288121EB222F7311007042C1 /* ExcerciseRealm.swift in Sources */,
 				0BB2A5CA223434E3006C8FF7 /* CenterViewController+TableViewDelegateDataSource.swift in Sources */,
 				0BA3DB9B222DD3ED00AC7538 /* RecognizerReturnDelegate.swift in Sources */,
@@ -761,6 +938,19 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		28F4C08F22388372003318ED /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				28F4C09D22388372003318ED /* NotificationController.swift in Sources */,
+				28F4C0F522389919003318ED /* iosWatch.swift in Sources */,
+				28F4C0F722389FBA003318ED /* RecognizerReturnDelegate.swift in Sources */,
+				28F4C0E922388AEA003318ED /* DetailVC.swift in Sources */,
+				28F4C09B22388372003318ED /* ExtensionDelegate.swift in Sources */,
+				28F4C09922388372003318ED /* InterfaceController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -768,6 +958,21 @@
 			isa = PBXTargetDependency;
 			target = 0BCA1AB72228D30000B51C27 /* EZWorkout */;
 			targetProxy = 0BFDDB7122334B2700318F80 /* PBXContainerItemProxy */;
+		};
+		28F4C09622388372003318ED /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 28F4C09222388372003318ED /* WorkoutWatch Extension */;
+			targetProxy = 28F4C09522388372003318ED /* PBXContainerItemProxy */;
+		};
+		28F4C0EB22388F38003318ED /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 28F4C08622388371003318ED /* WorkoutWatch */;
+			targetProxy = 28F4C0EA22388F38003318ED /* PBXContainerItemProxy */;
+		};
+		28F4C0ED22388F42003318ED /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 28F4C09222388372003318ED /* WorkoutWatch Extension */;
+			targetProxy = 28F4C0EC22388F42003318ED /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -786,6 +991,14 @@
 				0BCA1AC82228D30100B51C27 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		28F4C08922388371003318ED /* Interface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				28F4C08A22388371003318ED /* Base */,
+			);
+			name = Interface.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -913,7 +1126,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = L688AU9RCV;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = EZWorkout/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -932,7 +1145,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = L688AU9RCV;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = EZWorkout/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -983,6 +1196,86 @@
 			};
 			name = Release;
 		};
+		28F4C0A522388373003318ED /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
+				IBSC_MODULE = WorkoutWatch_Extension;
+				INFOPLIST_FILE = WorkoutWatch/Info.plist;
+				PRODUCT_BUNDLE_IDENTIFIER = com.spencersymington.EZWorkout.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 5.1;
+			};
+			name = Debug;
+		};
+		28F4C0A622388373003318ED /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
+				IBSC_MODULE = WorkoutWatch_Extension;
+				INFOPLIST_FILE = WorkoutWatch/Info.plist;
+				PRODUCT_BUNDLE_IDENTIFIER = com.spencersymington.EZWorkout.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 5.1;
+			};
+			name = Release;
+		};
+		28F4C0A722388373003318ED /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "WorkoutWatch Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.spencersymington.EZWorkout.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 5.1;
+			};
+			name = Debug;
+		};
+		28F4C0A822388373003318ED /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "WorkoutWatch Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.spencersymington.EZWorkout.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 5.1;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -1009,6 +1302,24 @@
 			buildConfigurations = (
 				0BFDDB7322334B2700318F80 /* Debug */,
 				0BFDDB7422334B2700318F80 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		28F4C0A922388373003318ED /* Build configuration list for PBXNativeTarget "WorkoutWatch Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				28F4C0A722388373003318ED /* Debug */,
+				28F4C0A822388373003318ED /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		28F4C0AB22388373003318ED /* Build configuration list for PBXNativeTarget "WorkoutWatch" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				28F4C0A522388373003318ED /* Debug */,
+				28F4C0A622388373003318ED /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
