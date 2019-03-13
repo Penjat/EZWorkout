@@ -32,9 +32,7 @@ class ExerciseView: UIView {
   
   func setUp(exerciseModel:ExerciseModel){
     
-    //TODO adjust text presentation
-    infoContainer.layer.cornerRadius = 12
-    exerciseImage.layer.cornerRadius = exerciseImage.frame.size.width / 2
+    setUpDisplay()
     
     
     let nameString = exerciseModel.name
@@ -116,15 +114,7 @@ class ExerciseView: UIView {
     
     
     
-    //TODO adjust text presentation
-    infoContainer.layer.cornerRadius = 12
-    exerciseImage.layer.cornerRadius = exerciseImage.frame.size.width / 2
-    
-    exerciseImage.layer.borderColor = UIColor.black.cgColor
-    exerciseImage.layer.borderWidth = 3.0
-    
-    infoContainer.layer.borderColor = UIColor.black.cgColor
-    infoContainer.layer.borderWidth = 2.0
+    setUpDisplay()
     
     
     
@@ -171,13 +161,19 @@ class ExerciseView: UIView {
     labelExerciseReps.text = repsString
     labelExerciseWeight.text = weightString
     
-    
-    
-    
-    
-    
-    
 
+
+  }
+  func setUpDisplay(){
+    //TODO adjust text presentation
+    infoContainer.layer.cornerRadius = 12
+    exerciseImage.layer.cornerRadius = exerciseImage.frame.size.width / 2
+    
+    exerciseImage.layer.borderColor = UIColor.black.cgColor
+    exerciseImage.layer.borderWidth = 3.0
+    
+    infoContainer.layer.borderColor = UIColor.black.cgColor
+    infoContainer.layer.borderWidth = 2.0
   }
 
 }

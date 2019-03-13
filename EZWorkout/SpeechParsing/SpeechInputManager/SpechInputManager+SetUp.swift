@@ -22,6 +22,8 @@ extension SpeechInputManager{
     
     exerciseRefs.append(ExerciseRef(name: "stepup",muscleGroups: [MuscleGroup.Biceps],exerciseType: ExerciseType.Weight , outputName:"step-ups"))
     
+    exerciseRefs.append(ExerciseRef(name: "jumpingjacks",muscleGroups: [.Legs],exerciseType: ExerciseType.BodyWeight , outputName: "jumping-jacks"))
+    
     exerciseRefs.append(ExerciseRef(name: "goodmorning",muscleGroups: [MuscleGroup.Biceps],exerciseType: ExerciseType.Weight , outputName:"good mornings"))
     
     exerciseRefs.append(ExerciseRef(name: "situp",muscleGroups: [MuscleGroup.Core],exerciseType: ExerciseType.BodyWeight , outputName:"sit-ups"))
@@ -81,7 +83,7 @@ extension SpeechInputManager{
     
     exerciseRefs.append(ExerciseRef(name: "lunge",muscleGroups: [.Legs,.Back],exerciseType: ExerciseType.Weight))
     
-    exerciseRefs.append(ExerciseRef(name: "pushup",muscleGroups: [MuscleGroup.Chest],exerciseType: ExerciseType.BodyWeight))
+    exerciseRefs.append(ExerciseRef(name: "pushup",muscleGroups: [MuscleGroup.Chest],exerciseType: ExerciseType.BodyWeight,outputName:"push-ups"))
     
     exerciseRefs.append(ExerciseRef(name: "dumbbellpress",muscleGroups: [MuscleGroup.Chest],exerciseType: ExerciseType.Weight))
     
