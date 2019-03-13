@@ -219,7 +219,7 @@
                                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="M9X-kT-o9V">
                                                 <rect key="frame" x="0.0" y="0.0" width="370" height="1547"/>
                                                 <connections>
-                                                    <segue destination="Ed5-UN-i11" kind="embed" id="Bt0-p3-qS6"/>
+                                                    <segue destination="Ed5-UN-i11" kind="embed" identifier="embedStatPage1" id="Bt0-p3-qS6"/>
                                                 </connections>
                                             </containerView>
                                         </subviews>
@@ -263,6 +263,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="IwB-PQ-JIp"/>
                     </view>
+                    <connections>
+                        <outlet property="scrollView1" destination="qSf-dL-L4V" id="rUC-sb-Eoz"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vyC-Xc-4Ev" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
