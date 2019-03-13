@@ -52,6 +52,7 @@ class StaticDataManager{
     chart.rightAxis.enabled = false
     //barChart.rightAxis.drawGridLinesEnabled = false
     chart.xAxis.drawGridLinesEnabled = false
+    
     //chart.backgroundColor = UIColor(red: 189/255, green: 195/255, blue: 199/255, alpha: 1)
     //chart.backgroundColor = #colorLiteral(red: 0.1764492095, green: 0.1764859259, blue: 0.1850380898, alpha: 1)
     chart.xAxis.gridColor = .white
@@ -73,6 +74,7 @@ class StaticDataManager{
     
     let ll = ChartLimitLine(limit: 9.0, label: "Average")
     chart.rightAxis.addLimitLine(ll)
+    
   }
   
   static func getRealmDataGroupedbySets()->[String:Int]{

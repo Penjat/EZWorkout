@@ -43,7 +43,7 @@ class StatsCenterVC: UIViewController {
     
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-      if (segue.identifier == "goTotal"){
+      if (segue.identifier == "embedStatPage1"){
         let statPage1 = segue.destination as! StatsPage1Controller
         scrollView1.delegate = statPage1
         
