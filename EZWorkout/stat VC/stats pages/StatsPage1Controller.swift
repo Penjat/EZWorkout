@@ -9,10 +9,14 @@ class StatsPage1Controller: UIViewController {
   @IBOutlet weak var chart2: HorizontalBarChartView!
   @IBOutlet weak var chart3: HorizontalBarChartView!
   
+  
+  
   @IBOutlet weak var chart1Text: UILabel!
   @IBOutlet weak var chart2Text: UILabel!
   @IBOutlet weak var chart3Text: UILabel!
   
+  
+  var chartArray : [BarChartView]!
   
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -22,6 +26,35 @@ class StatsPage1Controller: UIViewController {
     setupChart3()
     
     
+    
+  }
+  override func viewDidAppear(_ animated: Bool) {
+    super.viewDidAppear(animated)
+    chartArray = [chart1,chart2,chart3]
+    checkShouldAnimate()
+  }
+  
+  func checkShouldAnimate(scrollPos:CGFloat = 0){
+    let screenSize = UIScreen.main.bounds
+    let screenHeight = screenSize.height
+    
+    var i = 0
+    for chart in chartArray{
+      
+      if chart.frame.maxY < scrollPos + screenHeight{
+        
+        chart.animate(xAxisDuration: 0.0, yAxisDuration: 2.0)
+        chartArray.remove(at: i)
+        
+        
+        //leftAxis.labelFont = .systemFont(ofSize: 10, weight: .light)
+        
+        
+        i += 1
+      }else{
+        
+      }
+    }
   }
   
   func setupChart1(){

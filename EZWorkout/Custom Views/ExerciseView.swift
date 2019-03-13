@@ -99,24 +99,30 @@ class ExerciseView: UIView {
     
     let exerciseType = ExerciseType.exerciseType(string: exerciseRealm.type)
     switch (exerciseType){
+      
     case .BodyWeight:
       //only track reps
-      repsString = "\(exerciseRealm.reps) reps"
+      if let reps : Int = exerciseRealm.reps as! Int {
+        repsString = "\(reps) reps"
+      }
+      
+      break
       
     case .Weight:
       //track weight and reps
       repsString = "\(exerciseRealm.reps) reps"
       weightString = exerciseRealm.weight.value != nil ?  "\(exerciseRealm.weight.value!) lbs" : "???"
-      
+      break
     case .Timed:
       repsString = "\(exerciseRealm.reps) min"
-      
+      break
     case .Distance:
       weightString = "\(exerciseRealm.weight) km"
-      
+      break
     case .TimedDistance:
       weightString = "\(exerciseRealm.weight) km"
       repsString = "\(exerciseRealm.reps) min"
+      break
     }
     
     
