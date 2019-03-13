@@ -5,7 +5,8 @@ import Charts
 
 class StatsCenterVC: UIViewController {
 
-    
+  @IBOutlet weak var scrollView1: UIScrollView!
+  
     var userVC = StatUserVC()
     var totalVC = StatTotalVC()
     
@@ -42,13 +43,12 @@ class StatsCenterVC: UIViewController {
     
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if (segue.identifier == "goUser"){
-            userVC = segue.destination as! StatUserVC
-           // viewController.animateCircular()
-            
-        }else if (segue.identifier == "goTotal"){
-            totalVC = segue.destination as! StatTotalVC
-        }
+      if (segue.identifier == "goTotal"){
+        let statPage1 = segue.destination as! StatsPage1Controller
+        scrollView1.delegate = statPage1
+        
+        
+      }
     }
   
  

@@ -14,6 +14,8 @@ class StatsPage1Controller: UIViewController {
   @IBOutlet weak var chart3Text: UILabel!
   
   
+  var chartArray : [BarChartView]!
+  
   override func viewDidLoad() {
     super.viewDidLoad()
     
@@ -21,7 +23,18 @@ class StatsPage1Controller: UIViewController {
     setupChart2()
     setupChart3()
     
+    chartArray = [chart1,chart2,chart3]
     
+  }
+  override func viewDidAppear(_ animated: Bool) {
+    super.viewDidAppear(animated)
+    checkShouldAnimate()
+  }
+  func checkShouldAnimate(){
+    
+    for chart in chartArray{
+      chart.animate(xAxisDuration: 0.0, yAxisDuration: 2.0)
+    }
   }
   
   func setupChart1(){
