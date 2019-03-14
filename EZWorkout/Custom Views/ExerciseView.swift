@@ -43,6 +43,7 @@ class ExerciseView: UIView {
     let value = exerciseModel.value != nil ? exerciseModel.value! : -1
     
     let exerciseType = exerciseModel.exerciseRef!.exerciseType
+    
     switch (exerciseType){
     case .BodyWeight:
       //only track reps
@@ -125,32 +126,65 @@ class ExerciseView: UIView {
     var weightString = ""
     var repsString = ""
     
+    let reps : Int = exerciseRealm.reps != nil ? exerciseRealm.reps : -1
+    let value :Int = exerciseRealm.weight != nil ? exerciseRealm.weight.value! : -1
+    
     let exerciseType = ExerciseType.exerciseType(string: exerciseRealm.type)
+    
     switch (exerciseType){
-      
     case .BodyWeight:
       //only track reps
-      if let reps : Int = exerciseRealm.reps as! Int {
+      if reps < 0 {
+        repsString = ""
+      }else{
         repsString = "\(reps) reps"
       }
       
-      break
       
     case .Weight:
       //track weight and reps
-      repsString = "\(exerciseRealm.reps) reps"
-      weightString = exerciseRealm.weight.value != nil ?  "\(exerciseRealm.weight.value!) lbs" : "???"
-      break
+      if reps < 0 {
+        repsString = ""
+      }else{
+        repsString = "\(reps) reps"
+      }
+      
+      
+      if value < 0 {
+        weightString = ""
+      }else{
+        weightString = "\(value) lbs"
+      }
+      
+      
     case .Timed:
-      repsString = "\(exerciseRealm.reps) min"
-      break
+      if reps < 0 {
+        repsString = ""
+      }else{
+        repsString = "\(reps) min"
+      }
+      
+      
     case .Distance:
-      weightString = "\(exerciseRealm.weight) km"
-      break
+      if value < 0 {
+        weightString = ""
+      }else{
+        weightString = "\(value) km"
+      }
+      
+      
     case .TimedDistance:
-      weightString = "\(exerciseRealm.weight) km"
-      repsString = "\(exerciseRealm.reps) min"
-      break
+      if reps < 0 {
+        repsString = ""
+      }else{
+        repsString = "\(reps) min"
+      }
+      if value < 0 {
+        weightString = ""
+      }else{
+        weightString = "\(value) km"
+      }
+      
     }
     
     
@@ -164,6 +198,7 @@ class ExerciseView: UIView {
 
 
   }
+ 
   func setUpDisplay(){
     //TODO adjust text presentation
     infoContainer.layer.cornerRadius = 12

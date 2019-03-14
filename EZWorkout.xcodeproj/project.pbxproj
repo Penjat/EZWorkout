@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0B38BDB92231D13D00DEA358 /* HistoryViewController+PickerDelegateDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B38BDB82231D13D00DEA358 /* HistoryViewController+PickerDelegateDataSource.swift */; };
+		0B3C97B62239F9590042BE4C /* RealmDataManager+FakeYear.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B3C97B52239F9590042BE4C /* RealmDataManager+FakeYear.swift */; };
 		0B4AF2D1223597C400A7CBF2 /* NewHistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B4AF2D0223597C400A7CBF2 /* NewHistoryViewController.swift */; };
 		0B4AF2D3223598FA00A7CBF2 /* NewHistoryViewController+FSCalendarDelegateDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B4AF2D2223598FA00A7CBF2 /* NewHistoryViewController+FSCalendarDelegateDataSource.swift */; };
 		0B4AF2D52235B18E00A7CBF2 /* NewHistoryViewController+TableViewDataSourceDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B4AF2D42235B18E00A7CBF2 /* NewHistoryViewController+TableViewDataSourceDelegate.swift */; };
@@ -178,6 +179,7 @@
 
 /* Begin PBXFileReference section */
 		0B38BDB82231D13D00DEA358 /* HistoryViewController+PickerDelegateDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HistoryViewController+PickerDelegateDataSource.swift"; sourceTree = "<group>"; };
+		0B3C97B52239F9590042BE4C /* RealmDataManager+FakeYear.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RealmDataManager+FakeYear.swift"; sourceTree = "<group>"; };
 		0B4AF2D0223597C400A7CBF2 /* NewHistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = NewHistoryViewController.swift; path = EZWorkout/NewHistoryViewController.swift; sourceTree = SOURCE_ROOT; };
 		0B4AF2D2223598FA00A7CBF2 /* NewHistoryViewController+FSCalendarDelegateDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NewHistoryViewController+FSCalendarDelegateDataSource.swift"; sourceTree = "<group>"; };
 		0B4AF2D42235B18E00A7CBF2 /* NewHistoryViewController+TableViewDataSourceDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NewHistoryViewController+TableViewDataSourceDelegate.swift"; sourceTree = "<group>"; };
@@ -560,6 +562,7 @@
 			isa = PBXGroup;
 			children = (
 				288121E6222F6B63007042C1 /* RealmDataManager.swift */,
+				0B3C97B52239F9590042BE4C /* RealmDataManager+FakeYear.swift */,
 				288121F0222F7D83007042C1 /* userStatRealm.swift */,
 				288121EC222F7B15007042C1 /* UserRealm.swift */,
 				288121EE222F7B85007042C1 /* WorkoutRealm.swift */,
@@ -700,6 +703,9 @@
 						CreatedOnToolsVersion = 10.1;
 						SystemCapabilities = {
 							com.apple.HealthKit = {
+								enabled = 0;
+							};
+							com.apple.Keychain = {
 								enabled = 0;
 							};
 						};
@@ -853,6 +859,7 @@
 				288121E2222F5598007042C1 /* ScrollStatsView.swift in Sources */,
 				0B5013F0222F2F9F004A64EC /* RecordWorkoutMasterViewController+ContainerFunctions.swift in Sources */,
 				0B4AF2E52236EF3B00A7CBF2 /* CommandModel.swift in Sources */,
+				0B3C97B62239F9590042BE4C /* RealmDataManager+FakeYear.swift in Sources */,
 				0BF84E8422309FA600DFC6B0 /* WorkoutTableManager.swift in Sources */,
 				0BB7E9BC2232FB21000C285D /* RecordWorkoutMasterViewController+Visualizer.swift in Sources */,
 				0B5013EE222F2DB2004A64EC /* CenterViewProtocol.swift in Sources */,
@@ -1129,8 +1136,9 @@
 			baseConfigurationReference = 8872BA68D8FE0B972398D279 /* Pods-EZWorkout.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = L688AU9RCV;
 				INFOPLIST_FILE = EZWorkout/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1138,6 +1146,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.spencersymington.EZWorkout;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -1148,8 +1157,9 @@
 			baseConfigurationReference = FEEC72732415616696171480 /* Pods-EZWorkout.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = L688AU9RCV;
 				INFOPLIST_FILE = EZWorkout/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1157,6 +1167,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.spencersymington.EZWorkout;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -1205,12 +1216,14 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = L688AU9RCV;
 				IBSC_MODULE = WorkoutWatch_Extension;
 				INFOPLIST_FILE = WorkoutWatch/Info.plist;
 				PRODUCT_BUNDLE_IDENTIFIER = com.spencersymington.EZWorkout.watchkitapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 4.2;
@@ -1224,12 +1237,14 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = L688AU9RCV;
 				IBSC_MODULE = WorkoutWatch_Extension;
 				INFOPLIST_FILE = WorkoutWatch/Info.plist;
 				PRODUCT_BUNDLE_IDENTIFIER = com.spencersymington.EZWorkout.watchkitapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 4.2;

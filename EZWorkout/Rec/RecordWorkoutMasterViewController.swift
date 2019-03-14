@@ -36,7 +36,8 @@ class RecordWorkoutMasterViewController: UIViewController {
   
   var speechRecognizer: SpeechRecognizer!
   
-  
+  var moveColor1 :UIColor!
+  var moveColor2 :UIColor!
   
   var gradient: CAGradientLayer!
   
@@ -56,6 +57,9 @@ class RecordWorkoutMasterViewController: UIViewController {
     
     idleColor1 = #colorLiteral(red: 0.2392156869, green: 0.6745098233, blue: 0.9686274529, alpha: 1)
     idleColor2 = #colorLiteral(red: 0.1411764771, green: 0.3960784376, blue: 0.5647059083, alpha: 1)
+    
+    moveColor1 = #colorLiteral(red: 0.9704785943, green: 0.918192029, blue: 0.6774753332, alpha: 1)
+    moveColor2 = #colorLiteral(red: 0.3647058904, green: 0.06666667014, blue: 0.9686274529, alpha: 1)
     //TODO put in animation extention
     gradient = CAGradientLayer()
     //startGradient()
@@ -68,7 +72,7 @@ class RecordWorkoutMasterViewController: UIViewController {
     gradient.frame = CGRect(x: 0.0, y: 0.0, width: self.view.frame.size.width, height: self.view.frame.size.height)
     self.view.layer.insertSublayer(gradient, at: 0)
     
-    print("gradient colors = \(gradient.colors)")
+    
     
     
     prepareVisualizer()
@@ -97,7 +101,7 @@ class RecordWorkoutMasterViewController: UIViewController {
     
     let fromAnimation = CABasicAnimation(keyPath: "colors")
     fromAnimation.duration = 2.0
-    fromAnimation.toValue = [UIColor.red.cgColor,UIColor.blue.cgColor]
+    fromAnimation.toValue = [moveColor1.cgColor,moveColor2.cgColor]
     fromAnimation.fillMode = CAMediaTimingFillMode.forwards
     fromAnimation.isRemovedOnCompletion = false
     //fromAnimation.repeatCount = HUGE
@@ -109,12 +113,24 @@ class RecordWorkoutMasterViewController: UIViewController {
     
     
   }
+  func backToIdle(){
+    let fromAnimation = CABasicAnimation(keyPath: "colors")
+    fromAnimation.duration = 2.0
+    fromAnimation.toValue = [#colorLiteral(red: 0.2392156869, green: 0.6745098233, blue: 0.9686274529, alpha: 1).cgColor
+      ,#colorLiteral(red: 0.1411764771, green: 0.3960784376, blue: 0.5647059083, alpha: 1).cgColor]
+    fromAnimation.fillMode = CAMediaTimingFillMode.forwards
+    fromAnimation.isRemovedOnCompletion = false
+    //fromAnimation.repeatCount = HUGE
+    //fromAnimation.autoreverses = true
+    gradient.add(fromAnimation, forKey: "colorChange")
+  }
   
   func startLoopingAnimation(){
-    gradient.colors = [UIColor.red.cgColor, UIColor.blue.cgColor]
+    
+    gradient.colors = [moveColor1.cgColor, moveColor2.cgColor]
         let loopAnimation = CABasicAnimation(keyPath: "colors")
         loopAnimation.duration = 2.0
-        loopAnimation.toValue = [UIColor.blue.cgColor,UIColor.red.cgColor]
+        loopAnimation.toValue = [moveColor2.cgColor,moveColor1.cgColor]
         loopAnimation.fillMode = CAMediaTimingFillMode.forwards
         loopAnimation.isRemovedOnCompletion = false
         loopAnimation.repeatCount = HUGE

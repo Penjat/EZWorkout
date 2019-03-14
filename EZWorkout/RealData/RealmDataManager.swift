@@ -44,53 +44,57 @@ class RealmDataMangers {
         if let results = realm.objects(UserRealm.self).first{
             UserRealm.curUser = results
         }else{
-            let realm = try! Realm()
-            let firstExcerise = RealmDataMangers.createExcercise(calory: 10, type: "Bodyweight", name: "bench", modified: "incline", reps: 20, weight: 40)
-            let second = RealmDataMangers.createExcercise(calory: 10, type: "weight", name: "benchpress", modified: "incline", reps: 20, weight: 40)
-            let second1 = RealmDataMangers.createExcercise(calory: 10, type: "weight", name: "swimming", modified: "incline", reps: 20, weight: 40)
-            let second2 = RealmDataMangers.createExcercise(calory: 10, type: "weight", name: "weight", modified: "incline", reps: 20, weight: 40)
-            let second3 = RealmDataMangers.createExcercise(calory: 10, type: "weight", name: "barbell", modified: "incline", reps: 20, weight: 40)
-            let second4 = RealmDataMangers.createExcercise(calory: 10, type: "weight", name: "weight", modified: "incline", reps: 20, weight: 40)
-            let second5 = RealmDataMangers.createExcercise(calory: 10, type: "weight", name: "barbell", modified: "incline", reps: 20, weight: 40)
-            let second6 = RealmDataMangers.createExcercise(calory: 10, type: "weight", name: "weight", modified: "incline", reps: 20, weight: 40)
-            let second7 = RealmDataMangers.createExcercise(calory: 10, type: "weight", name: "barbell", modified: "incline", reps: 20, weight: 40)
-            let second8 = RealmDataMangers.createExcercise(calory: 10, type: "weight", name: "swimming", modified: "incline", reps: 20, weight: 40)
-            let second9 = RealmDataMangers.createExcercise(calory: 10, type: "weight", name: "barbell", modified: "incline", reps: 20, weight: 40)
-            let formatter = DateFormatter()
-            
-            
-            
-            formatter.dateFormat = "d MMM yyyy HH:mm:ss"
-            let someDateTime1S = formatter.date(from: "12 Mar 2019 20:58:22")
-            let someDateTime1E = formatter.date(from: "12 Mar 2019 21:58:22")
-            
-            let someDateTime2S = formatter.date(from: "11 Feb 2019 12:58:22")
-            let someDateTime2e = formatter.date(from: "11 Feb 2019 13:58:22")
-            let someDateTime3S = formatter.date(from: "07 Mar 2019 14:01:22")
-            let someDateTime3e = formatter.date(from: "07 Mar 2019 14:58:22")
-            let someDateTime4S = formatter.date(from: "03 Jan 2019 11:12:22")
-            let someDateTime4e = formatter.date(from: "03 Jan 2019 11:40:22")
-            let someDateTime5S = formatter.date(from: "22 Jan 2019 15:58:22")
-            let someDateTime5e = formatter.date(from: "22 Jan 2019 16:50:22")
-            let workout = RealmDataMangers.createWorkout(endTime: Date(), startTime: Date(), location: "Light-house", excerciseArray: [firstExcerise,second,second1])
-            
-            let workout2 = RealmDataMangers.createWorkout(endTime: someDateTime2e!, startTime: someDateTime2S!, location: "Light-house", excerciseArray: [second2,second3,second4])
-            
-            let workout3 = RealmDataMangers.createWorkout(endTime: someDateTime3e!, startTime: someDateTime3S!, location: "Light-house", excerciseArray: [second5,second6])
-            
-            let workout4 = RealmDataMangers.createWorkout(endTime: someDateTime4e!, startTime: someDateTime4S!, location: "Light-house", excerciseArray: [second7,second1])
-            
-            let workout5 = RealmDataMangers.createWorkout(endTime: someDateTime5e!, startTime: someDateTime5S!, location: "Light-house", excerciseArray: [second2,firstExcerise])
-            
-            
-            let userSat =  RealmDataMangers.createUserStat(date: someDateTime2S!, weight: 120, restingHeart: 60)
-            
-            let userSat2 =  RealmDataMangers.createUserStat(date: someDateTime3e!, weight: 123, restingHeart: 65)
-            
-            let userSat3 =  RealmDataMangers.createUserStat(date: someDateTime4e!, weight: 140, restingHeart: 73)
-            let user = RealmDataMangers.createUser(name: "Jason", gender: "male", Date: Date(), userStatArray: [userSat,userSat2,userSat3], workoutArray: [workout,workout2,workout3,workout4,workout5])
+//            let realm = try! Realm()
+//            let firstExcerise = RealmDataMangers.createExcercise(calory: 10, type: "weight", name: "bench", modified: "incline", reps: 20, weight: 40)
+//            let second = RealmDataMangers.createExcercise(calory: 10, type: "weight", name: "benchpress", modified: "incline", reps: 20, weight: 40)
+//            let second1 = RealmDataMangers.createExcercise(calory: 10, type: "weight", name: "swimming", modified: "incline", reps: 20, weight: 40)
+//            let second2 = RealmDataMangers.createExcercise(calory: 10, type: "weight", name: "weight", modified: "incline", reps: 20, weight: 40)
+//            let second3 = RealmDataMangers.createExcercise(calory: 10, type: "weight", name: "barbell", modified: "incline", reps: 20, weight: 40)
+//            let second4 = RealmDataMangers.createExcercise(calory: 10, type: "weight", name: "weight", modified: "incline", reps: 20, weight: 40)
+//            let second5 = RealmDataMangers.createExcercise(calory: 10, type: "weight", name: "barbell", modified: "incline", reps: 20, weight: 40)
+//            let second6 = RealmDataMangers.createExcercise(calory: 10, type: "weight", name: "weight", modified: "incline", reps: 20, weight: 40)
+//            let second7 = RealmDataMangers.createExcercise(calory: 10, type: "weight", name: "barbell", modified: "incline", reps: 20, weight: 40)
+//            let second8 = RealmDataMangers.createExcercise(calory: 10, type: "weight", name: "swimming", modified: "incline", reps: 20, weight: 40)
+//            let second9 = RealmDataMangers.createExcercise(calory: 10, type: "weight", name: "barbell", modified: "incline", reps: 20, weight: 40)
+//            let formatter = DateFormatter()
+//
+//
+//
+//            formatter.dateFormat = "d MMM yyyy HH:mm:ss"
+//            let someDateTime1S = formatter.date(from: "12 Mar 2019 20:58:22")
+//            let someDateTime1E = formatter.date(from: "12 Mar 2019 21:58:22")
+//
+//            let someDateTime2S = formatter.date(from: "11 Feb 2019 12:58:22")
+//            let someDateTime2e = formatter.date(from: "11 Feb 2019 13:58:22")
+//            let someDateTime3S = formatter.date(from: "07 Mar 2019 14:01:22")
+//            let someDateTime3e = formatter.date(from: "07 Mar 2019 14:58:22")
+//            let someDateTime4S = formatter.date(from: "03 Jan 2019 11:12:22")
+//            let someDateTime4e = formatter.date(from: "03 Jan 2019 11:40:22")
+//            let someDateTime5S = formatter.date(from: "22 Jan 2019 15:58:22")
+//            let someDateTime5e = formatter.date(from: "22 Jan 2019 16:50:22")
+//            let workout = RealmDataMangers.createWorkout(endTime: Date(), startTime: Date(), location: "Light-house", excerciseArray: [firstExcerise,second,second1])
+//
+//            let workout2 = RealmDataMangers.createWorkout(endTime: someDateTime2e!, startTime: someDateTime2S!, location: "Light-house", excerciseArray: [second2,second3,second4])
+//
+//            let workout3 = RealmDataMangers.createWorkout(endTime: someDateTime3e!, startTime: someDateTime3S!, location: "Light-house", excerciseArray: [second5,second6])
+//
+//            let workout4 = RealmDataMangers.createWorkout(endTime: someDateTime4e!, startTime: someDateTime4S!, location: "Light-house", excerciseArray: [second7,second1])
+//
+//            let workout5 = RealmDataMangers.createWorkout(endTime: someDateTime5e!, startTime: someDateTime5S!, location: "Light-house", excerciseArray: [second2,firstExcerise])
+//
+////
+//            let userSat =  RealmDataMangers.createUserStat(date: someDateTime2S!, weight: 120, restingHeart: 60)
+//
+//            let userSat2 =  RealmDataMangers.createUserStat(date: someDateTime3e!, weight: 123, restingHeart: 65)
+//
+//            let userSat3 =  RealmDataMangers.createUserStat(date: someDateTime4e!, weight: 140, restingHeart: 73)
+            let user = RealmDataMangers.createUser(name: "Jason", gender: "male", Date: Date(), userStatArray: [], workoutArray: [])
             RealmDataMangers.save(object: user, realm: realm)
             UserRealm.curUser = realm.objects(UserRealm.self).first!
+          
+          
+          createFakeYear()
+          
         }
         
     }

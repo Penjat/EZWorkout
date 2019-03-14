@@ -37,6 +37,8 @@ extension RecordWorkoutMasterViewController{
       centerController!.endWorkoutTimer()
       timerFlash()
       //workoutStatusLabel.text = "workout complete"
+      //gradient.removeAllAnimations()
+      backToIdle()
     }else{
       print("you need to start a workout first")
       createFeedbackMessage(topMsg: "you need to start a workout first", bottomMsg: "")
