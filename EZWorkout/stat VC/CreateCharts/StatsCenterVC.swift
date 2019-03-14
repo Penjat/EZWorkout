@@ -7,7 +7,8 @@ class StatsCenterVC: UIViewController {
 
   @IBOutlet weak var scrollView1: UIScrollView!
   
-    var userVC = StatUserVC()
+    var stat3 = StatPage3Controller()
+    var stat4 = StatPage4Controller()
     var totalVC = StatTotalVC()
     
     override func viewDidLoad() {
@@ -26,18 +27,18 @@ class StatsCenterVC: UIViewController {
   }
     func pageAnimation(page:Int){
       //TODO put this code back
-//        switch page {
-//        case 0:
-//            chart1.animate(xAxisDuration: 2.0, yAxisDuration: 2.0)
-//        case 1:
-//            totalVC.animateGraph()
-//       // case 2:
-//           // TypePieChartView.animate(yAxisDuration: 1)
-//       case 3:
-//            userVC.animateCircular()
-//        default:
-//            return
-//        }
+        switch page {
+        case 0: return
+            
+        case 1:
+            totalVC.animateGraph()
+       // case 2:
+           // TypePieChartView.animate(yAxisDuration: 1)
+       case 2:
+            stat3.animateGraph()
+        default:
+            stat4.animateGraph()
+        }
     }
     
     
@@ -45,10 +46,22 @@ class StatsCenterVC: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
       if (segue.identifier == "embedStatPage1"){
         let statPage1 = segue.destination as! StatsPage1Controller
-        scrollView1.delegate = statPage1
+        statPage1.view.translatesAutoresizingMaskIntoConstraints = false
+        //totalVC = segue.destination
         
         
-      }
+      }else if segue.identifier == "goTotal"{
+        totalVC = segue.destination as! StatTotalVC
+        totalVC.view.translatesAutoresizingMaskIntoConstraints = false
+       
+        }else if segue.identifier == "page3"{
+        stat3 = segue.destination as! StatPage3Controller
+        stat3.view.translatesAutoresizingMaskIntoConstraints = false
+        
+      }else if segue.identifier == "page4"{
+        stat4 = segue.destination as! StatPage4Controller
+        stat4.view.translatesAutoresizingMaskIntoConstraints = false
+       
     }
   
  
@@ -58,8 +71,8 @@ class StatsCenterVC: UIViewController {
   
   
   
+  }
+
+
 }
-
-
-
 

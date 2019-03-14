@@ -1,6 +1,7 @@
 
 
 import UIKit
+import RAMAnimatedTabBarController
 
 class MasterTabBarController: UITabBarController {
   

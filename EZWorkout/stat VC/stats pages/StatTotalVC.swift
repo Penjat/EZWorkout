@@ -11,7 +11,9 @@ import Charts
 
 class StatTotalVC: UIViewController {
     
-  
+
+    @IBOutlet weak var pieChart: PieChartView!
+    
     @IBOutlet weak var timeGraph: BarChartView!
     @IBOutlet weak var static1: BarChartView!
   @IBOutlet weak var chartTotalReps: BarChartView!
@@ -22,14 +24,24 @@ class StatTotalVC: UIViewController {
   
     override func viewDidLoad() {
         super.viewDidLoad()
+        let exerciseDict = StaticDataManager.getRealmData(type: .type)
+        let topSevenDict = StaticDataManager.sortRealmDict(dict: exerciseDict)
+        
+        updateChartData(theChart: pieChart, chartLabel: topSevenDict.map{$0.0}, data: topSevenDict.map{(arg) -> PieChartDataEntry in
+            
+            let (key, value) = arg
+            let k = PieChartDataEntry(value:Double(value))
+            return k
+        })
       setUpChart1()
       setUpChart2()
       setUpChart3()
     }
     func animateGraph(){
-//        piePercentGraph!.animate(yAxisDuration: 1.4, easing: EasingFunctions.EaseOutBack)
-//        timeGraph.animate(xAxisDuration: 2.0, yAxisDuration: 2.0)
-//        static1.animate(xAxisDuration: 2.0, yAxisDuration: 2.0)
+        pieChart.animate(yAxisDuration: 1.4, easing: EasingFunctions.EaseOutBack)
+        timeGraph.animate(xAxisDuration: 2.0, yAxisDuration: 2.0)
+        static1.animate(xAxisDuration: 2.0, yAxisDuration: 2.0)
+        chartTotalReps.animate(xAxisDuration: 2.0, yAxisDuration: 2.0)
     }
     
     internal struct EasingFunctions

@@ -20,6 +20,11 @@ class StatPage4Controller: UIViewController {
       setupChart2(timeFrame: .day)
       setupChart3(timeFrame: .day)
     }
+    
+    func animateGraph(){
+        chartTimeSpent.animate(xAxisDuration: 2.0, yAxisDuration: 2.0)
+        chartCaloriesBurned.animate(xAxisDuration: 2.0, yAxisDuration: 2.0)
+    }
   
   @IBAction func chart1Toggle(_ sender: UISegmentedControl) {
     print("you pressed \(sender.selectedSegmentIndex)")

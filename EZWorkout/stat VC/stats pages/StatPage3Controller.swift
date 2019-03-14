@@ -16,6 +16,12 @@ class StatPage3Controller: UIViewController {
       setupChart3()
       
     }
+    
+    func animateGraph(){
+        chartRestingHeart.animate(xAxisDuration: 2.0, yAxisDuration: 2.0)
+        chartUserWeight.animate(xAxisDuration: 2.0, yAxisDuration: 2.0)
+        chartBMI.animate(xAxisDuration: 2.0, yAxisDuration: 2.0)
+    }
   
   func setupChart1(){
     //todo create fake user resting heart rates

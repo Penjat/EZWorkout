@@ -3,6 +3,7 @@ PODS:
     - Charts/Core (= 3.2.2)
   - Charts/Core (3.2.2)
   - FSCalendar (2.8.0)
+  - RAMAnimatedTabBarController (4.0.1)
   - Realm (3.13.1):
     - Realm/Headers (= 3.13.1)
   - Realm/Headers (3.13.1)
@@ -14,6 +15,7 @@ PODS:
 DEPENDENCIES:
   - Charts (~> 3.2)
   - FSCalendar
+  - RAMAnimatedTabBarController
   - RealmSwift
   - SkyFloatingLabelTextField (~> 3.0)
   - UICircularProgressRing
@@ -22,6 +24,7 @@ SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - Charts
     - FSCalendar
+    - RAMAnimatedTabBarController
     - Realm
     - RealmSwift
     - SkyFloatingLabelTextField
@@ -30,11 +33,12 @@ SPEC REPOS:
 SPEC CHECKSUMS:
   Charts: f69cf0518b6d1d62608ca504248f1bbe0b6ae77e
   FSCalendar: 3a5ed3636e2ba1b83ebebfcf0c2603105a6f5efe
+  RAMAnimatedTabBarController: 677d6f7ec7e88b1089486f4db49b0a5067e8ad1c
   Realm: 50071da38fe079e0735e47c9f2eae738c68c5996
   RealmSwift: 8a1e6a02b7a08cd17a31e3115143fb69fe5f3fb9
   SkyFloatingLabelTextField: 38164979b79512f9ff9288ad8acfc4bbf5d843e3
   UICircularProgressRing: 2ef1293241b83d8020ede21a8fe3b3d859525730
 
-PODFILE CHECKSUM: 002497734f1f13b64516ab907fcf4a92919ad416
+PODFILE CHECKSUM: d8036174508456c063028b99f28c6ea985076243
 
 COCOAPODS: 1.5.3

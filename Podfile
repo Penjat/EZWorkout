@@ -9,6 +9,7 @@ pod 'RealmSwift'
 pod 'UICircularProgressRing'
 pod 'SkyFloatingLabelTextField', '~> 3.0'
 pod 'FSCalendar'
+pod 'RAMAnimatedTabBarController'
   # Pods for EZWorkout
 
 end
