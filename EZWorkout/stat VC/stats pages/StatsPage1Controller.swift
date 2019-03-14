@@ -68,7 +68,7 @@ class StatsPage1Controller: UIViewController {
     
     print("this is top 7 sport \(topSevenDict)")
     
-    let barColor = #colorLiteral(red: 0.9428298473, green: 0.9622165561, blue: 0, alpha: 1)
+    let barColor = #colorLiteral(red: 0.2588235438, green: 0.7568627596, blue: 0.9686274529, alpha: 1)
     
     StaticDataManager.setUpChart(chart: chart1 , chartLabels: topSevenDict.map{$0.0} , chartValues: topSevenDict.map{$0.1} , colors: [barColor],bottomLabelText: "Total Weigth Moved")
     
@@ -97,7 +97,7 @@ class StatsPage1Controller: UIViewController {
     
     print("this is top 7 sport \(topSevenDict)")
     
-    let barColor = #colorLiteral(red: 0.9428298473, green: 0.9622165561, blue: 0, alpha: 1)
+    let barColor = #colorLiteral(red: 0.9372549057, green: 0.3490196168, blue: 0.1921568662, alpha: 1)
     
     
     

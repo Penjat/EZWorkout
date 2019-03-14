@@ -17,6 +17,8 @@ class SpeechInputManager {
     setUpExerciseRefs()
     setUpModifiers()
     setUpCommands()
+    print("exercise ref count = \(exerciseRefs.count)")
+    print("modifier count = \(exerciseModifiers.count)")
   }
   
 }
