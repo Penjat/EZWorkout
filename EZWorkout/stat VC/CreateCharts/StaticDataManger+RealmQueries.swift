@@ -167,7 +167,7 @@ extension StaticDataManager{
       }
       
     }
-    return Int(time)
+    return Int(time/3600.0)
   }
   static func getTotalTime()->Double{
     let realm = try! Realm()

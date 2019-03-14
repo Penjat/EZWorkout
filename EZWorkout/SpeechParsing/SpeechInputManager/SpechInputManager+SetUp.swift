@@ -116,9 +116,9 @@ extension SpeechInputManager{
     exerciseRefs.append(ExerciseRef(name: "adductor",muscleGroups: [.Chest],exerciseType: ExerciseType.Weight , outputName: "adductor"))
     
     //-------------TODO tricep kickbacks as one
-    exerciseRefs.append(ExerciseRef(name: "tricepdumbbellkickback",muscleGroups: [.Chest],exerciseType: ExerciseType.Weight , outputName: "tricep dumbell kickbacks"))
+//    exerciseRefs.append(ExerciseRef(name: "tricepdumbbellkickback",muscleGroups: [.Chest],exerciseType: ExerciseType.Weight , outputName: "tricep dumbell kickbacks"))
     
-    exerciseRefs.append(ExerciseRef(name: "tricepkickback",muscleGroups: [.Chest],exerciseType: ExerciseType.Weight , outputName: "tricep kickbacks"))
+//    exerciseRefs.append(ExerciseRef(name: "tricepkickback",muscleGroups: [.Chest],exerciseType: ExerciseType.Weight , outputName: "tricep kickbacks"))
     //------------------------
     exerciseRefs.append(ExerciseRef(name: "run",muscleGroups: [.Legs],exerciseType: ExerciseType.TimedDistance , outputName: "running"))
     

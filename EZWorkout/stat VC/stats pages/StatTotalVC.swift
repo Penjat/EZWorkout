@@ -25,17 +25,25 @@ class StatTotalVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         let exerciseDict = StaticDataManager.getRealmData(type: .type)
-        let topSevenDict = StaticDataManager.sortRealmDict(dict: exerciseDict)
+        var topSevenDict = StaticDataManager.sortRealmDict(dict: exerciseDict)
         
+        var total = 0
+        for (s,i) in topSevenDict{
+            total += i
+        }
+        //topSevenDict = topSevenDict.map{($0.0/total)*100}
         updateChartData(theChart: pieChart, chartLabel: topSevenDict.map{$0.0}, data: topSevenDict.map{(arg) -> PieChartDataEntry in
             
-            let (key, value) = arg
+            var (key, value) = arg
+            value = (value*100/total)
             let k = PieChartDataEntry(value:Double(value))
+            k.label = key
             return k
         })
       setUpChart1()
       setUpChart2()
       setUpChart3()
+       
     }
     func animateGraph(){
         pieChart.animate(yAxisDuration: 1.4, easing: EasingFunctions.EaseOutBack)
@@ -56,11 +64,26 @@ class StatTotalVC: UIViewController {
     func updateChartData(theChart: PieChartView, chartLabel:[String] ,data: [PieChartDataEntry]) {
         
         let dataInfo = PieChartDataSet(values: data, label: nil)
-        let colors = [UIColor(named: "iosColor"), UIColor(named: "macColor"),UIColor.darkGray]
+        let colors = [#colorLiteral(red: 0.4160000086, green: 0.6200000048, blue: 0.851000011, alpha: 1),#colorLiteral(red: 0.5427411795, green: 1, blue: 0.4465199709, alpha: 1),#colorLiteral(red: 1, green: 0.3947873712, blue: 0.8685549498, alpha: 1),#colorLiteral(red: 0.7254902124, green: 0.4784313738, blue: 0.09803921729, alpha: 1),#colorLiteral(red: 1, green: 0.3460842371, blue: 0.2327074111, alpha: 1)]
+       
         dataInfo.colors = colors as![NSUIColor]
         dataInfo.entryLabelColor = .white
+        dataInfo.valueLinePart1OffsetPercentage = 0.8
+        dataInfo.valueLinePart1Length = 0.2
+        dataInfo.valueLinePart2Length = 0.4
+        //set.xValuePosition = .outsideSlice
+        dataInfo.yValuePosition = .outsideSlice
         
         let chartData = PieChartData(dataSet: dataInfo)
+        let pFormatter = NumberFormatter()
+        pFormatter.numberStyle = .percent
+        pFormatter.maximumFractionDigits = 1
+        pFormatter.multiplier = 1
+        pFormatter.percentSymbol = " %"
+        chartData.setValueFormatter(DefaultValueFormatter(formatter: pFormatter))
+        chartData.setValueFont(UIFont(name: "Simply Rounded", size: 14.0)!)
+     
+        chartData.setValueTextColor(#colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1))
         
         theChart.data = chartData
         // theChart.color
@@ -76,7 +99,7 @@ class StatTotalVC: UIViewController {
     let monthArray = stringTimeArray.map{$0.1}
     let totalWeight = StatHelper.createTotal(timeArray: monthArray, closure: StaticDataManager.getTotalWeight(beforeDate:))
     let barColor = #colorLiteral(red: 0.2196078449, green: 0.007843137719, blue: 0.8549019694, alpha: 1)
-    StaticDataManager.setUpChart(chart: timeGraph, chartLabels: labelArray, chartValues: totalWeight,colors: [barColor],bottomLabelText: "Total Weight Lifted")
+    StaticDataManager.setUpChart(chart: timeGraph, chartLabels: labelArray, chartValues: totalWeight,colors: [barColor],bottomLabelText: "Total Weight Lifted (lbs)")
     
     //timeGraph.xAxis.labelFont  = UIFont(name: "Simply Rounded", size: 20.0)!
     
@@ -89,7 +112,7 @@ class StatTotalVC: UIViewController {
     let totalTime = StatHelper.createTotal(timeArray: monthArray, closure: StaticDataManager.getTotalTime(beforeDate:))
     
     
-    StaticDataManager.setUpChart(chart: static1, chartLabels: labelArray, chartValues: totalTime,colors: [UIColor.yellow],bottomLabelText: "Total Time Working Out")
+    StaticDataManager.setUpChart(chart: static1, chartLabels: labelArray, chartValues: totalTime,colors: [UIColor.yellow],bottomLabelText: "Total Time Working Out (hour)")
     
     //static1.xAxis.labelFont  = UIFont(name: "Simply Rounded", size: 20.0)!
     

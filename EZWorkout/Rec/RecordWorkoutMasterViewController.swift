@@ -58,8 +58,8 @@ class RecordWorkoutMasterViewController: UIViewController {
     idleColor1 = #colorLiteral(red: 0.2392156869, green: 0.6745098233, blue: 0.9686274529, alpha: 1)
     idleColor2 = #colorLiteral(red: 0.1411764771, green: 0.3960784376, blue: 0.5647059083, alpha: 1)
     
-    moveColor1 = #colorLiteral(red: 0.9704785943, green: 0.918192029, blue: 0.6774753332, alpha: 1)
-    moveColor2 = #colorLiteral(red: 0.3647058904, green: 0.06666667014, blue: 0.9686274529, alpha: 1)
+    moveColor1 = #colorLiteral(red: 0.5706557631, green: 0.8416675329, blue: 0.9755091071, alpha: 1)
+    moveColor2 = #colorLiteral(red: 0.5306761861, green: 0.0978826955, blue: 0.9567930102, alpha: 1)
     //TODO put in animation extention
     gradient = CAGradientLayer()
     //startGradient()

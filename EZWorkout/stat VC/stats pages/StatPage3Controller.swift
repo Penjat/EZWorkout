@@ -18,9 +18,9 @@ class StatPage3Controller: UIViewController {
     }
     
     func animateGraph(){
-        chartRestingHeart.animate(xAxisDuration: 2.0, yAxisDuration: 2.0)
-        chartUserWeight.animate(xAxisDuration: 2.0, yAxisDuration: 2.0)
-        chartBMI.animate(xAxisDuration: 2.0, yAxisDuration: 2.0)
+        chartRestingHeart.animate(xAxisDuration: 1.0, yAxisDuration: 1.0)
+        chartUserWeight.animate(xAxisDuration: 1.0, yAxisDuration: 1.0)
+        chartBMI.animate(xAxisDuration: 1.0, yAxisDuration: 1.0)
     }
   
   func setupChart1(){

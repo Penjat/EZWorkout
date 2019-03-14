@@ -91,7 +91,6 @@
 		0BF84E902230ED2700DFC6B0 /* ExerciseTypeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BF84E8F2230ED2700DFC6B0 /* ExerciseTypeView.swift */; };
 		0BF84E922231B0E900DFC6B0 /* ExerciseSet.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0BF84E912231B0E900DFC6B0 /* ExerciseSet.xib */; };
 		0BF84E942231B16A00DFC6B0 /* ExerciseSetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BF84E932231B16A00DFC6B0 /* ExerciseSetView.swift */; };
-		0BFDDB6F22334B2700318F80 /* EZWorkoutTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BFDDB6E22334B2700318F80 /* EZWorkoutTests.swift */; };
 		1BD8438B9947517B54131039 /* Pods_EZWorkout.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 56613A7F23DBE1C05BB336A2 /* Pods_EZWorkout.framework */; };
 		2851C8812231F23A005E4384 /* StaticDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2851C8802231F23A005E4384 /* StaticDataManager.swift */; };
 		285A56DB2229DB2E003E4AA0 /* ExcerciseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 285A56DA2229DB2E003E4AA0 /* ExcerciseTableViewCell.swift */; };
@@ -122,13 +121,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		0BFDDB7122334B2700318F80 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 0BCA1AB02228D30000B51C27 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 0BCA1AB72228D30000B51C27;
-			remoteInfo = EZWorkout;
-		};
 		28F4C09522388372003318ED /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 0BCA1AB02228D30000B51C27 /* Project object */;
@@ -264,11 +256,10 @@
 		0BF84E8F2230ED2700DFC6B0 /* ExerciseTypeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseTypeView.swift; sourceTree = "<group>"; };
 		0BF84E912231B0E900DFC6B0 /* ExerciseSet.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ExerciseSet.xib; sourceTree = "<group>"; };
 		0BF84E932231B16A00DFC6B0 /* ExerciseSetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseSetView.swift; sourceTree = "<group>"; };
-		0BFDDB6C22334B2700318F80 /* EZWorkoutTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EZWorkoutTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		0BFDDB6E22334B2700318F80 /* EZWorkoutTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EZWorkoutTests.swift; sourceTree = "<group>"; };
-		0BFDDB7022334B2700318F80 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2851C8802231F23A005E4384 /* StaticDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StaticDataManager.swift; sourceTree = "<group>"; };
 		285A56DA2229DB2E003E4AA0 /* ExcerciseTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExcerciseTableViewCell.swift; sourceTree = "<group>"; };
+		286B6716223ADDA700438B77 /* WorkoutWatch.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = WorkoutWatch.entitlements; sourceTree = "<group>"; };
+		286B6717223ADDB700438B77 /* WorkoutWatch Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "WorkoutWatch Extension.entitlements"; sourceTree = "<group>"; };
 		28812195222DA4DA007042C1 /* StatVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatVC.swift; sourceTree = "<group>"; };
 		288121DD222F53DC007042C1 /* StatPVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatPVC.swift; sourceTree = "<group>"; };
 		288121E1222F5598007042C1 /* ScrollStatsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollStatsView.swift; sourceTree = "<group>"; };
@@ -306,13 +297,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				1BD8438B9947517B54131039 /* Pods_EZWorkout.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		0BFDDB6922334B2700318F80 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -433,7 +417,6 @@
 			isa = PBXGroup;
 			children = (
 				0BCA1ABA2228D30000B51C27 /* EZWorkout */,
-				0BFDDB6D22334B2700318F80 /* EZWorkoutTests */,
 				28F4C08822388371003318ED /* WorkoutWatch */,
 				28F4C09722388372003318ED /* WorkoutWatch Extension */,
 				0BCA1AB92228D30000B51C27 /* Products */,
@@ -446,7 +429,6 @@
 			isa = PBXGroup;
 			children = (
 				0BCA1AB82228D30000B51C27 /* EZWorkout.app */,
-				0BFDDB6C22334B2700318F80 /* EZWorkoutTests.xctest */,
 				28F4C08722388371003318ED /* WorkoutWatch.app */,
 				28F4C09322388372003318ED /* WorkoutWatch Extension.appex */,
 			);
@@ -493,15 +475,6 @@
 				0BF84E932231B16A00DFC6B0 /* ExerciseSetView.swift */,
 			);
 			path = "Cells and Xibs";
-			sourceTree = "<group>";
-		};
-		0BFDDB6D22334B2700318F80 /* EZWorkoutTests */ = {
-			isa = PBXGroup;
-			children = (
-				0BFDDB6E22334B2700318F80 /* EZWorkoutTests.swift */,
-				0BFDDB7022334B2700318F80 /* Info.plist */,
-			);
-			path = EZWorkoutTests;
 			sourceTree = "<group>";
 		};
 		2851C8842231F43A005E4384 /* CreateCharts */ = {
@@ -581,6 +554,7 @@
 		28F4C08822388371003318ED /* WorkoutWatch */ = {
 			isa = PBXGroup;
 			children = (
+				286B6716223ADDA700438B77 /* WorkoutWatch.entitlements */,
 				28F4C08922388371003318ED /* Interface.storyboard */,
 				28F4C08C22388372003318ED /* Assets.xcassets */,
 				28F4C08E22388372003318ED /* Info.plist */,
@@ -591,6 +565,7 @@
 		28F4C09722388372003318ED /* WorkoutWatch Extension */ = {
 			isa = PBXGroup;
 			children = (
+				286B6717223ADDB700438B77 /* WorkoutWatch Extension.entitlements */,
 				28F4C09822388372003318ED /* InterfaceController.swift */,
 				28F4C09A22388372003318ED /* ExtensionDelegate.swift */,
 				28F4C09C22388372003318ED /* NotificationController.swift */,
@@ -644,24 +619,6 @@
 			productReference = 0BCA1AB82228D30000B51C27 /* EZWorkout.app */;
 			productType = "com.apple.product-type.application";
 		};
-		0BFDDB6B22334B2700318F80 /* EZWorkoutTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 0BFDDB7522334B2700318F80 /* Build configuration list for PBXNativeTarget "EZWorkoutTests" */;
-			buildPhases = (
-				0BFDDB6822334B2700318F80 /* Sources */,
-				0BFDDB6922334B2700318F80 /* Frameworks */,
-				0BFDDB6A22334B2700318F80 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				0BFDDB7222334B2700318F80 /* PBXTargetDependency */,
-			);
-			name = EZWorkoutTests;
-			productName = EZWorkoutTests;
-			productReference = 0BFDDB6C22334B2700318F80 /* EZWorkoutTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 		28F4C08622388371003318ED /* WorkoutWatch */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 28F4C0AB22388373003318ED /* Build configuration list for PBXNativeTarget "WorkoutWatch" */;
@@ -710,23 +667,41 @@
 					0BCA1AB72228D30000B51C27 = {
 						CreatedOnToolsVersion = 10.1;
 						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 0;
+							};
 							com.apple.HealthKit = {
 								enabled = 0;
 							};
 							com.apple.Keychain = {
-								enabled = 0;
+								enabled = 1;
+							};
+							com.apple.iCloud = {
+								enabled = 1;
 							};
 						};
 					};
-					0BFDDB6B22334B2700318F80 = {
-						CreatedOnToolsVersion = 10.1;
-						TestTargetID = 0BCA1AB72228D30000B51C27;
-					};
 					28F4C08622388371003318ED = {
 						CreatedOnToolsVersion = 10.1;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 					28F4C09222388372003318ED = {
 						CreatedOnToolsVersion = 10.1;
+						SystemCapabilities = {
+							com.apple.ApplePay = {
+								enabled = 0;
+							};
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 0;
+							};
+							com.apple.iCloud = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -744,7 +719,6 @@
 			projectRoot = "";
 			targets = (
 				0BCA1AB72228D30000B51C27 /* EZWorkout */,
-				0BFDDB6B22334B2700318F80 /* EZWorkoutTests */,
 				28F4C08622388371003318ED /* WorkoutWatch */,
 				28F4C09222388372003318ED /* WorkoutWatch Extension */,
 			);
@@ -773,13 +747,6 @@
 				0BAA18352234750900EC40D8 /* Simply Rounded Bold Italic.ttf in Resources */,
 				0BA30333222E09F00046FDB9 /* HistorySB.storyboard in Resources */,
 				0BAA18332234720A00EC40D8 /* KeepCalm-Medium.ttf in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		0BFDDB6A22334B2700318F80 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -951,14 +918,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		0BFDDB6822334B2700318F80 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				0BFDDB6F22334B2700318F80 /* EZWorkoutTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		28F4C08F22388372003318ED /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -975,11 +934,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		0BFDDB7222334B2700318F80 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 0BCA1AB72228D30000B51C27 /* EZWorkout */;
-			targetProxy = 0BFDDB7122334B2700318F80 /* PBXContainerItemProxy */;
-		};
 		28F4C09622388372003318ED /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 28F4C09222388372003318ED /* WorkoutWatch Extension */;
@@ -1146,15 +1100,16 @@
 			baseConfigurationReference = 8872BA68D8FE0B972398D279 /* Pods-EZWorkout.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = EZWorkout/EZWorkout.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = L688AU9RCV;
+				DEVELOPMENT_TEAM = XX8BFQJ7RJ;
 				INFOPLIST_FILE = EZWorkout/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.spencersymington.EZWorkout;
+				PRODUCT_BUNDLE_IDENTIFIER = com.josh.EZWorkout;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.2;
@@ -1167,57 +1122,20 @@
 			baseConfigurationReference = FEEC72732415616696171480 /* Pods-EZWorkout.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = EZWorkout/EZWorkout.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = L688AU9RCV;
+				DEVELOPMENT_TEAM = XX8BFQJ7RJ;
 				INFOPLIST_FILE = EZWorkout/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.spencersymington.EZWorkout;
+				PRODUCT_BUNDLE_IDENTIFIER = com.josh.EZWorkout;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Release;
-		};
-		0BFDDB7322334B2700318F80 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = EZWorkoutTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.spencersymington.EZWorkoutTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/EZWorkout.app/EZWorkout";
-			};
-			name = Debug;
-		};
-		0BFDDB7422334B2700318F80 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = EZWorkoutTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.spencersymington.EZWorkoutTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/EZWorkout.app/EZWorkout";
 			};
 			name = Release;
 		};
@@ -1226,12 +1144,13 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = WorkoutWatch/WorkoutWatch.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = L688AU9RCV;
+				DEVELOPMENT_TEAM = XX8BFQJ7RJ;
 				IBSC_MODULE = WorkoutWatch_Extension;
 				INFOPLIST_FILE = WorkoutWatch/Info.plist;
-				PRODUCT_BUNDLE_IDENTIFIER = com.spencersymington.EZWorkout.watchkitapp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.josh.EZWorkout.watchkitapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = watchos;
@@ -1247,12 +1166,13 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = WorkoutWatch/WorkoutWatch.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = L688AU9RCV;
+				DEVELOPMENT_TEAM = XX8BFQJ7RJ;
 				IBSC_MODULE = WorkoutWatch_Extension;
 				INFOPLIST_FILE = WorkoutWatch/Info.plist;
-				PRODUCT_BUNDLE_IDENTIFIER = com.spencersymington.EZWorkout.watchkitapp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.josh.EZWorkout.watchkitapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = watchos;
@@ -1267,15 +1187,19 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_ENTITLEMENTS = "WorkoutWatch Extension/WorkoutWatch Extension.entitlements";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = XX8BFQJ7RJ;
 				INFOPLIST_FILE = "WorkoutWatch Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.spencersymington.EZWorkout.watchkitapp.watchkitextension;
+				PRODUCT_BUNDLE_IDENTIFIER = com.josh.EZWorkout.watchkitapp.watchkitextension;
 				PRODUCT_NAME = "${TARGET_NAME}";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 4.2;
@@ -1288,15 +1212,19 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_ENTITLEMENTS = "WorkoutWatch Extension/WorkoutWatch Extension.entitlements";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = XX8BFQJ7RJ;
 				INFOPLIST_FILE = "WorkoutWatch Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.spencersymington.EZWorkout.watchkitapp.watchkitextension;
+				PRODUCT_BUNDLE_IDENTIFIER = com.josh.EZWorkout.watchkitapp.watchkitextension;
 				PRODUCT_NAME = "${TARGET_NAME}";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 4.2;
@@ -1322,15 +1250,6 @@
 			buildConfigurations = (
 				0BCA1ACE2228D30100B51C27 /* Debug */,
 				0BCA1ACF2228D30100B51C27 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		0BFDDB7522334B2700318F80 /* Build configuration list for PBXNativeTarget "EZWorkoutTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				0BFDDB7322334B2700318F80 /* Debug */,
-				0BFDDB7422334B2700318F80 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

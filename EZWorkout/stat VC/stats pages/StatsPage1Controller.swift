@@ -70,12 +70,12 @@ class StatsPage1Controller: UIViewController {
     
     let barColor = #colorLiteral(red: 0.2588235438, green: 0.7568627596, blue: 0.9686274529, alpha: 1)
     
-    StaticDataManager.setUpChart(chart: chart1 , chartLabels: topSevenDict.map{$0.0} , chartValues: topSevenDict.map{$0.1} , colors: [barColor],bottomLabelText: "Total Weigth Moved")
+    StaticDataManager.setUpChart(chart: chart1 , chartLabels: topSevenDict.map{$0.0} , chartValues: topSevenDict.map{$0.1} , colors: [barColor],bottomLabelText: "Total Weigth Moved (lbs)")
     
     //      chart1.leftAxis.labelFont = UIFont(name: "Simply Rounded", size: 20.0)!
     chart1.xAxis.labelFont  = UIFont(name: "Simply Rounded", size: 20.0)!
     
-    chart1.legend.font = UIFont(name: "Simply Rounded", size: 20.0)!
+    chart1.legend.font = UIFont(name: "Simply Rounded", size: 15.0)!
     
     
     
@@ -106,7 +106,7 @@ class StatsPage1Controller: UIViewController {
     
     chart2.xAxis.labelFont  = UIFont(name: "Simply Rounded", size: 20.0)!
     
-    chart2.legend.font = UIFont(name: "Simply Rounded", size: 20.0)!
+    chart2.legend.font = UIFont(name: "Simply Rounded", size: 15.0)!
     
   }
   
@@ -126,7 +126,7 @@ class StatsPage1Controller: UIViewController {
     
     chart3.xAxis.labelFont  = UIFont(name: "Simply Rounded", size: 20.0)!
     
-    chart3.legend.font = UIFont(name: "Simply Rounded", size: 20.0)!
+    chart3.legend.font = UIFont(name: "Simply Rounded", size: 15.0)!
   }
   
   

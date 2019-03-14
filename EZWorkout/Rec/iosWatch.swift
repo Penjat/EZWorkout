@@ -12,7 +12,6 @@ class iosWatch{
     static var delegate : RecognizerReturnDelegate?
     static func getOutputFromWatch(inputStr: String)->String{
         delegate?.recieve(speech: inputStr)
-        
         return inputStr
     }
 }
