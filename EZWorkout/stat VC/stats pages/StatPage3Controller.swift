@@ -21,7 +21,7 @@ class StatPage3Controller: UIViewController {
     //todo create fake user resting heart rates
     
     
-    let numbers = [20.0,66.0,90.0,100.0]
+    let numbers = [90.0,89.0,88.0,89.0,87.0,86.5,84,80.0,79.0,75.0,76.0,74]
     
     var values = [ChartDataEntry]()
     var i = 0.0
@@ -68,7 +68,7 @@ class StatPage3Controller: UIViewController {
   
   func setupChart2(){
     //todo create fake user weights
-    let numbers = [20.0,66.0,90.0,100.0]
+    let numbers = [155.0,156.0,150.0,152.0,149.0,150.0,148.0]
     let labelTextColor = #colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1)
     var values = [ChartDataEntry]()
     var i = 0.0
