@@ -75,8 +75,8 @@ class StatTotalVC: UIViewController {
     let labelArray = stringTimeArray.map{$0.0}
     let monthArray = stringTimeArray.map{$0.1}
     let totalWeight = StatHelper.createTotal(timeArray: monthArray, closure: StaticDataManager.getTotalWeight(beforeDate:))
-    
-    StaticDataManager.setUpChart(chart: timeGraph, chartLabels: labelArray, chartValues: totalWeight,colors: [UIColor.black],bottomLabelText: "Total Weight Lifted")
+    let barColor = #colorLiteral(red: 0.2196078449, green: 0.007843137719, blue: 0.8549019694, alpha: 1)
+    StaticDataManager.setUpChart(chart: timeGraph, chartLabels: labelArray, chartValues: totalWeight,colors: [barColor],bottomLabelText: "Total Weight Lifted")
     
     //timeGraph.xAxis.labelFont  = UIFont(name: "Simply Rounded", size: 20.0)!
     
@@ -100,8 +100,8 @@ class StatTotalVC: UIViewController {
     //TODO change to calories
     let monthArray = stringTimeArray.map{$0.1}
     let totalReps = StatHelper.createTotal(timeArray: monthArray , closure: StaticDataManager.getTotalReps(date:))
-    
-    StaticDataManager.setUpChart(chart: chartTotalReps, chartLabels: stringTimeArray.map{$0.0}, chartValues: totalReps,colors: [UIColor.yellow],bottomLabelText: "Total Calories Burned")
+    let barColor = #colorLiteral(red: 0.5843137503, green: 0.8235294223, blue: 0.4196078479, alpha: 1)
+    StaticDataManager.setUpChart(chart: chartTotalReps, chartLabels: stringTimeArray.map{$0.0}, chartValues: totalReps,colors: [barColor],bottomLabelText: "Total Calories Burned")
     
     //chartTotalReps.xAxis.labelFont  = UIFont(name: "Simply Rounded", size: 20.0)!
     
