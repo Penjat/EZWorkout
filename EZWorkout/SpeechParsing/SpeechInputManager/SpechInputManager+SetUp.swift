@@ -83,6 +83,8 @@ extension SpeechInputManager{
     
     exerciseRefs.append(ExerciseRef(name: "lunge",muscleGroups: [.Legs,.Back],exerciseType: ExerciseType.Weight))
     
+    //TODO take out later
+    exerciseRefs.append(ExerciseRef(name: "push",muscleGroups: [MuscleGroup.Chest],exerciseType: ExerciseType.BodyWeight,outputName:"push-ups"))
     exerciseRefs.append(ExerciseRef(name: "pushup",muscleGroups: [MuscleGroup.Chest],exerciseType: ExerciseType.BodyWeight,outputName:"push-ups"))
     
     exerciseRefs.append(ExerciseRef(name: "dumbbellpress",muscleGroups: [MuscleGroup.Chest],exerciseType: ExerciseType.Weight))
