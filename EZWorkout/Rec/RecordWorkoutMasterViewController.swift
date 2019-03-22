@@ -1,6 +1,7 @@
 
 import AVFoundation
 import UIKit
+import RealmSwift
 
 class RecordWorkoutMasterViewController: UIViewController {
   
@@ -44,38 +45,39 @@ class RecordWorkoutMasterViewController: UIViewController {
   
   override func viewDidLoad() {
     super.viewDidLoad()
+   
     
-    
-    speechRecognizer = SpeechRecognizer(delegate: self)
-    
-    DataManager.dataManager.testSingelton()
-    //feebBackLabel
-    feedbackVisualizer.alpha = 0.0
-    
-    //timerLabel.alpha = 0.0
-    topBarController.animateTopBars(page: curPage)
-    
-    idleColor1 = #colorLiteral(red: 0.2392156869, green: 0.6745098233, blue: 0.9686274529, alpha: 1)
-    idleColor2 = #colorLiteral(red: 0.1411764771, green: 0.3960784376, blue: 0.5647059083, alpha: 1)
-    
-    moveColor1 = #colorLiteral(red: 0.5706557631, green: 0.8416675329, blue: 0.9755091071, alpha: 1)
-    moveColor2 = #colorLiteral(red: 0.5306761861, green: 0.0978826955, blue: 0.9567930102, alpha: 1)
-    //TODO put in animation extention
-    gradient = CAGradientLayer()
-    //startGradient()
-  
-    gradient.colors = [idleColor1.cgColor, idleColor2.cgColor]
-    gradient.locations = [0.0 , 1.0]
-    gradient.startPoint = CGPoint(x: 0.0, y: 0.0)
-    gradient.endPoint = CGPoint(x: 1.0, y: 0.0)
-    
-    gradient.frame = CGRect(x: 0.0, y: 0.0, width: self.view.frame.size.width, height: self.view.frame.size.height)
-    self.view.layer.insertSublayer(gradient, at: 0)
-    
-    
-    
-    
-    prepareVisualizer()
+        speechRecognizer = SpeechRecognizer(delegate: self)
+        
+        DataManager.dataManager.testSingelton()
+        //feebBackLabel
+        feedbackVisualizer.alpha = 0.0
+        
+        //timerLabel.alpha = 0.0
+        topBarController.animateTopBars(page: curPage)
+        
+        let idleColor1 = #colorLiteral(red: 0.8964110017, green: 0.6467557549, blue: 0.6463074088, alpha: 1)
+        let idleColor2 = #colorLiteral(red: 0.1764705926, green: 0.01176470611, blue: 0.5607843399, alpha: 1)
+        
+        moveColor1 = #colorLiteral(red: 0.5706557631, green: 0.8416675329, blue: 0.9755091071, alpha: 1)
+        moveColor2 = #colorLiteral(red: 0.5306761861, green: 0.0978826955, blue: 0.9567930102, alpha: 1)
+        //TODO put in animation extention
+        gradient = CAGradientLayer()
+        //startGradient()
+        
+        gradient.colors = [idleColor1.cgColor, idleColor2.cgColor]
+        gradient.locations = [0.0 , 1.0]
+        gradient.startPoint = CGPoint(x: 0.0, y: 0.0)
+        gradient.endPoint = CGPoint(x: 1.0, y: 0.0)
+        
+        gradient.frame = CGRect(x: 0.0, y: 0.0, width: self.view.frame.size.width, height: self.view.frame.size.height)
+        self.view.layer.insertSublayer(gradient, at: 0)
+        
+        
+        
+        
+        prepareVisualizer()
+   
   }
   func animateRecPressed(){
     
@@ -140,16 +142,24 @@ class RecordWorkoutMasterViewController: UIViewController {
     
   }
   override func viewDidAppear(_ animated: Bool) {
-    super.viewDidAppear(animated)
-    centerScrollView.setContentOffset(CGPoint(x:view.frame.width, y:0), animated: false)
-    centerScrollView.delegate = self
-    
-    sectionTitle.alpha = 0.3
-    sectionTitle.transform = CGAffineTransform(scaleX: 1.4, y: 1.4)
-    UIView.animate(withDuration: 1.0, animations: {
-      self.sectionTitle.alpha = 1.0
-      self.sectionTitle.transform = CGAffineTransform(scaleX: 1, y: 1)
-      })
+    let realm = try! Realm()
+    if (realm.objects(UserRealm.self).first == nil){
+        let storyBoard = UIStoryboard(name: "Main", bundle: nil)
+        let loginVC = storyBoard.instantiateViewController(withIdentifier: "loginVC")
+        self.present(loginVC, animated: true, completion: nil)
+    }else{
+        super.viewDidAppear(animated)
+        centerScrollView.setContentOffset(CGPoint(x:view.frame.width, y:0), animated: false)
+        centerScrollView.delegate = self
+        
+        sectionTitle.alpha = 0.3
+        sectionTitle.transform = CGAffineTransform(scaleX: 1.4, y: 1.4)
+        UIView.animate(withDuration: 1.0, animations: {
+            self.sectionTitle.alpha = 1.0
+            self.sectionTitle.transform = CGAffineTransform(scaleX: 1, y: 1)
+        })
+    }
+   
     
   }
   override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

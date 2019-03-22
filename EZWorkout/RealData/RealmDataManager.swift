@@ -44,6 +44,7 @@ class RealmDataMangers {
         if let results = realm.objects(UserRealm.self).first{
             UserRealm.curUser = results
         }else{
+            
 //            let realm = try! Realm()
 //            let firstExcerise = RealmDataMangers.createExcercise(calory: 10, type: "weight", name: "bench", modified: "incline", reps: 20, weight: 40)
 //            let second = RealmDataMangers.createExcercise(calory: 10, type: "weight", name: "benchpress", modified: "incline", reps: 20, weight: 40)
@@ -88,12 +89,15 @@ class RealmDataMangers {
 //            let userSat2 =  RealmDataMangers.createUserStat(date: someDateTime3e!, weight: 123, restingHeart: 65)
 //
 //            let userSat3 =  RealmDataMangers.createUserStat(date: someDateTime4e!, weight: 140, restingHeart: 73)
-            let user = RealmDataMangers.createUser(name: "Jason", gender: "male", Date: Date(), userStatArray: [], workoutArray: [])
-            RealmDataMangers.save(object: user, realm: realm)
-            UserRealm.curUser = realm.objects(UserRealm.self).first!
-          
-          
-          createFakeYear()
+            
+            
+            
+//            let user = RealmDataMangers.createUser(name: "Jason", gender: "male", Date: Date(), userStatArray: [], workoutArray: [])
+//            RealmDataMangers.save(object: user, realm: realm)
+//            UserRealm.curUser = realm.objects(UserRealm.self).first!
+//
+//
+//          createFakeYear()
           
         }
         
