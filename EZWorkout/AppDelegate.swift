@@ -19,7 +19,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
   func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
     // Override point for customization after application launch.
     let config = Realm.Configuration(
-        schemaVersion: 50,
+        schemaVersion: 52,
         migrationBlock: { migration, oldSchemaVersion in
             if (oldSchemaVersion < 1) {
                 // Nothing to do!
@@ -30,7 +30,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     Realm.Configuration.defaultConfiguration = config
     RealmDataMangers.retrieveUser()
      print(Realm.Configuration.defaultConfiguration.fileURL!)
-    //UserRealm.curUser.getAllTime()
     return true
   }
 
