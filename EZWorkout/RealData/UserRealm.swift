@@ -14,6 +14,7 @@ class UserRealm: Object {
     @objc dynamic var name: String!
     @objc dynamic var gender: String!
     @objc dynamic var birthday: Date?
+    let isFirstTime = RealmOptional<Bool>()
     
     let userStatArray = List<userStatRealm>()
     let workoutArray = List<WorkoutRealm>()

@@ -28,7 +28,7 @@ class StatUserVC: UIViewController, UITextFieldDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        circularView.backgroundColor = .black
+//        circularView.backgroundColor = .black
         setUpText()
         setUpButton()
         textFields = [caloryField,heightField,weightField,ageField]
@@ -83,7 +83,7 @@ class StatUserVC: UIViewController, UITextFieldDelegate {
         caloryField.title = "              calories"
         caloryField.iconImage = UIImage(named: "gym")
         weightField.title = "              Weight lb"
-        weightField.iconImage = UIImage(named: "weight")
+        weightField.iconImage = UIImage(named: "gym")
         // plane icon as per https://fortawesome.github.io/Font-Awesome/cheatsheet/
         //heightField.iconText = "\u{f072}"
        
