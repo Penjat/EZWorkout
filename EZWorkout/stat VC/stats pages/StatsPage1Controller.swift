@@ -76,18 +76,6 @@ class StatsPage1Controller: UIViewController {
     chart1.xAxis.labelFont  = UIFont(name: "Simply Rounded", size: 20.0)!
     
     chart1.legend.font = UIFont(name: "Simply Rounded", size: 15.0)!
-    
-    
-    
-    
-    //      chart1.legend.formSize = 20.0
-    //      chart1.legend.yOffset = 20.0
-    //      chart1.legend.neededHeight = 50
-    //chart1.legend.enabled = false
-    
-    
-    
-    
   }
   func setupChart2(){
     let exerciseDict = StaticDataManager.getRealmDataGroupedbySets(startDate: nil, endDate: nil)
