@@ -20,18 +20,18 @@ class StatsPage1Controller: UIViewController {
   
   override func viewDidLoad() {
     super.viewDidLoad()
-    
     setupChart1()
     setupChart2()
     setupChart3()
-    
-    
-    
   }
   override func viewDidAppear(_ animated: Bool) {
+    setupChart1()
+    setupChart2()
+    setupChart3()
     super.viewDidAppear(animated)
     chartArray = [chart1,chart2,chart3]
     checkShouldAnimate()
+
   }
   
   func checkShouldAnimate(scrollPos:CGFloat = 0){

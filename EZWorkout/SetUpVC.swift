@@ -76,13 +76,12 @@ class SetUpVC: UIViewController,UITextFieldDelegate {
         textField.tintColor = overcastBlueColor
         textField.textColor = darkGreyColor
         textField.lineColor = lightGreyColor
-        
         textField.selectedTitleColor = overcastBlueColor
         textField.selectedLineColor = overcastBlueColor
         
         textField.iconWidth = 65
         //textField.iconFont = UIFont(name: "FontAwesome", size: 35)
-        textField.font = UIFont(name: "AppleSDGothicNeo-Regular", size: 18)
+        textField.font = UIFont(name: "AppleSDGothicNeo-Regular", size: 15)
         textField.titleColor = overcastBlueColor
         // textField.minimumFontSize
     }
@@ -101,7 +100,9 @@ class SetUpVC: UIViewController,UITextFieldDelegate {
     
     @IBAction func nextAction(_ sender: Any) {
         guard let height = heightTxt.text,
-            let weight = weightTxt.text else{return}
+            let weight = weightTxt.text else{
+                return
+        }
         let realm = try! Realm()
         let userState = RealmDataMangers.createUserStat(date: Date(), weight: Int(weight)!, restingHeart: nil)
         let user = RealmDataMangers.createUser(name: "Jason", gender: gender, Date: Date(), userStatArray: [userState], workoutArray: [])

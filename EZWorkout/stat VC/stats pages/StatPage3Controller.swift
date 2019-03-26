@@ -11,13 +11,14 @@ class StatPage3Controller: UIViewController {
   
     override func viewDidLoad() {
         super.viewDidLoad()
-      setupChart1()
-      setupChart2()
-      setupChart3()
+       
       
     }
     
     func animateGraph(){
+        setupChart1()
+        setupChart2()
+        setupChart3()
         chartRestingHeart.animate(xAxisDuration: 1.0, yAxisDuration: 1.0)
         chartUserWeight.animate(xAxisDuration: 1.0, yAxisDuration: 1.0)
         chartBMI.animate(xAxisDuration: 1.0, yAxisDuration: 1.0)

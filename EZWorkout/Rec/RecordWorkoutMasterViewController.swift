@@ -6,7 +6,6 @@ import RealmSwift
 class RecordWorkoutMasterViewController: UIViewController {
   
   @IBOutlet weak var sectionTitle: UILabel!
-  
   var recorder:AVAudioRecorder!
   
   @IBOutlet weak var centerScrollView: UIScrollView!
@@ -142,12 +141,12 @@ class RecordWorkoutMasterViewController: UIViewController {
     
   }
   override func viewDidAppear(_ animated: Bool) {
-    let realm = try! Realm()
-    if (realm.objects(UserRealm.self).first == nil){
+    if (RealmDataMangers.retrieveUser() == false){
         let storyBoard = UIStoryboard(name: "Main", bundle: nil)
         let loginVC = storyBoard.instantiateViewController(withIdentifier: "loginVC")
         self.present(loginVC, animated: true, completion: nil)
-    }else{
+    }
+   else{
         super.viewDidAppear(animated)
         centerScrollView.setContentOffset(CGPoint(x:view.frame.width, y:0), animated: false)
         centerScrollView.delegate = self

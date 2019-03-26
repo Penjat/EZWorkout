@@ -14,11 +14,14 @@ class StatPage4Controller: UIViewController {
   
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // Do any additional setup after loading the view.
-      setupChart1(timeFrame: .day)
-      setupChart2(timeFrame: .day)
-      setupChart3(timeFrame: .day)
+      
+    }
+    override func viewDidAppear(_ animated: Bool) {
+        setupChart1(timeFrame: .day)
+        setupChart2(timeFrame: .day)
+        setupChart3(timeFrame: .day)
     }
     
     func animateGraph(){
