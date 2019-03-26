@@ -8,6 +8,7 @@
 
 import UIKit
 import SkyFloatingLabelTextField
+import RealmSwift
 class SetUpVC: UIViewController,UITextFieldDelegate {
 
     @IBOutlet weak var maleBtn: UIButton!
@@ -19,6 +20,7 @@ class SetUpVC: UIViewController,UITextFieldDelegate {
     @IBOutlet weak var nextBtn: UIButton!
     
     
+    var gender = "male"
     let lightGreyColor: UIColor = UIColor(red: 197 / 255, green: 205 / 255, blue: 205 / 255, alpha: 1.0)
     let darkGreyColor: UIColor = UIColor(red: 52 / 255, green: 42 / 255, blue: 61 / 255, alpha: 1.0)
     let overcastBlueColor: UIColor = UIColor(red: 0, green: 187 / 255, blue: 204 / 255, alpha: 1.0)
@@ -42,6 +44,8 @@ class SetUpVC: UIViewController,UITextFieldDelegate {
         nextBtn.layer.cornerRadius = 10
         setUpField()
         textFields = [heightTxt,weightTxt]
+        maleBtn.layer.cornerRadius = 30
+        femaleBtn.layer.cornerRadius = 30
         for text in textFields{
             text.delegate = self
         }
@@ -72,18 +76,42 @@ class SetUpVC: UIViewController,UITextFieldDelegate {
         textField.tintColor = overcastBlueColor
         textField.textColor = darkGreyColor
         textField.lineColor = lightGreyColor
-        
         textField.selectedTitleColor = overcastBlueColor
         textField.selectedLineColor = overcastBlueColor
         
         textField.iconWidth = 65
         //textField.iconFont = UIFont(name: "FontAwesome", size: 35)
-        textField.font = UIFont(name: "AppleSDGothicNeo-Regular", size: 18)
+        textField.font = UIFont(name: "AppleSDGothicNeo-Regular", size: 15)
         textField.titleColor = overcastBlueColor
         // textField.minimumFontSize
     }
-
+    @IBAction func maleAction(_ sender: Any) {
+        gender = "male"
+        maleBtn.backgroundColor = #colorLiteral(red: 1, green: 0.5764705882, blue: 0, alpha: 0.3724315068)
+        femaleBtn.backgroundColor = .clear
+    }
+    
+    @IBAction func femaleAction(_ sender: Any) {
+        gender = "female"
+        femaleBtn.backgroundColor = #colorLiteral(red: 1, green: 0.5764705882, blue: 0, alpha: 0.3724315068)
+        maleBtn.backgroundColor = .clear
+    }
+    
+    
     @IBAction func nextAction(_ sender: Any) {
+        guard let height = heightTxt.text,
+            let weight = weightTxt.text else{
+                return
+        }
+        let realm = try! Realm()
+        let userState = RealmDataMangers.createUserStat(date: Date(), weight: Int(weight)!, restingHeart: nil)
+        let user = RealmDataMangers.createUser(name: "Jason", gender: gender, Date: Date(), userStatArray: [userState], workoutArray: [])
+        
+        RealmDataMangers.save(object: user, realm: realm)
+        UserRealm.curUser = realm.objects(UserRealm.self).first!
+        dismiss(animated: true, completion: nil)
+        
+        
     }
     
 }

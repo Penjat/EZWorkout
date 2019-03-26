@@ -24,7 +24,7 @@ class StatsMasterController: UIViewController {
     //TODO put in animation extention
     let gradient = CAGradientLayer()
     //startGradient()
-    
+
     gradient.colors = [idleColor1.cgColor, idleColor2.cgColor]
     gradient.locations = [0.0 , 1.0]
     gradient.startPoint = CGPoint(x: 0.0, y: 1.0)
@@ -35,8 +35,9 @@ class StatsMasterController: UIViewController {
     
   }
   override func viewDidAppear(_ animated: Bool) {
-    
+   
     super.viewDidAppear(animated)
+
     sectionTitle.alpha = 0.3
     sectionTitle.transform = CGAffineTransform(scaleX: 1.4, y: 1.4)
     UIView.animate(withDuration: 1.0, animations: {

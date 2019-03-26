@@ -37,8 +37,6 @@
 		0BA30329222DE70A0046FDB9 /* Exercise.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0BA30328222DE70A0046FDB9 /* Exercise.xib */; };
 		0BA3032B222DE8EA0046FDB9 /* ExerciseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BA3032A222DE8EA0046FDB9 /* ExerciseView.swift */; };
 		0BA3032D222E08530046FDB9 /* RecWorkoutSB.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0BA3032C222E08530046FDB9 /* RecWorkoutSB.storyboard */; };
-		0BA30331222E09870046FDB9 /* StatsSB.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0BA30330222E09870046FDB9 /* StatsSB.storyboard */; };
-		0BA30333222E09F00046FDB9 /* HistorySB.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0BA30332222E09F00046FDB9 /* HistorySB.storyboard */; };
 		0BA30337222E1CDC0046FDB9 /* WorkoutModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BA30336222E1CDC0046FDB9 /* WorkoutModel.swift */; };
 		0BA30339222E1E220046FDB9 /* SpeechInputManager+Commands.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BA30338222E1E220046FDB9 /* SpeechInputManager+Commands.swift */; };
 		0BA3033D222E28290046FDB9 /* ExerciseCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BA3033C222E28290046FDB9 /* ExerciseCell.swift */; };
@@ -115,7 +113,6 @@
 		28F4C09F22388373003318ED /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 28F4C09E22388373003318ED /* Assets.xcassets */; };
 		28F4C0A422388373003318ED /* WorkoutWatch.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 28F4C08722388371003318ED /* WorkoutWatch.app */; };
 		28F4C0E922388AEA003318ED /* DetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28F4C0E822388AEA003318ED /* DetailVC.swift */; };
-		28F4C0F022389272003318ED /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28F4C0EF22389272003318ED /* ViewController.swift */; };
 		28F4C0F422389917003318ED /* iosWatch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28F4C0F322389917003318ED /* iosWatch.swift */; };
 		28F4C0F522389919003318ED /* iosWatch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28F4C0F322389917003318ED /* iosWatch.swift */; };
 		28F4C0F722389FBA003318ED /* RecognizerReturnDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BA3DB9A222DD3ED00AC7538 /* RecognizerReturnDelegate.swift */; };
@@ -201,8 +198,6 @@
 		0BA30328222DE70A0046FDB9 /* Exercise.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Exercise.xib; sourceTree = "<group>"; };
 		0BA3032A222DE8EA0046FDB9 /* ExerciseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseView.swift; sourceTree = "<group>"; };
 		0BA3032C222E08530046FDB9 /* RecWorkoutSB.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = RecWorkoutSB.storyboard; sourceTree = "<group>"; };
-		0BA30330222E09870046FDB9 /* StatsSB.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = StatsSB.storyboard; sourceTree = "<group>"; };
-		0BA30332222E09F00046FDB9 /* HistorySB.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = HistorySB.storyboard; sourceTree = "<group>"; };
 		0BA30336222E1CDC0046FDB9 /* WorkoutModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutModel.swift; sourceTree = "<group>"; };
 		0BA30338222E1E220046FDB9 /* SpeechInputManager+Commands.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SpeechInputManager+Commands.swift"; sourceTree = "<group>"; };
 		0BA3033C222E28290046FDB9 /* ExerciseCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseCell.swift; sourceTree = "<group>"; };
@@ -286,7 +281,6 @@
 		28F4C0A122388373003318ED /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
 		28F4C0E722388A03003318ED /* EZWorkout.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = EZWorkout.entitlements; sourceTree = "<group>"; };
 		28F4C0E822388AEA003318ED /* DetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailVC.swift; sourceTree = "<group>"; };
-		28F4C0EF22389272003318ED /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		28F4C0F322389917003318ED /* iosWatch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iosWatch.swift; sourceTree = "<group>"; };
 		56613A7F23DBE1C05BB336A2 /* Pods_EZWorkout.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EZWorkout.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8872BA68D8FE0B972398D279 /* Pods-EZWorkout.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EZWorkout.debug.xcconfig"; path = "Pods/Target Support Files/Pods-EZWorkout/Pods-EZWorkout.debug.xcconfig"; sourceTree = "<group>"; };
@@ -345,7 +339,6 @@
 		0BA30334222E0A540046FDB9 /* History */ = {
 			isa = PBXGroup;
 			children = (
-				0BA30332222E09F00046FDB9 /* HistorySB.storyboard */,
 				0BF84E7F22309F7100DFC6B0 /* HistoryViewController.swift */,
 				0BF84E892230A99800DFC6B0 /* HistoryViewController+WorkoutTableDelegate.swift */,
 				0BF84E8B2230C2A900DFC6B0 /* HistoryViewController+ExerciseTableDelegate.swift */,
@@ -515,7 +508,6 @@
 				0BA3032C222E08530046FDB9 /* RecWorkoutSB.storyboard */,
 				0B5013ED222F2DB2004A64EC /* CenterViewProtocol.swift */,
 				0BA30344222EDDFA0046FDB9 /* Help.xib */,
-				28F4C0EF22389272003318ED /* ViewController.swift */,
 				0BA30346222EDE2C0046FDB9 /* HelpView.swift */,
 				0B5013F3222F6653004A64EC /* FeedbackMsg.xib */,
 				0B5013F5222F673E004A64EC /* FeedbackMsgView.swift */,
@@ -527,7 +519,6 @@
 			isa = PBXGroup;
 			children = (
 				2851C8842231F43A005E4384 /* CreateCharts */,
-				0BA30330222E09870046FDB9 /* StatsSB.storyboard */,
 				288121DD222F53DC007042C1 /* StatPVC.swift */,
 				0B4AF2EE22372F0300A7CBF2 /* stats pages */,
 				28812195222DA4DA007042C1 /* StatVC.swift */,
@@ -746,9 +737,7 @@
 				0BA30345222EDDFA0046FDB9 /* Help.xib in Resources */,
 				0BA3032D222E08530046FDB9 /* RecWorkoutSB.storyboard in Resources */,
 				0BAA183922349D9F00EC40D8 /* Simply Rounded.ttf in Resources */,
-				0BA30331222E09870046FDB9 /* StatsSB.storyboard in Resources */,
 				0BAA18352234750900EC40D8 /* Simply Rounded Bold Italic.ttf in Resources */,
-				0BA30333222E09F00046FDB9 /* HistorySB.storyboard in Resources */,
 				0BAA18332234720A00EC40D8 /* KeepCalm-Medium.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -861,7 +850,6 @@
 				0BF84E862230A32D00DFC6B0 /* ExerciseSetCell.swift in Sources */,
 				0B4AF2F822387F4900A7CBF2 /* StatPage1Controller+ScrollViewDelegate.swift in Sources */,
 				0BA3032B222DE8EA0046FDB9 /* ExerciseView.swift in Sources */,
-				28F4C0F022389272003318ED /* ViewController.swift in Sources */,
 				0B38BDB92231D13D00DEA358 /* HistoryViewController+PickerDelegateDataSource.swift in Sources */,
 				0BCA1AC42228D30100B51C27 /* EZWorkout.xcdatamodeld in Sources */,
 				0B4AF2D92236100B00A7CBF2 /* RecTopBarVC.swift in Sources */,
