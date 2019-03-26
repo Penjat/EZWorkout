@@ -20,6 +20,7 @@ extension RecordWorkoutMasterViewController{
       //timerLabelFadeIn()
       //workoutStatusLabel.text = "workout in progress..."
       startAnimatingGradient()
+      
     }else{
       print("you are already working out")
       createFeedbackMessage(topMsg: "you are already working out", bottomMsg: "")
@@ -39,6 +40,7 @@ extension RecordWorkoutMasterViewController{
       //workoutStatusLabel.text = "workout complete"
       //gradient.removeAllAnimations()
       backToIdle()
+      RealmDataMangers.retrieveUser()
     }else{
       print("you need to start a workout first")
       createFeedbackMessage(topMsg: "you need to start a workout first", bottomMsg: "")

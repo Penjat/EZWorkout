@@ -24,14 +24,16 @@ class StatTotalVC: UIViewController {
   
     override func viewDidLoad() {
         super.viewDidLoad()
+        setUpChart1()
+        setUpChart2()
+        setUpChart3()
         let exerciseDict = StaticDataManager.getRealmData(type: .type)
-        var topSevenDict = StaticDataManager.sortRealmDict(dict: exerciseDict)
+        let topSevenDict = StaticDataManager.sortRealmDict(dict: exerciseDict)
         
         var total = 0
-        for (s,i) in topSevenDict{
+        for (_,i) in topSevenDict{
             total += i
         }
-        //topSevenDict = topSevenDict.map{($0.0/total)*100}
         updateChartData(theChart: pieChart, chartLabel: topSevenDict.map{$0.0}, data: topSevenDict.map{(arg) -> PieChartDataEntry in
             
             var (key, value) = arg
@@ -40,9 +42,7 @@ class StatTotalVC: UIViewController {
             k.label = key
             return k
         })
-      setUpChart1()
-      setUpChart2()
-      setUpChart3()
+      
        
     }
     func animateGraph(){
